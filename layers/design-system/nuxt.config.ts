@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { fileURLToPath } from "url";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -8,5 +9,15 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
+  },
+  icon: {
+    provider: "server",
+    customCollections: [
+      {
+        prefix: "my-icon",
+        dir: fileURLToPath(new URL("./assets/icons", import.meta.url)),
+        normalizeIconName: false,
+      },
+    ],
   },
 });
