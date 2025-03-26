@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxt/icon"],
+  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts"],
   css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
