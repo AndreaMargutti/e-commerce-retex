@@ -1,0 +1,102 @@
+diff --git a/node_modules/@storybook-vue/nuxt/.bun-tag-a6021d9159232a56 b/.bun-tag-a6021d9159232a56
+new file mode 100644
+index 0000000000000000000000000000000000000000..e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+diff --git a/dist/preset.cjs b/dist/preset.cjs
+index d5185d9404a5a030409f23ba3f391b7303e1ee9a..fc39ba6303308b0ca701da7d8f0745b66647185e 100644
+--- a/dist/preset.cjs
++++ b/dist/preset.cjs
+@@ -3230,23 +3230,23 @@ const viteFinal = async (config, options) => {
+     storybookViteConfig.root
+   );
+   const finalViteConfig = mergeViteConfig(storybookViteConfig, nuxtConfig, nuxt);
+-  if (options.outputDir != null) {
+-    const fs = await import('node:fs');
+-    fs.mkdirSync(path.join(options.outputDir, "logs"), { recursive: true });
+-    console.debug(`Writing Vite configs to ${options.outputDir}/logs/...`);
+-    fs.writeFileSync(
+-      path.join(options.outputDir, "logs", "vite-storybook.config.json"),
+-      stringify__default(storybookViteConfig, { space: "  " })
+-    );
+-    fs.writeFileSync(
+-      path.join(options.outputDir, "logs", "vite-nuxt.config.json"),
+-      stringify__default(nuxtConfig, { space: "  " })
+-    );
+-    fs.writeFileSync(
+-      path.join(options.outputDir, "logs", "vite-final.config.json"),
+-      stringify__default(finalViteConfig, { space: "  " })
+-    );
+-  }
++  // if (options.outputDir != null) {
++  //   const fs = await import('node:fs');
++  //   fs.mkdirSync(path.join(options.outputDir, "logs"), { recursive: true });
++  //   console.debug(`Writing Vite configs to ${options.outputDir}/logs/...`);
++  //   fs.writeFileSync(
++  //     path.join(options.outputDir, "logs", "vite-storybook.config.json"),
++  //     stringify__default(storybookViteConfig, { space: "  " })
++  //   );
++  //   fs.writeFileSync(
++  //     path.join(options.outputDir, "logs", "vite-nuxt.config.json"),
++  //     stringify__default(nuxtConfig, { space: "  " })
++  //   );
++  //   fs.writeFileSync(
++  //     path.join(options.outputDir, "logs", "vite-final.config.json"),
++  //     stringify__default(finalViteConfig, { space: "  " })
++  //   );
++  // }
+   return finalViteConfig;
+ };
+ async function getPackageDir(packageName) {
+@@ -3259,7 +3259,7 @@ async function getPackageDir(packageName) {
+ }
+ function getNuxtProxyConfig(nuxt) {
+   const port = nuxt.options.runtimeConfig.app.port ?? 3e3;
+-  const route = "^/(_nuxt|_ipx|_icon|__nuxt_devtools__|__nuxt_island)";
++  const route = "^/(_nuxt|_ipx|api/_nuxt_icon|__nuxt_devtools__|__nuxt_island)";
+   const proxy = {
+     [route]: {
+       target: `http://localhost:${port}`,
+diff --git a/dist/preset.mjs b/dist/preset.mjs
+index eb9a1e918938153a289a90be5d150e7b1a005a85..685898d9ad8094a5b67ddaa64a661c672ccee6ed 100644
+--- a/dist/preset.mjs
++++ b/dist/preset.mjs
+@@ -3217,23 +3217,23 @@ const viteFinal = async (config, options) => {
+     storybookViteConfig.root
+   );
+   const finalViteConfig = mergeViteConfig(storybookViteConfig, nuxtConfig, nuxt);
+-  if (options.outputDir != null) {
+-    const fs = await import('node:fs');
+-    fs.mkdirSync(join(options.outputDir, "logs"), { recursive: true });
+-    console.debug(`Writing Vite configs to ${options.outputDir}/logs/...`);
+-    fs.writeFileSync(
+-      join(options.outputDir, "logs", "vite-storybook.config.json"),
+-      stringify(storybookViteConfig, { space: "  " })
+-    );
+-    fs.writeFileSync(
+-      join(options.outputDir, "logs", "vite-nuxt.config.json"),
+-      stringify(nuxtConfig, { space: "  " })
+-    );
+-    fs.writeFileSync(
+-      join(options.outputDir, "logs", "vite-final.config.json"),
+-      stringify(finalViteConfig, { space: "  " })
+-    );
+-  }
++  // if (options.outputDir != null) {
++  //   const fs = await import('node:fs');
++  //   fs.mkdirSync(join(options.outputDir, "logs"), { recursive: true });
++  //   console.debug(`Writing Vite configs to ${options.outputDir}/logs/...`);
++  //   fs.writeFileSync(
++  //     join(options.outputDir, "logs", "vite-storybook.config.json"),
++  //     stringify(storybookViteConfig, { space: "  " })
++  //   );
++  //   fs.writeFileSync(
++  //     join(options.outputDir, "logs", "vite-nuxt.config.json"),
++  //     stringify(nuxtConfig, { space: "  " })
++  //   );
++  //   fs.writeFileSync(
++  //     join(options.outputDir, "logs", "vite-final.config.json"),
++  //     stringify(finalViteConfig, { space: "  " })
++  //   );
++  // }
+   return finalViteConfig;
+ };
+ async function getPackageDir(packageName) {
