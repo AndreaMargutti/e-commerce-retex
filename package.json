@@ -9,6 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint",
+    "clean-project": "rm -rf .nuxt dist node_modules",
+    "storybook": "storybook dev -p 6006 --no-open",
     "format": "prettier --write \"{components,pages,plugins,middleware,layouts,composables,assets}/**/*.{js,jsx,ts,tsx,vue,html,css,scss,json,md}\""
   },
   "dependencies": {
@@ -20,10 +22,23 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.2.0",
+    "@nuxtjs/storybook": "8.3.3",
+    "@storybook-vue/nuxt": "8.3.3",
+    "@storybook/addon-a11y": "8.3.3",
+    "@storybook/addon-essentials": "8.3.3",
+    "@storybook/addon-interactions": "8.3.3",
+    "@storybook/addon-links": "8.3.3",
+    "@storybook/blocks": "8.3.3",
+    "@storybook/vue3": "8.3.3",
+    "@tailwindcss/postcss": "^4.0.16",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "prettier": "^3.5.3",
-    "sass": "^1.86.0"
+    "sass": "^1.86.0",
+    "storybook": "8.3.3"
+  },
+  "patchedDependencies": {
+    "@storybook-vue/nuxt@8.3.3": "patches/@storybook-vue%2Fnuxt@8.3.3.patch"
   }
 }
