@@ -1,5 +1,5 @@
 <template>
   <div>
-    <AtomsLogo size="xl" />
+    <AtomsLogoDefault />
   </div>
 </template>
