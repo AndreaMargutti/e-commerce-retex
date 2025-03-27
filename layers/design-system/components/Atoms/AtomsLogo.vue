@@ -23,5 +23,5 @@ const logoSize = computed(() => {
 </script>
 
 <template>
-  <Icon name="my-icon:logo-default" :class="[logoSize]" />
+  <Icon name="my-icon:logo-default" :class="logoSize" />
 </template>
