@@ -5,7 +5,6 @@ import AtomsLogo from "./AtomsLogoDefault.vue";
 const meta: Meta<typeof AtomsLogo> = {
   component: AtomsLogo,
   title: "Design System / Atoms / AtomsLogo",
-  tags: ["autodocs"],
 };
 
 export default meta;
