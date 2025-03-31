@@ -12,9 +12,9 @@
   --text-tiny--font-weight: 400;
   /* text-2.5xl definition */
   --text-2.5xl: 1.75rem;
-  --text-3.5xl--line-height: 2.25rem;
-  --text-3.5xl--letter-spacing: 0%;
-  --text-3.5xl--font-weight: 400;
+  --text-2.5xl--line-height: 2.25rem;
+  --text-2.5xl--letter-spacing: 0%;
+  --text-2.5xl--font-weight: 400;
   /* text-3.5xl definition */
   --text-3.5xl: 2rem;
   --text-3.5xl--line-height: 2.5rem;
