@@ -1,0 +1,30 @@
+@theme {
+  --color-*: initial;
+
+  /* colori base */
+  --color-black-base: #000000;
+  --color-blue-base: #333f48;
+  --color-grey-base: #c7c9c7;
+  --color-beige-base: #f3eee1;
+
+  /* colori accent */
+  --color-red-accent: #c8102e;
+
+  /* greyscale */
+  --color-gray-25: #f5f5f5;
+  --color-gray-20: #e5e5e5;
+  --color-gray-75: #bdbdbd;
+  --color-gray-100: #4e4e4e;
+
+  /* photo-backgound */
+  --color-photo-background: linearGradient(#d0cdc7, #e3e3e1);
+
+  /* transparency */
+  --color-transparent-0: rgba(229, 229, 229, 0.2);
+  --color-transparent-50: linearGradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  --color-transparent-100: rgba(0, 0, 0, 0.6); /* color statek */
+  --color-red-state: #b72b35;
+  --color-green-state: #437e22;
+  --color-grey-state: #767676;
+  --color-blue-state: #355cbe;
+}

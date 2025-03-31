@@ -1,4 +1,5 @@
 @theme {
+  --font-display: "Inter", sans-serif;
   /* text-tiny definition */
   --text-tiny: 0.625rem;
   --text-tiny--line-height: 100%;
@@ -18,7 +19,7 @@
 
 @layer base {
   html {
-    font-family: Inter, sans-serif;
+    font-family: var(--font-display);
     font-size: var(--text-base);
   }
 
