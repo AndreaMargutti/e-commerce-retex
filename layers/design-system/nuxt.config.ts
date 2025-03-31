@@ -4,8 +4,8 @@ import { fileURLToPath } from "url";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts"],
-  css: ["./layers/design-system/assets/css/main.css"],
+  modules: ["@nuxt/icon", "@nuxt/fonts"],
+  css: ["@design-system/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
   },
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     provider: "server",
     customCollections: [
       {
-        prefix: "my-icon",
+        prefix: "icon",
         dir: fileURLToPath(new URL("./assets/icons", import.meta.url)),
         normalizeIconName: false,
       },
