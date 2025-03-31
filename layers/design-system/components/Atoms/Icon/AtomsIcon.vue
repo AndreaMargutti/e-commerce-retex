@@ -5,5 +5,5 @@ defineProps<AtomsIconProps>();
 </script>
 
 <template>
-  <Icon :name="`my-icon:${name}`" />
+  <Icon :name="`icon:${name}`" />
 </template>
