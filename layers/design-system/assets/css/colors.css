@@ -1,13 +1,13 @@
 @theme {
   --color-*: initial;
 
-  /* colori base */
+  /* base */
   --color-black-base: #000000;
   --color-blue-base: #333f48;
   --color-grey-base: #c7c9c7;
   --color-beige-base: #f3eee1;
 
-  /* colori accent */
+  /* accent */
   --color-red-accent: #c8102e;
 
   /* greyscale */
@@ -22,7 +22,9 @@
   /* transparency */
   --color-transparent-0: rgba(229, 229, 229, 0.2);
   --color-transparent-50: linearGradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  --color-transparent-100: rgba(0, 0, 0, 0.6); /* color statek */
+  --color-transparent-100: rgba(0, 0, 0, 0.6);
+
+  /* statek */
   --color-red-state: #b72b35;
   --color-green-state: #437e22;
   --color-grey-state: #767676;

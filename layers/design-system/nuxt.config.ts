@@ -5,9 +5,6 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   modules: ["@nuxt/icon", "@nuxt/fonts"],
-  alias: {
-    "@design-system": fileURLToPath(new URL("./", import.meta.url)),
-  },
   css: ["@design-system/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
