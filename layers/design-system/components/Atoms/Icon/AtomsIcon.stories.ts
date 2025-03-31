@@ -10,14 +10,14 @@ const meta: Meta<typeof AtomsIcon> = {
 export default meta;
 type Story = StoryObj<typeof AtomsIcon>;
 export const Default: Story = {
+  args: {
+    name: "account",
+  },
   render: (args) => ({
     components: { AtomsIcon },
     setup() {
       return { args };
     },
     template: `<AtomsIcon v-bind="args" />`,
-    args: {
-      name: "string",
-    },
   }),
 };
