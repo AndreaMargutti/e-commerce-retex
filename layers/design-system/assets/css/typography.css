@@ -4,20 +4,6 @@
   }
 }
 
-.text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.text-medium {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.text-small {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
+@theme {
+  --text-tiny: 0.625rem;
 }
