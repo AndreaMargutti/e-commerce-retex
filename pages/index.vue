@@ -1,3 +1,5 @@
 <template>
-  <div></div>
+  <div>
+    <AtomsLabel />
+  </div>
 </template>
