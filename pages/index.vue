@@ -1,5 +1,5 @@
 <template>
   <div>
-    <AtomsLabel />
+    <AtomsLink />
   </div>
 </template>

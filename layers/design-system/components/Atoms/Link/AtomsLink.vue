@@ -1,3 +1,3 @@
 <template>
-  <p class="text-xs xl:text-sm">LABEL</p>
+  <NuxtLink class="text-xs xl:text-sm">LABEL</NuxtLink>
 </template>
