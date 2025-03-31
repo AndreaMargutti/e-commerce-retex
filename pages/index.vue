@@ -1,5 +1,5 @@
 <template>
   <div>
-    <AtomsLink />
+    <AtomsLink name="uomo" href="uomo" />
   </div>
 </template>
