@@ -2,3 +2,7 @@
 @import "./breakpoints.css";
 @import "./typography.css";
 @import "./colors.css";
+
+@layer base {
+  @import "./reset.css";
+}
