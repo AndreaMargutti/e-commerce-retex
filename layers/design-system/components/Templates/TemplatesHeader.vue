@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const { headerLinks, init } = useHeaderLinks();
-init();
+
+onMounted(() => {
+  init();
+});
+
+const isLogged = ref(true);
 </script>
 
 <template>
@@ -11,7 +16,10 @@ init();
       <span class="lg:hidden">
         <AtomsIcon name="menu" class="hidden" />
       </span>
-      <AtomsIcon name="account" />
+      <div>
+        <AtomsIcon name="account" v-if="!isLogged" />
+        <AtomsIcon name="logged" v-else />
+      </div>
     </div>
 
     <div class="lg:pr-4 min-[1440px]:pr-10">
