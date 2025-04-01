@@ -5,7 +5,7 @@ onMounted(() => {
   init();
 });
 
-const isLogged = ref(true);
+const isLogged = ref(false);
 </script>
 
 <template>
