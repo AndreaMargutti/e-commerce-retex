@@ -1,8 +1,8 @@
 <template>
   <section
-    class="flex lg:flex-row-reverse justify-between items-center py-2 px-4"
+    class="flex max-lg:justify-between lg:text-end items-center py-2 px-4 md:px-8"
   >
-    <div class="space-x-6">
+    <div class="space-x-6 lg:space-x-4 px-4 lg:order-2 lg:grow">
       <AtomsIcon name="menu" />
       <AtomsIcon name="account" />
     </div>
@@ -11,11 +11,13 @@
       <AtomsLogoDefault />
     </div>
 
-    <div class="space-x-6">
+    <div class="flex grow gap-4">
+      <AtomsLink v-for="n in 10" name="HOME" href="/" />
+    </div>
+
+    <div class="space-x-6 lg:space-x-4 lg:order-3">
       <AtomsIcon name="search" />
       <AtomsIcon name="cart" />
     </div>
   </section>
 </template>
-
-<style scoped></style>
