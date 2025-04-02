@@ -1,3 +1,3 @@
 export type AtomsWishlistBadgeProps = {
-  wishListItems: number;
+  wishListItems: Array<number>;
 };
