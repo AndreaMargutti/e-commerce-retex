@@ -8,6 +8,7 @@ defineProps<AtomsLinkProps>();
   <NuxtLink
     :to="`${href}`"
     class="text-xs xl:text-sm hover:underline underline-offset-5"
-    >{{ name }}</NuxtLink
   >
+    {{ name }}
+  </NuxtLink>
 </template>
