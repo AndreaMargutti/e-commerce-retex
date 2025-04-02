@@ -1,9 +1,5 @@
 export const useWishlist = () => {
-  let wishListNumber = ref([12, 3, 4, 5]);
-
-  for (let i = 0; i < 99; i++) {
-    wishListNumber.value.push(i);
-  }
+  let wishListNumber = useState("wishListNumber", () => [12, 4, 5]);
 
   return {
     wishListNumber,
