@@ -10,9 +10,7 @@ export default meta;
 type Story = StoryObj<typeof AtomsWishlistBadge>;
 export const Default: Story = {
   args: {
-    label: 10,
-    isTransparent: false,
-    isVisible: true,
+    wishListItems: Array.from({ length: 100 }, (_, i) => i + 1),
   },
   render: (args) => ({
     components: { AtomsWishlistBadge },

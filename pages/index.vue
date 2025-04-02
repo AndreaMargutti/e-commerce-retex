@@ -1,8 +1,5 @@
-<script setup lang="ts">
-const { wishListNumber } = useWishlist();
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <TemplatesHeader />
-  <AtomsWishlistBadge :wishListItems="wishListNumber" />
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { headerLinks, init } = useHeaderLinks();
+const { wishListNumber } = useWishlist();
 
 onMounted(() => {
   init();
