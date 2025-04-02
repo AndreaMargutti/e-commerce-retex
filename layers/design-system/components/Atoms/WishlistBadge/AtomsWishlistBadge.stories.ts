@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import AtomsBadge from "./AtomsBadge.vue";
+import AtomsWishlistBadge from "./AtomsWishlistBadge.vue";
 
-const meta: Meta<typeof AtomsBadge> = {
-  component: AtomsBadge,
+const meta: Meta<typeof AtomsWishlistBadge> = {
+  component: AtomsWishlistBadge,
   title: "Design System / Atoms / AtomsBadge",
 };
 
 export default meta;
-type Story = StoryObj<typeof AtomsBadge>;
+type Story = StoryObj<typeof AtomsWishlistBadge>;
 export const Default: Story = {
   args: {
     label: 10,
@@ -15,10 +15,10 @@ export const Default: Story = {
     isVisible: true,
   },
   render: (args) => ({
-    components: { AtomsBadge },
+    components: { AtomsWishlistBadge },
     setup() {
       return { args };
     },
-    template: `<AtomsBadge v-bind="args" />`,
+    template: `<AtomsWishlistBadge v-bind="args" />`,
   }),
 };

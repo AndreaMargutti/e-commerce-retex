@@ -1,4 +1,8 @@
+<script setup lang="ts">
+const { wishListNumber } = useWishlist();
+</script>
+
 <template>
   <TemplatesHeader />
-  <AtomsBadge label="99" :isVisible="true" :isTransparent="true" />
+  <AtomsWishlistBadge :wishListItems="wishListNumber" />
 </template>
