@@ -17,10 +17,10 @@ const isLogged = ref(false);
       <span class="lg:hidden">
         <AtomsIcon name="menu" class="hidden" />
       </span>
-      <div>
+      <span>
         <AtomsIcon name="account" v-if="!isLogged" />
         <AtomsIcon name="logged" v-else />
-      </div>
+      </span>
     </div>
 
     <div class="lg:pr-4 min-[1440px]:pr-10">
