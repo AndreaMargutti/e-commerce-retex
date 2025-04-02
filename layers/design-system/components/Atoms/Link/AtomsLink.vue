@@ -11,5 +11,3 @@ defineProps<AtomsLinkProps>();
     >{{ name }}</NuxtLink
   >
 </template>
-
-<style scoped></style>
