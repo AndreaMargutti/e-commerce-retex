@@ -14,7 +14,7 @@ const size = computed(() => {
   if (props.items < 99) {
     return "size-4 text-sm text-white";
   } else {
-    return "text-[7px] text-white";
+    return "size-4 text-[7px] text-white";
   }
 });
 
