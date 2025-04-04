@@ -8,7 +8,7 @@ onMounted(() => {
 });
 
 const isLogged = ref(false);
-// TODO: Add logic for change of background color
+// TODO: Add logic to change background color
 </script>
 
 <template>
@@ -17,11 +17,19 @@ const isLogged = ref(false);
   >
     <div class="space-x-6 lg:space-x-4 px-4 lg:order-2 lg:grow">
       <span class="lg:hidden">
-        <AtomsIcon name="menu" class="hidden" />
+        <AtomsIconWrapper type="button">
+          <template v-slot:button-slot>
+            <AtomsIcon name="menu" class="hidden" />
+          </template>
+        </AtomsIconWrapper>
       </span>
       <span>
-        <AtomsIcon name="account" v-if="!isLogged" />
-        <AtomsIcon name="logged" v-else />
+        <AtomsIconWrapper type="link">
+          <template v-slot:link-slot>
+            <AtomsIcon name="account" v-if="!isLogged" />
+            <AtomsIcon name="logged" v-else />
+          </template>
+        </AtomsIconWrapper>
       </span>
     </div>
 
@@ -40,15 +48,31 @@ const isLogged = ref(false);
 
     <div class="space-x-6 lg:order-3 lg:relative">
       <span class="search-icon">
-        <AtomsIcon name="search" />
+        <AtomsIconWrapper type="button">
+          <template v-slot:button-slot>
+            <AtomsIcon name="search" />
+          </template>
+        </AtomsIconWrapper>
       </span>
       <span class="max-lg:hidden relative">
-        <AtomsIcon name="pin" class="mr-4" />
-        <AtomsIcon name="wishlist" />
+        <AtomsIconWrapper type="link">
+          <template v-slot:link-slot>
+            <AtomsIcon name="pin" class="mr-4" />
+          </template>
+        </AtomsIconWrapper>
+        <AtomsIconWrapper type="link">
+          <template v-slot:link-slot>
+            <AtomsIcon name="wishlist" />
+          </template>
+        </AtomsIconWrapper>
         <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-10" />
       </span>
       <span class="text-center relative">
-        <AtomsIcon name="cart" />
+        <AtomsIconWrapper type="link">
+          <template v-slot:link-slot>
+            <AtomsIcon name="cart" />
+          </template>
+        </AtomsIconWrapper>
         <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-1.5" />
       </span>
     </div>

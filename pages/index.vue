@@ -5,4 +5,5 @@ const { cartLength } = useCart();
 
 <template>
   <TemplatesHeader />
+  <AtomsIconWrapper type="button" />
 </template>
