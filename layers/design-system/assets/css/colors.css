@@ -24,7 +24,7 @@
   --color-transparent-50: linearGradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   --color-transparent-100: rgba(0, 0, 0, 0.6);
 
-  /* statek */
+  /* state */
   --color-red-state: #b72b35;
   --color-green-state: #437e22;
   --color-grey-state: #767676;

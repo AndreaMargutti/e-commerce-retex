@@ -8,6 +8,7 @@ onMounted(() => {
 });
 
 const isLogged = ref(false);
+// TODO: Add logic for change of background color
 </script>
 
 <template>
