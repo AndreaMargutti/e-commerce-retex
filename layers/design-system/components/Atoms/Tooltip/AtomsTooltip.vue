@@ -5,7 +5,7 @@ defineProps<AtomsTooltipProps>();
 </script>
 
 <template>
-  <div class="arrow py-2 px-1">
+  <div :class="`${type}-arrow`" class="arrow py-2 px-1">
     <span class="text-sm">{{ label }}</span>
   </div>
 </template>
@@ -23,16 +23,33 @@ defineProps<AtomsTooltipProps>();
   display: block;
   position: absolute;
   left: 50%;
-  top: 100%;
   translate: -50%;
   width: 0;
   height: 0;
   border: 10px solid transparent;
-  border-top-color: black;
+}
+
+.down-arrow:before,
+.down-arrow:after {
+  top: 100%;
+  border-top-color: var(--color-black-base);
+}
+
+.up-arrow:before,
+.up-arrow:after {
+  bottom: 100%;
+  border-bottom-color: var(--color-black-base);
 }
 
 .arrow:after {
   border: 9px solid transparent;
+}
+
+.down-arrow:after {
   border-top-color: white;
+}
+
+.up-arrow:after {
+  border-bottom-color: white;
 }
 </style>
