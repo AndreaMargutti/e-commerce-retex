@@ -1,5 +1,5 @@
 export const useCart = () => {
-  let cartItems = useState("cartItems", () => [1, 2]);
+  let cartItems = useState("cartItems", () => []);
   let cartLength = cartItems.value.length;
 
   return {

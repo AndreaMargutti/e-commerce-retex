@@ -5,5 +5,4 @@ const { cartLength } = useCart();
 
 <template>
   <TemplatesHeader />
-  <AtomsTooltip label="sono un tooltip" type="down" />
 </template>
