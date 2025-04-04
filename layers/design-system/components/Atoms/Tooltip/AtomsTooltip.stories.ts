@@ -12,6 +12,7 @@ type Story = StoryObj<typeof AtomsTooltip>;
 export const Default: Story = {
   args: {
     label: "tooltip",
+    type: "up",
   },
   render: (args) => ({
     components: { AtomsTooltip },
