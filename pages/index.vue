@@ -5,6 +5,4 @@ const { cartLength } = useCart();
 
 <template>
   <TemplatesHeader />
-  <AtomsWishlistBadge :items="wishListLength" />
-  <AtomsWishlistBadge :items="cartLength" />
 </template>

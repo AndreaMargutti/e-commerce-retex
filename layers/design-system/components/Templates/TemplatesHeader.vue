@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { headerLinks, init } = useHeaderLinks();
-const { wishListNumber } = useWishlist();
+const { wishListLength } = useWishlist();
+const { cartLength } = useCart();
 
 onMounted(() => {
   init();
@@ -36,15 +37,19 @@ const isLogged = ref(false);
       />
     </div>
 
-    <div class="space-x-6 lg:space-x-4 lg:order-3 lg:relative">
+    <div class="space-x-6 lg:order-3 lg:relative">
       <span class="search-icon">
         <AtomsIcon name="search" />
       </span>
-      <span class="max-lg:hidden space-x-4">
-        <AtomsIcon name="pin" />
+      <span class="max-lg:hidden relative">
+        <AtomsIcon name="pin" class="mr-4" />
         <AtomsIcon name="wishlist" />
+        <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-10" />
       </span>
-      <AtomsIcon name="cart" />
+      <span class="text-center relative">
+        <AtomsIcon name="cart" />
+        <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-1.5" />
+      </span>
     </div>
   </header>
 </template>
