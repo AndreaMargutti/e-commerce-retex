@@ -3,15 +3,15 @@ import type { AtomsWishlistBadgeProps } from "./AtomsWishlistBadgeProps";
 const props = defineProps<AtomsWishlistBadgeProps>();
 
 const wishListLabel = computed(() => {
-  return props.wishListItems.length > 99 ? `99+` : props.wishListItems.length;
+  return props.items > 99 ? `99+` : props.items;
 });
 
 const wishlistVisibility = computed(() => {
-  return props.wishListItems.length > 0 ? "block" : "hidden";
+  return props.items > 0 ? "block" : "hidden";
 });
 
 const wishListSize = computed(() => {
-  if (props.wishListItems.length < 99) {
+  if (props.items < 99) {
     return "size-5 text-sm text-white";
   } else {
     return "size-4 text-[7px] text-white";

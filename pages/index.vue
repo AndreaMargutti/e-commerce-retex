@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const { wishListNumber } = useWishlist();
+const { wishListLength } = useWishlist();
+const { cartLength } = useCart();
 </script>
 
 <template>
   <TemplatesHeader />
-  <AtomsWishlistBadge :wishListItems="wishListNumber" />
+  <AtomsWishlistBadge :items="wishListLength" />
+  <AtomsWishlistBadge :items="cartLength" />
 </template>
