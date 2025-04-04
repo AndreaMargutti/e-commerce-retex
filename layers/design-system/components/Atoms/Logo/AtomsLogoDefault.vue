@@ -1,6 +1,6 @@
 <template>
   <Icon
-    name="my-icon:logo-default"
+    name="icon:logo-default"
     class="text-[4rem] lg:text-[51px] xl:text-[4.5rem]"
   />
 </template>
