@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 
 import AtomsLink from "./AtomsLink.vue";
-import { name } from "eslint-plugin-prettier/recommended";
 
 const meta: Meta<typeof AtomsLink> = {
   component: AtomsLink,
