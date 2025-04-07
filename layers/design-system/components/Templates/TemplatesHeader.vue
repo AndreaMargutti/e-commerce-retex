@@ -29,7 +29,7 @@ const isLogged = ref(false);
       </span>
     </div>
 
-    <div class="lg:pr-4 min-[1440px]:pr-10">
+    <div class="lg:pr-4 min-xl :pr-10">
       <AtomsLogoDefault />
     </div>
 
