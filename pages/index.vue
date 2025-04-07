@@ -5,5 +5,5 @@ const { cartLength } = useCart();
 
 <template>
   <TemplatesHeader />
-  <AtomsLink label="link" href="#" />
+  <AtomsButton label="ciao" type="tertiary" />
 </template>
