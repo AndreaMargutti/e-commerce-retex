@@ -1,6 +1,6 @@
 export const useCart = () => {
-  let cartItems = useState("cartItems", () => []);
-  let cartLength = cartItems.value.length;
+  const cartItems = useState("cartItems", () => [1, 2, 4, 5, 6]);
+  const cartLength = computed(() => cartItems.value.length);
 
   return {
     cartLength,
