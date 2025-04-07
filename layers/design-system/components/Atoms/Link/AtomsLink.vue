@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AtomsLinkProps } from "./AtomsLinkProps";
 
-defineProps<AtomsLinkProps>();
+const props = defineProps<AtomsLinkProps>();
 </script>
 
 <template>
@@ -12,7 +12,5 @@ defineProps<AtomsLinkProps>();
   >
     {{ label }}
   </NuxtLink>
-  <button v-else-if="type === 'button'">
-    {{ label }}
-  </button>
+  <button v-else-if="type === 'button'">{{}}</button>
 </template>
