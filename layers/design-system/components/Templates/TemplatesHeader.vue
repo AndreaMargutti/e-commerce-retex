@@ -3,7 +3,7 @@ const { headerLinks, init } = useHeaderLinks();
 const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
 
-onMounted(() => {
+onServerPrefetch(() => {
   init();
 });
 
