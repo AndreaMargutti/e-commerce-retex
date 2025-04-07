@@ -1,4 +1,6 @@
 export type AtomsButtonsProps = {
-  type: "primary" | "secondary" | "tertiary";
   label: string;
+  type: "primary" | "secondary" | "tertiary";
+  hasIcon: boolean;
+  isUppercase: boolean;
 };
