@@ -18,17 +18,13 @@ const isLogged = ref(false);
     <div class="space-x-6 lg:space-x-4 px-4 lg:order-2 lg:grow">
       <span class="lg:hidden">
         <AtomsIconWrapper type="button">
-          <template v-slot:button-slot>
-            <AtomsIcon name="menu" class="hidden" />
-          </template>
+          <AtomsIcon name="menu" class="hidden" />
         </AtomsIconWrapper>
       </span>
       <span>
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="account" v-if="!isLogged" />
-            <AtomsIcon name="logged" v-else />
-          </template>
+        <AtomsIconWrapper>
+          <AtomsIcon name="account" v-if="!isLogged" />
+          <AtomsIcon name="logged" v-else />
         </AtomsIconWrapper>
       </span>
     </div>
@@ -49,29 +45,21 @@ const isLogged = ref(false);
     <div class="space-x-6 lg:order-3 lg:relative">
       <span class="search-icon">
         <AtomsIconWrapper type="button">
-          <template v-slot:button-slot>
-            <AtomsIcon name="search" />
-          </template>
+          <AtomsIcon name="search" />
         </AtomsIconWrapper>
       </span>
       <span class="max-lg:hidden relative">
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="pin" class="mr-4" />
-          </template>
+        <AtomsIconWrapper>
+          <AtomsIcon name="pin" class="mr-4" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="wishlist" />
-          </template>
+        <AtomsIconWrapper>
+          <AtomsIcon name="wishlist" />
         </AtomsIconWrapper>
         <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-10" />
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="cart" />
-          </template>
+        <AtomsIconWrapper>
+          <AtomsIcon name="cart" />
         </AtomsIconWrapper>
         <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-1.5" />
       </span>

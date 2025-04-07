@@ -2,16 +2,16 @@
 import { NuxtLink } from "#components";
 import type { AtomsIconWrapperProps } from "./AtomsIconWrapperProps";
 
-withDefaults(defineProps<AtomsIconWrapperProps>() {
-  type: "link"
+withDefaults(defineProps<AtomsIconWrapperProps>(), {
+  type: "link",
 });
 </script>
 
 <template>
   <button v-if="type === 'button'">
-    <slot name="button-slot"></slot>
+    <slot></slot>
   </button>
   <NuxtLink to="#" v-else-if="type === 'link'">
-    <slot name="link-slot"></slot>
+    <slot></slot>
   </NuxtLink>
 </template>
