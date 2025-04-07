@@ -2,7 +2,9 @@
 import { NuxtLink } from "#components";
 import type { AtomsIconWrapperProps } from "./AtomsIconWrapperProps";
 
-defineProps<AtomsIconWrapperProps>();
+withDefaults(defineProps<AtomsIconWrapperProps>() {
+  type: "link"
+});
 </script>
 
 <template>
