@@ -12,8 +12,9 @@ type Story = StoryObj<typeof AtomsLink>;
 
 export const Link: Story = {
   args: {
-    name: "uomo",
+    label: "uomo",
     href: "/uomo",
+    type: "link",
   },
   render: (args) => ({
     components: { AtomsLink },
