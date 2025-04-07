@@ -15,8 +15,8 @@ const isLogged = ref(false);
   <header
     class="bg-white flex justify-between lg:text-end items-center py-2 px-4 md:px-8"
   >
-    <div class="space-x-6 lg:space-x-4 px-4 lg:order-2 lg:grow">
-      <span class="lg:hidden">
+    <div class="lg:space-x-4 px-4 lg:order-2 lg:grow">
+      <span class="mr-6 lg:hidden">
         <AtomsIconWrapper type="button">
           <AtomsIcon name="menu" class="hidden" />
         </AtomsIconWrapper>
