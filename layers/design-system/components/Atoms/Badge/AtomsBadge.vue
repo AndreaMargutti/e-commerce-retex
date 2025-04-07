@@ -12,9 +12,9 @@ const visibility = computed(() => {
 
 const size = computed(() => {
   if (props.items < 99) {
-    return "size-4 text-sm text-white";
+    return "text-sm";
   } else {
-    return "size-4 text-[7px] text-white";
+    return "text-[7px]";
   }
 });
 
@@ -28,7 +28,7 @@ const classes = computed(() => {
 <template>
   <div
     :class="classes"
-    class="bg-black-base py-0.5 px-1 rounded-full flex items-center justify-center"
+    class="size-4 text-white bg-black-base py-0.5 px-1 rounded-full flex items-center justify-center"
   >
     <p>{{ label }}</p>
   </div>
