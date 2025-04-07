@@ -1,3 +1,1 @@
-<template>
-  <TemplatesHeader />
-</template>
+<template></template>
