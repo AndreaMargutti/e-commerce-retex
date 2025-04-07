@@ -22,7 +22,7 @@ const isLogged = ref(false);
         </AtomsIconWrapper>
       </span>
       <span>
-        <AtomsIconWrapper>
+        <AtomsIconWrapper type="link">
           <AtomsIcon name="account" v-if="!isLogged" />
           <AtomsIcon name="logged" v-else />
         </AtomsIconWrapper>
@@ -49,16 +49,16 @@ const isLogged = ref(false);
         </AtomsIconWrapper>
       </span>
       <span class="max-lg:hidden relative">
-        <AtomsIconWrapper>
+        <AtomsIconWrapper type="link">
           <AtomsIcon name="pin" class="mr-4" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper>
+        <AtomsIconWrapper type="link">
           <AtomsIcon name="wishlist" />
         </AtomsIconWrapper>
         <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-10" />
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper>
+        <AtomsIconWrapper type="link">
           <AtomsIcon name="cart" />
         </AtomsIconWrapper>
         <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-1.5" />
