@@ -1,4 +1,8 @@
 export type AtomsLinkProps = {
-  name: string;
-  href: string;
+  type: "link" | "button";
+  variant?: "primary" | "secondary" | "tertiary";
+  size?: "small" | "medium" | "large";
+  disabled?: boolean;
+  label: string;
+  href?: string;
 };
