@@ -61,7 +61,7 @@ const isLogged = ref(false);
         <AtomsIconWrapper type="link">
           <AtomsIcon name="cart" />
         </AtomsIconWrapper>
-        <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-1.5" />
+        <AtomsBadge :items="cartLength" class="absolute top-1.5 left-1.5" />
       </span>
     </div>
   </header>
