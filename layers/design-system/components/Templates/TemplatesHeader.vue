@@ -35,10 +35,10 @@ const isLogged = ref(false);
 
     <div class="hidden lg:flex grow gap-4 xl:gap-10">
       <AtomsLink
-        v-for="{ id, label, href } in headerLinks"
+        v-for="{ value, label, href } in headerLinks"
         :name="label.toLocaleUpperCase()"
         :href="href"
-        :key="id"
+        :key="value"
       />
     </div>
 
