@@ -33,7 +33,7 @@ const isLogged = ref(false);
       <AtomsLogoDefault />
     </div>
 
-    <div class="hidden lg:flex grow gap-4 xl:gap-10">
+    <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
         v-for="{ value, label, href } in headerLinks"
         :name="label.toLocaleUpperCase()"
@@ -43,7 +43,7 @@ const isLogged = ref(false);
     </div>
 
     <div class="space-x-6 lg:order-3 lg:relative">
-      <span class="search-icon">
+      <span class="lg:absolute lg:-left-16">
         <AtomsIconWrapper type="button">
           <AtomsIcon name="search" />
         </AtomsIconWrapper>
@@ -66,12 +66,3 @@ const isLogged = ref(false);
     </div>
   </header>
 </template>
-
-<style scoped>
-@media screen and (min-width: 1024px) {
-  .search-icon {
-    position: absolute;
-    left: calc(-100% + 16px);
-  }
-}
-</style>
