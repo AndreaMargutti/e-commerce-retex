@@ -3,9 +3,7 @@ const { headerLinks, init } = useHeaderLinks();
 const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
 
-onMounted(() => {
-  init();
-});
+await init();
 
 const isLogged = ref(false);
 // TODO: Add logic to change background color
@@ -13,77 +11,48 @@ const isLogged = ref(false);
 
 <template>
   <header
-    class="bg-white flex max-lg:justify-between lg:text-end items-center py-2 px-4 md:px-8"
+    class="bg-white flex justify-between lg:text-end items-center py-2 px-4 md:px-8 h-[76px]"
   >
-    <div class="space-x-6 lg:space-x-4 px-4 lg:order-2 lg:grow">
-      <span class="lg:hidden">
-        <AtomsIconWrapper type="button">
-          <template v-slot:button-slot>
-            <AtomsIcon name="menu" class="hidden" />
-          </template>
-        </AtomsIconWrapper>
+    <div class="lg:space-x-4 px-4 lg:order-2 lg:grow">
+      <span class="mr-6 lg:hidden">
+        <AtomsIcon name="menu" class="hidden" />
       </span>
       <span>
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="account" v-if="!isLogged" />
-            <AtomsIcon name="logged" v-else />
-          </template>
-        </AtomsIconWrapper>
+        <AtomsIcon name="account" v-if="!isLogged" />
+        <AtomsIcon name="logged" v-else />
       </span>
     </div>
 
-    <div class="lg:pr-4 min-[1440px]:pr-10">
+    <div class="lg:pr-4 min-xl :pr-10">
       <AtomsLogoDefault />
     </div>
 
-    <div class="hidden lg:flex grow gap-4 min-[1440px]:gap-10">
+    <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
-        v-for="{ id, label, href } in headerLinks"
-        :name="label.toLocaleUpperCase()"
+        v-for="{ value, label, href } in headerLinks"
+        :name="typeof label === 'string' ? label.toLocaleUpperCase() : label"
         :href="href"
-        :key="id"
+        :key="value"
       />
     </div>
 
     <div class="space-x-6 lg:order-3 lg:relative">
-      <span class="search-icon">
-        <AtomsIconWrapper type="button">
-          <template v-slot:button-slot>
-            <AtomsIcon name="search" />
-          </template>
-        </AtomsIconWrapper>
+      <span class="lg:absolute lg:-left-16">
+        <AtomsIcon name="search" />
       </span>
       <span class="max-lg:hidden relative">
         <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="pin" class="mr-4" />
-          </template>
+          <AtomsIcon name="pin" class="mr-4" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="wishlist" />
-          </template>
+        <AtomsIconWrapper type="link" badge="wishlist">
+          <AtomsIcon name="wishlist" />
         </AtomsIconWrapper>
-        <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-10" />
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper type="link">
-          <template v-slot:link-slot>
-            <AtomsIcon name="cart" />
-          </template>
+        <AtomsIconWrapper type="link" badge="cart">
+          <AtomsIcon name="cart" />
         </AtomsIconWrapper>
-        <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-1.5" />
       </span>
     </div>
   </header>
 </template>
-
-<style scoped>
-@media screen and (min-width: 1024px) {
-  .search-icon {
-    position: absolute;
-    left: calc(-100% + 16px);
-  }
-}
-</style>
