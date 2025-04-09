@@ -17,15 +17,11 @@ const isLogged = ref(false);
   >
     <div class="lg:space-x-4 px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
-        <AtomsIconWrapper type="button">
-          <AtomsIcon name="menu" class="hidden" />
-        </AtomsIconWrapper>
+        <AtomsIcon name="menu" class="hidden" />
       </span>
       <span>
-        <AtomsIconWrapper type="link">
-          <AtomsIcon name="account" v-if="!isLogged" />
-          <AtomsIcon name="logged" v-else />
-        </AtomsIconWrapper>
+        <AtomsIcon name="account" v-if="!isLogged" />
+        <AtomsIcon name="logged" v-else />
       </span>
     </div>
 
@@ -44,24 +40,20 @@ const isLogged = ref(false);
 
     <div class="space-x-6 lg:order-3 lg:relative">
       <span class="lg:absolute lg:-left-16">
-        <AtomsIconWrapper type="button">
-          <AtomsIcon name="search" />
-        </AtomsIconWrapper>
+        <AtomsIcon name="search" />
       </span>
       <span class="max-lg:hidden relative">
         <AtomsIconWrapper type="link">
           <AtomsIcon name="pin" class="mr-4" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper type="link">
+        <AtomsIconWrapper type="link" badge="wishlist">
           <AtomsIcon name="wishlist" />
         </AtomsIconWrapper>
-        <AtomsBadge :items="wishListLength" class="absolute top-1.5 left-10" />
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper type="link">
+        <AtomsIconWrapper type="link" badge="cart">
           <AtomsIcon name="cart" />
         </AtomsIconWrapper>
-        <AtomsBadge :items="cartLength" class="absolute top-1.5 left-1.5" />
       </span>
     </div>
   </header>
