@@ -30,7 +30,7 @@ const isLogged = ref(false);
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
         v-for="{ value, label, href } in headerLinks"
-        :name="label.toLocaleUpperCase()"
+        :name="typeof label === 'string' ? label.toLocaleUpperCase() : label"
         :href="href"
         :key="value"
       />
