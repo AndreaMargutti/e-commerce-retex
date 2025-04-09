@@ -3,9 +3,7 @@ const { headerLinks, init } = useHeaderLinks();
 const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
 
-onServerPrefetch(() => {
-  init();
-});
+await init();
 
 const isLogged = ref(false);
 // TODO: Add logic to change background color
