@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AtomsIconWrapper>;
 export const Default: Story = {
   args: {
     type: "button",
+    badge: "cart",
   },
   render: (args) => ({
     components: { AtomsIconWrapper, AtomsIcon },
@@ -18,10 +19,8 @@ export const Default: Story = {
       return { args };
     },
     template: `
-      <AtomsIconWrapper v-bind="args">
-        <template v-slot:button-slot>
-          <AtomsIcon v-bind:name="name" />
-        </template>
-      </AtomsIconWrapper>`,
+    <AtomsIconWrapper v-bind="args">
+      <AtomsIcon name="cart" />
+    </AtomsIconWrapper>`,
   }),
 };
