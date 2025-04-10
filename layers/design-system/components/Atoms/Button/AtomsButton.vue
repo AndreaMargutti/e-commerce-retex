@@ -70,6 +70,6 @@ const emitClick = () => {
     {{
       variant !== "underline" ? label.toLocaleUpperCase() : capitalize(label)
     }}
-    <AtomsIcon v-if="icon?.hasIcon" :name="icon.iconName" />
+    <AtomsIcon v-if="icon?.hasIcon" :name="icon?.iconName" />
   </button>
 </template>
