@@ -5,6 +5,10 @@ declare global {
     to: string;
     items?: MenuItem[];
   }
+
+  type Menu = {
+    items: MenuItem[];
+  };
 }
 
 export {};

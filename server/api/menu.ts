@@ -1,7 +1,3 @@
-type Menu = {
-  items: MenuItem[];
-};
-
 export default defineEventHandler((event): Menu => {
   return {
     items: [
