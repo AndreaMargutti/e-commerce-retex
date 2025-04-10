@@ -2,7 +2,7 @@
   <AtomsButton
     label="bottone terziario"
     type="tertiary"
-    variant="withIcon"
+    variant="underline"
     size="medium"
     :isDisabled="false"
   />

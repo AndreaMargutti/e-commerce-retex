@@ -1,7 +1,7 @@
 export type AtomsButtonProps = {
   label: string;
   type: "primary" | "secondary" | "tertiary";
-  variant: "withIcon" | "withBackground" | "underlineBig" | "underlineSmall";
+  variant?: "withBackground" | "underline";
   size: "small" | "medium" | "large";
   isDisabled?: boolean;
   icon?: {

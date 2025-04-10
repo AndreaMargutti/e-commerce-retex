@@ -12,16 +12,10 @@ const btnBaseStyle = computed(() => {
 
 const variantStyle = computed(() => {
   switch (props.variant) {
-    case "withIcon":
-      return "flex items-center gap-1 hover:underline active:underline";
-      break;
     case "withBackground":
       return "text-white bg-photo-background hover:underline active:underline";
       break;
-    case "underlineBig":
-      return "font-medium underline";
-      break;
-    case "underlineSmall":
+    case "underline":
       return "font-medium underline";
   }
 });
@@ -40,7 +34,9 @@ const sizeStyle = computed(() => {
 });
 
 const withIconStyle = computed(() =>
-  props.icon?.hasIcon ? "flex items-center gap-1" : ""
+  props.icon?.hasIcon
+    ? "flex items-center gap-1 hover:underline active:underline"
+    : ""
 );
 
 const disableStyle = computed(() =>
@@ -76,9 +72,7 @@ const emitClick = () => {
 <template>
   <button :class="btnStyle" @click="emitClick">
     {{
-      variant !== "underlineBig" && variant !== "underlineSmall"
-        ? label.toLocaleUpperCase()
-        : capitalize(label)
+      variant !== "underline" ? label.toLocaleUpperCase() : capitalize(label)
     }}
     <AtomsIcon v-if="icon?.hasIcon" :name="icon.iconName" />
   </button>

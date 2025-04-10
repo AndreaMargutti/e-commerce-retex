@@ -13,7 +13,7 @@ type Story = StoryObj<typeof AtomsButton>;
 export const Default: Story = {
   args: {
     type: "tertiary",
-    variant: "underlineBig",
+    variant: "underline",
     size: "medium",
     label: "button",
     isDisabled: false,
