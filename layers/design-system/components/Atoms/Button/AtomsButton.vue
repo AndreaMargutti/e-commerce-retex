@@ -57,15 +57,11 @@ const capitalize = (label: string): string => {
   return label.charAt(0).toLocaleUpperCase() + label.slice(1);
 };
 
-const emit = defineEmits<{ (e: "handleClick"): void }>();
+const emit = defineEmits<{ (e: "click"): void }>();
 
 const emitClick = () => {
-  if (props.isDisabled) {
-    return;
-  } else {
-    emit("handleClick");
-    console.log("Button clicked");
-  }
+  if (props.isDisabled) return;
+  emit("click");
 };
 </script>
 
