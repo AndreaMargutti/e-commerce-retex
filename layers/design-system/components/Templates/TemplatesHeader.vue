@@ -5,7 +5,7 @@ const { cartLength } = useCart();
 
 await init();
 
-const isLogged = ref(false);
+const { isLoggedIn } = useLogin();
 // TODO: Add logic to change background color
 </script>
 
@@ -17,13 +17,18 @@ const isLogged = ref(false);
       <span class="mr-6 lg:hidden">
         <AtomsIcon name="menu" class="hidden" />
       </span>
+      <span class="hidden lg:inline">
+        <AtomsIconWrapper type="button">
+          <AtomsIcon name="search" />
+        </AtomsIconWrapper>
+      </span>
       <span>
-        <AtomsIcon name="account" v-if="!isLogged" />
+        <AtomsIcon name="account" v-if="!isLoggedIn" />
         <AtomsIcon name="logged" v-else />
       </span>
     </div>
 
-    <div class="lg:pr-4 min-xl :pr-10">
+    <div class="pr-4 lg:pr-10 min-xl :pr-10">
       <AtomsLogoDefault />
     </div>
 
@@ -36,8 +41,8 @@ const isLogged = ref(false);
       />
     </div>
 
-    <div class="space-x-6 lg:order-3 lg:relative">
-      <span class="lg:absolute lg:-left-16">
+    <div class="space-x-6 lg:order-3">
+      <span class="lg:hidden">
         <AtomsIcon name="search" />
       </span>
       <span class="max-lg:hidden relative">

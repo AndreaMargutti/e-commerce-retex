@@ -4,11 +4,10 @@ import type { AtomsIconWrapperProps } from "./AtomsIconWrapperProps";
 
 const props = withDefaults(defineProps<AtomsIconWrapperProps>(), {
   type: "link",
-  badgeSize: 99,
+  badgeSize: 10,
 });
 
 const emit = defineEmits(["handleClick"]);
-
 const emitClick = () => {
   emit("handleClick");
 };
@@ -19,7 +18,7 @@ const emitClick = () => {
     <button v-if="type === 'button'" @click="emitClick">
       <slot></slot>
     </button>
-    <NuxtLink to="#">
+    <NuxtLink to="#" v-else>
       <slot></slot>
     </NuxtLink>
     <AtomsBadge

@@ -8,7 +8,7 @@ const label = computed(() => {
 
 const textSize = computed(() => {
   if (props.items < 99) {
-    return "text-sm";
+    return "text-sm h-[20px] w-[20px]";
   } else if (props.items === 99) {
     return "text-tiny";
   } else {
@@ -16,13 +16,25 @@ const textSize = computed(() => {
   }
 });
 
+const color = computed(() => {
+  if (props.color === "grey") {
+    return "bg-grey-base text-black-base";
+  } else {
+    return "bg-black-base text-white";
+  }
+});
+
+const badgeStyle = computed(() => {
+  return [textSize.value, color.value];
+});
+
 // TODO: Add a prop to change the color of the badge
 </script>
 
 <template>
   <div
-    :class="textSize"
-    class="size-4 text-white bg-black-base py-0.5 px-1 rounded-full flex items-center justify-center"
+    :class="badgeStyle"
+    class="h-[14px] w-[14px] py-0.5 px-1 rounded-full flex items-center justify-center"
   >
     <p>{{ label }}</p>
   </div>
