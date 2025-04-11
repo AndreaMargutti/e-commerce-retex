@@ -9,15 +9,17 @@ function hasItems(item: MenuItem): boolean {
 
 const isOpen = ref(false);
 const secondLayerItems = ref<MenuItem[] | null>(null);
+const parentLabel = ref<string | null>(null);
 
 const toggleMenu = () => {
-  console.log("open menu");
+  console.log("toggle menu");
   isOpen.value = !isOpen.value;
 };
 
 const openSecondLayer = (item: MenuItem) => {
   if (hasItems(item)) {
     secondLayerItems.value = item.items;
+    parentLabel.value = item.label;
     isOpen.value = true;
   }
 };
@@ -35,7 +37,9 @@ const openSecondLayer = (item: MenuItem) => {
       </li>
     </ul>
     <div class="absolute top-0 left-0" v-if="isOpen">
-      <div @click="toggleMenu">Torna Indietro</div>
+      <div @click="toggleMenu" class="text-center border-b-gray-20 border-b-1">
+        {{ parentLabel.toLocaleUpperCase() }}
+      </div>
       <ul>
         <li v-for="item in secondLayerItems" :key="item.id">
           <AtomsButton :label="item.label" />
