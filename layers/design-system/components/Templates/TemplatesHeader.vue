@@ -44,12 +44,12 @@ const isLogged = ref(false);
         <AtomsIconWrapper type="link">
           <AtomsIcon name="pin" class="mr-4" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper type="link" badge="wishlist">
+        <AtomsIconWrapper type="link" :badgeSize="wishlistLength">
           <AtomsIcon name="wishlist" />
         </AtomsIconWrapper>
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper type="link" badge="cart">
+        <AtomsIconWrapper type="link">
           <AtomsIcon name="cart" />
         </AtomsIconWrapper>
       </span>

@@ -1,5 +1,5 @@
 export const useHeaderLinks = () => {
-  const { data, execute } = useFetch("/api/headerlinks", {
+  const { data, execute } = useFetch("/api/mock-data/headerlinks", {
     immediate: false,
     cache: "reload",
   });
