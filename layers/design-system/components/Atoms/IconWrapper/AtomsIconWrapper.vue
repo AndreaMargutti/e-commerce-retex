@@ -4,7 +4,6 @@ import type { AtomsIconWrapperProps } from "./AtomsIconWrapperProps";
 
 const props = withDefaults(defineProps<AtomsIconWrapperProps>(), {
   type: "link",
-  badgeSize: 10,
 });
 
 const emit = defineEmits(["handleClick"]);
