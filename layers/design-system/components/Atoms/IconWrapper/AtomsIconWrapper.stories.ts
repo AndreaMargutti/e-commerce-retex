@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AtomsIconWrapper>;
 export const Default: Story = {
   args: {
     type: "button",
+    iconName: "cart",
     badgeSize: 0,
   },
   render: (args) => ({
@@ -20,7 +21,7 @@ export const Default: Story = {
     },
     template: `
     <AtomsIconWrapper v-bind="args">
-      <AtomsIcon name="cart" />
+
     </AtomsIconWrapper>`,
   }),
 };

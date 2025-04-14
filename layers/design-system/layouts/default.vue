@@ -15,5 +15,3 @@ await init();
     <!--TODO: insert footer when done-->
   </div>
 </template>
-
-<style scoped></style>
