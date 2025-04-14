@@ -10,7 +10,7 @@ const { isLoggedIn } = useLogin();
 
 <template>
   <header
-    class="hover:bg-white hover:text-black flex justify-between lg:text-end items-center py-2 px-4 md:px-8 h-[76px]"
+    class="hover:bg-white hover:text-black text-white flex justify-between lg:text-end items-center py-2 px-4 md:px-8 h-[76px]"
   >
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
