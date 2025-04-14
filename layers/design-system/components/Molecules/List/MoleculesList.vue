@@ -18,7 +18,7 @@ const toggleMenu = () => {
 
 const openSecondLayer = (item: MenuItem) => {
   if (hasItems(item)) {
-    secondLayerItems.value = item.items;
+    secondLayerItems.value = item.items !== undefined ? item.items : null;
     parentLabel.value = item.label;
     isOpen.value = true;
   }
@@ -30,6 +30,8 @@ const openSecondLayer = (item: MenuItem) => {
     <ul v-if="!isOpen">
       <li v-for="item in menu" :key="item.id">
         <AtomsButton
+          size="small"
+          type="tertiary"
           :label="item.label"
           :icon="{ hasIcon: hasItems(item), iconName: 'navigation-right' }"
           @click="hasItems(item) ? openSecondLayer(item) : null"
@@ -38,11 +40,15 @@ const openSecondLayer = (item: MenuItem) => {
     </ul>
     <div class="absolute top-0 left-0" v-if="isOpen">
       <div @click="toggleMenu" class="text-center border-b-gray-20 border-b-1">
-        {{ parentLabel.toLocaleUpperCase() }}
+        {{
+          typeof parentLabel === "string"
+            ? parentLabel.toLocaleUpperCase()
+            : parentLabel
+        }}
       </div>
       <ul>
         <li v-for="item in secondLayerItems" :key="item.id">
-          <AtomsButton :label="item.label" />
+          <AtomsButton type="tertiary" size="small" :label="item.label" />
         </li>
       </ul>
     </div>
