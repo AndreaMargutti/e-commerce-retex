@@ -27,8 +27,6 @@ const color = computed(() => {
 const badgeStyle = computed(() => {
   return [textSize.value, color.value];
 });
-
-// TODO: Add a prop to change the color of the badge
 </script>
 
 <template>
