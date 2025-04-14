@@ -5,7 +5,10 @@ defineProps<AtomsTooltipProps>();
 </script>
 
 <template>
-  <div :class="`${direction}-arrow`" class="arrow px-2 py-1 text-center">
+  <div
+    :class="`${direction}-arrow`"
+    class="arrow px-2 py-1 text-center whitespace-nowrap"
+  >
     <span class="text-sm">{{ label }}</span>
   </div>
 </template>
