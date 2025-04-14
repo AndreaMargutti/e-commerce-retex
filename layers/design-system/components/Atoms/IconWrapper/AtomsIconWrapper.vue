@@ -12,16 +12,12 @@ const emitClick = () => {
 </script>
 
 <template>
-  <span
-    class="relative group"
-    @mouseenter="toggleVisibility"
-    @mouseleave="toggleVisibility"
-  >
+  <span class="relative">
     <button v-if="type === 'button'" @click="emitClick">
-      <slot></slot>
+      <AtomsIcon :name="iconName" />
     </button>
     <NuxtLink to="#" v-else>
-      <slot></slot>
+      <AtomsIcon :name="iconName" />
     </NuxtLink>
     <AtomsBadge
       v-show="badgeSize"

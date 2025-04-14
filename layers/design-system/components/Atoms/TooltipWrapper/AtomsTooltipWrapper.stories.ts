@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import AtomsTooltipWrapper from "./AtomsTooltipWrapper.vue";
-import AtomsTooltip from "../Tooltip/AtomsTooltip.vue";
 import { render } from "vue";
+import AtomsIconWrapper from "../IconWrapper/AtomsIconWrapper.vue";
 
 const meta: Meta<typeof AtomsTooltipWrapper> = {
   component: AtomsTooltipWrapper,
@@ -23,12 +23,12 @@ export const Default: Story = {
     direction: "up",
   },
   render: (args) => ({
-    components: { AtomsTooltipWrapper, AtomsTooltip },
+    components: { AtomsTooltipWrapper, AtomsIconWrapper },
     setup() {
       return { args };
     },
-    template: `<TooltipWrapper v-bind="args">
-    <AtomsTooltip :label="args.label" :direction="args.direction" />
-    </TooltipWrapper>`,
+    template: `<AtomsTooltipWrapper v-bind="args">
+    <AtomsIconWrapper type="button" iconName="account" />
+    </AtomsTooltipWrapper>`,
   }),
 };
