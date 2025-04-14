@@ -1,4 +1,4 @@
 export type AtomsTooltipProps = {
-  type: "down" | "up";
+  direction: "down" | "up";
   label: string;
 };

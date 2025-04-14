@@ -11,7 +11,7 @@ type Story = StoryObj<typeof AtomsIconWrapper>;
 export const Default: Story = {
   args: {
     type: "button",
-    badge: "cart",
+    badgeSize: 0,
   },
   render: (args) => ({
     components: { AtomsIconWrapper, AtomsIcon },
