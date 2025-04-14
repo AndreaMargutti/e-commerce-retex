@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type headerlinks from "~/server/api/mock-data/headerlinks.js";
 import type { TemplatesHeaderProps } from "./TemplatesHeaderProps.ts";
 const props = withDefaults(defineProps<TemplatesHeaderProps>(), {
   size: "normal",
@@ -33,6 +34,7 @@ const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
 
 const { isLoggedIn } = useLogin();
+console.log(props.links);
 </script>
 
 <template>
@@ -91,7 +93,7 @@ const { isLoggedIn } = useLogin();
           <AtomsIcon name="pin" />
           <AtomsTooltipWrapper label="Store Locator" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper type="link" :badgeSize="wishlistLength" class="group">
+        <AtomsIconWrapper type="link" :badgeSize="wishListLength" class="group">
           <AtomsIcon name="wishlist" />
           <AtomsTooltipWrapper label="WishList" />
         </AtomsIconWrapper>

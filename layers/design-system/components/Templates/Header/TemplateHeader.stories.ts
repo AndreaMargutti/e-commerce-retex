@@ -40,7 +40,10 @@ export const Default: Story = {
     },
     template: `<TemplatesHeader v-bind="args">
       <AtomsLink
-      
+        v-for="link in headerLinks"
+        :key="link.value"
+        :href="link.href"
+        :class="['header-link', link.value]"
       >
         link 
       </AtomsLink>
