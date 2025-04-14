@@ -29,11 +29,8 @@ const headerClass = computed(() => {
   return [transparentStyle.value, headerSize.value];
 });
 
-const { headerLinks, init } = useHeaderLinks();
 const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
-
-await init();
 
 const { isLoggedIn } = useLogin();
 </script>
@@ -71,10 +68,14 @@ const { isLoggedIn } = useLogin();
 
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
-        v-for="{ value, label, href } in headerLinks"
-        :name="typeof label === 'string' ? label.toLocaleUpperCase() : label"
-        :href="href"
-        :key="value"
+        v-for="link in links"
+        :name="
+          typeof link.label === 'string'
+            ? link.label.toLocaleUpperCase()
+            : link.label
+        "
+        :href="link.href"
+        :key="link.value"
       />
     </div>
 
