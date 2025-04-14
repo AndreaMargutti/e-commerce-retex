@@ -44,23 +44,27 @@ console.log(props.links);
   >
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
-        <AtomsIconWrapper type="button" tooltipLabel="Menu">
-          <AtomsIcon name="menu" class="hidden" />
-          <AtomsTooltipWrapper label="menu" />
-        </AtomsIconWrapper>
+        <AtomsTooltipWrapper label="Menu">
+          <AtomsIconWrapper type="button" iconName="menu" />
+        </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
-        <AtomsIconWrapper type="button" tooltipLabel="Search">
-          <AtomsIcon name="search" />
-          <AtomsTooltipWrapper label="Search" />
-        </AtomsIconWrapper>
+        <AtomsTooltipWrapper label="Search">
+          <AtomsIconWrapper
+            type="button"
+            tooltipLabel="Search"
+            iconName="search"
+          />
+        </AtomsTooltipWrapper>
       </span>
       <span>
-        <AtomsIconWrapper type="link" tooltipLabel="Account">
-          <AtomsIcon name="account" v-if="!isLoggedIn" />
-          <AtomsIcon name="logged" v-else />
-          <AtomsTooltipWrapper label="Account" />
-        </AtomsIconWrapper>
+        <AtomsTooltipWrapper label="Account">
+          <AtomsIconWrapper
+            type="link"
+            :iconName="isLoggedIn ? 'logged' : 'account'"
+          >
+          </AtomsIconWrapper>
+        </AtomsTooltipWrapper>
       </span>
     </div>
 
@@ -83,30 +87,30 @@ console.log(props.links);
 
     <div class="space-x-4 lg:order-3">
       <span class="lg:hidden">
-        <AtomsIconWrapper type="button" tooltipLabel="Search">
-          <AtomsIcon name="search" />
-          <AtomsTooltipWrapper label="Search" />
-        </AtomsIconWrapper>
+        <AtomsTooltipWrapper label="Search">
+          <AtomsIconWrapper type="button" iconName="search" />
+        </AtomsTooltipWrapper>
       </span>
       <span class="space-x-4 max-lg:hidden relative">
-        <AtomsIconWrapper type="link" tooltipLabel="Store Locator">
-          <AtomsIcon name="pin" />
-          <AtomsTooltipWrapper label="Store Locator" />
-        </AtomsIconWrapper>
-        <AtomsIconWrapper type="link" :badgeSize="wishListLength" class="group">
-          <AtomsIcon name="wishlist" />
-          <AtomsTooltipWrapper label="WishList" />
-        </AtomsIconWrapper>
+        <AtomsTooltipWrapper label="Store Locator">
+          <AtomsIconWrapper type="link" iconName="pin" />
+        </AtomsTooltipWrapper>
+        <AtomsTooltipWrapper label="Wishlist">
+          <AtomsIconWrapper
+            type="link"
+            :badgeSize="wishListLength"
+            iconName="wishlist"
+          />
+        </AtomsTooltipWrapper>
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper
-          type="link"
-          :badgeSize="cartLength"
-          tooltipLabel="Cart"
-        >
-          <AtomsIcon name="cart" />
-          <AtomsTooltipWrapper label="Cart" />
-        </AtomsIconWrapper>
+        <AtomsTooltipWrapper label="Cart">
+          <AtomsIconWrapper
+            type="link"
+            :badgeSize="cartLength"
+            iconName="cart"
+          />
+        </AtomsTooltipWrapper>
       </span>
     </div>
   </header>
