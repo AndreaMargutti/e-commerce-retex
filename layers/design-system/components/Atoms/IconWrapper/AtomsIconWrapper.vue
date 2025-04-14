@@ -5,7 +5,6 @@ import type { AtomsIconWrapperProps } from "./AtomsIconWrapperProps";
 const props = withDefaults(defineProps<AtomsIconWrapperProps>(), {
   type: "link",
 });
-
 const emit = defineEmits(["handleClick"]);
 const emitClick = () => {
   emit("handleClick");
@@ -13,7 +12,11 @@ const emitClick = () => {
 </script>
 
 <template>
-  <span class="relative">
+  <span
+    class="relative group"
+    @mouseenter="toggleVisibility"
+    @mouseleave="toggleVisibility"
+  >
     <button v-if="type === 'button'" @click="emitClick">
       <slot></slot>
     </button>

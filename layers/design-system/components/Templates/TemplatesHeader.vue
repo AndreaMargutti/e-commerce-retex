@@ -6,25 +6,31 @@ const { cartLength } = useCart();
 await init();
 
 const { isLoggedIn } = useLogin();
-// TODO: Add logic to change background color
 </script>
 
 <template>
   <header
-    class="bg-white flex justify-between lg:text-end items-center py-2 px-4 md:px-8 h-[76px]"
+    class="hover:bg-white hover:text-black flex justify-between lg:text-end items-center py-2 px-4 md:px-8 h-[76px]"
   >
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
-        <AtomsIcon name="menu" class="hidden" />
+        <AtomsIconWrapper type="button" tooltipLabel="Menu">
+          <AtomsIcon name="menu" class="hidden" />
+          <AtomsTooltipWrapper label="menu" />
+        </AtomsIconWrapper>
       </span>
       <span class="hidden lg:inline">
-        <AtomsIconWrapper type="button">
+        <AtomsIconWrapper type="button" tooltipLabel="Search">
           <AtomsIcon name="search" />
+          <AtomsTooltipWrapper label="Search" />
         </AtomsIconWrapper>
       </span>
       <span>
-        <AtomsIcon name="account" v-if="!isLoggedIn" />
-        <AtomsIcon name="logged" v-else />
+        <AtomsIconWrapper type="link" tooltipLabel="Account">
+          <AtomsIcon name="account" v-if="!isLoggedIn" />
+          <AtomsIcon name="logged" v-else />
+          <AtomsTooltipWrapper label="Account" />
+        </AtomsIconWrapper>
       </span>
     </div>
 
@@ -41,21 +47,31 @@ const { isLoggedIn } = useLogin();
       />
     </div>
 
-    <div class="space-x-6 lg:order-3">
+    <div class="space-x-4 lg:order-3">
       <span class="lg:hidden">
-        <AtomsIcon name="search" />
-      </span>
-      <span class="max-lg:hidden relative">
-        <AtomsIconWrapper type="link">
-          <AtomsIcon name="pin" class="mr-4" />
+        <AtomsIconWrapper type="button" tooltipLabel="Search">
+          <AtomsIcon name="search" />
+          <AtomsTooltipWrapper label="Search" />
         </AtomsIconWrapper>
-        <AtomsIconWrapper type="link" :badgeSize="wishlistLength">
+      </span>
+      <span class="space-x-4 max-lg:hidden relative">
+        <AtomsIconWrapper type="link" tooltipLabel="Store Locator">
+          <AtomsIcon name="pin" />
+          <AtomsTooltipWrapper label="Store Locator" />
+        </AtomsIconWrapper>
+        <AtomsIconWrapper type="link" :badgeSize="wishlistLength" class="group">
           <AtomsIcon name="wishlist" />
+          <AtomsTooltipWrapper label="WishList" />
         </AtomsIconWrapper>
       </span>
       <span class="text-center relative">
-        <AtomsIconWrapper type="link">
+        <AtomsIconWrapper
+          type="link"
+          :badgeSize="cartLength"
+          tooltipLabel="Cart"
+        >
           <AtomsIcon name="cart" />
+          <AtomsTooltipWrapper label="Cart" />
         </AtomsIconWrapper>
       </span>
     </div>
