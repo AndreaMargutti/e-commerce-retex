@@ -1,7 +1,7 @@
 import AtomsLink from "../../Atoms/Link/AtomsLink.vue";
 import TemplatesHeader from "./TemplatesHeader.vue";
-import type { Meta, StoryFn, StoryObj } from "@storybook/vue3";
-import { http, HttpResponse, delay } from "msw";
+import type { Meta, StoryObj } from "@storybook/vue3";
+import { http, HttpResponse } from "msw";
 
 const meta: Meta<typeof TemplatesHeader> = {
   title: "Design System /Templates / Header",

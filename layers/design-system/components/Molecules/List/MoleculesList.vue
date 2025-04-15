@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const { data } = useFetch("/api/menu");
-const menu = data.value?.items;
+const { data } = await useFetch<Menu>("/api/mock-data/menu");
+const menu: MenuItem[] = data.value?.items || [];
 console.log(menu);
 
 function hasItems(item: MenuItem): boolean {
@@ -12,22 +12,19 @@ const secondLayerItems = ref<MenuItem[] | null>(null);
 const parentLabel = ref<string | null>(null);
 
 const toggleMenu = () => {
-  console.log("toggle menu");
   isOpen.value = !isOpen.value;
 };
 
 const openSecondLayer = (item: MenuItem) => {
-  if (hasItems(item)) {
-    secondLayerItems.value = item.items !== undefined ? item.items : null;
-    parentLabel.value = item.label;
-    isOpen.value = true;
-  }
+  secondLayerItems.value = item.items || null;
+  parentLabel.value = item.label;
+  isOpen.value = true;
 };
 </script>
 
 <template>
   <div class="relative">
-    <ul v-if="!isOpen">
+    <ul v-if="!isOpen" class="border-t-1">
       <li v-for="item in menu" :key="item.id">
         <AtomsButton
           size="small"
@@ -39,14 +36,14 @@ const openSecondLayer = (item: MenuItem) => {
       </li>
     </ul>
     <div class="absolute top-0 left-0" v-if="isOpen">
-      <div @click="toggleMenu" class="text-center border-b-gray-20 border-b-1">
-        {{
-          typeof parentLabel === "string"
-            ? parentLabel.toLocaleUpperCase()
-            : parentLabel
-        }}
+      <div
+        @click="toggleMenu"
+        class="text-center border-b-gray-20 border-b-1 uppercase"
+      >
+        {{ parentLabel }}
       </div>
       <ul>
+        <li>Vedi tutti {{ parentLabel }}</li>
         <li v-for="item in secondLayerItems" :key="item.id">
           <AtomsButton type="tertiary" size="small" :label="item.label" />
         </li>
