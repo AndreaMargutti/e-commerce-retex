@@ -1,17 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import MolecluesAccordionButton from "./MoleculesAccordionButton.vue";
-import type MoleculesAccordionButton from "./MoleculesAccordionButton.vue";
+import MoleculesAccordionButton from "./MoleculesAccordionButton.vue";
 
 const meta: Meta<typeof MoleculesAccordionButton> = {
   title: "Design System / Molecules / Accordion / MoleculesAccordionButton",
-  component: MolecluesAccordionButton,
+  component: MoleculesAccordionButton,
 };
 export default meta;
 
-type Story = StoryObj<typeof MolecluesAccordionButton>;
-const Default: Story = {
+type Story = StoryObj<typeof MoleculesAccordionButton>;
+export const Default: Story = {
+  args: {
+    label: "label button",
+  },
+
   render: (args) => ({
-    components: { MolecluesAccordionButton },
+    components: { MoleculesAccordionButton },
     setup() {
       return { args };
     },

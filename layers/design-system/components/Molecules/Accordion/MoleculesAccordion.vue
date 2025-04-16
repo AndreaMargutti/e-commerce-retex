@@ -8,6 +8,5 @@ const toggleContent = () => {
 <template>
   <MoleculesAccordionButton label="ciao" @openAccordion="toggleContent" />
   <MoleculesAccordionContent v-show="isContentShown">
-    ciao
   </MoleculesAccordionContent>
 </template>
