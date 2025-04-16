@@ -49,7 +49,7 @@ console.log(props.links);
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
-        <AtomsTooltipWrapper label="Search" direction="down">
+        <AtomsTooltipWrapper label="Search" direction="up">
           <AtomsIconWrapper
             type="button"
             tooltipLabel="Search"
