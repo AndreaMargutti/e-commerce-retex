@@ -17,7 +17,7 @@ const openAccordion = () => {
     class="bg-gray-25 flex items-center justify-between w-full p-4"
     @click="openAccordion"
   >
-    <p class="text-md">{{ label }}</p>
+    <p class="text-md">{{ buttonLabel }}</p>
     <AtomsIcon :name="'navigation-chevron-down'" v-if="!isAccordionOpen" />
     <AtomsIcon :name="'navigation-chevron-up'" v-else />
   </button>

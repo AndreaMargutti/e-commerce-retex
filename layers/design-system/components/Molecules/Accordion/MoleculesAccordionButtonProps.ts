@@ -1,3 +1,3 @@
 export type MoleculesAccordionButtonProps = {
-  label: string;
+  buttonLabel: string;
 };

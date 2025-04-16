@@ -14,29 +14,12 @@ export default defineEventHandler((event): Menu => {
           {
             id: 31,
             label: "Capispalla",
-            to: "/donna/capispalla",
+            to: "/uomo/capispalla",
           },
           {
             id: 32,
             label: "Abbigliamento",
-            to: "/donna/abbigliamento",
-            items: [
-              {
-                id: 321,
-                label: "T-shirt",
-                to: "/donna/abbigliamento/t-shirt",
-              },
-              {
-                id: 322,
-                label: "Pantaloni",
-                to: "/donna/abbigliamento/pantaloni",
-              },
-              {
-                id: 323,
-                label: "Gonne",
-                to: "/donna/abbigliamento/gonne",
-              },
-            ],
+            to: "/uomo/abbigliamento",
           },
         ],
       },
@@ -69,6 +52,18 @@ export default defineEventHandler((event): Menu => {
                 id: 323,
                 label: "Gonne",
                 to: "/donna/abbigliamento/gonne",
+              },
+            ],
+          },
+          {
+            id: 33,
+            label: "Accessori",
+            to: "/donna/accessori",
+            items: [
+              {
+                id: 331,
+                label: "Borse",
+                to: "/donna/accessori/borse",
               },
             ],
           },

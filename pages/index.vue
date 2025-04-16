@@ -1,3 +1,1 @@
-<template>
-  <MoleculesAccordion />
-</template>
+<template></template>

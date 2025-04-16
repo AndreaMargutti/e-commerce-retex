@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import type { MoleculesAccordionProps } from "./MoleculesAccordionProps";
+
+defineProps<MoleculesAccordionProps>();
+
 const isContentShown = ref(false);
 const toggleContent = () => {
   isContentShown.value = !isContentShown.value;
@@ -6,7 +10,10 @@ const toggleContent = () => {
 </script>
 
 <template>
-  <MoleculesAccordionButton label="ciao" @openAccordion="toggleContent" />
+  <MoleculesAccordionButton
+    @openAccordion="toggleContent"
+    :buttonLabel="accordionLabel"
+  />
   <MoleculesAccordionContent v-show="isContentShown">
   </MoleculesAccordionContent>
 </template>

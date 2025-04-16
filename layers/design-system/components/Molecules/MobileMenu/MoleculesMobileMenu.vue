@@ -21,6 +21,14 @@ const openSecondLayer = (item: MenuItem) => {
   parentLabel.value = item.label;
   isSecondLayerOpen.value = true;
 };
+
+const hasAccordion = (item: MenuItem): boolean => {
+  if (!item.hasOwnProperty("items")) {
+    return false;
+  } else {
+    return true;
+  }
+};
 </script>
 
 <template>
@@ -59,8 +67,19 @@ const openSecondLayer = (item: MenuItem) => {
             class="border-b-1 border-gray-20"
           />
         </li>
-        <li v-for="item in secondLayerItems" :key="item.id" class="py-2">
-          <AtomsButton type="tertiary" size="large" :label="item.label" />
+        <li v-for="item in secondLayerItems" :key="item.id">
+          <AtomsButton
+            type="tertiary"
+            size="large"
+            :label="item.label"
+            v-if="!hasAccordion(item)"
+            class="py-2"
+          />
+          <MoleculesAccordion
+            :itemsReceived="item"
+            :accordionLabel="item.label"
+            v-else
+          />
         </li>
       </ul>
     </div>
