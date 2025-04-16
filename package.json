@@ -14,8 +14,12 @@
     "format": "prettier --write \"{components,pages,plugins,middleware,layouts,composables,assets}/**/*.{js,jsx,ts,tsx,vue,html,css,scss,json,md}\""
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.11.1",
+    "@nuxt/icon": "^1.11.0",
     "@nuxtjs/i18n": "9.4.0",
     "@tailwindcss/vite": "^4.0.14",
+    "msw": "^2.7.4",
+    "msw-storybook-addon": "^2.0.4",
     "nuxt": "^3.16.1",
     "tailwindcss": "^4.0.14",
     "vue": "^3.5.13",
@@ -41,5 +45,10 @@
   },
   "patchedDependencies": {
     "@storybook-vue/nuxt@8.3.3": "patches/@storybook-vue%2Fnuxt@8.3.3.patch"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
