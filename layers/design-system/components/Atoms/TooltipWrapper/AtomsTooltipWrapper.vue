@@ -16,3 +16,11 @@ withDefaults(defineProps<AtomsTooltipWrapperProps>(), {
     </div>
   </span>
 </template>
+
+<style scoped>
+@media (hover: none) {
+  .group:hover .group-hover\:block {
+    display: hidden;
+  }
+}
+</style>

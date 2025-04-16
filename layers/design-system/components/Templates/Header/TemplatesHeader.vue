@@ -32,8 +32,8 @@ const headerClass = computed(() => {
 
 const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
-
 const { isLoggedIn } = useLogin();
+
 const isMenuMobileOpen = ref(false);
 const toggleMenuMobile = () => {
   isMenuMobileOpen.value = !isMenuMobileOpen.value;
