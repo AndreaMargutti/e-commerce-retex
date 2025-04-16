@@ -50,7 +50,10 @@ const hasAccordion = (item: MenuItem): boolean => {
         />
       </li>
     </ul>
-    <div class="flex flex-col gap-2 px-4 py-2 min-h-[186px]">
+    <div
+      class="flex flex-col gap-2 px-4 py-2 min-h-[186px]"
+      v-if="!isSecondLayerOpen"
+    >
       <AtomsLink
         name="Store Locator"
         href="/store-locator"
@@ -64,6 +67,7 @@ const hasAccordion = (item: MenuItem): boolean => {
         linkIcon="wishlist"
       />
     </div>
+    <MoleculesMobileMenuDeliveryBanner v-show="!isSecondLayerOpen" />
     <div v-if="isSecondLayerOpen">
       <div
         class="flex items-center px-4 py-2 max-h-[48px] border-y-1 border-gray-20"
