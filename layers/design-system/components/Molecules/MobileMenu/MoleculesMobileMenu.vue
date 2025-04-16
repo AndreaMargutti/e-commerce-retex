@@ -51,7 +51,9 @@ const hasAccordion = (item: MenuItem): boolean => {
       </li>
     </ul>
     <div v-if="isSecondLayerOpen">
-      <div class="flex items-center px-4 py-2 max-h-[48px]">
+      <div
+        class="flex items-center px-4 py-2 max-h-[48px] border-y-1 border-gray-20"
+      >
         <AtomsIcon :name="'navigation-chevron-right'" class="justify-start" />
         <AtomsButton
           size="large"
@@ -67,7 +69,6 @@ const hasAccordion = (item: MenuItem): boolean => {
             :label="`Vedi tutti ${parentLabel}`"
             type="tertiary"
             size="large"
-            class="border-b-1 border-gray-20"
           />
         </li>
         <li v-for="item in secondLayerItems" :key="item.id">
