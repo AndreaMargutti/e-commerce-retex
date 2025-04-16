@@ -34,7 +34,10 @@ const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
 
 const { isLoggedIn } = useLogin();
-console.log(props.links);
+const isMenuMobileOpen = ref(false);
+const toggleMenuMobile = () => {
+  isMenuMobileOpen.value = !isMenuMobileOpen.value;
+};
 </script>
 
 <template>
@@ -45,7 +48,11 @@ console.log(props.links);
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
         <AtomsTooltipWrapper label="Menu">
-          <AtomsIconWrapper type="button" iconName="menu" />
+          <AtomsIconWrapper
+            type="button"
+            iconName="menu"
+            @handleClick="toggleMenuMobile"
+          />
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
@@ -114,4 +121,5 @@ console.log(props.links);
       </span>
     </div>
   </header>
+  <MoleculesMobileMenu :statusMenu="isMenuMobileOpen" />
 </template>

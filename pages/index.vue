@@ -1,3 +1,1 @@
-<template>
-  <MoleculesList />
-</template>
+<template></template>

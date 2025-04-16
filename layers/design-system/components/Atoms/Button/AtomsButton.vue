@@ -34,9 +34,7 @@ const sizeStyle = computed(() => {
 });
 
 const withIconStyle = computed(() =>
-  props.icon?.hasIcon
-    ? "flex items-center gap-1 hover:underline active:underline"
-    : ""
+  props.icon?.hasIcon ? "hover:underline active:underline" : ""
 );
 
 const disableStyle = computed(() =>
@@ -66,10 +64,10 @@ const emitClick = () => {
 </script>
 
 <template>
-  <button :class="btnStyle" @click="emitClick">
-    {{
-      variant !== "underline" ? label.toLocaleUpperCase() : capitalize(label)
-    }}
+  <div class="flex items-center justify-between px-4 py-2" @click="emitClick">
+    <button :class="btnStyle">
+      {{ capitalize(label) }}
+    </button>
     <AtomsIcon v-if="icon?.hasIcon" :name="icon?.iconName" />
-  </button>
+  </div>
 </template>

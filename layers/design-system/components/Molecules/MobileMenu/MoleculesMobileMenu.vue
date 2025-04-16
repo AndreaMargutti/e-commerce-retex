@@ -1,12 +1,15 @@
 <script lang="ts" setup>
+import type { MolecularMobileMenuProps } from "./MoleculesMobileMenuProps";
+defineProps<MolecularMobileMenuProps>();
+
 const { data } = await useFetch<Menu>("/api/mock-data/menu");
 const menu: MenuItem[] = data.value?.items || [];
+//TODO: remove later on
 console.log(menu);
 
 function hasItems(item: MenuItem): boolean {
   return item.items !== undefined && item.items.length > 0;
 }
-
 const isOpen = ref(false);
 const secondLayerItems = ref<MenuItem[] | null>(null);
 const parentLabel = ref<string | null>(null);
@@ -24,10 +27,10 @@ const openSecondLayer = (item: MenuItem) => {
 
 <template>
   <div class="relative">
-    <ul v-if="!isOpen" class="border-t-1">
+    <ul v-if="statusMenu && !isOpen">
       <li v-for="item in menu" :key="item.id">
         <AtomsButton
-          size="small"
+          size="large"
           type="tertiary"
           :label="item.label"
           :icon="{ hasIcon: hasItems(item), iconName: 'navigation-right' }"
