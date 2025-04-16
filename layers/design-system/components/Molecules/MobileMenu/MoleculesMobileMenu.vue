@@ -38,9 +38,9 @@ const hasAccordion = (item: MenuItem): boolean => {
   >
     <ul
       v-if="statusMenu && !isSecondLayerOpen"
-      class="border-t-1 border-gray-20"
+      class="border-y-1 border-gray-20"
     >
-      <li v-for="item in menu" :key="item.id">
+      <li v-for="item in menu" :key="item.id" class="last:pb-[3rem]">
         <AtomsButton
           size="large"
           type="tertiary"
@@ -50,6 +50,20 @@ const hasAccordion = (item: MenuItem): boolean => {
         />
       </li>
     </ul>
+    <div class="flex flex-col gap-2 px-4 py-2 min-h-[186px]">
+      <AtomsLink
+        name="Store Locator"
+        href="/store-locator"
+        variant="accordion"
+        linkIcon="pin"
+      />
+      <AtomsLink
+        name="Wishlist"
+        href="/wishlist"
+        variant="accordion"
+        linkIcon="wishlist"
+      />
+    </div>
     <div v-if="isSecondLayerOpen">
       <div
         class="flex items-center px-4 py-2 max-h-[48px] border-y-1 border-gray-20"

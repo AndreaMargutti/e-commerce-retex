@@ -96,6 +96,7 @@ const toggleMenuMobile = () => {
         "
         :href="link.href"
         :key="link.value"
+        variant="header"
       />
     </div>
 
