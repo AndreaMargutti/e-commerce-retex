@@ -32,7 +32,10 @@ const hasAccordion = (item: MenuItem): boolean => {
 </script>
 
 <template>
-  <div>
+  <div
+    class="fixed w-full overflow-y-auto bg-white"
+    :class="statusMenu ? 'top-[76px] h-[calc(100vh-76px)]' : 'top-[-100%]'"
+  >
     <ul
       v-if="statusMenu && !isSecondLayerOpen"
       class="border-t-1 border-gray-20"
