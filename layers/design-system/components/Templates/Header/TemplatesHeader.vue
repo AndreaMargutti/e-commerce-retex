@@ -43,7 +43,7 @@ const toggleMenuMobile = () => {
 <template>
   <header
     :class="headerClass"
-    class="flex justify-between lg:text-end items-center px-4 md:px-8"
+    class="flex justify-between lg:text-end items-center px-4 md:px-8 sticky top-0 z-50"
   >
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">

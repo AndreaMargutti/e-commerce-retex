@@ -32,7 +32,7 @@ const hasAccordion = (item: MenuItem): boolean => {
 </script>
 
 <template>
-  <div class="relative">
+  <div>
     <ul
       v-if="statusMenu && !isSecondLayerOpen"
       class="border-t-1 border-gray-20"
@@ -47,7 +47,7 @@ const hasAccordion = (item: MenuItem): boolean => {
         />
       </li>
     </ul>
-    <div class="absolute top-0 left-0 right-0" v-if="isSecondLayerOpen">
+    <div v-if="isSecondLayerOpen">
       <div class="flex items-center px-4 py-2 max-h-[48px]">
         <AtomsIcon :name="'navigation-chevron-right'" class="justify-start" />
         <AtomsButton
