@@ -76,10 +76,19 @@ const hasAccordion = (item: MenuItem): boolean => {
             class="py-2"
           />
           <MoleculesAccordion
-            :itemsReceived="item"
+            :itemsReceived="item.items || []"
             :accordionLabel="item.label"
             v-else
-          />
+          >
+            <MoleculesAccordionContent>
+              <AtomsButton
+                type="tertiary"
+                size="large"
+                :label="accordionItem.label"
+                v-for="accordionItem in item.items"
+              />
+            </MoleculesAccordionContent>
+          </MoleculesAccordion>
         </li>
       </ul>
     </div>

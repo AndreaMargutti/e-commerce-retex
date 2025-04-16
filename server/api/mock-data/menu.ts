@@ -40,18 +40,43 @@ export default defineEventHandler((event): Menu => {
             items: [
               {
                 id: 321,
-                label: "T-shirt",
-                to: "/donna/abbigliamento/t-shirt",
+                label: "Parka",
+                to: "/donna/abbigliamento/parka",
               },
               {
                 id: 322,
-                label: "Pantaloni",
-                to: "/donna/abbigliamento/pantaloni",
+                label: "Cappotti",
+                to: "/donna/abbigliamento/cappotti",
               },
               {
                 id: 323,
-                label: "Gonne",
-                to: "/donna/abbigliamento/gonne",
+                label: "Giacche",
+                to: "/donna/abbigliamento/giacche",
+              },
+              {
+                id: 324,
+                label: "Piumini leggeri",
+                to: "/donna/abbigliamento/piumini-leggeri",
+              },
+              {
+                id: 325,
+                label: "Piumini",
+                to: "/donna/abbigliamento/piumini",
+              },
+              {
+                id: 326,
+                label: "Bomber",
+                to: "/donna/abbigliamento/bomber",
+              },
+              {
+                id: 327,
+                label: "Gilet",
+                to: "/donna/abbigliamento/gilet",
+              },
+              {
+                id: 328,
+                label: "Impermeabili",
+                to: "/donna/abbigliamento/impermeabili",
               },
             ],
           },

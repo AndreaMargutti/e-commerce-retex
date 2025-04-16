@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { MoleculesAccordionProps } from "./MoleculesAccordionProps";
 
-defineProps<MoleculesAccordionProps>();
+defineProps<MoleculesAccordionProps<MenuItem>>();
 
 const isContentShown = ref(false);
 const toggleContent = () => {
@@ -14,6 +14,9 @@ const toggleContent = () => {
     @openAccordion="toggleContent"
     :buttonLabel="accordionLabel"
   />
-  <MoleculesAccordionContent v-show="isContentShown">
+  <MoleculesAccordionContent v-if="isContentShown">
+    <div class="py-2">
+      <slot></slot>
+    </div>
   </MoleculesAccordionContent>
 </template>
