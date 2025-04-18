@@ -129,5 +129,6 @@ const toggleMenuMobile = () => {
       </span>
     </div>
   </header>
-  <MoleculesMobileMenu :statusMenu="isMenuMobileOpen" />
+  <MoleculesMobileMenu :statusMenu="isMenuMobileOpen" class="lg:hidden" />
+  <MoleculesMenu class="hidden lg:block" />
 </template>
