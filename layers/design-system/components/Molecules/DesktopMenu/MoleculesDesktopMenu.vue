@@ -4,14 +4,14 @@ defineProps<MoleculesDesktopMenuProps>();
 </script>
 
 <template>
-  <div>
-    <ul>
-      <li v-for="(item, index) in items" :key="index">
-        <AtomsLink :name="item.label" :href="item.to" variant="header">
-          <MoleculesList :items="item.items || []" />
-          <p>VEDI TUTTI</p>
-        </AtomsLink>
-      </li>
-    </ul>
-  </div>
+  <ul class="flex flex-wrap absolute inset-y-full -left-0 right-0">
+    <li v-for="(item, index) in items" :key="index" class="basis-1/6">
+      <AtomsLink
+        :name="item.label.toLocaleUpperCase()"
+        :href="item.to"
+        variant="desktopMenu"
+      />
+      <MoleculesList :items="item.items || []" />
+    </li>
+  </ul>
 </template>

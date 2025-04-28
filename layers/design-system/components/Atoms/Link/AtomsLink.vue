@@ -8,6 +8,8 @@ const variantStyle = computed(() => {
     return "text-xs xl:text-sm hover:underline underline-offset-5";
   } else if (props.variant === "accordion") {
     return "text-base font-normal";
+  } else if (props.variant === "desktopMenu") {
+    return "text-xs xl:text-sm font-medium";
   }
 });
 </script>
@@ -22,6 +24,5 @@ const variantStyle = computed(() => {
           : name
       }}
     </NuxtLink>
-    <slot />
   </div>
 </template>

@@ -187,6 +187,28 @@ export default defineEventHandler((event): Menu => {
               },
             ],
           },
+          {
+            id: 34,
+            label: "Scarpe",
+            to: "/donna/scarpe",
+            items: [
+              {
+                id: 341,
+                label: "Stivali",
+                to: "/donna/scarpe/stivali",
+              },
+              {
+                id: 342,
+                label: "Stivaletti",
+                to: "/donna/scarpe/stivaletti",
+              },
+              {
+                id: 343,
+                label: "Sneakers",
+                to: "/donna/scarpe/sneakers",
+              },
+            ],
+          },
         ],
       },
     ],

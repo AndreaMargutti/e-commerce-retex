@@ -5,8 +5,8 @@ defineProps<MoleculesListProps<MenuItem>>();
 </script>
 
 <template>
-  <ul>
-    <li v-for="singleItem in items">
+  <ul class="absolute inset-y-10">
+    <li v-for="singleItem in items" class="py-2">
       <AtomsLink
         :name="singleItem.label"
         :href="singleItem.to"
