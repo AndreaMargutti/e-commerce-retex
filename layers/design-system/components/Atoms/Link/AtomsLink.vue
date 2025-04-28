@@ -22,5 +22,6 @@ const variantStyle = computed(() => {
           : name
       }}
     </NuxtLink>
+    <slot />
   </div>
 </template>

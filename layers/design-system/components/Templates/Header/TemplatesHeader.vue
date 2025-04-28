@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type headerlinks from "~/server/api/mock-data/headerlinks.js";
 import type { TemplatesHeaderProps } from "./TemplatesHeaderProps.ts";
 const props = withDefaults(defineProps<TemplatesHeaderProps>(), {
   size: "normal",
@@ -89,15 +88,16 @@ const toggleMenuMobile = () => {
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
         v-for="link in links"
-        :name="
-          typeof link.label === 'string'
-            ? link.label.toLocaleUpperCase()
-            : link.label
-        "
-        :href="link.href"
-        :key="link.value"
+        :key="link.id"
+        :name="link.label"
         variant="header"
-      />
+        class="group"
+      >
+        <MoleculesDesktopMenu
+          :items="link.items || []"
+          class="hidden group-hover:block"
+        />
+      </AtomsLink>
     </div>
 
     <div class="space-x-4 lg:order-3">
@@ -130,5 +130,4 @@ const toggleMenuMobile = () => {
     </div>
   </header>
   <MoleculesMobileMenu :statusMenu="isMenuMobileOpen" class="lg:hidden" />
-  <MoleculesMenu class="hidden lg:block" />
 </template>

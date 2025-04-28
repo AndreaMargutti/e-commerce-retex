@@ -1,16 +1,12 @@
 <script setup lang="ts">
-const { headerLinks, init } = useHeaderLinks();
+const { menuItems, init } = useHeaderLinks();
 
 await init();
 </script>
 
 <template>
   <div>
-    <TemplatesHeader
-      :isTransparent="false"
-      size="normal"
-      :links="headerLinks"
-    />
+    <TemplatesHeader :isTransparent="false" size="normal" :links="menuItems" />
     <slot />
     <!--TODO: insert footer when done-->
   </div>
