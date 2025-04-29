@@ -4,26 +4,12 @@ import MoleculesFooterList from "./MoleculesFooterList.vue";
 const meta: Meta<typeof MoleculesFooterList> = {
   title: "Design System / Molecules / Footer List",
   component: MoleculesFooterList,
-  argTypes: {
-    title: {
-      control: {
-        type: "select",
-      },
-      options: ["Social Media", "Payments Methods"],
-    },
-    type: {
-      options: ["social", "payments"],
-      control: {
-        type: "radio",
-      },
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const PaymentsList: Story = {
   render: (args) => ({
     components: { MoleculesFooterList },
     setup() {
@@ -66,5 +52,51 @@ export const Default: Story = {
     ],
     title: "Payments Methods:",
     type: "payments",
+  },
+};
+
+export const SocialList: Story = {
+  render: (args) => ({
+    components: { MoleculesFooterList },
+    setup() {
+      return { args };
+    },
+    template: '<MoleculesFooterList v-bind="args" />',
+  }),
+  args: {
+    icons: [
+      {
+        id: 1,
+        label: "Instagram",
+        href: "https://www.instagram.com/",
+        icon: "instagram",
+      },
+      {
+        id: 2,
+        label: "Facebook",
+        href: "https://www.facebook.com/",
+        icon: "facebook",
+      },
+      {
+        id: 3,
+        label: "Youtube",
+        href: "https://www.youtube.com/",
+        icon: "youtube",
+      },
+      {
+        id: 4,
+        label: "Pinterest",
+        href: "https://www.pinterest.com/",
+        icon: "pinterest",
+      },
+      {
+        id: 6,
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/",
+        icon: "linkedin",
+      },
+    ],
+    title: "Follow Us:",
+    type: "social",
   },
 };
