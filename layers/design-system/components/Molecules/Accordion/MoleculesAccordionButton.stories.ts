@@ -10,7 +10,7 @@ export default meta;
 type Story = StoryObj<typeof MoleculesAccordionButton>;
 export const Default: Story = {
   args: {
-    label: "label button",
+    buttonLabel: "label button",
   },
 
   render: (args) => ({
