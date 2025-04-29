@@ -13,5 +13,8 @@ defineProps<MoleculesListProps<MenuItem>>();
         variant="header"
       />
     </li>
+    <li class="py-2">
+      <AtomsLink name="VEDI TUTTI" href="#" variant="desktopMenu" />
+    </li>
   </ul>
 </template>

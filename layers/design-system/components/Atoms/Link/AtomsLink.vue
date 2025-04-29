@@ -9,7 +9,7 @@ const variantStyle = computed(() => {
   } else if (props.variant === "accordion") {
     return "text-base font-normal";
   } else if (props.variant === "desktopMenu") {
-    return "text-xs xl:text-sm font-medium";
+    return "text-xs xl:text-sm font-medium h-[3rem] flex items-center";
   }
 });
 </script>
