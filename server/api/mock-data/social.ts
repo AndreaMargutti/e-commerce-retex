@@ -1,17 +1,6 @@
-interface SocialItem {
-  id: number;
-  label: string;
-  href: string;
-  icon: string;
-}
-
-interface Social {
-  socials: SocialItem[];
-}
-
-export default defineEventHandler((event): Social => {
+export default defineEventHandler((event): FooterIcons => {
   return {
-    socials: [
+    icons: [
       {
         id: 1,
         label: "Instagram",
