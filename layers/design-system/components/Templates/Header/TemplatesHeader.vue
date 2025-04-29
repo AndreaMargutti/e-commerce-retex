@@ -37,6 +37,24 @@ const isMenuMobileOpen = ref(false);
 const toggleMenuMobile = () => {
   isMenuMobileOpen.value = !isMenuMobileOpen.value;
 };
+
+const desktopMenuStatus = ref(false);
+const hideMenu = ref();
+const toggleDesktopMenu = () => {
+  desktopMenuStatus.value = !desktopMenuStatus.value;
+};
+
+const startHideMenu = () => {
+  hideMenu.value = setTimeout(() => {
+    desktopMenuStatus.value = false;
+  }, 1000);
+};
+
+const clearHideTimeout = () => {
+  if (hideMenu.value) {
+    clearTimeout(hideMenu.value);
+  }
+};
 </script>
 
 <template>
@@ -86,11 +104,19 @@ const toggleMenuMobile = () => {
     </div>
 
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
-      <div v-for="link in links" :key="link.id" class="group">
-        <AtomsLink :key="link.id" :name="link.label" variant="header" />
+      <div v-for="link in links" :key="link.id">
+        <AtomsLink
+          :key="link.id"
+          :name="link.label"
+          variant="header"
+          @mouseenter="toggleDesktopMenu"
+          @mouseleave="startHideMenu"
+        />
         <MoleculesDesktopMenu
           :items="link.items"
-          class="hidden group-hover:flex"
+          v-show="desktopMenuStatus"
+          @mouseenter="clearHideTimeout"
+          @mouseleave="startHideMenu"
         />
       </div>
     </div>
