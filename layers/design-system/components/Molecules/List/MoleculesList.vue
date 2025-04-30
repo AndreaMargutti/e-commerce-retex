@@ -14,7 +14,7 @@ defineProps<MoleculesListProps<MenuItem>>();
       />
     </li>
     <li class="py-2">
-      <AtomsLink name="VEDI TUTTI" href="#" variant="desktopMenu" />
+      <AtomsLink :name="$t('vedi tutti')" href="#" variant="desktopMenu" />
     </li>
   </ul>
 </template>

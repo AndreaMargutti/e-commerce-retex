@@ -11,5 +11,10 @@ export default defineNuxtConfig({
   },
   i18n: {
     vueI18n: "./i18n.config.ts",
+    defaultLocale: "it",
+    locales: [
+      { code: "it", name: "italiano", file: "it.json" },
+      { code: "en", name: "english", file: "en.json" },
+    ],
   },
 });
