@@ -6,11 +6,19 @@ import AtomsButton from "./AtomsButton.vue";
 const meta: Meta<typeof AtomsButton> = {
   component: AtomsButton,
   title: "Design System / Atoms / AtomsButton",
+  argTypes: {
+    type: {
+      control: {
+        type: "select",
+        options: ["primary", "secondary", "tertiary"],
+      },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof AtomsButton>;
-export const Default: Story = {
+export const Tertiary: Story = {
   args: {
     type: "tertiary",
     variant: "underline",
