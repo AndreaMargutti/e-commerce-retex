@@ -8,9 +8,15 @@ const meta: Meta<typeof AtomsButton> = {
   title: "Design System / Atoms / AtomsButton",
   argTypes: {
     type: {
+      options: ["primary", "secondary", "tertiary"],
       control: {
         type: "select",
-        options: ["primary", "secondary", "tertiary"],
+      },
+    },
+    textSize: {
+      options: ["small", "medium", "large"],
+      control: {
+        type: "select",
       },
     },
   },
