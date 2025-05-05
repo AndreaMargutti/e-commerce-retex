@@ -1,4 +1,1 @@
-export default defineI18nConfig(() => ({
-  legacy: false,
-  locale: "it",
-}));
+export default defineI18nConfig(() => ({}));
