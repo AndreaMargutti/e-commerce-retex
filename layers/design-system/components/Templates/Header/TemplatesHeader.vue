@@ -91,7 +91,12 @@ const toggleMenuMobile = () => {
         :key="link.id"
         class="group relative after:content-[''] after:p-0 after:absolute after:-z-10 after:-inset-[5px] after:pb-15"
       >
-        <AtomsLink :key="link.id" :name="link.label" variant="header" />
+        <AtomsLink
+          :key="link.id"
+          :name="link.label"
+          :href="link.to"
+          variant="header"
+        />
         <MoleculesDesktopMenu
           :items="link.category"
           class="hidden group-hover:flex"
