@@ -16,7 +16,7 @@ const variantStyle = computed(() => {
 
 <template>
   <div class="flex items-center">
-    <AtomsIcon v-if="variant === 'accordion'" :name="linkIcon || ''" />
+    <AtomsIcon v-if="variant === 'accordion'" :name="icon || ''" />
     <NuxtLink :to="href" :class="variantStyle">
       {{
         typeof name === "string" && variant !== "accordion"

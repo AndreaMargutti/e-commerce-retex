@@ -1,6 +1,6 @@
 export type AtomsLinkProps = {
   name: string;
-  href?: string;
+  href: string;
   variant: "header" | "accordion" | "desktopMenu";
-  linkIcon?: string;
+  icon?: string;
 };
