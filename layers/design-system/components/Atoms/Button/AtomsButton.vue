@@ -66,10 +66,14 @@ const emitClick = () => {
 </script>
 
 <template>
-  <div class="flex items-center justify-between px-4 py-2">
-    <button :class="btnStyle" @click="emitClick">
-      {{ capitalize.capitalize(label) }}
-    </button>
-    <AtomsIcon v-if="iconName" :name="iconName" />
-  </div>
+  <button
+    :class="btnStyle"
+    @click="emitClick"
+    class="flex items-center justify-between px-4 py-2 w-full"
+  >
+    {{ capitalize.capitalize(label) }}
+    <div>
+      <AtomsIcon v-if="iconName" :name="iconName" />
+    </div>
+  </button>
 </template>

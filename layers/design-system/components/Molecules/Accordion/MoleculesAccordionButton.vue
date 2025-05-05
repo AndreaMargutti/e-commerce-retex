@@ -3,22 +3,23 @@ import type { MoleculesAccordionButtonProps } from "./MoleculesAccordionButtonPr
 
 defineProps<MoleculesAccordionButtonProps>();
 
-const isAccordionOpen = ref(false);
 const emit = defineEmits(["openAccordion"]);
 
 const openAccordion = () => {
-  isAccordionOpen.value = !isAccordionOpen.value;
+  changeStatus();
   emit("openAccordion");
 };
+
+const { status, changeStatus } = useMenu();
 </script>
 
 <template>
   <button
-    class="bg-gray-25 flex items-center justify-between w-full p-4"
+    class="bg-gray-25 flex items-center justify-between p-4 w-full h-12"
     @click="openAccordion"
   >
-    <p class="text-md">{{ buttonLabel }}</p>
-    <AtomsIcon :name="'navigation-chevron-down'" v-if="!isAccordionOpen" />
+    {{ buttonLabel }}
+    <AtomsIcon :name="'navigation-chevron-down'" v-if="!status" />
     <AtomsIcon :name="'navigation-chevron-up'" v-else />
   </button>
 </template>

@@ -7,16 +7,16 @@ const isContentShown = ref(false);
 const toggleContent = () => {
   isContentShown.value = !isContentShown.value;
 };
+
+const { status, changeStatus } = useMenu();
 </script>
 
 <template>
   <MoleculesAccordionButton
-    @openAccordion="toggleContent"
+    @openAccordion="changeStatus"
     :buttonLabel="accordionLabel"
   />
-  <MoleculesAccordionContent v-if="isContentShown">
-    <div class="py-2">
-      <slot></slot>
-    </div>
-  </MoleculesAccordionContent>
+  <div class="py-2" v-if="status">
+    <slot></slot>
+  </div>
 </template>

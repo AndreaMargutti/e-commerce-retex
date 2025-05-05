@@ -22,13 +22,7 @@ const openSecondLayer = (item: MenuItem) => {
   isSecondLayerOpen.value = true;
 };
 
-const hasAccordion = (item: MenuItem): boolean => {
-  if (!item.hasOwnProperty("items")) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const hasAccordion = (item: MenuItem): boolean => item.hasOwnProperty("items");
 </script>
 
 <template>
@@ -42,10 +36,10 @@ const hasAccordion = (item: MenuItem): boolean => {
     >
       <li v-for="item in menu" :key="item.id" class="last:pb-[3rem]">
         <AtomsButton
-          size="large"
+          textSize="large"
           type="tertiary"
           :label="item.label"
-          :icon="{ hasIcon: hasItems(item), iconName: 'navigation-right' }"
+          :iconName="item.items ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
         />
       </li>
@@ -74,7 +68,7 @@ const hasAccordion = (item: MenuItem): boolean => {
       >
         <AtomsIcon :name="'navigation-chevron-right'" class="justify-start" />
         <AtomsButton
-          size="large"
+          textSize="large"
           type="tertiary"
           :label="parentLabel !== null ? parentLabel.toLocaleUpperCase() : ''"
           @click="toggleMenu"
@@ -86,13 +80,13 @@ const hasAccordion = (item: MenuItem): boolean => {
           <AtomsButton
             :label="`Vedi tutti ${parentLabel}`"
             type="tertiary"
-            size="large"
+            textSize="large"
           />
         </li>
         <li v-for="item in secondLayerItems" :key="item.id">
           <AtomsButton
             type="tertiary"
-            size="large"
+            textSize="large"
             :label="item.label"
             v-if="!hasAccordion(item)"
             class="py-2"
@@ -105,7 +99,7 @@ const hasAccordion = (item: MenuItem): boolean => {
             <MoleculesAccordionContent>
               <AtomsButton
                 type="tertiary"
-                size="large"
+                textSize="large"
                 :label="accordionItem.label"
                 v-for="accordionItem in item.items"
               />
