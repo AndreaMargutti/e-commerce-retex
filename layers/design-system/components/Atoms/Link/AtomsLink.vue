@@ -15,7 +15,7 @@ const variantStyle = computed(() => {
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center">
     <AtomsIcon v-if="variant === 'accordion'" :name="linkIcon || ''" />
     <NuxtLink :to="href" :class="variantStyle">
       {{

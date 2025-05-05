@@ -5,7 +5,7 @@ defineProps<MoleculesDesktopMenuProps>();
 
 <template>
   <ul
-    class="flex flex-wrap pt-9 px-8 absolute inset-y-[full-30px] -left-0 right-0 h-[100vh]"
+    class="flex flex-wrap px-8 fixed top-[76px] -left-0 right-0 h-[100vh] overflow-auto bg-white"
   >
     <li v-for="(item, index) in items" :key="index" class="basis-1/6">
       <AtomsLink
