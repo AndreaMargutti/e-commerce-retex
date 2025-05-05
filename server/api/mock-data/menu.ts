@@ -12,12 +12,17 @@ export default defineEventHandler((event): Menu => {
         to: "/uomo",
         category: [
           {
-            id: 31,
+            id: 20,
+            label: "Vedi tutti uomo",
+            to: "/uomo",
+          },
+          {
+            id: 21,
             label: "Capispalla",
             to: "/uomo/capispalla",
           },
           {
-            id: 32,
+            id: 22,
             label: "Abbigliamento",
             to: "/uomo/abbigliamento",
           },
@@ -28,6 +33,11 @@ export default defineEventHandler((event): Menu => {
         label: "donna",
         to: "/donna",
         category: [
+          {
+            id: 30,
+            label: "Vedi tutti donna",
+            to: "/donna",
+          },
           {
             id: 31,
             label: "Capispalla",

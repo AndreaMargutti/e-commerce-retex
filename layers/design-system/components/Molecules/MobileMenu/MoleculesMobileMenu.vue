@@ -79,13 +79,6 @@ const hasAccordion = (item: MenuItem): boolean =>
         />
       </div>
       <ul>
-        <li>
-          <AtomsButton
-            :label="`Vedi tutti ${parentLabel}`"
-            type="tertiary"
-            textSize="large"
-          />
-        </li>
         <li v-for="item in secondLayerItems" :key="item.id">
           <AtomsButton
             type="tertiary"
