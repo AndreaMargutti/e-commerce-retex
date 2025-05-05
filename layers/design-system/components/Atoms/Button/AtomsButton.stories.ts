@@ -21,14 +21,12 @@ type Story = StoryObj<typeof AtomsButton>;
 export const Tertiary: Story = {
   args: {
     type: "tertiary",
-    variant: "underline",
-    size: "medium",
+    textSize: "medium",
     label: "button",
+    onBackground: false,
+    isUnderline: false,
     isDisabled: false,
-    icon: {
-      hasIcon: true,
-      iconName: "navigation-right",
-    },
+    iconName: undefined,
   },
   render: (args) => ({
     components: { AtomsButton },
