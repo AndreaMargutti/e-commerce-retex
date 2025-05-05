@@ -89,7 +89,7 @@ const toggleMenuMobile = () => {
       <div v-for="link in links" :key="link.id" class="group">
         <AtomsLink :key="link.id" :name="link.label" variant="header" />
         <MoleculesDesktopMenu
-          :items="link.items"
+          :items="link.category"
           class="hidden group-hover:flex"
         />
       </div>

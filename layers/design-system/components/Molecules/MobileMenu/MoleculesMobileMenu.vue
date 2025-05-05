@@ -6,7 +6,7 @@ const { data } = await useFetch<Menu>("/api/mock-data/menu");
 const menu: MenuItem[] = data.value?.items || [];
 
 function hasItems(item: MenuItem): boolean {
-  return item.items !== undefined && item.items.length > 0;
+  return item.category !== undefined && item.category.length > 0;
 }
 const isSecondLayerOpen = ref(false);
 const secondLayerItems = ref<MenuItem[] | null>(null);
@@ -17,12 +17,13 @@ const toggleMenu = () => {
 };
 
 const openSecondLayer = (item: MenuItem) => {
-  secondLayerItems.value = item.items || null;
+  secondLayerItems.value = item.category || null;
   parentLabel.value = item.label;
   isSecondLayerOpen.value = true;
 };
 
-const hasAccordion = (item: MenuItem): boolean => item.hasOwnProperty("items");
+const hasAccordion = (item: MenuItem): boolean =>
+  item.hasOwnProperty("category");
 </script>
 
 <template>
@@ -39,7 +40,7 @@ const hasAccordion = (item: MenuItem): boolean => item.hasOwnProperty("items");
           textSize="large"
           type="tertiary"
           :label="item.label"
-          :iconName="item.items ? 'navigation-right' : ''"
+          :iconName="item.category ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
         />
       </li>
@@ -53,12 +54,14 @@ const hasAccordion = (item: MenuItem): boolean => item.hasOwnProperty("items");
         href="/store-locator"
         variant="accordion"
         linkIcon="pin"
+        class="h-12"
       />
       <AtomsLink
         name="Wishlist"
         href="/wishlist"
         variant="accordion"
         linkIcon="wishlist"
+        class="h-12"
       />
     </div>
     <MoleculesMobileMenuDeliveryBanner v-show="!isSecondLayerOpen" />
@@ -92,7 +95,7 @@ const hasAccordion = (item: MenuItem): boolean => item.hasOwnProperty("items");
             class="py-2"
           />
           <MoleculesAccordion
-            :itemsReceived="item.items || []"
+            :itemsReceived="item.category || []"
             :accordionLabel="item.label"
             v-else
           >
@@ -101,7 +104,7 @@ const hasAccordion = (item: MenuItem): boolean => item.hasOwnProperty("items");
                 type="tertiary"
                 textSize="large"
                 :label="accordionItem.label"
-                v-for="accordionItem in item.items"
+                v-for="accordionItem in item.category"
               />
             </MoleculesAccordionContent>
           </MoleculesAccordion>

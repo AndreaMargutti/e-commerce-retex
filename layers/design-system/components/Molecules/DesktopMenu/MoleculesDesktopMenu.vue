@@ -13,7 +13,7 @@ defineProps<MoleculesDesktopMenuProps>();
         :href="item.to"
         variant="desktopMenu"
       />
-      <MoleculesList :items="item.items || []" />
+      <MoleculesList :items="item.category || []" />
     </li>
   </ul>
 </template>
