@@ -52,14 +52,12 @@ const hasAccordion = (item: MenuItem): boolean =>
       <AtomsLink
         name="Store Locator"
         href="/store-locator"
-        variant="accordion"
         icon="pin"
         class="h-12"
       />
       <AtomsLink
         name="Wishlist"
         href="/wishlist"
-        variant="accordion"
         icon="wishlist"
         class="h-12"
       />

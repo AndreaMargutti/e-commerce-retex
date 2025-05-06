@@ -10,17 +10,11 @@ defineProps<MoleculesListProps<MenuItem>>();
       <AtomsLink
         :name="singleItem.label"
         :href="singleItem.to"
-        variant="header"
-        :isUppercase="true"
+        :isUppercase="isUppercase"
       />
     </li>
     <li class="py-2">
-      <AtomsLink
-        :name="$t('vedi tutti')"
-        href="#"
-        variant="desktopMenu"
-        :isUppercase="true"
-      />
+      <AtomsLink :name="$t('vedi tutti')" href="#" :isUppercase="true" />
     </li>
   </ul>
 </template>
