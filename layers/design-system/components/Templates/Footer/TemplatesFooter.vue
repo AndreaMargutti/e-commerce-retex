@@ -13,4 +13,5 @@ const footerPaymetns = paymentData.value?.icons || [];
     type="payments"
     :icons="footerPaymetns"
   />
+  <AtomsButton type="primary" label="BUTTON" text-size="small" />
 </template>

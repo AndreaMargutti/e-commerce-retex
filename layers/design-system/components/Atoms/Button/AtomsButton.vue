@@ -5,6 +5,9 @@ const props = defineProps<AtomsButtonProps>();
 const btnBaseStyle = computed((): string => {
   let result = "";
   switch (props.type) {
+    case "primary":
+      result = "bg-black-500 py-3 px-16";
+      break;
     case "tertiary":
       result = "text-black-state";
       break;
