@@ -2,12 +2,14 @@
 import type { AtomsButtonProps } from "./AtomsButtonProps";
 const props = defineProps<AtomsButtonProps>();
 
-const btnBaseStyle = computed(() => {
+const btnBaseStyle = computed((): string => {
+  let result = "";
   switch (props.type) {
     case "tertiary":
-      return "text-black-state";
+      result = "text-black-state";
       break;
   }
+  return result;
 });
 
 const textSize = computed(() => {
