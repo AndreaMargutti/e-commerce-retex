@@ -35,7 +35,7 @@ const hasAccordion = (item: MenuItem): boolean =>
       v-if="statusMenu && !isSecondLayerOpen"
       class="border-y-1 border-gray-20"
     >
-      <li v-for="item in menu" :key="item.id" class="last:pb-[3rem]">
+      <li v-for="item in menu" :key="item.id" class="min-h-12 last:pb-12">
         <AtomsButton
           textSize="large"
           type="tertiary"
@@ -79,24 +79,26 @@ const hasAccordion = (item: MenuItem): boolean =>
         />
       </div>
       <ul>
-        <li v-for="item in secondLayerItems" :key="item.id">
+        <li v-for="item in secondLayerItems" :key="item.id" class="min-h-12">
           <AtomsButton
+            v-if="!hasAccordion(item)"
             type="tertiary"
             textSize="large"
             :label="item.label"
-            v-if="!hasAccordion(item)"
+            :href="item.to"
             class="py-2"
           />
           <MoleculesAccordion
+            v-else
             :itemsReceived="item.category || []"
             :accordionLabel="item.label"
-            v-else
           >
             <MoleculesAccordionContent>
               <AtomsButton
                 type="tertiary"
                 textSize="large"
                 :label="accordionItem.label"
+                :href="accordionItem.to"
                 v-for="accordionItem in item.category"
               />
             </MoleculesAccordionContent>
