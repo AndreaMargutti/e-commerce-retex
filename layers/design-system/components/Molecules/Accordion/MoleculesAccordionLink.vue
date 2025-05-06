@@ -1,5 +1,5 @@
 <template>
-  <div class="text-bas font-normal">
+  <div class="px-4 py-2 font-normal">
     <slot></slot>
   </div>
 </template>

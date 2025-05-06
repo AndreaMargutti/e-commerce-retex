@@ -39,12 +39,12 @@ const onBackground = computed(() => {
 
 const isUnderline = computed(() => {
   if (props.isUnderline) {
-    return "hover:underline active:underline";
+    return "hover:underline active:underline underline-offset-4";
   }
 });
 
 const withIconStyle = computed(() =>
-  props.iconName ? "hover:underline active:underline" : ""
+  props.iconName ? "hover:underline active:underline underline-offset-4" : ""
 );
 
 const disableStyle = computed(() => (props.isDisabled ? "text-grey-25" : ""));
