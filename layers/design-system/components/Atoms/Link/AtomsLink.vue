@@ -9,8 +9,8 @@ const { capitalize } = useCapitalize();
 
 <template>
   <div class="flex items-center gap-2 hover:cursor-pointer">
-    <span v-show="icon">
-      <AtomsIcon :name="icon" class="scale-125" />
+    <span v-if="icon">
+      <AtomsIcon :name="icon!" class="scale-125" />
     </span>
     <NuxtLink
       :to="href"
