@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { fireEvent, userEvent, within } from "@storybook/test";
 
 import AtomsButton from "./AtomsButton.vue";
 
@@ -21,6 +20,9 @@ const meta: Meta<typeof AtomsButton> = {
     },
   },
 };
+
+export default meta;
+type Story = StoryObj<typeof AtomsButton>;
 
 export const Primary: Story = {
   args: {
@@ -45,8 +47,6 @@ export const Primary: Story = {
   }),
 };
 
-export default meta;
-type Story = StoryObj<typeof AtomsButton>;
 export const Tertiary: Story = {
   args: {
     type: "tertiary",
