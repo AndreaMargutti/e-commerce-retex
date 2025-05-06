@@ -96,6 +96,7 @@ const toggleMenuMobile = () => {
           :name="link.label"
           :href="link.to"
           variant="header"
+          :isUppercase="true"
         />
         <MoleculesDesktopMenu
           :items="link.category"

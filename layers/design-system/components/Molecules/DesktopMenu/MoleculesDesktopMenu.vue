@@ -11,6 +11,7 @@ defineProps<MoleculesDesktopMenuProps>();
       <AtomsLink
         :name="item.label.toLocaleUpperCase()"
         :href="item.to"
+        :isUppercase="true"
         variant="desktopMenu"
       />
       <MoleculesList :items="item.category || []" />

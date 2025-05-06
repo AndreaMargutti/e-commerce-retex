@@ -18,11 +18,7 @@ const variantStyle = computed(() => {
   <div class="flex items-center hover:cursor-pointer">
     <AtomsIcon v-if="variant === 'accordion'" :name="icon || ''" />
     <NuxtLink :to="href" :class="variantStyle">
-      {{
-        typeof name === "string" && variant !== "accordion"
-          ? name.toLocaleUpperCase()
-          : name
-      }}
+      {{ isUppercase ? name.toLocaleUpperCase() : name }}
     </NuxtLink>
   </div>
 </template>

@@ -3,4 +3,5 @@ export type AtomsLinkProps = {
   href: string;
   variant: "header" | "accordion" | "desktopMenu";
   icon?: string;
+  isUppercase?: boolean;
 };
