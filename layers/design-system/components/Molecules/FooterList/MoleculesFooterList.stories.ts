@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import MoleculesFooterList from "./MoleculesFooterList.vue";
 
 const meta: Meta<typeof MoleculesFooterList> = {
-  title: "Design System / Molecules / Footer List",
+  title: "Design System / Molecules / Footer / Footer List",
   component: MoleculesFooterList,
 };
 

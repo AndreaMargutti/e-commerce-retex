@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import MoleculesDesktopMenu from "./MoleculesDesktopMenu.vue";
 
 const meta: Meta<typeof MoleculesDesktopMenu> = {
-  title: "Design System/Molecules/Desktop Menu",
+  title: "Design System / Molecules / Menu / Desktop Menu",
   component: MoleculesDesktopMenu,
 };
 export default meta;
@@ -22,7 +22,7 @@ export const Default: Story = {
         label: "Nuovi Arrivi",
         to: "/",
         id: 0,
-        items: [
+        category: [
           {
             label: "Submenu 1",
             to: "/submenu1",

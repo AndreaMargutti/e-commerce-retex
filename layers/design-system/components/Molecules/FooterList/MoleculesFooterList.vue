@@ -20,7 +20,6 @@ const paymentClasses = computed((): string => {
       class="font-medium text-xs"
       :class="type === 'social' ? 'mb-10' : 'mr-4 block md:inline'"
     >
-      <!--aggiungere mb-10 per type social-->
       {{ title.toLocaleUpperCase() }}
     </h5>
     <div class="*:mr-6">

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import MoleculesMobileMenu from "./MoleculesMobileMenu.vue";
 
 const meta: Meta<typeof MoleculesMobileMenu> = {
-  title: "Design System/Molecules/Mobile Menu",
+  title: "Design System / Molecules / Menu / Mobile Menu",
   component: MoleculesMobileMenu,
 };
 export default meta;
