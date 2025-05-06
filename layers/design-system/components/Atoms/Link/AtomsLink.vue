@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { AtomsLinkProps } from "./AtomsLinkProps";
 
-const props = defineProps<AtomsLinkProps>();
+const props = withDefaults(defineProps<AtomsLinkProps>(), {
+  textSize: "text-xs xl:text-sm",
+});
 const { capitalize } = useCapitalize();
 </script>
 
@@ -12,7 +14,8 @@ const { capitalize } = useCapitalize();
     </span>
     <NuxtLink
       :to="href"
-      class="text-xs xl:text-sm hover:underline underline-offset-5"
+      :class="textSize"
+      class="hover:underline underline-offset-5"
     >
       {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
     </NuxtLink>

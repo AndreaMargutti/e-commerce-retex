@@ -36,12 +36,16 @@ const hasAccordion = (item: MenuItem): boolean =>
       class="border-y-1 border-gray-20"
     >
       <li v-for="item in menu" :key="item.id" class="min-h-12 last:pb-12">
+        <MoleculesAccordionLink v-if="!item.category">
+          <AtomsLink :name="item.label" :href="item.to" text-size="text-base" />
+        </MoleculesAccordionLink>
         <AtomsButton
           textSize="large"
           type="tertiary"
           :label="item.label"
           :iconName="item.category ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
+          v-else
         />
       </li>
     </ul>
@@ -78,28 +82,26 @@ const hasAccordion = (item: MenuItem): boolean =>
       </div>
       <ul>
         <li v-for="item in secondLayerItems" :key="item.id" class="min-h-12">
-          <AtomsButton
+          <AtomsLink
             v-if="!hasAccordion(item)"
-            type="tertiary"
-            textSize="large"
-            :label="item.label"
+            textSize="text-base"
+            :name="item.label"
             :href="item.to"
-            class="py-2"
+            class="py-2 px-4"
           />
           <MoleculesAccordion
             v-else
             :itemsReceived="item.category || []"
             :accordionLabel="item.label"
           >
-            <MoleculesAccordionContent>
-              <AtomsButton
-                type="tertiary"
-                textSize="large"
-                :label="accordionItem.label"
-                :href="accordionItem.to"
-                v-for="accordionItem in item.category"
-              />
-            </MoleculesAccordionContent>
+            <AtomsLink
+              v-for="accordionItem in item.category"
+              :key="accordionItem.id"
+              textSize="text-base"
+              :name="accordionItem.label"
+              :href="accordionItem.to"
+              class="py-2 px-4"
+            />
           </MoleculesAccordion>
         </li>
       </ul>

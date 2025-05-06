@@ -3,4 +3,5 @@ export type AtomsLinkProps = {
   href: string;
   icon?: string;
   isUppercase?: boolean;
+  textSize?: string;
 };
