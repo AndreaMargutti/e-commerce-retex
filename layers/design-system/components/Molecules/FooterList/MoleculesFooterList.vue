@@ -3,11 +3,14 @@ import type { MoleculesFooterListProps } from "./MoleculesFooterListProps";
 
 const props = defineProps<MoleculesFooterListProps>();
 
-const paymentClasses = computed(() => {
+const paymentClasses = computed((): string => {
+  let classes = "";
   switch (props.type) {
     case "payments":
-      return "block text-center md:flex items-center bg-gray-200 h-[4.5rem] justify-center pt-6 md:pt-0";
+      classes =
+        "block text-center md:flex items-center bg-gray-200 h-[4.5rem] justify-center pt-6 md:pt-0";
   }
+  return classes;
 });
 </script>
 

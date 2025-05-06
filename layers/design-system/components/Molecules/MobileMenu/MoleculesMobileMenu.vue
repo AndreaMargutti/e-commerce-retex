@@ -28,7 +28,7 @@ const hasAccordion = (item: MenuItem): boolean =>
 
 <template>
   <div
-    class="fixed w-full overflow-y-auto bg-white flex flex-col"
+    class="fixed w-full overflow-y-auto bg-white z-10 flex flex-col"
     :class="statusMenu ? 'top-[76px] h-[calc(100vh-76px)]' : 'top-[-100%]'"
   >
     <ul
