@@ -12,6 +12,11 @@ const meta: Meta<typeof AtomsLink> = {
         type: "select",
       },
     },
+    isUppercase: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
 };
 
@@ -23,6 +28,7 @@ export const Link: Story = {
     name: "uomo",
     href: "/uomo",
     variant: "header",
+    isUppercase: false,
   },
   render: (args) => ({
     components: { AtomsLink },

@@ -2,11 +2,11 @@
 import type { AtomsBadgeProps } from "./AtomsBadgeProps";
 const props = defineProps<AtomsBadgeProps>();
 
-const label = computed(() => {
+const label = computed((): "99+" | number => {
   return props.items > 99 ? `99+` : props.items;
 });
 
-const textSize = computed(() => {
+const textSize = computed((): string => {
   if (props.items < 99) {
     return "text-sm h-[20px] w-[20px]";
   } else if (props.items === 99) {
@@ -16,7 +16,7 @@ const textSize = computed(() => {
   }
 });
 
-const color = computed(() => {
+const color = computed((): string => {
   if (props.color === "grey") {
     return "bg-grey-base text-black-base";
   } else {
@@ -24,7 +24,7 @@ const color = computed(() => {
   }
 });
 
-const badgeStyle = computed(() => {
+const badgeStyle = computed((): string[] => {
   return [textSize.value, color.value];
 });
 </script>

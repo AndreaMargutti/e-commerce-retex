@@ -3,7 +3,7 @@ declare global {
     id: number;
     label: string;
     to: string;
-    items?: MenuItem[];
+    category?: MenuItem[];
   }
 
   type Menu = {

@@ -6,7 +6,7 @@ const { data } = await useFetch<Menu>("/api/mock-data/menu");
 const menu: MenuItem[] = data.value?.items || [];
 
 function hasItems(item: MenuItem): boolean {
-  return item.items !== undefined && item.items.length > 0;
+  return item.category !== undefined && item.category.length > 0;
 }
 const isSecondLayerOpen = ref(false);
 const secondLayerItems = ref<MenuItem[] | null>(null);
@@ -17,35 +17,30 @@ const toggleMenu = () => {
 };
 
 const openSecondLayer = (item: MenuItem) => {
-  secondLayerItems.value = item.items || null;
+  secondLayerItems.value = item.category || null;
   parentLabel.value = item.label;
   isSecondLayerOpen.value = true;
 };
 
-const hasAccordion = (item: MenuItem): boolean => {
-  if (!item.hasOwnProperty("items")) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const hasAccordion = (item: MenuItem): boolean =>
+  item.hasOwnProperty("category");
 </script>
 
 <template>
   <div
-    class="fixed w-full overflow-y-auto bg-white"
+    class="fixed w-full overflow-y-auto bg-white flex flex-col"
     :class="statusMenu ? 'top-[76px] h-[calc(100vh-76px)]' : 'top-[-100%]'"
   >
     <ul
       v-if="statusMenu && !isSecondLayerOpen"
       class="border-y-1 border-gray-20"
     >
-      <li v-for="item in menu" :key="item.id" class="last:pb-[3rem]">
+      <li v-for="item in menu" :key="item.id" class="min-h-12 last:pb-12">
         <AtomsButton
-          size="large"
+          textSize="large"
           type="tertiary"
           :label="item.label"
-          :icon="{ hasIcon: hasItems(item), iconName: 'navigation-right' }"
+          :iconName="item.category ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
         />
       </li>
@@ -57,14 +52,14 @@ const hasAccordion = (item: MenuItem): boolean => {
       <AtomsLink
         name="Store Locator"
         href="/store-locator"
-        variant="accordion"
-        linkIcon="pin"
+        icon="pin"
+        class="h-12"
       />
       <AtomsLink
         name="Wishlist"
         href="/wishlist"
-        variant="accordion"
-        linkIcon="wishlist"
+        icon="wishlist"
+        class="h-12"
       />
     </div>
     <MoleculesMobileMenuDeliveryBanner v-show="!isSecondLayerOpen" />
@@ -74,7 +69,7 @@ const hasAccordion = (item: MenuItem): boolean => {
       >
         <AtomsIcon :name="'navigation-chevron-right'" class="justify-start" />
         <AtomsButton
-          size="large"
+          textSize="large"
           type="tertiary"
           :label="parentLabel !== null ? parentLabel.toLocaleUpperCase() : ''"
           @click="toggleMenu"
@@ -82,32 +77,27 @@ const hasAccordion = (item: MenuItem): boolean => {
         />
       </div>
       <ul>
-        <li>
+        <li v-for="item in secondLayerItems" :key="item.id" class="min-h-12">
           <AtomsButton
-            :label="`Vedi tutti ${parentLabel}`"
-            type="tertiary"
-            size="large"
-          />
-        </li>
-        <li v-for="item in secondLayerItems" :key="item.id">
-          <AtomsButton
-            type="tertiary"
-            size="large"
-            :label="item.label"
             v-if="!hasAccordion(item)"
+            type="tertiary"
+            textSize="large"
+            :label="item.label"
+            :href="item.to"
             class="py-2"
           />
           <MoleculesAccordion
-            :itemsReceived="item.items || []"
-            :accordionLabel="item.label"
             v-else
+            :itemsReceived="item.category || []"
+            :accordionLabel="item.label"
           >
             <MoleculesAccordionContent>
               <AtomsButton
                 type="tertiary"
-                size="large"
+                textSize="large"
                 :label="accordionItem.label"
-                v-for="accordionItem in item.items"
+                :href="accordionItem.to"
+                v-for="accordionItem in item.category"
               />
             </MoleculesAccordionContent>
           </MoleculesAccordion>

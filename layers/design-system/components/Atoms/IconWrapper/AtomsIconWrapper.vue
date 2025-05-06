@@ -21,7 +21,7 @@ const emitClick = () => {
     </NuxtLink>
     <AtomsBadge
       v-show="badgeSize"
-      :items="badgeSize || null"
+      :items="badgeSize || 0"
       class="absolute top-1.5 left-1.5"
     />
   </span>

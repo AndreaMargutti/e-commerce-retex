@@ -86,10 +86,20 @@ const toggleMenuMobile = () => {
     </div>
 
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
-      <div v-for="link in links" :key="link.id" class="group">
-        <AtomsLink :key="link.id" :name="link.label" variant="header" />
+      <div
+        v-for="link in links"
+        :key="link.id"
+        class="group relative after:content-[''] after:p-0 after:absolute after:-z-10 after:-inset-[5px] after:pb-15"
+      >
+        <AtomsLink
+          :key="link.id"
+          :name="link.label"
+          :href="link.to"
+          variant="header"
+          :isUppercase="true"
+        />
         <MoleculesDesktopMenu
-          :items="link.items"
+          :items="link.category"
           class="hidden group-hover:flex"
         />
       </div>

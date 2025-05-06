@@ -4,7 +4,7 @@
   /* base */
   --color-black-base: #000000;
   --color-blue-base: #333f48;
-  --color-grey-base: #c7c9c7;
+  --color-gray-base: #c7c9c7;
   --color-beige-base: #f3eee1;
 
   /* accent */
@@ -27,6 +27,6 @@
   /* state */
   --color-red-state: #b72b35;
   --color-green-state: #437e22;
-  --color-grey-state: #767676;
+  --color-gray-state: #767676;
   --color-blue-state: #355cbe;
 }

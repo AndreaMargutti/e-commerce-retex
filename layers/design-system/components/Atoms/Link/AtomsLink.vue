@@ -2,27 +2,19 @@
 import type { AtomsLinkProps } from "./AtomsLinkProps";
 
 const props = defineProps<AtomsLinkProps>();
-
-const variantStyle = computed(() => {
-  if (props.variant === "header") {
-    return "text-xs xl:text-sm hover:underline underline-offset-5";
-  } else if (props.variant === "accordion") {
-    return "text-base font-normal";
-  } else if (props.variant === "desktopMenu") {
-    return "text-xs xl:text-sm font-medium h-[3rem] flex items-center";
-  }
-});
+const { capitalize } = useCapitalize();
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
-    <AtomsIcon v-if="variant === 'accordion'" :name="linkIcon || ''" />
-    <NuxtLink :to="href" :class="variantStyle">
-      {{
-        typeof name === "string" && variant !== "accordion"
-          ? name.toLocaleUpperCase()
-          : name
-      }}
+  <div class="flex items-center gap-2 hover:cursor-pointer">
+    <span v-show="icon">
+      <AtomsIcon :name="icon" class="scale-125" />
+    </span>
+    <NuxtLink
+      :to="href"
+      class="text-xs xl:text-sm hover:underline underline-offset-5"
+    >
+      {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
     </NuxtLink>
   </div>
 </template>
