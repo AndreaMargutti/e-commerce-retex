@@ -6,7 +6,8 @@ const btnBaseStyle = computed((): string => {
   let result = "";
   switch (props.type) {
     case "primary":
-      result = "bg-black-500 py-3 px-16";
+      result =
+        "bg-black-base text-white font-medium py-3 px-16 hover:bg-white hover:text-black-base hover:border-black-base hover:border-1";
       break;
     case "tertiary":
       result = "text-black-state";
@@ -47,7 +48,9 @@ const withIconStyle = computed(() =>
   props.iconName ? "hover:underline active:underline underline-offset-4" : ""
 );
 
-const disableStyle = computed(() => (props.isDisabled ? "text-grey-25" : ""));
+const disableStyle = computed(() =>
+  props.isDisabled ? "[&&]:text-gray-state bg-gray-20" : ""
+);
 
 const btnStyle = computed(() => {
   return [
@@ -71,11 +74,7 @@ const emitClick = () => {
 </script>
 
 <template>
-  <button
-    :class="btnStyle"
-    @click="emitClick"
-    class="flex items-center justify-between px-4 py-2 w-full"
-  >
+  <button :class="btnStyle" @click="emitClick">
     {{ capitalize.capitalize(label) }}
     <div>
       <AtomsIcon v-if="iconName" :name="iconName" />

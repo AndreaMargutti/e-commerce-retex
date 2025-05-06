@@ -45,6 +45,7 @@ const hasAccordion = (item: MenuItem): boolean =>
           :label="item.label"
           :iconName="item.category ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
+          class="flex items-center justify-between px-4 py-2 w-full"
           v-else
         />
       </li>

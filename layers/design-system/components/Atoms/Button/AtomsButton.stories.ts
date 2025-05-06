@@ -22,6 +22,29 @@ const meta: Meta<typeof AtomsButton> = {
   },
 };
 
+export const Primary: Story = {
+  args: {
+    type: "primary",
+    textSize: "small",
+    label: "button",
+    onBackground: false,
+    isUnderline: false,
+    isDisabled: false,
+    iconName: undefined,
+  },
+  render: (args) => ({
+    components: { AtomsButton },
+    setup() {
+      return { args };
+    },
+    template: `
+    <AtomsButton v-bind="args" v-on="$attrs">
+      <template #icon>
+      </template>
+    </AtomsButton>`,
+  }),
+};
+
 export default meta;
 type Story = StoryObj<typeof AtomsButton>;
 export const Tertiary: Story = {
