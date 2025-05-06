@@ -91,15 +91,13 @@ const hasAccordion = (item: MenuItem): boolean =>
             :itemsReceived="item.category || []"
             :accordionLabel="item.label"
           >
-            <MoleculesAccordionContent>
-              <AtomsButton
-                type="tertiary"
-                textSize="large"
-                :label="accordionItem.label"
-                :href="accordionItem.to"
-                v-for="accordionItem in item.category"
-              />
-            </MoleculesAccordionContent>
+            <AtomsButton
+              type="tertiary"
+              textSize="large"
+              :label="accordionItem.label"
+              :href="accordionItem.to"
+              v-for="accordionItem in item.category"
+            />
           </MoleculesAccordion>
         </li>
       </ul>
