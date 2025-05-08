@@ -12,7 +12,7 @@ const labelStyle = computed((): string => {
   if (!inputClick.value) {
     return "bottom-3";
   } else {
-    return "bottom-10 uppercase text-tiny";
+    return "bottom-10 text-tiny";
   }
 });
 
@@ -24,19 +24,20 @@ const placeholderStyle = computed((): string => {
   }
 });
 
-const textData = ref("");
+const modelValue = defineModel();
 </script>
 
 <template>
   <div class="relative border-b-1 max-w-[21rem] max-h-14 mt-10">
     <label
+      v-show="modelValue === ''"
       :class="labelStyle"
       class="absolute transition-all duration-300 ease-in-out"
     >
       {{ label }}
     </label>
     <input
-      v-model="textData"
+      v-model="modelValue"
       :type="type"
       :placeholder="label"
       @focus="selectInput"
@@ -46,5 +47,4 @@ const textData = ref("");
     />
     <p class="absolute right-0 pt-1">{{ message }}</p>
   </div>
-  {{ textData }}
 </template>

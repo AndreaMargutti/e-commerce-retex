@@ -2,24 +2,31 @@
 import type { MoleculesFormProps } from "./MoleculesFormProps";
 defineProps<MoleculesFormProps>();
 
-const formData = ref();
+const email: Ref<string> = ref("");
 
-const submitForm = () => {
+const submitForm = async () => {
   const form = document.querySelector("form") as HTMLFormElement;
-  if (form) {
-    form.submit();
-  }
+  const { data } = await useFetch("/api/test", {
+    method: "POST",
+    body: {
+      email: email.value,
+    },
+  });
 };
 </script>
 
 <template>
-  <form :method="formMethod">
-    <slot></slot>
-    <AtomsButton
-      type="primary"
-      textSize="medium"
-      label="invia"
-      @click="submitForm"
+  <form
+    :method="formMethod"
+    @submit.prevent="submitForm"
+    class="flex flex-col gap-4"
+  >
+    <AtomsTextField
+      label="e-mail"
+      type="email"
+      message="Inserici qui la tua mail"
+      v-model="email"
     />
+    <AtomsButton type="primary" textSize="medium" label="invia" class="mt-4" />
   </form>
 </template>
