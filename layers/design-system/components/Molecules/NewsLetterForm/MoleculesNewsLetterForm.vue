@@ -4,9 +4,10 @@ defineProps<MoleculesNewsLetterFormProps>();
 
 const email: Ref<string> = ref("");
 const error: Ref<boolean> = ref(false);
-const successMessage: Ref<string> = ref("");
+const successMessage: Ref<boolean> = ref(false);
 
 const submitForm = async () => {
+  //TODO: remove this when the form is ready
   error.value = false;
   try {
     const form = document.querySelector("form") as HTMLFormElement;
@@ -16,7 +17,9 @@ const submitForm = async () => {
         email: email.value,
       },
     });
-    successMessage.value = status.value;
+    //TODO: remove this when the form is ready
+    console.log("status", status);
+    successMessage.value = status.value === "success" ? true : false;
   } catch (err) {
     error.value = true;
   }
