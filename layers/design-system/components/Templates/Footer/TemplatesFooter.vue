@@ -7,5 +7,5 @@ const footerPaymetns = paymentData.value?.icons || [];
 </script>
 
 <template>
-  <MoleculesNewsLetterForm formMethod="POST"> </MoleculesNewsLetterForm>
+  <MoleculesNewsLetterForm formMethod="POST" />
 </template>

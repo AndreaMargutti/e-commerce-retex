@@ -9,10 +9,10 @@ function selectInput() {
 }
 
 const labelStyle = computed((): string => {
-  if (!inputClick.value) {
-    return "bottom-3";
-  } else {
+  if (inputClick.value || modelValue.value) {
     return "bottom-10 text-tiny";
+  } else {
+    return "bottom-3 delay-300";
   }
 });
 
@@ -30,9 +30,8 @@ const modelValue = defineModel();
 <template>
   <div class="relative border-b-1 max-w-[21rem] max-h-14 mt-10">
     <label
-      v-show="modelValue === ''"
       :class="labelStyle"
-      class="absolute transition-all duration-300 ease-in-out"
+      class="absolute transition-all duration-200 ease-in-out"
     >
       {{ label }}
     </label>
