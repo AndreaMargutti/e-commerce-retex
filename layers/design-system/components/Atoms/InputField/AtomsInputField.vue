@@ -5,11 +5,11 @@ defineProps<AtomsInputFieldProps>();
 </script>
 
 <template>
-  <div>
+  <div class="border-b-1 max-w-[21rem]">
     <input
       :type="type"
       :placeholder="label"
-      class="border-b-1 pb-3 placeholder:text-black-base min-w-[21rem]"
+      class="placeholder:text-black-base min-w-[21rem] pb-3"
     />
   </div>
 </template>
