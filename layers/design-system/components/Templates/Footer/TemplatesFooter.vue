@@ -7,12 +7,5 @@ const footerPaymetns = paymentData.value?.icons || [];
 </script>
 
 <template>
-  <MoleculesFooterList title="Socials" type="social" :icons="footerSocial" />
-  <MoleculesFooterList
-    title="Payments Method"
-    type="payments"
-    :icons="footerPaymetns"
-  />
-  <AtomsButton type="primary" label="BUTTON" text-size="small" />
-  <AtomsInputField label="Text Field" type="text" />
+  <AtomsTextField label="Text Field" message="Example" type="text" />
 </template>
