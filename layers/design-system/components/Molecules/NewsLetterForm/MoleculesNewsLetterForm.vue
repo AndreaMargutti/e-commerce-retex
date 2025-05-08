@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { MoleculesFormProps } from "./MoleculesFormProps";
-defineProps<MoleculesFormProps>();
+import type { MoleculesNewsLetterFormProps } from "./MoleculesNewsLetterFormProps";
+defineProps<MoleculesNewsLetterFormProps>();
 
 const email: Ref<string> = ref("");
 
