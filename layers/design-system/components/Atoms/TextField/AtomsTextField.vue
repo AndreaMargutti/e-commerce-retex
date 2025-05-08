@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { AtomsInputFieldProps } from "./AtomsInputFieldProps";
+import type { AtomsInputFieldProps } from "./AtomsTextFieldProps";
 
 defineProps<AtomsInputFieldProps>();
 </script>
