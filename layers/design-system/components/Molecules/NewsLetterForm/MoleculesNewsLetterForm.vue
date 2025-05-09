@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { MoleculesNewsLetterFormProps } from "./MoleculesNewsLetterFormProps";
+import { validateEmail } from "#imports";
 defineProps<MoleculesNewsLetterFormProps>();
 
 const email: Ref<string> = ref("");
@@ -9,19 +10,23 @@ const successMessage: Ref<boolean> = ref(false);
 const submitForm = async () => {
   //TODO: remove this when the form is ready
   error.value = false;
-  try {
-    const form = document.querySelector("form") as HTMLFormElement;
-    const { data, status } = await useFetch("/api/test", {
-      method: "POST",
-      body: {
-        email: email.value,
-      },
-    });
-    //TODO: remove this when the form is ready
-    console.log("status", status);
-    successMessage.value = status.value === "success" ? true : false;
-  } catch (err) {
-    error.value = true;
+  if (validateEmail(email.value)) {
+    try {
+      const form = document.querySelector("form") as HTMLFormElement;
+      const { data, status } = await useFetch("/api/test", {
+        method: "POST",
+        body: {
+          email: email.value,
+        },
+      });
+      //TODO: remove this when the form is ready
+      console.log("status", status);
+      successMessage.value = status.value === "success" ? true : false;
+    } catch (err) {
+      error.value = true;
+    }
+  } else {
+    console.log("error: invalid mail");
   }
 };
 </script>
