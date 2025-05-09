@@ -45,8 +45,5 @@ const submitForm = async () => {
     />
     <AtomsButton type="primary" textSize="medium" label="invia" class="mt-4" />
   </form>
-  {{ successMessage }}
-  <p v-if="successMessage">
-    {{ newsLetterText }}
-  </p>
+  <MoleculesNewsLetterFormText :isSubscribed="successMessage" />
 </template>
