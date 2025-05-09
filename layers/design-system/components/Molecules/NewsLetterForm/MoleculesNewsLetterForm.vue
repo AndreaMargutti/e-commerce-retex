@@ -32,18 +32,20 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <form
-    :method="formMethod"
-    @submit.prevent="submitForm"
-    class="flex flex-col gap-4"
-  >
-    <AtomsTextField
-      label="e-mail"
-      type="email"
-      message="Inserici qui la tua e-mail"
-      v-model="email"
-    />
-    <AtomsButton type="primary" textSize="medium" label="invia" class="mt-4" />
-  </form>
+  <div class="">
+    <form
+      :method="formMethod"
+      @submit.prevent="submitForm"
+      class="flex flex-col gap-4 md:flex-row md:gap-8 md:items-baseline"
+    >
+      <AtomsTextField label="e-mail" type="email" v-model="email" />
+      <AtomsButton
+        type="primary"
+        textSize="medium"
+        label="invia"
+        class="mt-4"
+      />
+    </form>
+  </div>
   <MoleculesNewsLetterFormText :isSubscribed="successMessage" />
 </template>
