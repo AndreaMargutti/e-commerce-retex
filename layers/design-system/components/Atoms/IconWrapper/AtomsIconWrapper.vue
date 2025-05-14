@@ -12,7 +12,7 @@ const emitClick = () => {
 </script>
 
 <template>
-  <span class="relative">
+  <span :class="{ relative: type === 'link' }">
     <button v-if="type === 'button'" @click="emitClick">
       <AtomsIcon :name="iconName" />
     </button>
