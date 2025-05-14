@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import type { AtomsInputFieldProps } from "./AtomsTextFieldProps";
+import { validateEmail } from "#imports";
+import type { ModelRef } from "vue";
 defineProps<AtomsInputFieldProps>();
 
 const inputClick = ref(false);
@@ -24,14 +26,46 @@ const placeholderStyle = computed((): string => {
   }
 });
 
-const modelValue = defineModel();
+const modelValue = defineModel<string>();
 const cleanInput = () => {
   modelValue.value = "";
 };
+
+const inputState = computed(() => {
+  if (validateEmail(modelValue.value || "")) {
+    return "border-green-state";
+  } else if (modelValue.value) {
+    return "border-red-state";
+  }
+});
+
+const stateIcon = computed(() => {
+  if (validateEmail(modelValue.value || "")) {
+    return "feedback-positive";
+  } else if (modelValue.value) {
+    return "feedback-negative";
+  }
+});
+
+const typingTimeout = ref<number | null>(null);
+const isTyping = ref(false);
+
+function handleInput() {
+  isTyping.value = true;
+  if (typingTimeout.value) {
+    clearTimeout(typingTimeout.value);
+  }
+  typingTimeout.value = setTimeout(() => {
+    isTyping.value = false;
+  }, 1000); // Adjust debounce time as needed
+}
 </script>
 
 <template>
-  <div class="relative border-b-1 max-w-[21rem] max-h-14 mt-10">
+  <div
+    class="relative border-b-1 max-w-[21rem] max-h-14 mt-10"
+    :class="inputState"
+  >
     <label
       :class="labelStyle"
       class="absolute transition-all duration-200 ease-in-out"
@@ -44,15 +78,26 @@ const cleanInput = () => {
       :placeholder="label"
       @focus="selectInput"
       @blur="selectInput"
+      @input="handleInput"
       :class="placeholderStyle"
       class="min-w-[21rem] pb-3 pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
     />
     <AtomsIconWrapper
-      v-show="modelValue"
+      v-show="modelValue && isTyping"
       @handleClick="cleanInput"
       type="button"
       iconName="close"
       class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+    />
+    <AtomsIcon
+      v-if="!isTyping && validateEmail(modelValue)"
+      name="feedback-positive"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-state"
+    />
+    <AtomsIcon
+      v-if="!isTyping && modelValue && !validateEmail(modelValue)"
+      name="feedback-negative"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-state"
     />
     <p class="absolute right-0 pt-1">{{ message }}</p>
   </div>
