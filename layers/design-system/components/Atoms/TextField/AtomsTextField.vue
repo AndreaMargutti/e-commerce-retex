@@ -55,9 +55,9 @@ function handleInput() {
   if (typingTimeout.value) {
     clearTimeout(typingTimeout.value);
   }
-  typingTimeout.value = setTimeout(() => {
+  typingTimeout.value = window.setTimeout(() => {
     isTyping.value = false;
-  }, 1000); // Adjust debounce time as needed
+  }, 3000); // Adjust debounce time as needed
 }
 </script>
 
@@ -87,15 +87,15 @@ function handleInput() {
       @handleClick="cleanInput"
       type="button"
       iconName="close"
-      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2"
     />
     <AtomsIcon
-      v-if="!isTyping && validateEmail(modelValue)"
+      v-show="!isTyping && validateEmail(modelValue || '')"
       name="feedback-positive"
       class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-state"
     />
     <AtomsIcon
-      v-if="!isTyping && modelValue && !validateEmail(modelValue)"
+      v-show="!isTyping && modelValue && !validateEmail(modelValue)"
       name="feedback-negative"
       class="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-state"
     />
