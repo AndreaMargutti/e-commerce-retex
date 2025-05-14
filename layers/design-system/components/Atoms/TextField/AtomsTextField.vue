@@ -35,15 +35,22 @@ const modelValue = defineModel();
     >
       {{ label }}
     </label>
-    <input
-      v-model="modelValue"
-      :type="type"
-      :placeholder="label"
-      @focus="selectInput"
-      @blur="selectInput"
-      :class="placeholderStyle"
-      class="min-w-[21rem] pb-3 palceholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
-    />
+    <div class="relative">
+      <input
+        v-model="modelValue"
+        :type="type"
+        :placeholder="label"
+        @focus="selectInput"
+        @blur="selectInput"
+        :class="placeholderStyle"
+        class="min-w-[21rem] pb-3 pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
+      />
+      <AtomsIcon
+        v-show="modelValue"
+        name="close"
+        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+      />
+    </div>
     <p class="absolute right-0 pt-1">{{ message }}</p>
   </div>
 </template>
