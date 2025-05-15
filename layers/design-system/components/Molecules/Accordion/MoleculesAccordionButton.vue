@@ -15,7 +15,7 @@ const { status, changeStatus } = useMenu();
 
 <template>
   <button
-    class="bg-gray-25 lg:bg-transparent font-medium lg:text-xs flex items-center justify-between p-4 w-full h-12 lg:w-auto lg:p-b-6 lg:border-b-1"
+    class="bg-gray-25 lg:bg-transparent font-medium flex items-center justify-between p-4 w-full h-12"
     @click="openAccordion"
   >
     {{ buttonLabel }}
