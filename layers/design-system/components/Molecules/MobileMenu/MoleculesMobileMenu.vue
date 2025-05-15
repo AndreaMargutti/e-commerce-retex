@@ -92,6 +92,7 @@ const hasAccordion = (item: MenuItem): boolean =>
           />
           <MoleculesAccordion
             v-else
+            accordionType="header"
             :itemsReceived="item.category || []"
             :accordionLabel="item.label"
           >
