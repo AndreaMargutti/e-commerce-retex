@@ -17,7 +17,7 @@ defineProps<MoleculesNewsLetterFormTextProps>();
       Google.
     </p>
     <div v-show="isSubscribed" class="text-md">
-      <AtomsIcon name="navigation-check" />
+      <AtomsIcon name="navigation-check" style="height: 32px; width: 32px" />
       <p class="font-medium">Email Signdup succesfull</p>
       <p>
         You will always be updated on all the offers of Woolrich products and

@@ -5,6 +5,10 @@ const footerSocial = socialData.value?.icons || [];
 const { data: paymentData } = await useFetch("/api/mock-data/payments");
 const footerPaymetns = paymentData.value?.icons || [];
 
+const { data: footerDeliveryData } = await useFetch("/api/mock-data/delivery");
+const footerDelivery = footerDeliveryData.value?.icons || [];
+console.log(footerDelivery);
+
 const { data: footerListData } = await useFetch("/api/mock-data/footerlist");
 const footerList = footerListData.value || [];
 </script>
@@ -12,7 +16,10 @@ const footerList = footerListData.value || [];
 <template>
   <div class="bg-gray-25">
     <div class="min-h-[331px] px-4 md:pt-16 lg:flex lg:gap-8 lg:px-8">
-      <MoleculesNewsLetterForm />
+      <MoleculesNewsLetterForm
+        formMethod="POST"
+        newsLetterText="Subscribe to our newsletter"
+      />
 
       <div class="py-10 lg:py-0 lg:min-w-fit">
         <MoleculesFooterList
@@ -25,10 +32,15 @@ const footerList = footerListData.value || [];
 
     <!-- inizio accordion -->
     <section class="lg:flex lg:flex-wrap gap-8 lg:px-8">
-      <div v-for="footer in footerList.data" :key="footer.id" class="flex-1/4">
+      <div
+        v-for="footer in footerList.data || []"
+        :key="footer.id"
+        class="flex-1/4"
+      >
         <MoleculesAccordion
           :accordionLabel="footer.label"
           accordionType="footer"
+          :itemsReceived="footer.items"
         >
           <AtomsLink
             v-for="item in footer.items"
@@ -45,7 +57,6 @@ const footerList = footerListData.value || [];
       title="Payments Methods"
       :icons="footerPaymetns"
       type="payments"
-      class="border-t-1 border-gray-75"
     />
   </div>
 </template>

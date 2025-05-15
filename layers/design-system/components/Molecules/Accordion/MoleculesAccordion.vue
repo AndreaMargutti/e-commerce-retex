@@ -15,6 +15,7 @@ const { status, changeStatus } = useMenu();
   <MoleculesAccordionButton
     @openAccordion="changeStatus"
     :buttonLabel="accordionLabel"
+    :class="accordionType === 'footer' ? 'border-b-1 border-gray-75' : ''"
   />
   <div class="py-2 lg:hidden" v-if="status">
     <slot></slot>

@@ -14,10 +14,16 @@ const emitClick = () => {
 <template>
   <span :class="{ relative: type === 'link' }">
     <button v-if="type === 'button'" @click="emitClick">
-      <AtomsIcon :name="iconName" />
+      <AtomsIcon
+        :name="iconName"
+        :style="{ width: `${iconSize}px`, height: `${iconSize}px` }"
+      />
     </button>
     <NuxtLink to="#" v-else>
-      <AtomsIcon :name="iconName" />
+      <AtomsIcon
+        :name="iconName"
+        :style="{ width: `${iconSize}px`, height: `${iconSize}px` }"
+      />
     </NuxtLink>
     <AtomsBadge
       v-show="badgeSize"

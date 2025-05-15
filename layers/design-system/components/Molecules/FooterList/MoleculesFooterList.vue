@@ -29,6 +29,7 @@ const paymentClasses = computed((): string => {
         type="link"
         :iconName="type === 'social' ? icon : `${icon}-off`"
         :href="href"
+        :iconSize="type === 'social' ? 24 : 32"
       />
     </div>
   </div>
