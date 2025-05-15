@@ -77,7 +77,7 @@ function handleInput() {
       @blur="selectInput"
       @input="handleInput"
       :class="placeholderStyle"
-      class="min-w-[21rem] pb-3 pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
+      class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
     />
     <AtomsIconWrapper
       v-show="modelValue && isTyping"
