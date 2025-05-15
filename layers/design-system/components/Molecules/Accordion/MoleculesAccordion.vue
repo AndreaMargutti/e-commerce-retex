@@ -16,7 +16,7 @@ const { status, changeStatus } = useMenu();
     @openAccordion="changeStatus"
     :buttonLabel="accordionLabel"
   />
-  <div class="py-2" v-if="status">
+  <div class="py-2 lg:pt-6" v-if="status">
     <slot></slot>
   </div>
 </template>

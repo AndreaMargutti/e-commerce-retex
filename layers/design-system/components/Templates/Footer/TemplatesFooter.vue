@@ -10,15 +10,39 @@ const footerList = footerListData.value || [];
 </script>
 
 <template>
-  <div v-for="footer in footerList.data">
-    <MoleculesAccordion :accordionLabel="footer.label">
-      <AtomsLink
-        v-for="item in footer.items"
-        :key="item.id"
-        :name="item.label"
-        :href="item.to"
-        class="py-2 px-4"
-      />
-    </MoleculesAccordion>
+  <div class="bg-gray-25">
+    <div class="min-h-[331px] px-4 md:pt-16 lg:gap-8">
+      <MoleculesNewsLetterForm />
+
+      <div class="py-10">
+        <MoleculesFooterList
+          title="Our Socials"
+          :icons="footerSocial"
+          type="social"
+        />
+      </div>
+    </div>
+
+    <!-- inizio accordion -->
+    <div class="lg:flex justify-evenly flex-1/3">
+      <div v-for="footer in footerList.data" :key="footer.id">
+        <MoleculesAccordion :accordionLabel="footer.label">
+          <AtomsLink
+            v-for="item in footer.items"
+            :key="item.id"
+            :name="item.label"
+            :href="item.to"
+            class="px-4"
+          />
+        </MoleculesAccordion>
+      </div>
+    </div>
+
+    <MoleculesFooterList
+      title="Payments Methods"
+      :icons="footerPaymetns"
+      type="payments"
+      class="border-t-1 border-gray-75"
+    />
   </div>
 </template>

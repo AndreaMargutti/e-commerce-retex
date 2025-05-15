@@ -15,11 +15,13 @@ const { status, changeStatus } = useMenu();
 
 <template>
   <button
-    class="bg-gray-25 font-medium flex items-center justify-between p-4 w-full h-12"
+    class="bg-gray-25 lg:bg-transparent font-medium lg:text-xs flex items-center justify-between p-4 w-full h-12 lg:w-auto lg:p-b-6 lg:border-b-1"
     @click="openAccordion"
   >
     {{ buttonLabel }}
-    <AtomsIcon :name="'navigation-chevron-down'" v-if="!status" />
-    <AtomsIcon :name="'navigation-chevron-up'" v-else />
+    <div class="block lg:hidden">
+      <AtomsIcon :name="'navigation-chevron-down'" v-if="!status" />
+      <AtomsIcon :name="'navigation-chevron-up'" v-else />
+    </div>
   </button>
 </template>

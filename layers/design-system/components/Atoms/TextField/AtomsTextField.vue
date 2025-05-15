@@ -62,10 +62,7 @@ function handleInput() {
 </script>
 
 <template>
-  <div
-    class="relative border-b-1 max-w-[21rem] max-h-14 mt-10"
-    :class="inputState"
-  >
+  <div class="relative border-b-1 max-h-14 mt-10" :class="inputState">
     <label
       :class="labelStyle"
       class="absolute transition-all duration-200 ease-in-out"
