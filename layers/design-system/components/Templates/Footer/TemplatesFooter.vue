@@ -4,8 +4,21 @@ const footerSocial = socialData.value?.icons || [];
 
 const { data: paymentData } = await useFetch("/api/mock-data/payments");
 const footerPaymetns = paymentData.value?.icons || [];
+
+const { data: footerListData } = await useFetch("/api/mock-data/footerlist");
+const footerList = footerListData.value || [];
 </script>
 
 <template>
-  <MoleculesNewsLetterForm formMethod="POST" news-letter-text="email-inviata" />
+  <div v-for="footer in footerList.data">
+    <MoleculesAccordion :accordionLabel="footer.label">
+      <AtomsLink
+        v-for="item in footer.items"
+        :key="item.id"
+        :name="item.label"
+        :href="item.to"
+        class="py-2 px-4"
+      />
+    </MoleculesAccordion>
+  </div>
 </template>
