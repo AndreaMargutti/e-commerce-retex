@@ -5,10 +5,10 @@ defineProps<MoleculesNewsLetterFormProps>();
 
 const email: Ref<string> = ref("");
 const error: Ref<boolean> = ref(false);
+const isSubscribed: Ref<boolean> = ref(false);
 const successMessage: Ref<boolean> = ref(false);
 
 const submitForm = async () => {
-  //TODO: remove this when the form is ready
   error.value = false;
   if (validateEmail(email.value)) {
     try {
@@ -19,8 +19,7 @@ const submitForm = async () => {
           email: email.value,
         },
       });
-      //TODO: remove this when the form is ready
-      console.log("status", status);
+      isSubscribed.value = true;
       successMessage.value = status.value === "success" ? true : false;
     } catch (err) {
       error.value = true;
@@ -34,6 +33,7 @@ const submitForm = async () => {
 <template>
   <div>
     <form
+      v-if="!isSubscribed"
       :method="formMethod"
       @submit.prevent="submitForm"
       class="flex flex-col gap-4 md:justify-items-stretch md:flex-row"
