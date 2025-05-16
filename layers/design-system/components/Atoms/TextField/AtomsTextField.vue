@@ -5,6 +5,8 @@ import type { ModelRef } from "vue";
 defineProps<AtomsInputFieldProps>();
 
 const inputClick = ref(false);
+const hasError = ref(false);
+const isBlurred = ref(false);
 
 function selectInput() {
   inputClick.value = !inputClick.value;
@@ -31,33 +33,31 @@ const cleanInput = () => {
   modelValue.value = "";
 };
 
-const inputState = computed(() => {
-  if (validateEmail(modelValue.value || "")) {
-    return "border-green-state";
-  } else if (modelValue.value) {
+const inputState = computed((): string => {
+  if (hasError.value && modelValue.value) {
     return "border-red-state";
+  } else if (isBlurred.value && !hasError.value) {
+    return "border-green-state";
   }
 });
 
-const stateIcon = computed(() => {
+const handleError = () => {
   if (validateEmail(modelValue.value || "")) {
-    return "feedback-positive";
-  } else if (modelValue.value) {
-    return "feedback-negative";
+    hasError.value = false;
+  } else {
+    hasError.value = true;
   }
-});
+};
 
-const typingTimeout = ref<number | null>(null);
-const isTyping = ref(false);
+function handleBlur() {
+  selectInput();
+  isBlurred.value = true;
+  handleError();
+}
 
-function handleInput() {
-  isTyping.value = true;
-  if (typingTimeout.value) {
-    clearTimeout(typingTimeout.value);
-  }
-  typingTimeout.value = window.setTimeout(() => {
-    isTyping.value = false;
-  }, 3000); // Adjust debounce time as needed
+function handleFocus() {
+  selectInput();
+  isBlurred.value = false;
 }
 </script>
 
@@ -73,26 +73,27 @@ function handleInput() {
       v-model="modelValue"
       :type="type"
       :placeholder="label"
-      @focus="selectInput"
-      @blur="selectInput"
+      @focus="handleFocus"
+      @blur="handleBlur"
       @input="handleInput"
       :class="placeholderStyle"
       class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
     />
     <AtomsIconWrapper
-      v-show="modelValue && isTyping"
+      v-if="modelValue && !isBlurred"
+      @mousedown.prevent
       @handleClick="cleanInput"
       type="button"
       iconName="close"
       class="absolute right-3 top-1/2 transform -translate-y-1/2"
     />
     <AtomsIcon
-      v-show="!isTyping && validateEmail(modelValue || '')"
+      v-show="isBlurred && !hasError && modelValue"
       name="feedback-positive"
       class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-state"
     />
     <AtomsIcon
-      v-show="!isTyping && modelValue && !validateEmail(modelValue)"
+      v-show="isBlurred && hasError && modelValue"
       name="feedback-negative"
       class="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-state"
     />
