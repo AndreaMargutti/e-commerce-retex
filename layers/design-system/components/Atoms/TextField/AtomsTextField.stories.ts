@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import AtomsInputField from "./AtomsTextField.vue";
+import AtomsTextField from "./AtomsTextField.vue";
 
-const meta: Meta<typeof AtomsInputField> = {
-  component: AtomsInputField,
+const meta: Meta<typeof AtomsTextField> = {
+  component: AtomsTextField,
   title: "Design System / Atoms / AtomsInputField",
   argTypes: {
     type: {
@@ -15,7 +15,7 @@ const meta: Meta<typeof AtomsInputField> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof AtomsInputField>;
+type Story = StoryObj<typeof AtomsTextField>;
 
 export const Default: Story = {
   args: {
@@ -23,10 +23,10 @@ export const Default: Story = {
     type: "text",
   },
   render: (args) => ({
-    components: { AtomsInputField },
+    components: { AtomsTextField },
     setup() {
       return { args };
     },
-    template: `<AtomsInputField v-bind="args" />`,
+    template: `<AtomsTextField v-bind="args" />`,
   }),
 };
