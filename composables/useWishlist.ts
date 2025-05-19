@@ -1,6 +1,6 @@
 export const useWishlist = () => {
-  let wishListItems = useState("wishListNumber", () => []);
-  let wishListLength = computed(() => wishListItems.value.length);
+  const wishListItems = useState("wishListNumber", () => []);
+  const wishListLength = computed(() => wishListItems.value.length);
 
   return {
     wishListLength,

@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
   alias: {
     "@design-system": fileURLToPath(
       new URL("./layers/design-system", import.meta.url)
