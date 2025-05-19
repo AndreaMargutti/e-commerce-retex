@@ -2,7 +2,7 @@
 import type { AtomsBadgeProps } from "./AtomsBadgeProps";
 const props = defineProps<AtomsBadgeProps>();
 
-const label = computed((): "99+" | number => {
+const label = computed((): string | number => {
   return props.items > 99 ? `99+` : props.items;
 });
 
