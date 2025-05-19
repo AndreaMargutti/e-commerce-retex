@@ -59,9 +59,6 @@ const toggleMenuMobile = () => {
             icon-name="close"
             @handle-click="toggleMenuMobile"
           />
-          =========
-          <AtomsIconWrapper type="button" icon-name="menu" />
-          >>>>>>>>> Temporary merge branch 2
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
