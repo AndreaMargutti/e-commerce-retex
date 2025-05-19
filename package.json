@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare",
     "clean-project": "rm -rf .nuxt dist node_modules",
     "storybook": "storybook dev -p 6006 --no-open",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "format": "prettier --write \"{components,pages,plugins,middleware,layouts,composables,assets}/**/*.{js,jsx,ts,tsx,vue,html,css,scss,json,md}\""
   },
   "dependencies": {
