@@ -73,8 +73,8 @@ console.log(props.links);
 
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
-        :key="link.value"
         v-for="link in links"
+        :key="link.value"
         :name="
           typeof link.label === 'string'
             ? link.label.toLocaleUpperCase()
