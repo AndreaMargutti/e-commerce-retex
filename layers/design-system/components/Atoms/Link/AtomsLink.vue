@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { AtomsLinkProps } from "./AtomsLinkProps";
-
-const props = withDefaults(defineProps<AtomsLinkProps>(), {
+withDefaults(defineProps<AtomsLinkProps>(), {
   textSize: "text-xs xl:text-sm",
 });
 </script>
