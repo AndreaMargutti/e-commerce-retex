@@ -5,5 +5,5 @@ export type AtomsButtonProps = {
   isUnderline?: boolean;
   textSize: "small" | "medium" | "large";
   isDisabled?: boolean;
-  iconName?: string | undefined;
+  iconName?: string;
 };

@@ -7,7 +7,8 @@ const btnBaseStyle = computed((): string => {
   let result = "";
   switch (props.type) {
     case "tertiary":
-      result = "text-black-state";
+      result =
+        "text-black-state hover:underline active:underline underline-offset-4";
       break;
   }
   return result;
@@ -30,14 +31,8 @@ const onBackground = computed(() => {
   if (props.onBackground) {
     switch (props.type) {
       case "tertiary":
-        return "py-4 text-white text-shadow-black text-shadow-lg bg-gray-25";
+        return "py-4 text-white text-shadow-btn bg-gray-25";
     }
-  }
-});
-
-const isUnderline = computed(() => {
-  if (props.isUnderline) {
-    return "hover:underline active:underline underline-offset-4";
   }
 });
 
@@ -52,7 +47,6 @@ const btnStyle = computed(() => {
     btnBaseStyle.value,
     textSize.value,
     onBackground.value,
-    isUnderline.value,
     withIconStyle.value,
     disableStyle.value,
   ];
@@ -73,8 +67,8 @@ const emitClick = () => {
     class="flex items-center justify-between px-4 py-2 w-full"
   >
     {{ capitalize(label) }}
-    <div>
-      <AtomsIcon v-if="iconName" :name="iconName" />
-    </div>
+    <span v-if="iconName">
+      <AtomsIcon :name="iconName" />
+    </span>
   </button>
 </template>
