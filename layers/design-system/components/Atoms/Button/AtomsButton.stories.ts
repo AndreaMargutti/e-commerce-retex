@@ -55,7 +55,7 @@ export const Tertiary: Story = {
     onBackground: false,
     isUnderline: false,
     isDisabled: false,
-    iconName: undefined,
+    iconName: "navigation-right",
   },
   render: (args) => ({
     components: { AtomsButton },

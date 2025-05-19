@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import capitalize from "~/utils/capitalize";
 import type { AtomsButtonProps } from "./AtomsButtonProps";
 const props = defineProps<AtomsButtonProps>();
 
@@ -10,7 +11,8 @@ const btnBaseStyle = computed((): string => {
         "bg-black-base text-white font-medium py-3 px-16 hover:bg-white hover:text-black-base hover:border-black-base hover:border-1";
       break;
     case "tertiary":
-      result = "text-black-state";
+      result =
+        "text-black-state hover:underline active:underline underline-offset-4";
       break;
   }
   return result;
@@ -33,23 +35,17 @@ const onBackground = computed(() => {
   if (props.onBackground) {
     switch (props.type) {
       case "tertiary":
-        return "py-4 text-white text-shadow-black text-shadow-lg bg-gray-25";
+        return "py-4 text-white text-shadow-btn bg-gray-25";
     }
   }
 });
 
-const isUnderline = computed(() => {
-  if (props.isUnderline) {
-    return "hover:underline active:underline underline-offset-4";
-  }
-});
-
 const withIconStyle = computed(() =>
-  props.iconName ? "hover:underline active:underline underline-offset-4" : ""
+  props.iconName ? "hover:underline active:underline underline-offset-4" : "",
 );
 
 const disableStyle = computed(() =>
-  props.isDisabled ? "[&&]:text-gray-state bg-gray-20" : ""
+  props.isDisabled ? "[&&]:text-gray-state bg-gray-20" : "",
 );
 
 const btnStyle = computed(() => {
@@ -57,13 +53,10 @@ const btnStyle = computed(() => {
     btnBaseStyle.value,
     textSize.value,
     onBackground.value,
-    isUnderline.value,
     withIconStyle.value,
     disableStyle.value,
   ];
 });
-
-const capitalize = useCapitalize();
 
 const emit = defineEmits<{ (e: "click"): void }>();
 
@@ -74,10 +67,14 @@ const emitClick = () => {
 </script>
 
 <template>
-  <button :class="btnStyle" @click="emitClick">
-    {{ capitalize.capitalize(label) }}
-    <div>
-      <AtomsIcon v-if="iconName" :name="iconName" />
-    </div>
+  <button
+    :class="btnStyle"
+    class="flex items-center justify-between px-4 py-2 w-full"
+    @click="emitClick"
+  >
+    {{ capitalize(label) }}
+    <span v-if="iconName">
+      <AtomsIcon :name="iconName" />
+    </span>
   </button>
 </template>

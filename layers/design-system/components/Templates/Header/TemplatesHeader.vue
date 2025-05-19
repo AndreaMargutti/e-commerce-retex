@@ -47,7 +47,6 @@ const toggleMenuMobile = () => {
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
         <AtomsTooltipWrapper label="Menu">
-          <<<<<<< HEAD
           <AtomsIconWrapper
             v-if="!isMenuMobileOpen"
             type="button"
@@ -60,9 +59,9 @@ const toggleMenuMobile = () => {
             icon-name="close"
             @handle-click="toggleMenuMobile"
           />
-          =======
+          =========
           <AtomsIconWrapper type="button" icon-name="menu" />
-          >>>>>>> main
+          >>>>>>>>> Temporary merge branch 2
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
@@ -92,14 +91,21 @@ const toggleMenuMobile = () => {
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <div
         v-for="link in links"
-        :key="link.value"
-        :name="
-          typeof link.label === 'string'
-            ? link.label.toLocaleUpperCase()
-            : link.label
-        "
-        :href="link.href"
-      />
+        :key="link.id"
+        class="group relative after:content-[''] after:p-0 after:absolute after:-z-10 after:-inset-[5px] after:pb-15"
+      >
+        <AtomsLink
+          :key="link.id"
+          :name="link.label"
+          :href="link.to"
+          variant="header"
+          :is-uppercase="true"
+        />
+        <MoleculesDesktopMenu
+          :items="link.category"
+          class="hidden group-hover:flex"
+        />
+      </div>
     </div>
 
     <div class="space-x-4 lg:order-3">

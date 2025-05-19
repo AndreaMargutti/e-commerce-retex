@@ -5,5 +5,5 @@ export type AtomsButtonProps = {
   onBackground?: boolean;
   isUnderline?: boolean;
   isDisabled?: boolean;
-  iconName?: string | undefined;
+  iconName?: string;
 };
