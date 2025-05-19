@@ -7,7 +7,7 @@ await init();
 <template>
   <div>
     <TemplatesHeader
-      :isTransparent="false"
+      :is-transparent="false"
       size="normal"
       :links="headerLinks"
     />

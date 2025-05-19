@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type headerlinks from "~/server/api/mock-data/headerlinks.js";
 import type { TemplatesHeaderProps } from "./TemplatesHeaderProps.ts";
 const props = withDefaults(defineProps<TemplatesHeaderProps>(), {
   size: "normal",
@@ -45,15 +44,15 @@ console.log(props.links);
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
         <AtomsTooltipWrapper label="Menu">
-          <AtomsIconWrapper type="button" iconName="menu" />
+          <AtomsIconWrapper type="button" icon-name="menu" />
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
         <AtomsTooltipWrapper label="Search" direction="up">
           <AtomsIconWrapper
             type="button"
-            tooltipLabel="Search"
-            iconName="search"
+            tooltip-label="Search"
+            icon-name="search"
           />
         </AtomsTooltipWrapper>
       </span>
@@ -61,7 +60,7 @@ console.log(props.links);
         <AtomsTooltipWrapper label="Account">
           <AtomsIconWrapper
             type="link"
-            :iconName="isLoggedIn ? 'logged' : 'account'"
+            :icon-name="isLoggedIn ? 'logged' : 'account'"
           >
           </AtomsIconWrapper>
         </AtomsTooltipWrapper>
@@ -75,31 +74,31 @@ console.log(props.links);
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <AtomsLink
         v-for="link in links"
+        :key="link.value"
         :name="
           typeof link.label === 'string'
             ? link.label.toLocaleUpperCase()
             : link.label
         "
         :href="link.href"
-        :key="link.value"
       />
     </div>
 
     <div class="space-x-4 lg:order-3">
       <span class="lg:hidden">
         <AtomsTooltipWrapper label="Search">
-          <AtomsIconWrapper type="button" iconName="search" />
+          <AtomsIconWrapper type="button" icon-name="search" />
         </AtomsTooltipWrapper>
       </span>
       <span class="space-x-4 max-lg:hidden relative">
         <AtomsTooltipWrapper label="Store Locator">
-          <AtomsIconWrapper type="link" iconName="pin" />
+          <AtomsIconWrapper type="link" icon-name="pin" />
         </AtomsTooltipWrapper>
         <AtomsTooltipWrapper label="Wishlist">
           <AtomsIconWrapper
             type="link"
-            :badgeSize="wishListLength"
-            iconName="wishlist"
+            :badge-size="wishListLength"
+            icon-name="wishlist"
           />
         </AtomsTooltipWrapper>
       </span>
@@ -107,8 +106,8 @@ console.log(props.links);
         <AtomsTooltipWrapper label="Cart">
           <AtomsIconWrapper
             type="link"
-            :badgeSize="cartLength"
-            iconName="cart"
+            :badge-size="cartLength"
+            icon-name="cart"
           />
         </AtomsTooltipWrapper>
       </span>

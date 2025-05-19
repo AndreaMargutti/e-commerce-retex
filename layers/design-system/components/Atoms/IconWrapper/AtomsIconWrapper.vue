@@ -16,7 +16,7 @@ const emitClick = () => {
     <button v-if="type === 'button'" @click="emitClick">
       <AtomsIcon :name="iconName" />
     </button>
-    <NuxtLink to="#" v-else>
+    <NuxtLink v-else to="#">
       <AtomsIcon :name="iconName" />
     </NuxtLink>
     <AtomsBadge
