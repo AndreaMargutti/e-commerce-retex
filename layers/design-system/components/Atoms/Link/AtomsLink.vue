@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import capitalize from "~/utils/capitalize";
 import type { AtomsLinkProps } from "./AtomsLinkProps";
 
 const props = withDefaults(defineProps<AtomsLinkProps>(), {
   textSize: "text-xs xl:text-sm",
 });
-const { capitalize } = useCapitalize();
 </script>
 
 <template>

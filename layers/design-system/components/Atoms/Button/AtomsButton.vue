@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import capitalize from "~/utils/capitalize";
 import type { AtomsButtonProps } from "./AtomsButtonProps";
 const props = defineProps<AtomsButtonProps>();
 
@@ -57,8 +58,6 @@ const btnStyle = computed(() => {
   ];
 });
 
-const capitalize = useCapitalize();
-
 const emit = defineEmits<{ (e: "click"): void }>();
 
 const emitClick = () => {
@@ -73,7 +72,7 @@ const emitClick = () => {
     @click="emitClick"
     class="flex items-center justify-between px-4 py-2 w-full"
   >
-    {{ capitalize.capitalize(label) }}
+    {{ capitalize(label) }}
     <div>
       <AtomsIcon v-if="iconName" :name="iconName" />
     </div>
