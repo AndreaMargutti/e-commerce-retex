@@ -19,11 +19,8 @@ const emitClick = () => {
         :style="{ width: `${iconSize}px`, height: `${iconSize}px` }"
       />
     </button>
-    <NuxtLink to="#" v-else>
-      <AtomsIcon
-        :name="iconName"
-        :style="{ width: `${iconSize}px`, height: `${iconSize}px` }"
-      />
+    <NuxtLink v-else to="#">
+      <AtomsIcon :name="iconName" />
     </NuxtLink>
     <AtomsBadge
       v-show="badgeSize"

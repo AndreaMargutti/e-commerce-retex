@@ -47,26 +47,30 @@ const toggleMenuMobile = () => {
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
         <AtomsTooltipWrapper label="Menu">
+          <<<<<<< HEAD
           <AtomsIconWrapper
-            type="button"
-            iconName="menu"
-            @handleClick="toggleMenuMobile"
             v-if="!isMenuMobileOpen"
+            type="button"
+            icon-name="menu"
+            @handle-click="toggleMenuMobile"
           />
           <AtomsIconWrapper
-            type="button"
-            iconName="close"
-            @handle-click="toggleMenuMobile"
             v-else
+            type="button"
+            icon-name="close"
+            @handle-click="toggleMenuMobile"
           />
+          =======
+          <AtomsIconWrapper type="button" icon-name="menu" />
+          >>>>>>> main
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
         <AtomsTooltipWrapper label="Search" direction="up">
           <AtomsIconWrapper
             type="button"
-            tooltipLabel="Search"
-            iconName="search"
+            tooltip-label="Search"
+            icon-name="search"
           />
         </AtomsTooltipWrapper>
       </span>
@@ -74,7 +78,7 @@ const toggleMenuMobile = () => {
         <AtomsTooltipWrapper label="Account">
           <AtomsIconWrapper
             type="link"
-            :iconName="isLoggedIn ? 'logged' : 'account'"
+            :icon-name="isLoggedIn ? 'logged' : 'account'"
           >
           </AtomsIconWrapper>
         </AtomsTooltipWrapper>
@@ -88,38 +92,31 @@ const toggleMenuMobile = () => {
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
       <div
         v-for="link in links"
-        :key="link.id"
-        class="group relative after:content-[''] after:p-0 after:absolute after:-z-10 after:-inset-[5px] after:pb-15"
-      >
-        <AtomsLink
-          :key="link.id"
-          :name="link.label"
-          :href="link.to"
-          variant="header"
-          :isUppercase="true"
-        />
-        <MoleculesDesktopMenu
-          :items="link.category"
-          class="hidden group-hover:flex"
-        />
-      </div>
+        :key="link.value"
+        :name="
+          typeof link.label === 'string'
+            ? link.label.toLocaleUpperCase()
+            : link.label
+        "
+        :href="link.href"
+      />
     </div>
 
     <div class="space-x-4 lg:order-3">
       <span class="lg:hidden">
         <AtomsTooltipWrapper label="Search">
-          <AtomsIconWrapper type="button" iconName="search" />
+          <AtomsIconWrapper type="button" icon-name="search" />
         </AtomsTooltipWrapper>
       </span>
       <span class="space-x-4 max-lg:hidden relative">
         <AtomsTooltipWrapper label="Store Locator">
-          <AtomsIconWrapper type="link" iconName="pin" />
+          <AtomsIconWrapper type="link" icon-name="pin" />
         </AtomsTooltipWrapper>
         <AtomsTooltipWrapper label="Wishlist">
           <AtomsIconWrapper
             type="link"
-            :badgeSize="wishListLength"
-            iconName="wishlist"
+            :badge-size="wishListLength"
+            icon-name="wishlist"
           />
         </AtomsTooltipWrapper>
       </span>
@@ -127,12 +124,12 @@ const toggleMenuMobile = () => {
         <AtomsTooltipWrapper label="Cart">
           <AtomsIconWrapper
             type="link"
-            :badgeSize="cartLength"
-            iconName="cart"
+            :badge-size="cartLength"
+            icon-name="cart"
           />
         </AtomsTooltipWrapper>
       </span>
     </div>
   </header>
-  <MoleculesMobileMenu :statusMenu="isMenuMobileOpen" class="lg:hidden" />
+  <MoleculesMobileMenu :status-menu="isMenuMobileOpen" class="lg:hidden" />
 </template>

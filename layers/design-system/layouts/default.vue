@@ -5,7 +5,11 @@ await init();
 
 <template>
   <div>
-    <TemplatesHeader :isTransparent="false" size="normal" :links="menuItems" />
+    <TemplatesHeader
+      :is-transparent="false"
+      size="normal"
+      :links="headerLinks"
+    />
     <slot />
     <TemplatesFooter />
   </div>
