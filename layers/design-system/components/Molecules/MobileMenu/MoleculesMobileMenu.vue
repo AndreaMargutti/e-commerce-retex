@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { MolecularMobileMenuProps } from "./MoleculesMobileMenuProps";
-defineProps<MolecularMobileMenuProps>();
-
 const { data } = await useFetch<Menu>("/api/mock-data/menu");
 const menu: MenuItem[] = data.value?.items || [];
 
@@ -11,6 +8,8 @@ function hasItems(item: MenuItem): boolean {
 const isSecondLayerOpen = ref(false);
 const secondLayerItems = ref<MenuItem[] | null>(null);
 const parentLabel = ref<string | null>(null);
+
+const { isMenuMobileOpen } = useMenuMobile();
 
 const toggleMenu = () => {
   isSecondLayerOpen.value = !isSecondLayerOpen.value;
@@ -29,10 +28,12 @@ const hasAccordion = (item: MenuItem): boolean =>
 <template>
   <div
     class="fixed w-full overflow-y-auto bg-white flex flex-col"
-    :class="statusMenu ? 'top-[76px] h-[calc(100vh-76px)]' : 'top-[-100%]'"
+    :class="
+      isMenuMobileOpen ? 'top-[76px] h-[calc(100vh-76px)]' : 'top-[-100%]'
+    "
   >
     <ul
-      v-if="statusMenu && !isSecondLayerOpen"
+      v-if="isMenuMobileOpen && !isSecondLayerOpen"
       class="border-y-1 border-gray-20"
     >
       <li v-for="item in menu" :key="item.id" class="min-h-12 last:pb-12">
