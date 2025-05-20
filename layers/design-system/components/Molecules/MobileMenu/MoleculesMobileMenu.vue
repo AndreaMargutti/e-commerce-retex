@@ -40,18 +40,18 @@ const hasAccordion = (item: MenuItem): boolean =>
           <AtomsLink :name="item.label" :href="item.to" text-size="text-base" />
         </MoleculesAccordionLink>
         <AtomsButton
-          textSize="large"
+          v-else
+          text-size="large"
           type="tertiary"
           :label="item.label"
-          :iconName="item.category ? 'navigation-right' : ''"
+          :icon-name="item.category ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
-          v-else
         />
       </li>
     </ul>
     <div
-      class="flex flex-col gap-2 px-4 py-2 min-h-[186px]"
       v-if="!isSecondLayerOpen"
+      class="flex flex-col gap-2 px-4 py-2 min-h-[186px]"
     >
       <AtomsLink
         name="Store Locator"
@@ -73,31 +73,31 @@ const hasAccordion = (item: MenuItem): boolean =>
       >
         <AtomsIcon :name="'navigation-chevron-right'" class="justify-start" />
         <AtomsButton
-          textSize="large"
+          text-size="large"
           type="tertiary"
           :label="parentLabel !== null ? parentLabel.toLocaleUpperCase() : ''"
-          @click="toggleMenu"
           class="justify-center grow-1 -translate-x-3"
+          @click="toggleMenu"
         />
       </div>
       <ul>
         <li v-for="item in secondLayerItems" :key="item.id" class="min-h-12">
           <AtomsLink
             v-if="!hasAccordion(item)"
-            textSize="text-base"
+            text-size="text-base"
             :name="item.label"
             :href="item.to"
             class="py-2 px-4"
           />
           <MoleculesAccordion
             v-else
-            :itemsReceived="item.category || []"
-            :accordionLabel="item.label"
+            :items-received="item.category || []"
+            :accordion-label="item.label"
           >
             <AtomsLink
               v-for="accordionItem in item.category"
               :key="accordionItem.id"
-              textSize="text-base"
+              text-size="text-base"
               :name="accordionItem.label"
               :href="accordionItem.to"
               class="py-2 px-4"

@@ -63,8 +63,8 @@ const emitClick = () => {
 <template>
   <button
     :class="btnStyle"
-    @click="emitClick"
     class="flex items-center justify-between px-4 py-2 w-full"
+    @click="emitClick"
   >
     {{ capitalize(label) }}
     <span v-if="iconName">

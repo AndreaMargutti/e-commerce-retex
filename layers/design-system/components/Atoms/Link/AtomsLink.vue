@@ -13,7 +13,7 @@ withDefaults(defineProps<AtomsLinkProps>(), {
       class="hover:underline underline-offset-5"
     >
       <span v-if="icon">
-        <AtomsIcon :name="icon" class="scale-125" />
+        <AtomsIcon :name="icon" />
       </span>
       {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
     </NuxtLink>

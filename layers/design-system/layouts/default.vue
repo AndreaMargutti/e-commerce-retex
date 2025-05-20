@@ -6,7 +6,7 @@ await init();
 
 <template>
   <div>
-    <TemplatesHeader :isTransparent="false" size="normal" :links="menuItems" />
+    <TemplatesHeader :is-transparent="false" size="normal" :links="menuItems" />
     <slot />
     <!--TODO: insert footer when done-->
   </div>

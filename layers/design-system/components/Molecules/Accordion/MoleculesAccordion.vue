@@ -13,10 +13,10 @@ const { status, changeStatus } = useMenu();
 
 <template>
   <MoleculesAccordionButton
-    @openAccordion="changeStatus"
-    :buttonLabel="accordionLabel"
+    :button-label="accordionLabel"
+    @open-accordion="changeStatus"
   />
-  <div class="py-2" v-if="status">
+  <div v-if="status" class="py-2">
     <slot></slot>
   </div>
 </template>
