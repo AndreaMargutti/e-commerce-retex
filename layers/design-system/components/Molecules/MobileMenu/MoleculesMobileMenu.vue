@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { Menu, MenuItem } from "~/types/MenuItem";
 const { data } = await useFetch<Menu>("/api/mock-data/menu");
 const menu: MenuItem[] = data.value?.items || [];
 
@@ -35,7 +36,11 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
       v-if="isMenuMobileOpen && !isSecondLayerOpen"
       class="border-y-1 border-gray-20"
     >
-      <li v-for="item in menu" :key="item.id" class="last:pb-12">
+      <li
+        v-for="item in menu"
+        :key="item.id"
+        class="min-h-12 flex items-center last:pb-12"
+      >
         <MoleculesAccordionLink v-if="!item.category">
           <AtomsLink :name="item.label" :href="item.to" text-size="text-base" />
         </MoleculesAccordionLink>
