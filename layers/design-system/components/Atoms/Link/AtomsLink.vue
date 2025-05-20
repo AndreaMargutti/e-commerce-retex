@@ -6,16 +6,12 @@ withDefaults(defineProps<AtomsLinkProps>(), {
 </script>
 
 <template>
-  <div class="flex items-center gap-2 hover:cursor-pointer">
-    <NuxtLink
-      :to="href"
-      :class="textSize"
-      class="hover:underline underline-offset-5"
-    >
-      <span v-if="icon">
-        <AtomsIcon :name="icon" size="20px" />
-      </span>
-      {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
-    </NuxtLink>
-  </div>
+  <NuxtLink
+    :to="href"
+    :class="textSize"
+    class="flex items-center gap-2 hover:cursor-pointer hover:underline underline-offset-5"
+  >
+    <AtomsIcon :name="icon" size="20px" v-if="icon" />
+    {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
+  </NuxtLink>
 </template>

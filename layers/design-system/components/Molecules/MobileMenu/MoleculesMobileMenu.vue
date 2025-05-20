@@ -57,12 +57,14 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
         name="Store Locator"
         href="/store-locator"
         icon="pin"
+        text-size="16px"
         class="h-12"
       />
       <AtomsLink
         name="Wishlist"
         href="/wishlist"
         icon="wishlist"
+        text-size="16px"
         class="h-12"
       />
     </div>

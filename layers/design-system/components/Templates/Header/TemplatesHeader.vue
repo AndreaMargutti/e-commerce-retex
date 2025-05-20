@@ -102,7 +102,7 @@ const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
       </div>
     </div>
 
-    <div class="space-x-4 lg:order-3">
+    <div class="space-x-5 lg:order-3">
       <span class="lg:hidden">
         <AtomsTooltipWrapper label="Search">
           <AtomsIconWrapper type="button" icon-name="search" />
