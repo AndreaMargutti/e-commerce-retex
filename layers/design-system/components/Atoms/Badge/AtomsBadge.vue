@@ -18,14 +18,24 @@ const badgeSize = computed((): string => {
 });
 
 const textSize = computed((): string => {
-  if (props.size === "small") {
-    if (props.items > 99) {
-      return "text-[7px]";
-    } else {
-      return "text-tiny";
-    }
+  switch (props.size) {
+    case "small":
+      if (props.items > 99) {
+        return "text-[7px]";
+      } else {
+        return "text-tiny";
+      }
+      break;
+    case "large":
+      if (props.items > 99) {
+        return "text-tiny";
+      } else {
+        return "text-sm";
+      }
+      break;
+    default:
+      return "text-sm";
   }
-  return "text-sm";
 });
 
 const isInverted = computed(() => {
