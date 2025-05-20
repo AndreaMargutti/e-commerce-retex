@@ -49,10 +49,7 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
         />
       </li>
     </ul>
-    <div
-      v-if="!isSecondLayerOpen"
-      class="flex flex-col gap-2 px-4 py-2 min-h-[186px]"
-    >
+    <div v-if="!isSecondLayerOpen" class="flex flex-col px-4 min-h-[186px]">
       <AtomsLink
         name="Store Locator"
         href="/store-locator"
