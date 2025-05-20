@@ -92,7 +92,6 @@ const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
           :key="link.id"
           :name="link.label"
           :href="link.to"
-          variant="header"
           :is-uppercase="true"
         />
         <MoleculesDesktopMenu

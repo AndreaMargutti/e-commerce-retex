@@ -39,7 +39,7 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
       <li
         v-for="item in menu"
         :key="item.id"
-        class="min-h-12 flex items-center last:pb-12"
+        class="min-h-12 flex items-center last:pb-12 font-medium"
       >
         <MoleculesAccordionLink v-if="!item.category">
           <AtomsLink :name="item.label" :href="item.to" text-size="text-base" />
@@ -85,7 +85,11 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
         />
       </div>
       <ul>
-        <li v-for="item in secondLayerItems" :key="item.id" class="min-h-12">
+        <li
+          v-for="item in secondLayerItems"
+          :key="item.id"
+          class="min-h-12 font-medium"
+        >
           <AtomsLink
             v-if="!hasAccordion(item)"
             text-size="text-base"
@@ -104,7 +108,7 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
               text-size="text-base"
               :name="accordionItem.label"
               :href="accordionItem.to"
-              class="py-2 px-4"
+              class="py-2 px-4 font-normal"
             />
           </MoleculesAccordion>
         </li>
