@@ -21,8 +21,7 @@ const openSecondLayer = (item: MenuItem) => {
   isSecondLayerOpen.value = true;
 };
 
-const hasAccordion = (item: MenuItem): boolean =>
-  item.hasOwnProperty("category");
+const hasAccordion = (item: MenuItem): boolean => "category" in item;
 </script>
 
 <template>
