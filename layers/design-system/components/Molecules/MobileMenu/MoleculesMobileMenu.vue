@@ -6,11 +6,10 @@ const menu: MenuItem[] = data.value?.items || [];
 function hasItems(item: MenuItem): boolean {
   return item.category !== undefined && item.category.length > 0;
 }
-const isSecondLayerOpen = ref(false);
 const secondLayerItems = ref<MenuItem[] | null>(null);
 const parentLabel = ref<string | null>(null);
 
-const { isMenuMobileOpen } = useMenuMobile();
+const { isMenuMobileOpen, isSecondLayerOpen } = useMenuMobile();
 
 const toggleMenu = () => {
   isSecondLayerOpen.value = !isSecondLayerOpen.value;
