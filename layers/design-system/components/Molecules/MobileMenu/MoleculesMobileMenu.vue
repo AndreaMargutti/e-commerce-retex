@@ -26,7 +26,7 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
 
 <template>
   <div
-    class="fixed w-full overflow-y-auto bg-white flex flex-col"
+    class="fixed w-full overflow-y-auto bg-white flex flex-col z-10"
     :class="
       isMenuMobileOpen ? 'top-[76px] h-[calc(100vh-76px)]' : 'top-[-100%]'
     "
@@ -50,7 +50,6 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
           :label="item.label"
           :icon-name="item.category ? 'navigation-right' : ''"
           @click="hasItems(item) ? openSecondLayer(item) : null"
-          v-else
         />
       </li>
     </ul>
@@ -101,6 +100,7 @@ const hasAccordion = (item: MenuItem): boolean => "category" in item;
             v-else
             :items-received="item.category || []"
             :accordion-label="item.label"
+            accordion-type="header"
           >
             <AtomsLink
               v-for="accordionItem in item.category"
