@@ -25,14 +25,12 @@ const textSize = computed((): string => {
       } else {
         return "text-tiny";
       }
-      break;
     case "large":
       if (props.items > 99) {
         return "text-tiny";
       } else {
         return "text-sm";
       }
-      break;
     default:
       return "text-sm";
   }

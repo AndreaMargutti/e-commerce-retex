@@ -18,10 +18,8 @@ const textSize = computed(() => {
   switch (props.textSize) {
     case "small":
       return "text-xs";
-      break;
     case "medium":
       return "text-sm";
-      break;
     case "large":
       return "text-base";
   }

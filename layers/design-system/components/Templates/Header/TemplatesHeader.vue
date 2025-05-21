@@ -17,11 +17,8 @@ const headerSize = computed(() => {
   switch (props.size) {
     case "small":
       return "h-[40px] py-1";
-      break;
-
     default: //normal
       return "h-[76px] py-2";
-      break;
   }
 });
 
