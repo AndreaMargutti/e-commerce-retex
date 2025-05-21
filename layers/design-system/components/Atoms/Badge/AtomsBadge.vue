@@ -1,38 +1,58 @@
 <script setup lang="ts">
 import type { AtomsBadgeProps } from "./AtomsBadgeProps";
-const props = defineProps<AtomsBadgeProps>();
+const props = withDefaults(defineProps<AtomsBadgeProps>(), {
+  size: "large",
+  inverted: false,
+});
 
-const label = computed(() => {
+const label = computed((): string | number => {
   return props.items > 99 ? `99+` : props.items;
 });
 
-const textSize = computed(() => {
-  if (props.items < 99) {
-    return "text-sm h-[20px] w-[20px]";
-  } else if (props.items === 99) {
-    return "text-tiny";
-  } else {
-    return "text-[7px]";
+const badgeSize = computed((): string => {
+  if (props.size === "small") {
+    return "h-3.5 w-3.5";
+  } else if (props.size === "large") {
+    return "h-5 w-5";
+  } else return "";
+});
+
+const textSize = computed((): string => {
+  switch (props.size) {
+    case "small":
+      if (props.items > 99) {
+        return "text-[7px]";
+      } else {
+        return "text-tiny";
+      }
+    case "large":
+      if (props.items > 99) {
+        return "text-tiny";
+      } else {
+        return "text-sm";
+      }
+    default:
+      return "text-sm";
   }
 });
 
-const color = computed(() => {
-  if (props.color === "grey") {
-    return "bg-grey-base text-black-base";
-  } else {
+const isInverted = computed(() => {
+  if (props.inverted) {
     return "bg-black-base text-white";
+  } else {
+    return "bg-gray-base text-black-base";
   }
 });
 
-const badgeStyle = computed(() => {
-  return [textSize.value, color.value];
+const badgeStyle = computed((): string[] => {
+  return [badgeSize.value, textSize.value, isInverted.value];
 });
 </script>
 
 <template>
   <div
     :class="badgeStyle"
-    class="h-[14px] w-[14px] py-0.5 px-1 rounded-full flex items-center justify-center"
+    class="py-0.5 px-1 rounded-full flex items-center justify-center"
   >
     <p>{{ label }}</p>
   </div>

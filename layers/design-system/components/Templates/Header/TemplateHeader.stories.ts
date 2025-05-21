@@ -1,7 +1,7 @@
 import AtomsLink from "../../Atoms/Link/AtomsLink.vue";
 import TemplatesHeader from "./TemplatesHeader.vue";
-import type { Meta, StoryFn, StoryObj } from "@storybook/vue3";
-import { http, HttpResponse, delay } from "msw";
+import type { Meta, StoryObj } from "@storybook/vue3";
+import { http, HttpResponse } from "msw";
 
 const meta: Meta<typeof TemplatesHeader> = {
   title: "Design System /Templates / Header",
@@ -27,51 +27,57 @@ type Story = StoryObj<typeof TemplatesHeader>;
 const linksHeader = [
   {
     id: 1,
-    value: "Home",
     label: "Home",
     href: "/",
+    items: [],
   },
   {
     id: 2,
-    value: "Sale",
     label: "Sale",
     href: "/sale",
+    items: [],
   },
   {
     id: 3,
-    value: "New Arrivals",
     label: "New Arrivals",
     href: "/new-arrivals",
+    items: [],
   },
   {
     id: 4,
-    value: "Women",
     label: "Women",
     href: "/women",
+    items: [
+      { id: 1, label: "Clothing", href: "/women/clothing" },
+      { id: 2, label: "Accessories", href: "/women/accessories" },
+    ],
   },
   {
     id: 5,
-    value: "Men",
     label: "Men",
     href: "/men",
+    items: [
+      { id: 1, label: "Clothing", href: "/men/clothing" },
+      { id: 2, label: "Accessories", href: "/men/accessories" },
+    ],
   },
   {
     id: 6,
-    value: "Kids",
     label: "Kids",
     href: "/kids",
+    items: [],
   },
   {
     id: 7,
-    value: "Gift Guide",
     label: "Gift Guide",
     href: "/gift-guide",
+    items: [],
   },
   {
     id: 8,
-    value: "Woolrich World",
     label: "Woolrich World",
     href: "/woolrich-world",
+    items: [],
   },
 ];
 
@@ -91,19 +97,10 @@ export const Default: Story = {
     },
   },
   render: (args) => ({
-    components: { TemplatesHeader, AtomsLink },
+    components: { TemplatesHeader },
     setup() {
       return { args };
     },
-    template: `<TemplatesHeader v-bind="args">
-      <AtomsLink
-        v-for="link in headerLinks"
-        :key="link.value"
-        :href="link.href"
-        :class="['header-link', link.value]"
-      >
-        link 
-      </AtomsLink>
-    </TemplatesHeader>`,
+    template: `<TemplatesHeader v-bind="args" />`,
   }),
 };

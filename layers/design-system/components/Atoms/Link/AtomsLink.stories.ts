@@ -5,6 +5,13 @@ import AtomsLink from "./AtomsLink.vue";
 const meta: Meta<typeof AtomsLink> = {
   component: AtomsLink,
   title: "Design System / Atoms / AtomsLink",
+  argTypes: {
+    isUppercase: {
+      control: {
+        type: "boolean",
+      },
+    },
+  },
 };
 
 export default meta;
@@ -14,6 +21,7 @@ export const Link: Story = {
   args: {
     name: "uomo",
     href: "/uomo",
+    isUppercase: false,
   },
   render: (args) => ({
     components: { AtomsLink },

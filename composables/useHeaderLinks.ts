@@ -1,7 +1,5 @@
-import type { HeaderLink } from "~/types/headerLinks";
-
 export const useHeaderLinks = () => {
-  const { data, execute } = useFetch("/api/mock-data/headerlinks", {
+  const { data, execute } = useFetch("/api/mock-data/menu", {
     immediate: false,
     cache: "reload",
   });
@@ -10,12 +8,12 @@ export const useHeaderLinks = () => {
     await execute();
   };
 
-  const headerLinks: ComputedRef<HeaderLink[]> = computed(
-    () => data.value?.headerLinks || []
+  const menuItems: ComputedRef<MenuItem[]> = computed(
+    () => data.value?.items || []
   );
 
   return {
     init,
-    headerLinks,
+    menuItems,
   };
 };

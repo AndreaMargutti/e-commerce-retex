@@ -5,11 +5,16 @@ const meta: Meta<typeof AtomsBadge> = {
   component: AtomsBadge,
   title: "Design System / Atoms / AtomsBadge",
   argTypes: {
-    color: {
-      options: ["grey", "black"],
+    inverted: {
       control: {
-        type: "radio",
+        type: "boolean",
       },
+    },
+    size: {
+      control: {
+        type: "select",
+      },
+      options: ["small", "large"],
     },
   },
 };
@@ -18,8 +23,9 @@ export default meta;
 type Story = StoryObj<typeof AtomsBadge>;
 export const Default: Story = {
   args: {
-    items: 10,
-    color: "grey",
+    items: 9,
+    inverted: false,
+    size: "large",
   },
   render: (args) => ({
     components: { AtomsBadge },

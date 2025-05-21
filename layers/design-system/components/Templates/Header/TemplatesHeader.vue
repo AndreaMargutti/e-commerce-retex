@@ -17,11 +17,8 @@ const headerSize = computed(() => {
   switch (props.size) {
     case "small":
       return "h-[40px] py-1";
-      break;
-
     default: //normal
       return "h-[76px] py-2";
-      break;
   }
 });
 
@@ -31,20 +28,31 @@ const headerClass = computed(() => {
 
 const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
-
 const { isLoggedIn } = useLogin();
-console.log(props.links);
+
+const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
 </script>
 
 <template>
   <header
     :class="headerClass"
-    class="flex justify-between lg:text-end items-center px-4 md:px-8"
+    class="flex justify-between lg:text-end items-center px-4 md:px-8 sticky top-0 z-50"
   >
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
         <AtomsTooltipWrapper label="Menu">
-          <AtomsIconWrapper type="button" icon-name="menu" />
+          <AtomsIconWrapper
+            v-if="!isMenuMobileOpen"
+            type="button"
+            icon-name="menu"
+            @handle-click="toggleMenuMobile"
+          />
+          <AtomsIconWrapper
+            v-else
+            type="button"
+            icon-name="close"
+            @handle-click="toggleMenuMobile"
+          />
         </AtomsTooltipWrapper>
       </span>
       <span class="hidden lg:inline">
@@ -72,19 +80,25 @@ console.log(props.links);
     </div>
 
     <div class="hidden lg:flex grow gap-4 flex-1/2 flex-wrap xl:gap-10">
-      <AtomsLink
+      <div
         v-for="link in links"
-        :key="link.value"
-        :name="
-          typeof link.label === 'string'
-            ? link.label.toLocaleUpperCase()
-            : link.label
-        "
-        :href="link.href"
-      />
+        :key="link.id"
+        class="group relative after:content-[''] after:p-0 after:absolute after:-z-10 after:-inset-[5px] after:pb-15"
+      >
+        <AtomsLink
+          :key="link.id"
+          :name="link.label"
+          :href="link.to"
+          :is-uppercase="true"
+        />
+        <MoleculesDesktopMenu
+          :items="link.category"
+          class="hidden group-hover:flex"
+        />
+      </div>
     </div>
 
-    <div class="space-x-4 lg:order-3">
+    <div class="space-x-6 lg:space-x-4 lg:order-3">
       <span class="lg:hidden">
         <AtomsTooltipWrapper label="Search">
           <AtomsIconWrapper type="button" icon-name="search" />
@@ -113,4 +127,5 @@ console.log(props.links);
       </span>
     </div>
   </header>
+  <MoleculesMobileMenu :status-menu="isMenuMobileOpen" class="lg:hidden" />
 </template>
