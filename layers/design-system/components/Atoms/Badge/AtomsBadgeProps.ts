@@ -1,4 +1,5 @@
 export type AtomsBadgeProps = {
-  items: number | null;
-  color?: "grey";
+  items: number;
+  size: "small" | "large";
+  inverted: boolean;
 };

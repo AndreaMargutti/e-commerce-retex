@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import type { MoleculesListProps } from "./MoleculesListProps";
 
-defineProps<MoleculesListProps<MenuItem>>();
+defineProps<MoleculesListProps>();
 </script>
 
 <template>
   <ul class="">
-    <li v-for="singleItem in items" class="py-2">
+    <li v-for="singleItem in items" :key="singleItem.label" class="py-2">
       <AtomsLink
         :name="singleItem.label"
         :href="singleItem.to"
@@ -14,7 +14,7 @@ defineProps<MoleculesListProps<MenuItem>>();
       />
     </li>
     <li class="py-2">
-      <AtomsLink :name="$t('SeeAll')" href="#" :is-uppercase="true" />
+      <AtomsLink :name="$t('SeeAll')" href="#" is-uppercase />
     </li>
   </ul>
 </template>

@@ -6,12 +6,6 @@ const meta: Meta<typeof AtomsLink> = {
   component: AtomsLink,
   title: "Design System / Atoms / AtomsLink",
   argTypes: {
-    variant: {
-      options: ["header", "accordion", "desktopMenu"],
-      control: {
-        type: "select",
-      },
-    },
     isUppercase: {
       control: {
         type: "boolean",
@@ -27,7 +21,6 @@ export const Link: Story = {
   args: {
     name: "uomo",
     href: "/uomo",
-    variant: "header",
     isUppercase: false,
   },
   render: (args) => ({

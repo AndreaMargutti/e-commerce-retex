@@ -2,7 +2,7 @@
 import { NuxtLink } from "#components";
 import type { AtomsIconWrapperProps } from "./AtomsIconWrapperProps";
 
-const props = withDefaults(defineProps<AtomsIconWrapperProps>(), {
+withDefaults(defineProps<AtomsIconWrapperProps>(), {
   type: "link",
 });
 const emit = defineEmits(["handleClick"]);
@@ -25,6 +25,8 @@ const emitClick = () => {
     <AtomsBadge
       v-show="badgeSize"
       :items="badgeSize || 0"
+      size="large"
+      :inverted="false"
       class="absolute top-1.5 left-1.5"
     />
   </span>

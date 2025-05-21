@@ -1,21 +1,16 @@
 <script lang="ts" setup>
+import type { MenuItem } from "~/types/MenuItem";
 import type { MoleculesAccordionProps } from "./MoleculesAccordionProps";
 
 defineProps<MoleculesAccordionProps<MenuItem>>();
-
-const isContentShown = ref(false);
-const toggleContent = () => {
-  isContentShown.value = !isContentShown.value;
-};
 
 const { status, changeStatus } = useMenu();
 </script>
 
 <template>
   <MoleculesAccordionButton
-    @openAccordion="changeStatus"
-    :buttonLabel="accordionLabel"
-    :class="accordionType === 'footer' ? 'border-b-1 border-gray-75' : ''"
+    :button-label="accordionLabel"
+    @open-accordion="changeStatus"
   />
   <div class="py-2 lg:hidden" v-if="status">
     <slot></slot>

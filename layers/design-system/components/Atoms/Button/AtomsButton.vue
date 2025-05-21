@@ -22,10 +22,8 @@ const textSize = computed(() => {
   switch (props.textSize) {
     case "small":
       return "text-xs";
-      break;
     case "medium":
       return "text-sm";
-      break;
     case "large":
       return "text-base";
   }
@@ -35,7 +33,7 @@ const onBackground = computed(() => {
   if (props.onBackground) {
     switch (props.type) {
       case "tertiary":
-        return "py-4 text-white text-shadow-btn bg-gray-25";
+        return "py-4 text-white text-shadow-btn";
     }
   }
 });

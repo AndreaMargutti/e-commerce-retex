@@ -17,11 +17,8 @@ const headerSize = computed(() => {
   switch (props.size) {
     case "small":
       return "h-[40px] py-1";
-      break;
-
     default: //normal
       return "h-[76px] py-2";
-      break;
   }
 });
 
@@ -33,10 +30,7 @@ const { wishListLength } = useWishlist();
 const { cartLength } = useCart();
 const { isLoggedIn } = useLogin();
 
-const isMenuMobileOpen = ref(false);
-const toggleMenuMobile = () => {
-  isMenuMobileOpen.value = !isMenuMobileOpen.value;
-};
+const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
 </script>
 
 <template>
@@ -95,7 +89,6 @@ const toggleMenuMobile = () => {
           :key="link.id"
           :name="link.label"
           :href="link.to"
-          variant="header"
           :is-uppercase="true"
         />
         <MoleculesDesktopMenu
@@ -105,7 +98,7 @@ const toggleMenuMobile = () => {
       </div>
     </div>
 
-    <div class="space-x-4 lg:order-3">
+    <div class="space-x-6 lg:space-x-4 lg:order-3">
       <span class="lg:hidden">
         <AtomsTooltipWrapper label="Search">
           <AtomsIconWrapper type="button" icon-name="search" />

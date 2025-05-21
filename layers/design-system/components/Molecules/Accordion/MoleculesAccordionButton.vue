@@ -19,9 +19,7 @@ const { status, changeStatus } = useMenu();
     @click="openAccordion"
   >
     {{ buttonLabel }}
-    <div class="block lg:hidden">
-      <AtomsIcon :name="'navigation-chevron-down'" v-if="!status" />
-      <AtomsIcon :name="'navigation-chevron-up'" v-else />
-    </div>
+    <AtomsIcon v-if="!status" :name="'navigation-chevron-down'" />
+    <AtomsIcon v-else :name="'navigation-chevron-up'" />
   </button>
 </template>
