@@ -3,7 +3,7 @@ import AtomsTextField from "./AtomsTextField.vue";
 
 const meta: Meta<typeof AtomsTextField> = {
   component: AtomsTextField,
-  title: "Design System / Atoms / AtomsInputField",
+  title: "Design System / Atoms / AtomsTextField",
   argTypes: {
     type: {
       options: ["text", "email", "password"],
