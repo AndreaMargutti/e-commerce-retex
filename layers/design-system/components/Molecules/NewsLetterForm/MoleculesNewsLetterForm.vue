@@ -12,7 +12,6 @@ const submitForm = async () => {
   error.value = false;
   if (validateEmail(email.value)) {
     try {
-      const form = document.querySelector("form") as HTMLFormElement;
       const { data, status } = await useFetch("/api/test", {
         method: "POST",
         body: {

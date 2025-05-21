@@ -19,6 +19,7 @@ const emitClick = () => {
         :style="{ width: `${iconSize}px`, height: `${iconSize}px` }"
       />
     </button>
+    <!--TODO: change value of to -->
     <NuxtLink v-else to="#">
       <AtomsIcon :name="iconName" />
     </NuxtLink>

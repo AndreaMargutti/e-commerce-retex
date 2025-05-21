@@ -14,6 +14,7 @@ defineProps<MoleculesListProps>();
       />
     </li>
     <li class="py-2">
+      <!--TODO: change value of href -->
       <AtomsLink :name="$t('SeeAll')" href="#" is-uppercase />
     </li>
   </ul>
