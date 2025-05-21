@@ -34,11 +34,6 @@ const { cartLength } = useCart();
 const { isLoggedIn } = useLogin();
 
 const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
-
-const router = useRouter();
-router.afterEach(() => {
-  isMenuMobileOpen.value = false;
-});
 </script>
 
 <template>
@@ -106,7 +101,7 @@ router.afterEach(() => {
       </div>
     </div>
 
-    <div class="space-x-4 lg:order-3">
+    <div class="space-x-6 lg:space-x-4 lg:order-3">
       <span class="lg:hidden">
         <AtomsTooltipWrapper label="Search">
           <AtomsIconWrapper type="button" icon-name="search" />

@@ -31,13 +31,13 @@ const onBackground = computed(() => {
   if (props.onBackground) {
     switch (props.type) {
       case "tertiary":
-        return "py-4 text-white text-shadow-btn bg-gray-25";
+        return "py-4 text-white text-shadow-btn";
     }
   }
 });
 
 const withIconStyle = computed(() =>
-  props.iconName ? "hover:underline active:underline underline-offset-4" : ""
+  props.iconName ? "hover:underline active:underline underline-offset-4" : "",
 );
 
 const disableStyle = computed(() => (props.isDisabled ? "text-grey-25" : ""));

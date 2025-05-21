@@ -1,4 +1,6 @@
-export type MoleculesListProps<T> = {
-  items: Array<T>;
+import type { MenuItem } from "~/types/MenuItem";
+
+export type MoleculesListProps = {
+  items: Array<MenuItem>;
   isUppercase?: boolean;
 };
