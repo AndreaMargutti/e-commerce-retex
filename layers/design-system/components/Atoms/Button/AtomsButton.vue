@@ -8,11 +8,11 @@ const btnBaseStyle = computed((): string => {
   switch (props.type) {
     case "primary":
       result =
-        "bg-black-base text-white font-medium py-3 px-16 hover:bg-white hover:text-black-base hover:border-black-base hover:border-1";
+        "bg-black-base text-white font-medium py-3 px-16 justify-center hover:bg-white hover:text-black-base hover:border-black-base hover:border-1";
       break;
     case "tertiary":
       result =
-        "text-black-state hover:underline active:underline underline-offset-4";
+        "justify-between text-black-state hover:underline active:underline underline-offset-4";
       break;
   }
   return result;
@@ -26,6 +26,8 @@ const textSize = computed(() => {
       return "text-sm";
     case "large":
       return "text-base";
+    default:
+      return "";
   }
 });
 
@@ -67,7 +69,7 @@ const emitClick = () => {
 <template>
   <button
     :class="btnStyle"
-    class="flex items-center justify-between px-4 py-2 w-full"
+    class="flex items-center px-4 py-2 w-full"
     @click="emitClick"
   >
     {{ capitalize(label) }}

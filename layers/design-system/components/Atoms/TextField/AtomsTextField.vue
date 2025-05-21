@@ -37,6 +37,8 @@ const inputState = computed((): string => {
     return "border-red-state";
   } else if (isBlurred.value && !hasError.value) {
     return "border-green-state";
+  } else {
+    return "";
   }
 });
 
