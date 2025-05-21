@@ -4,7 +4,7 @@ import type { MoleculesAccordionProps } from "./MoleculesAccordionProps";
 
 defineProps<MoleculesAccordionProps<MenuItem>>();
 
-const { status, changeStatus } = useMenu();
+const { status, changeStatus } = useAccordion();
 </script>
 
 <template>
@@ -12,13 +12,13 @@ const { status, changeStatus } = useMenu();
     :button-label="accordionLabel"
     @open-accordion="changeStatus"
   />
-  <div class="py-2 lg:hidden" v-if="status">
+  <div v-if="status" class="py-2 lg:hidden">
     <slot></slot>
   </div>
 
   <div
-    class="hidden lg:flex lg:flex-wrap lg:pt-6"
     v-if="accordionType === 'footer'"
+    class="hidden lg:flex lg:flex-wrap lg:pt-6"
   >
     <slot></slot>
   </div>

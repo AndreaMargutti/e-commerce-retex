@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { AtomsInputFieldProps } from "./AtomsTextFieldProps";
 import { validateEmail } from "#imports";
-import type { ModelRef } from "vue";
 defineProps<AtomsInputFieldProps>();
 
 const inputClick = ref(false);
@@ -73,19 +72,19 @@ function handleFocus() {
       v-model="modelValue"
       :type="type"
       :placeholder="label"
+      :class="placeholderStyle"
+      class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
       @focus="handleFocus"
       @blur="handleBlur"
       @input="handleInput"
-      :class="placeholderStyle"
-      class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
     />
     <AtomsIconWrapper
       v-if="modelValue && !isBlurred"
-      @mousedown.prevent
-      @handleClick="cleanInput"
       type="button"
-      iconName="close"
+      icon-name="close"
       class="absolute right-3 top-1/2 transform -translate-y-1/2"
+      @mousedown.prevent
+      @handle-click="cleanInput"
     />
     <AtomsIcon
       v-show="isBlurred && !hasError && modelValue"

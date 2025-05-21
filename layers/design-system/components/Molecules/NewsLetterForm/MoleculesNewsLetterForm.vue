@@ -35,22 +35,22 @@ const submitForm = async () => {
     <form
       v-if="!isSubscribed"
       :method="formMethod"
-      @submit.prevent="submitForm"
       class="flex flex-col gap-4 md:justify-items-stretch md:flex-row"
+      @submit.prevent="submitForm"
     >
       <AtomsTextField
+        v-model="email"
         label="e-mail"
         type="email"
-        v-model="email"
         class="md:flex-grow-1"
       />
       <AtomsButton
         type="primary"
-        textSize="medium"
+        text-size="medium"
         label="invia"
         class="mt-4"
       />
     </form>
-    <MoleculesNewsLetterFormText :isSubscribed="successMessage" />
+    <MoleculesNewsLetterFormText :is-subscribed="successMessage" />
   </div>
 </template>

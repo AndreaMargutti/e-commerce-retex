@@ -10,7 +10,7 @@ const openAccordion = () => {
   emit("openAccordion");
 };
 
-const { status, changeStatus } = useMenu();
+const { status, changeStatus } = useAccordion();
 </script>
 
 <template>

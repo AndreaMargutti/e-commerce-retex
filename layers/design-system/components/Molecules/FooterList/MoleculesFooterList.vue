@@ -27,9 +27,9 @@ const paymentClasses = computed((): string => {
         v-for="{ id, href, label, icon } in icons"
         :key="id"
         type="link"
-        :iconName="type === 'social' ? icon : `${icon}-off`"
+        :icon-name="type === 'social' ? icon : `${icon}-off`"
         :href="href"
-        :iconSize="type === 'social' ? 24 : 32"
+        :icon-size="type === 'social' ? 24 : 32"
       />
     </div>
   </div>

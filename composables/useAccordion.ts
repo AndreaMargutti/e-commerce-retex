@@ -1,4 +1,4 @@
-export const useMenu = () => {
+export const useAccordion = () => {
   const status = ref(false);
 
   const changeStatus = () => {

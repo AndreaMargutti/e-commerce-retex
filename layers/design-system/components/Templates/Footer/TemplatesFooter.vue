@@ -17,8 +17,8 @@ const footerList = footerListData.value || [];
   <div class="bg-gray-25">
     <div class="min-h-[331px] px-4 md:pt-16 lg:flex lg:gap-8 lg:px-8">
       <MoleculesNewsLetterForm
-        formMethod="POST"
-        newsLetterText="Subscribe to our newsletter"
+        form-method="POST"
+        news-letter-text="Subscribe to our newsletter"
       />
 
       <div class="py-10 lg:py-0 lg:min-w-fit">
@@ -38,9 +38,9 @@ const footerList = footerListData.value || [];
         class="flex-1/4"
       >
         <MoleculesAccordion
-          :accordionLabel="footer.label"
-          accordionType="footer"
-          :itemsReceived="footer.items"
+          :accordion-label="footer.label"
+          accordion-type="footer"
+          :items-received="footer.items"
         >
           <AtomsLink
             v-for="item in footer.items"
