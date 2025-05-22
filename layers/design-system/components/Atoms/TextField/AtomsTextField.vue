@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { AtomsInputFieldProps } from "./AtomsTextFieldProps";
-import { validateEmail } from "#imports";
 defineProps<AtomsInputFieldProps>();
 
 const inputClick = ref(false);
@@ -78,7 +77,6 @@ function handleFocus() {
       class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
       @focus="handleFocus"
       @blur="handleBlur"
-      @input="handleInput"
     />
     <AtomsIconWrapper
       v-if="modelValue && !isBlurred"

@@ -1,4 +1,4 @@
-import { validateEmail } from "~/utils";
+import validateEmail from "~/utils/validateEmail";
 
 export default defineEventHandler(async (event) => {
   console.log("test success");
