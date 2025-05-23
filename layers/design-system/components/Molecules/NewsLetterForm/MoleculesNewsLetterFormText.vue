@@ -7,21 +7,13 @@ defineProps<MoleculesNewsLetterFormTextProps>();
 <template>
   <section class="mt-4">
     <p v-show="!isSubscribed" class="text-md">
-      Ho letto
-      <a href="" class="font-semibold underline">l’informativa sulla privacy</a>
-      e chiedo di iscrivermi alla Newsletter per rimanere aggiornato su tutte le
-      novità del mondo Woolrich. Questo sito è protetto da reCAPTCHA e si
-      applicano
-      <a href="" class="font-semibold underline">le norme sulla privacy</a> e i
-      <a href="" class="font-semibold underline">termini di servizio</a> di
-      Google.
+      {{ $t("PrivacyPolicy") }}
     </p>
     <div v-show="isSubscribed" class="text-md">
       <AtomsIcon name="navigation-check" style="height: 32px; width: 32px" />
-      <p class="font-medium">Email Signdup succesfull</p>
+      <p class="font-medium">{{ $t("RegistrationSuccess") }}</p>
       <p>
-        You will always be updated on all the offers of Woolrich products and
-        the news of our World.
+        {{ $t("NewsletterSubscription") }}
       </p>
     </div>
   </section>
