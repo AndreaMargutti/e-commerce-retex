@@ -27,7 +27,7 @@ const paymentClasses = computed((): string => {
       :class="type === 'payments' ? 'justify-center' : ''"
     >
       <AtomsIconWrapper
-        v-for="{ id, href, label, icon } in icons"
+        v-for="{ id, href, icon } in icons"
         :key="id"
         type="link"
         :icon-name="type === 'social' ? icon : `${icon}-off`"
