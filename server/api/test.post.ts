@@ -1,14 +1,14 @@
 import validateEmail from "~/utils/validateEmail";
 
 export default defineEventHandler(async (event) => {
-  console.log("test success");
-
-  //TODO: remove this when not needed anymore
-  // throw createError({ statusCode: 500, statusMessage: "test error" });
   const body = await readBody(event);
 
   if (validateEmail(body.email)) {
-    console.log("body", body);
+    return {
+      statusCode: 200,
+      statusMessage: "success",
+      body: body,
+    };
   } else {
     console.log("invalid email");
     throw createError({
