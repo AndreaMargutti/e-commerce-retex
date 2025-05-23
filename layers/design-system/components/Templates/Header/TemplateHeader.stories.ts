@@ -1,4 +1,3 @@
-import AtomsLink from "../../Atoms/Link/AtomsLink.vue";
 import TemplatesHeader from "./TemplatesHeader.vue";
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { http, HttpResponse } from "msw";

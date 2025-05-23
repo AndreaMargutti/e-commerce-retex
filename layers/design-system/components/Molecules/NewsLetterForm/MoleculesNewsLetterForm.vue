@@ -12,7 +12,7 @@ const submitForm = async () => {
   error.value = false;
   if (validateEmail(email.value)) {
     try {
-      const { data, status } = await useFetch("/api/test", {
+      const { data: _data, status } = await useFetch("/api/test", {
         method: "POST",
         body: {
           email: email.value,
@@ -22,6 +22,7 @@ const submitForm = async () => {
       successMessage.value = status.value === "success" ? true : false;
     } catch (err) {
       error.value = true;
+      console.error("error: ", err);
     }
   } else {
     console.log("error: invalid mail");
@@ -34,7 +35,7 @@ const submitForm = async () => {
     <form
       v-if="!isSubscribed"
       :method="formMethod"
-      class="flex flex-col gap-4 md:justify-items-stretch md:flex-row"
+      class="flex flex-col gap-4 md:flex-row"
       @submit.prevent="submitForm"
     >
       <AtomsTextField
@@ -46,8 +47,8 @@ const submitForm = async () => {
       <AtomsButton
         type="primary"
         text-size="medium"
-        label="invia"
-        class="mt-4"
+        :label="$t('Send')"
+        class="mt-4 md:w-auto md:h-12 md:self-end"
       />
     </form>
     <MoleculesNewsLetterFormText :is-subscribed="successMessage" />
