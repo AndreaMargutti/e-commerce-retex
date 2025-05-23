@@ -2,5 +2,5 @@ export type AtomsIconWrapperProps = {
   type: "button" | "link";
   badgeSize?: number;
   iconName: string;
-  iconSize?: number;
+  iconWrapperSize?: string;
 };
