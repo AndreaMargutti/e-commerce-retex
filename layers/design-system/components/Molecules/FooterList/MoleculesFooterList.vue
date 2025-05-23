@@ -22,7 +22,7 @@ const paymentClasses = computed((): string => {
     >
       {{ title.toLocaleUpperCase() }}
     </h5>
-    <div class="*:mr-6">
+    <div class="*:mr-6 flex items-center">
       <AtomsIconWrapper
         v-for="{ id, href, label, icon } in icons"
         :key="id"
