@@ -8,7 +8,7 @@ const btnBaseStyle = computed((): string => {
   switch (props.type) {
     case "primary":
       result =
-        "bg-black-base text-white font-medium py-3 px-16 justify-center hover:bg-white hover:text-black-base hover:border-black-base hover:border-1";
+        "bg-black-base text-white font-medium py-3 px-16 justify-center hover:bg-white hover:text-black-base border-black-base border-1";
       break;
     case "tertiary":
       result =
@@ -36,8 +36,11 @@ const onBackground = computed(() => {
     switch (props.type) {
       case "tertiary":
         return "py-4 text-white text-shadow-btn";
+      default:
+        return "";
     }
   }
+  return "";
 });
 
 const withIconStyle = computed(() =>
