@@ -23,7 +23,7 @@ const footerList = footerListData.value || [];
 
       <div class="py-10 lg:py-0 lg:min-w-fit">
         <MoleculesFooterList
-          title="Our Socials"
+          :title="$t('OurSocials')"
           :icons="footerSocial"
           type="social"
         />
@@ -54,7 +54,7 @@ const footerList = footerListData.value || [];
     </section>
 
     <MoleculesFooterList
-      title="Payments Methods"
+      :title="$t('PaymentMethods')"
       :icons="footerPaymetns"
       type="payments"
     />
