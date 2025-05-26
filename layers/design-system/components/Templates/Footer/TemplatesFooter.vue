@@ -15,11 +15,10 @@ const footerList = footerListData.value || [];
 
 <template>
   <div class="bg-gray-25">
-    <div class="min-h-[331px] px-4 md:pt-16 lg:flex lg:gap-8 lg:px-8">
+    <div class="px-4 md:pt-16 md:pb-14 lg:flex lg:gap-8 lg:px-8">
       <MoleculesNewsLetterForm
-        form-method="POST"
-        news-letter-text="Subscribe to our newsletter"
-        class="basis-2/3"
+        title="Iscrivi alla Newsletter"
+        class="basis-2/3 sm:max-[min-h-[20rem]]"
       />
 
       <div class="py-10 lg:py-0 lg:min-w-fit">

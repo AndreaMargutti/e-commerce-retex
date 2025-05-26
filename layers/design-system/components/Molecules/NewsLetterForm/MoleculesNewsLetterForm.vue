@@ -25,9 +25,12 @@ const submitForm = async () => {
 
 <template>
   <div>
+    <h5 class="font-medium text-xs pt-10 md:pt-0">
+      {{ title?.toLocaleUpperCase() }}
+    </h5>
     <form
       v-if="!isFormSent"
-      :method="formMethod"
+      method="POST"
       class="flex flex-col gap-4 md:flex-row"
       @submit.prevent="submitForm"
     >
@@ -44,7 +47,7 @@ const submitForm = async () => {
         :label="$t('Send')"
       />
     </form>
-    <div :class="!isFormSent ? 'pt-4' : 'pt-14'">
+    <div :class="!isFormSent ? 'pt-4' : 'pt-10'">
       <AtomsPolicyText v-if="!isFormSent" />
       <AtomsFormMessage v-else :status="messageStatus ? 'success' : 'error'" />
     </div>

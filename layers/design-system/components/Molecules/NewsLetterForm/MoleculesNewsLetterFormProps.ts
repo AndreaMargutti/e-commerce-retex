@@ -1,4 +1,3 @@
 export type MoleculesNewsLetterFormProps = {
-  formMethod: "GET" | "POST";
-  newsLetterText: string;
+  title?: string;
 };
