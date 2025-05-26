@@ -10,7 +10,7 @@ defineProps<MoleculesNewsLetterFormTextProps>();
       {{ $t("PrivacyPolicy") }}
     </p>
     <div v-show="isSubscribed" class="text-md">
-      <AtomsIcon name="navigation-check" style="height: 32px; width: 32px" />
+      <AtomsIcon name="navigation-check" icon-size="2em" />
       <p class="font-medium">{{ $t("RegistrationSuccess") }}</p>
       <p>
         {{ $t("NewsletterSubscription") }}
