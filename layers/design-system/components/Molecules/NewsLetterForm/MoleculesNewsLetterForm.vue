@@ -1,31 +1,24 @@
 <script lang="ts" setup>
 import type { MoleculesNewsLetterFormProps } from "./MoleculesNewsLetterFormProps";
-import { validateEmail } from "#imports";
 defineProps<MoleculesNewsLetterFormProps>();
 
 const email: Ref<string> = ref("");
-const error: Ref<boolean> = ref(false);
-const isSubscribed: Ref<boolean> = ref(false);
-const successMessage: Ref<boolean> = ref(false);
+const isFormSent: Ref<boolean> = ref(false);
+const messageStatus: Ref<boolean | null> = ref(null);
 
 const submitForm = async () => {
-  error.value = false;
   if (validateEmail(email.value)) {
     try {
-      const { data: _data, status } = await useFetch("/api/test", {
+      const _formData = await $fetch("/api/test", {
         method: "POST",
-        body: {
-          email: email.value,
-        },
+        body: { email: email.value },
       });
-      isSubscribed.value = true;
-      successMessage.value = status.value === "success" ? true : false;
-    } catch (err) {
-      error.value = true;
-      console.error("error: ", err);
+      isFormSent.value = true;
+      messageStatus.value = true;
+    } catch {
+      isFormSent.value = true;
+      messageStatus.value = false;
     }
-  } else {
-    console.log("error: invalid mail");
   }
 };
 </script>
@@ -33,15 +26,15 @@ const submitForm = async () => {
 <template>
   <div>
     <form
-      v-if="!isSubscribed"
+      v-if="!isFormSent"
       :method="formMethod"
       class="flex flex-col gap-4 md:flex-row"
       @submit.prevent="submitForm"
     >
       <AtomsTextField
         v-model="email"
-        label="e-mail"
         type="email"
+        label="e-mail"
         class="md:flex-grow-1"
       />
       <AtomsButton
@@ -51,6 +44,9 @@ const submitForm = async () => {
         :label="$t('Send')"
       />
     </form>
-    <MoleculesNewsLetterFormText :is-subscribed="successMessage" />
+    <div :class="!isFormSent ? 'pt-4' : 'pt-14'">
+      <AtomsPolicyText v-if="!isFormSent" />
+      <AtomsFormMessage v-else :status="messageStatus ? 'success' : 'error'" />
+    </div>
   </div>
 </template>

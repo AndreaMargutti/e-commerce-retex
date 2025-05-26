@@ -1,6 +1,8 @@
 import validateEmail from "~/utils/validateEmail";
 
 export default defineEventHandler(async (event) => {
+  // throw createError({ statusCode: 501, statusMessage: "Test error" });
+
   const body = await readBody(event);
 
   if (validateEmail(body.email)) {
