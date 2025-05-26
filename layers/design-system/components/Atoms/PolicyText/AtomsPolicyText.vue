@@ -1,3 +1,3 @@
 <template>
-  {{ $t("PrivacyPolicy") }}
+  <p v-html="$t('PrivacyPolicy')"></p>
 </template>

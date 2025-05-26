@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
   alias: {
     "@design-system": fileURLToPath(
-      new URL("./layers/design-system", import.meta.url)
+      new URL("./layers/design-system", import.meta.url),
     ),
   },
   i18n: {
@@ -15,5 +15,8 @@ export default defineNuxtConfig({
       { code: "it", name: "Italiano", file: "it.json" },
       { code: "en", name: "English", file: "en.json" },
     ],
+    compilation: {
+      strictMessage: false,
+    },
   },
 });
