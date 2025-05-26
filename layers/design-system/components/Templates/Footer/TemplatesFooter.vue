@@ -19,6 +19,7 @@ const footerList = footerListData.value || [];
       <MoleculesNewsLetterForm
         form-method="POST"
         news-letter-text="Subscribe to our newsletter"
+        class="basis-2/3"
       />
 
       <div class="py-10 lg:py-0 lg:min-w-fit">
@@ -30,7 +31,6 @@ const footerList = footerListData.value || [];
       </div>
     </div>
 
-    <!-- inizio accordion -->
     <section class="lg:flex lg:flex-wrap gap-8 lg:px-8">
       <div
         v-for="footer in footerList.data || []"
