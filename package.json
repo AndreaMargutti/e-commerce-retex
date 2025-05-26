@@ -20,9 +20,10 @@
     "@nuxt/fonts": "^0.11.1",
     "@nuxt/icon": "^1.11.0",
     "@nuxtjs/i18n": "9.4.0",
+    "@tailwindcss/vite": "^4.1.7",
     "eslint": "^9.27.0",
     "eslint-plugin-vue": "^10.1.0",
-    "@tailwindcss/vite": "^4.1.7",
+    "lint-staged": "^16.0.0",
     "msw": "^2.7.4",
     "msw-storybook-addon": "^2.0.4",
     "nuxt": "^3.16.1",
@@ -53,6 +54,12 @@
   "msw": {
     "workerDirectory": [
       "public"
+    ]
+  },
+  "lint-staged": {
+    "*": [
+      "bun run lint",
+      "bun run lint:fix"
     ]
   }
 }

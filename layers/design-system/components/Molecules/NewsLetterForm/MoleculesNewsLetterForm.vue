@@ -47,8 +47,8 @@ const submitForm = async () => {
       <AtomsButton
         type="primary"
         text-size="medium"
-        :label="$t('Send')"
         class="mt-4 md:w-auto md:h-12 md:self-end"
+        :label="$t('Send')"
       />
     </form>
     <MoleculesNewsLetterFormText :is-subscribed="successMessage" />
