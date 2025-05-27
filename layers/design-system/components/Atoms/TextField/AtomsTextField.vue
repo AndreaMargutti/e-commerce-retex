@@ -65,14 +65,13 @@ function handleFocus() {
   <div class="relative border-b-1 max-h-14 mt-10" :class="inputState">
     <label
       :class="labelStyle"
-      class="absolute transition-all duration-200 ease-in-out"
+      class="absolute transition-all duration-200 ease-in-out leading-none"
     >
       {{ label }}
     </label>
     <input
       v-model="modelValue"
       :type="type"
-      :placeholder="label"
       :class="placeholderStyle"
       class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
       @focus="handleFocus"
