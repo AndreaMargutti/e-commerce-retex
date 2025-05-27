@@ -18,14 +18,6 @@ const labelStyle = computed((): string => {
   }
 });
 
-const placeholderStyle = computed((): string => {
-  if (!inputClick.value) {
-    return "placeholder:opacity-0";
-  } else {
-    return "placeholder:opacity-100 placeholder:text-black-base";
-  }
-});
-
 const modelValue = defineModel<string>();
 const cleanInput = () => {
   modelValue.value = "";
@@ -67,13 +59,12 @@ function handleFocus() {
       :class="labelStyle"
       class="absolute transition-all duration-200 ease-in-out leading-none"
     >
-      {{ label }}
+      {{ label.toLocaleUpperCase() }}
     </label>
     <input
       v-model="modelValue"
       :type="type"
-      :class="placeholderStyle"
-      class="pb-3 w-full pr-10 placeholder:transition-all placeholder:delay-300 placeholder:duration-200 placeholder:ease-in-out"
+      class="w-full pr-10 pb-3 leading-none"
       @focus="handleFocus"
       @blur="handleBlur"
     />
@@ -95,6 +86,6 @@ function handleFocus() {
       name="feedback-negative"
       class="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-state"
     />
-    <p class="absolute right-0 pt-1">{{ message }}</p>
+    <p v-if="messagge" class="absolute right-0 pt-1">{{ message }}</p>
   </div>
 </template>
