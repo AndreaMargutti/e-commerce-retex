@@ -1,20 +1,20 @@
 <script lang="ts" setup>
 import type { AtomsInputFieldProps } from "./AtomsTextFieldProps";
-defineProps<AtomsInputFieldProps>();
+const props = defineProps<AtomsInputFieldProps>();
 
-const inputClick = ref(false);
+const isClicked = ref(false);
 const hasError = ref(false);
 const isBlurred = ref(false);
 
 function selectInput() {
-  inputClick.value = !inputClick.value;
+  isClicked.value = !isClicked.value;
 }
 
 const labelStyle = computed((): string => {
-  if (inputClick.value || modelValue.value) {
+  if (isClicked.value || modelValue.value) {
     return "bottom-10 text-tiny";
   } else {
-    return "bottom-3 delay-300";
+    return "bottom-3";
   }
 });
 
@@ -34,10 +34,14 @@ const inputState = computed((): string => {
 });
 
 const handleError = () => {
-  if (validateEmail(modelValue.value || "")) {
-    hasError.value = false;
-  } else {
-    hasError.value = true;
+  switch (props.type) {
+    case "email":
+      if (validateEmail(modelValue.value || "")) {
+        hasError.value = false;
+      } else {
+        hasError.value = true;
+      }
+      break;
   }
 };
 
@@ -54,7 +58,7 @@ function handleFocus() {
 </script>
 
 <template>
-  <div class="relative border-b-1 max-h-14 mt-10" :class="inputState">
+  <div class="relative border-b-1 mt-10" :class="inputState">
     <label
       :class="labelStyle"
       class="absolute transition-all duration-200 ease-in-out leading-none"
