@@ -65,7 +65,7 @@ function handleFocus() {
     <input
       v-model="modelValue"
       :type="type"
-      class="w-full pr-10 pb-3 leading-tight"
+      class="w-full pr-10 pb-3 leading-none"
       @focus="handleFocus"
       @blur="handleBlur"
     />
