@@ -25,7 +25,7 @@ const cleanInput = () => {
 const inputState = computed((): string => {
   if (hasError.value && modelValue.value) {
     return "border-red-state";
-  } else if (isBlurred.value && !hasError.value) {
+  } else if (!hasError.value) {
     return "border-green-state";
   } else {
     return "";
@@ -51,7 +51,6 @@ function handleBlur() {
 
 function handleFocus() {
   selectInput();
-  isBlurred.value = false;
 }
 </script>
 
@@ -74,18 +73,21 @@ function handleFocus() {
       v-if="modelValue"
       type="button"
       icon-name="close"
+      icon-wrapper-size="1em"
       class="absolute right-3 top-1/2 transform -translate-y-1/2"
       @mousedown.prevent
       @handle-click="cleanInput"
     />
     <AtomsIcon
       v-show="!hasError && modelValue"
+      icon-size="1.5em"
       name="feedback-positive"
       class="absolute right-10 top-1/2 transform -translate-y-1/2 text-green-state"
     />
     <AtomsIcon
       v-show="hasError && modelValue"
       name="feedback-negative"
+      icon-size="1.5em"
       class="absolute right-10 top-1/2 transform -translate-y-1/2 text-red-state"
     />
     <p v-if="messagge" class="absolute right-0 pt-1">{{ message }}</p>
