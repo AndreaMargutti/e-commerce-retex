@@ -4,7 +4,6 @@ const props = defineProps<AtomsInputFieldProps>();
 
 const isClicked = ref(false);
 const hasError = ref(false);
-const isBlurred = ref(false);
 
 function selectInput() {
   isClicked.value = !isClicked.value;
@@ -47,7 +46,6 @@ const handleError = () => {
 
 function handleBlur() {
   selectInput();
-  isBlurred.value = true;
   handleError();
 }
 
@@ -73,7 +71,7 @@ function handleFocus() {
       @blur="handleBlur"
     />
     <AtomsIconWrapper
-      v-if="modelValue && !isBlurred"
+      v-if="modelValue"
       type="button"
       icon-name="close"
       class="absolute right-3 top-1/2 transform -translate-y-1/2"
@@ -81,14 +79,14 @@ function handleFocus() {
       @handle-click="cleanInput"
     />
     <AtomsIcon
-      v-show="isBlurred && !hasError && modelValue"
+      v-show="!hasError && modelValue"
       name="feedback-positive"
-      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-state"
+      class="absolute right-10 top-1/2 transform -translate-y-1/2 text-green-state"
     />
     <AtomsIcon
-      v-show="isBlurred && hasError && modelValue"
+      v-show="hasError && modelValue"
       name="feedback-negative"
-      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-state"
+      class="absolute right-10 top-1/2 transform -translate-y-1/2 text-red-state"
     />
     <p v-if="messagge" class="absolute right-0 pt-1">{{ message }}</p>
   </div>
