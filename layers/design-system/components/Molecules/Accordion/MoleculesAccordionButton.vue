@@ -15,7 +15,7 @@ const { status, changeStatus } = useAccordion();
 
 <template>
   <button
-    class="bg-gray-25 lg:bg-transparent font-medium flex items-center justify-between p-4 w-full h-12 lg:text-sm lg:text-start uppercase lg:pb-6 lg:ps-8 lg:border-b-1 lg:border-gray-75"
+    class="bg-gray-25 lg:bg-transparent font-medium flex items-center justify-between p-4 w-full h-12 lg:text-xs lg:leading-[15px] lg:text-start uppercase lg:pb-6 lg:ps-8 lg:border-b-1 lg:border-gray-75"
     @click="openAccordion"
   >
     {{ buttonLabel }}
