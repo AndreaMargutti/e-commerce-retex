@@ -25,7 +25,7 @@ const cleanInput = () => {
 const inputState = computed((): string => {
   if (hasError.value && modelValue.value) {
     return "border-red-state";
-  } else if (!hasError.value) {
+  } else if (props.hasSuccess && !hasError.value) {
     return "border-green-state";
   } else {
     return "";
@@ -70,7 +70,7 @@ function handleFocus() {
       @blur="handleBlur"
     />
     <AtomsIconWrapper
-      v-if="modelValue"
+      v-if="modelValue && !hasError && !props.hasSuccess"
       type="button"
       icon-name="close"
       icon-wrapper-size="1em"
@@ -79,16 +79,16 @@ function handleFocus() {
       @handle-click="cleanInput"
     />
     <AtomsIcon
-      v-show="!hasError && modelValue"
+      v-show="hasSuccess && !hasError && modelValue"
       icon-size="1.5em"
       name="feedback-positive"
-      class="absolute right-10 top-1/2 transform -translate-y-1/2 text-green-state"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-state"
     />
     <AtomsIcon
       v-show="hasError && modelValue"
       name="feedback-negative"
       icon-size="1.5em"
-      class="absolute right-10 top-1/2 transform -translate-y-1/2 text-red-state"
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-state"
     />
     <p v-if="messagge" class="absolute right-0 pt-1">{{ message }}</p>
   </div>

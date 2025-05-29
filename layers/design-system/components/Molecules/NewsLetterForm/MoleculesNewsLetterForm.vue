@@ -39,6 +39,7 @@ const submitForm = async () => {
         type="email"
         label="e-mail"
         class="md:flex-grow-1"
+        :has-success="formSuccess"
       />
       <AtomsButton
         type="primary"
