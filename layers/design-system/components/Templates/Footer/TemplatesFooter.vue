@@ -34,7 +34,7 @@ const footerList = footerListData.value || [];
       <div
         v-for="footer in footerList.data || []"
         :key="footer.id"
-        class="flex-1/4 border-b-1 border-gray-75 last:border-0"
+        class="flex-1/4 border-b-1 border-gray-75 last:border-0 lg:border-0"
       >
         <MoleculesAccordion
           :accordion-label="footer.label"
@@ -46,7 +46,7 @@ const footerList = footerListData.value || [];
             :key="item.id"
             :name="item.label"
             :href="item.to"
-            class="px-4 py-6 lg:pl-8 lg:pb-6 flex-1/2 leading-[15px]"
+            class="px-4 py-4 lg:pl-8 lg:pb-6 flex-1/2 leading-[15px]"
           />
         </MoleculesAccordion>
       </div>
