@@ -18,7 +18,9 @@ const paymentClasses = computed((): string => {
   <div :class="paymentClasses">
     <h5
       class="font-medium text-xs"
-      :class="type === 'social' ? 'mb-8 md:mb-12' : 'mr-4 block md:inline'"
+      :class="
+        type === 'social' ? 'mb-10 lg:mb-8 xl:mb-10' : 'mr-4 block md:inline'
+      "
     >
       {{ title.toLocaleUpperCase() }}
     </h5>
