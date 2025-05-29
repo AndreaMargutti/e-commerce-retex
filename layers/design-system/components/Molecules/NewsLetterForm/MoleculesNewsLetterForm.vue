@@ -48,7 +48,7 @@ const submitForm = async () => {
         :label="$t('Send')"
       />
     </form>
-    <div :class="!isFormSent ? 'pt-4' : 'pt-10'">
+    <div :class="!isFormSent ? 'pt-6' : 'pt-10'">
       <AtomsPolicyText v-if="!isFormSent" />
       <AtomsFormMessage v-else :status="messageStatus ? 'success' : 'error'" />
     </div>
