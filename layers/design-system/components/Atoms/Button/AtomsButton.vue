@@ -8,7 +8,7 @@ const btnBaseStyle = computed((): string => {
   switch (props.type) {
     case "primary":
       result =
-        "bg-black-base text-white font-medium py-3 px-16 justify-center hover:bg-white hover:text-black-base border-black-base border-1";
+        "bg-black-base text-xs leading-[15px] uppercase text-white font-medium py-4 px-16 justify-center hover:bg-white hover:text-black-base border-black-base border-1";
       break;
     case "tertiary":
       result =

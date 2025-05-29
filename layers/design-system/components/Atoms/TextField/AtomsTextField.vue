@@ -55,7 +55,7 @@ function handleFocus() {
 </script>
 
 <template>
-  <div class="relative border-b-1 mt-10" :class="inputState">
+  <div class="relative border-b-1 mt-8" :class="inputState">
     <label
       :class="labelStyle"
       class="absolute transition-all duration-200 ease-in-out leading-none"

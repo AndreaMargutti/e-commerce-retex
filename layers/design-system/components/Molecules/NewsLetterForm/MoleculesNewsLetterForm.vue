@@ -25,7 +25,7 @@ const submitForm = async () => {
 
 <template>
   <div>
-    <h5 class="font-medium text-xs pt-10 md:pt-0">
+    <h5 class="font-medium text-xs pt-10 md:pt-0 leading-none">
       {{ title?.toLocaleUpperCase() }}
     </h5>
     <form
