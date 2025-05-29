@@ -46,7 +46,7 @@ const footerList = footerListData.value || [];
             :key="item.id"
             :name="item.label"
             :href="item.to"
-            class="px-4 py-4 lg:pl-8 lg:pb-6 flex-1/2 leading-[15px]"
+            class="px-4 pb-4 lg:pl-8 lg:pb-6 flex-1/2 leading-[15px]"
           />
         </MoleculesAccordion>
       </div>
