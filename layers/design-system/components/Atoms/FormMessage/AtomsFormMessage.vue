@@ -10,12 +10,14 @@ defineProps<AtomsFormMessageProps>();
     class="mb-2"
   />
   <div v-if="status === 'success'">
-    <p class="font-medium">{{ $t("RegistrationSuccess") }}</p>
-    <p>
+    <p class="font-medium leading-[19px] pb-2">
+      {{ $t("RegistrationSuccess") }}
+    </p>
+    <p class="leading-[19px]">
       {{ $t("NewsletterSubscription") }}
     </p>
   </div>
-  <p v-else class="font-medium">
+  <p v-else class="font-medium leading-[19px]">
     {{ $t("RegistrationError") }}
   </p>
 </template>
