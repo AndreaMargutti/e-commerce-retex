@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 const route = useRoute();
-const { data: editorialContent } = await useFetch("/api/pageContent/en");
+
+const { pageContent } = await usePageContent("en");
+
+// const { data: editorialContent } = await useFetch("/api/pageContent/en");
 </script>
 
 <template>
   <div>
     {{ route.path }}
-    {{ editorialContent }}
+    {{ pageContent }}
   </div>
 </template>

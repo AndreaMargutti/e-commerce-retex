@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 const route = useRoute();
 
-const { data: editorialContent, error } = await useFetch(
-  `/api/pageContent/${route.params.slug}`,
+const { pageContent, error } = await usePageContent(
+  route.params.slug as string,
 );
 </script>
 
 <template>
   <div>
     {{ route.params.slug }}
-    {{ editorialContent }}
+    {{ pageContent }}
     {{ error }}
   </div>
 </template>
