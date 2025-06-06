@@ -1,8 +1,6 @@
 // If the correct path is 'types/menu' relative to the project root, use:
 import type { Menu } from "~/types/MenuItem";
 
-// Or, if the file does not exist, create '/Users/a.margutti/Desktop/woolrich-demo/types/menu.d.ts' with:
-
 export default defineEventHandler((): Menu => {
   return {
     items: [
