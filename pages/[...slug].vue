@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 const route = useRoute();
+
+// const { data } = await useFetch(`/api/pageContent/${route.params.slug}`);
 </script>
 
 <template>
   <div>
-    ciao
     {{ route.params.slug }}
   </div>
 </template>

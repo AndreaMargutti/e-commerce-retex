@@ -1,6 +1,5 @@
 export default defineEventHandler((event) => {
   const slug = getRouterParam(event, "slug") as string;
-  console.log("slug", slug);
 
   const data: Record<string, unknown> = {
     "/": [
@@ -118,7 +117,7 @@ export default defineEventHandler((event) => {
         btnLink: "/it/stories",
       },
     ],
-    about: ["sono la pagina about in inglese"],
+    "/about": ["sono la pagina about in inglese"],
   };
 
   return data[slug];
