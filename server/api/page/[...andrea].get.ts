@@ -1,8 +1,8 @@
-export default defineEventHandler((event) => {
-  const slug = getRouterParam(event, "slug") as string;
+export default defineEventHandler(async (event) => {
+  const andrea = getRouterParam(event, "andrea") as string;
 
-  const data: Record<string, unknown> = {
-    "/": [
+  const pageData: Record<string, unknown> = {
+    en: [
       {
         name: "HeroBanner",
         image:
@@ -117,8 +117,8 @@ export default defineEventHandler((event) => {
         btnLink: "/it/stories",
       },
     ],
-    "/about": ["sono la pagina about in inglese"],
+    "en/about": ["sono la pagina about in inglese"],
   };
 
-  return data[slug];
+  return pageData[andrea];
 });
