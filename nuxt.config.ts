@@ -10,10 +10,10 @@ export default defineNuxtConfig({
     ),
   },
   i18n: {
-    defaultLocale: "it",
+    defaultLocale: "en",
     locales: [
-      { code: "it", name: "Italiano", file: "it.json" },
       { code: "en", name: "English", file: "en.json" },
+      { code: "it", name: "Italiano", file: "it.json" },
     ],
     compilation: {
       strictMessage: false,
