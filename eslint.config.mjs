@@ -7,4 +7,9 @@ export default withNuxt([
   // Your custom configs here
   ...pluginVue.configs["flat/recommended"],
   eslintConfigPrettier,
+  {
+    rules: {
+      "vue/multi-word-component-names": "off",
+    },
+  },
 ]);
