@@ -1,15 +1,10 @@
 <script lang="ts" setup>
 const route = useRoute();
-
-const { pageContent, error } = await usePageContent(
-  route.params.slug as string,
-);
 </script>
 
 <template>
   <div>
+    ciao
     {{ route.params.slug }}
-    {{ pageContent }}
-    {{ error }}
   </div>
 </template>

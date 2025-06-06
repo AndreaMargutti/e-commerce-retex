@@ -1,8 +1,9 @@
 export default defineEventHandler((event) => {
   const slug = getRouterParam(event, "slug") as string;
+  console.log("slug", slug);
 
-  const data = {
-    en: [
+  const data: Record<string, unknown> = {
+    "/": [
       {
         name: "HeroBanner",
         image:
@@ -120,16 +121,5 @@ export default defineEventHandler((event) => {
     about: ["sono la pagina about in inglese"],
   };
 
-  function isValidDataKey(key: string): key is keyof typeof data {
-    return key in data;
-  }
-
-  if (isValidDataKey(slug)) {
-    return data[slug];
-  } else {
-    throw createError({
-      statusCode: 404,
-      statusMessage: "Page not found",
-    });
-  }
+  return data[slug];
 });
