@@ -21,7 +21,7 @@ if (!pageContent.value) {
 <template>
   <main>
     <div v-for="(module, key) in pageContent" :key="key">
-      {{ module.name }}
+      <HeroBanner v-if="module.name === 'HeroBanner'" />
     </div>
   </main>
 </template>
