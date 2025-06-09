@@ -28,6 +28,8 @@ if (!pageContent.value) {
     <div v-for="(module, key) in pageContent" :key="key">
       <ModulesHeroBanner
         v-if="module.name === 'HeroBanner'"
+        position-x="center"
+        position-y="middle"
         :background-image="module.image ?? ''"
         :title="module.title ?? ''"
         :appendix="module.appendix ?? ''"
