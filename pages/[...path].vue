@@ -10,8 +10,11 @@ const { data: pageContent, error: pageError } = await useFetch<Module[]>(
   `/api/page${route.path}`,
 );
 
-if (pageError.value) {
-  console.error("Error fetching page content:", pageError.value);
+if (!pageContent.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page not Found",
+  });
 }
 </script>
 
