@@ -10,7 +10,7 @@ withDefaults(defineProps<AtomsTooltipWrapperProps>(), {
     <slot></slot>
     <div
       :class="[direction === 'down' ? 'bottom-8 mb-2' : 'mt-2']"
-      class="absolute left-[50%] -translate-x-[50%] hidden [@media(hover:hover)]:lg:group-hover:block"
+      class="absolute bg-white left-[50%] -translate-x-[50%] hidden [@media(hover:hover)]:lg:group-hover:block"
     >
       <AtomsTooltip :label="label" :direction="direction" />
     </div>
