@@ -14,13 +14,14 @@ const editorial: Record<string, unknown> = {
     //   name: "TextBlock",
     //   text: "Woolrich is committed to diversity at all levels of our organization and fosters a supportive and inclusive enviroment for our employees. We've long equipped those with a passion for the outdoors while protecting them from the elements. By breaking down barries in evniroments that test and inspire, and by fueling our innate desire for leisure, we are learning about the vorld around us and of course, about ourselves.",
     // },
-    // {
-    //   name: "HeroBanner",
-    //   image:
-    //     "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/70a6027d-9c78-4465-9303-cad0f087f13e/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-    //   imageAlt: "Emphaty will always remain the strongest fiber",
-    //   title: "Emphaty will always remain the strongest fiber",
-    // },
+    {
+      name: "HeroBanner",
+      image:
+        "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/70a6027d-9c78-4465-9303-cad0f087f13e/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+      imageAlt: "Emphaty will always remain the strongest fiber",
+      title: "Emphaty will always remain the strongest fiber",
+      fontStyle: "uppercase",
+    },
     // {
     //   name: "TextBlock",
     //   text: "Woolrich stands in solidarity with all those who reject racism, injustice, and inequality. We support our communities and our customers regardless of their background, ethnicity, or identity. The campaigns featured across all our channles exemplify our efforts to represent the diversity within our customer and employee base with respect and compassion.",

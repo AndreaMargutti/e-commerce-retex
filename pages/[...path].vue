@@ -8,6 +8,7 @@ interface Module {
   appendix?: string;
   subtitle?: string;
   labels?: string[];
+  fontStyle?: "capitalized" | "uppercase";
   // add other properties if needed
 }
 
@@ -32,6 +33,7 @@ if (!pageContent.value) {
         position-y="middle"
         :background-image="module.image ?? ''"
         :title="module.title ?? ''"
+        :font-style="module.fontStyle ?? undefined"
       />
     </div>
   </main>

@@ -52,7 +52,7 @@ const labelsStyle = computed(() => {
     <section :class="positioning" class="absolute">
       <div>
         <AtomsAppendix :appendix="appendix ?? ''" />
-        <AtomsTitle :title="title ?? ''" />
+        <AtomsTitle :title="title ?? ''" :font-style="fontStyle" />
         <AtomsSubtitle :subtitle="subtitle ?? ''" />
       </div>
       <div class="pt-8 flex gap-6 text-white" :class="labelsStyle">
