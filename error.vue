@@ -18,11 +18,11 @@ const handleError = () => clearError({ redirect: "/" });
       This is a 404 error, which means you've clicked on a bad link or entered
       an invalid URL.
     </p>
-    <p>
+    <p class="mt-10">
       Please, check your URL or return to
-      <NuxtLink to="/en" class="underline" @click="handleError"
-        >Woolrich homepage</NuxtLink
-      >
+      <NuxtLink to="/en" class="underline" @click="handleError">
+        Woolrich homepage
+      </NuxtLink>
     </p>
   </div>
 </template>
