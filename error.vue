@@ -13,8 +13,16 @@ const handleError = () => clearError({ redirect: "/" });
 
 <template>
   <div>
-    <h2>{{ error?.statusCode }}</h2>
-    <p>{{ error?.statusMessage }}</p>
-    <button @click="handleError">Clear errors</button>
+    <h2>Something's wrong here</h2>
+    <p>
+      This is a 404 error, which means you've clicked on a bad link or entered
+      an invalid URL.
+    </p>
+    <p>
+      Please, check your URL or return to
+      <NuxtLink to="/en" class="underline" @click="handleError"
+        >Woolrich homepage</NuxtLink
+      >
+    </p>
   </div>
 </template>
