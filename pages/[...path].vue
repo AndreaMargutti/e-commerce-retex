@@ -32,10 +32,8 @@ if (!pageContent.value) {
         position-y="middle"
         :background-image="module.image ?? ''"
         :title="module.title ?? ''"
-        :appendix="module.appendix ?? ''"
-        :subtitle="module.subtitle ?? ''"
-        :labels="module.labels ?? []"
       />
     </div>
+    <div class="h-[50rem] bg-amber-400"></div>
   </main>
 </template>

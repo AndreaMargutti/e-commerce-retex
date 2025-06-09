@@ -1,12 +1,22 @@
 <script setup lang="ts">
 import type { TemplatesHeaderProps } from "./TemplatesHeaderProps.ts";
+
 const props = withDefaults(defineProps<TemplatesHeaderProps>(), {
   size: "normal",
   isTransparent: false,
 });
 
+const isTransparentLocal = ref(props.isTransparent);
+
+watch(
+  () => props.isTransparent,
+  (val) => {
+    isTransparentLocal.value = val;
+  },
+);
+
 const transparentStyle = computed(() => {
-  if (props.isTransparent) {
+  if (isTransparentLocal.value) {
     return "bg-transparent text-white hover:bg-white hover:text-black";
   } else {
     return "bg-white text-black";
@@ -31,12 +41,23 @@ const { cartLength } = useCart();
 const { isLoggedIn } = useLogin();
 
 const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
+
+watch(
+  () => isMenuMobileOpen.value,
+  (open) => {
+    if (open) {
+      isTransparentLocal.value = false;
+    } else {
+      isTransparentLocal.value = props.isTransparent;
+    }
+  },
+);
 </script>
 
 <template>
   <header
     :class="headerClass"
-    class="flex justify-between lg:text-end items-center px-4 md:px-8 sticky top-0 z-50"
+    class="flex justify-between lg:text-end items-center px-4 md:px-8 fixed top-0 left-0 right-0 z-50 transition-all duration-300"
   >
     <div class="lg:space-x-4 lg:px-4 lg:order-2 lg:grow">
       <span class="mr-6 lg:hidden">
@@ -90,6 +111,7 @@ const { isMenuMobileOpen, toggleMenuMobile } = useMenuMobile();
           :name="link.label"
           :href="link.to"
           :is-uppercase="true"
+          direction="row"
         />
         <MoleculesDesktopMenu
           :items="link.category"
