@@ -1,7 +1,5 @@
-export default defineEventHandler(async (event) => {
-  const andrea = getRouterParam(event, "andrea") as string;
-
-  const pageData: Record<string, unknown> = {
+export default {
+  data: {
     en: [
       {
         name: "HeroBanner",
@@ -118,7 +116,5 @@ export default defineEventHandler(async (event) => {
       },
     ],
     "en/about": ["sono la pagina about in inglese"],
-  };
-
-  return pageData[andrea];
-});
+  },
+};

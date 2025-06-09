@@ -14,7 +14,7 @@ const { data: pageContent } = await useFetch<Module[]>(
 <template>
   <main>
     <div v-for="(module, key) in pageContent" :key="key">
-      {{ module.name }}
+      {{ module }}
     </div>
   </main>
 </template>
