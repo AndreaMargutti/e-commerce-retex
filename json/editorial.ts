@@ -6,6 +6,9 @@ const editorial: Record<string, unknown> = {
         "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
       imageAlt: "Diversity and Inclusion",
       title: "Diversity and Inclusion",
+      subtitle: "Subtitle",
+      appendix: "Appendix",
+      labels: ["Label 1", "Label 2", "Label 3", "Label 4"],
     },
     // {
     //   name: "TextBlock",

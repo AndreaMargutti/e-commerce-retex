@@ -4,4 +4,5 @@ export type AtomsLinkProps = {
   icon?: string;
   isUppercase?: boolean;
   textSize?: string;
+  direction: "row" | "row-reverse";
 };

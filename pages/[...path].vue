@@ -5,6 +5,9 @@ interface Module {
   name: string;
   image?: string;
   title?: string;
+  appendix?: string;
+  subtitle?: string;
+  labels?: string[];
   // add other properties if needed
 }
 
@@ -27,6 +30,9 @@ if (!pageContent.value) {
         v-if="module.name === 'HeroBanner'"
         :background-image="module.image ?? ''"
         :title="module.title ?? ''"
+        :appendix="module.appendix ?? ''"
+        :subtitle="module.subtitle ?? ''"
+        :labels="module.labels ?? []"
       />
     </div>
   </main>
