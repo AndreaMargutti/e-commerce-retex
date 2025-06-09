@@ -10,7 +10,7 @@ const { data: pageContent } = await useFetch<Module[]>(
   `/api/page${route.path}`,
 );
 
-if (!pageContent.value) {
+if (pageContent.value) {
   throw createError({
     statusCode: 404,
     statusMessage: "Page not Found",
