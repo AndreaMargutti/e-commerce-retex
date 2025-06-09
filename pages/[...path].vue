@@ -1,18 +1,8 @@
 <script lang="ts" setup>
+import type { Editorial } from "~/types/Editorial";
 const route = useRoute();
 
-interface Module {
-  name: string;
-  image?: string;
-  title?: string;
-  appendix?: string;
-  subtitle?: string;
-  labels?: string[];
-  fontStyle?: "capitalized" | "uppercase";
-  // add other properties if needed
-}
-
-const { data: pageContent } = await useFetch<Module[]>(
+const { data: pageContent } = await useFetch<Editorial[]>(
   `/api/page${route.path}`,
 );
 
