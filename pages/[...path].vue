@@ -34,6 +34,5 @@ if (!pageContent.value) {
         :title="module.title ?? ''"
       />
     </div>
-    <div class="h-[50rem] bg-amber-400"></div>
   </main>
 </template>
