@@ -5,5 +5,10 @@ defineProps<HeroBannerProps>();
 </script>
 
 <template>
-  <h1>SONO IL MODULO HEROBANNER</h1>
+  <figure class="relative">
+    <img :src="backgroundImage" alt="Hero Banner Background" />
+    <h2 class="text-white absolute bottom-1/2 left-1/2 -translate-x-1/2">
+      {{ title }}
+    </h2>
+  </figure>
 </template>

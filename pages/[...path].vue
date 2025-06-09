@@ -3,6 +3,8 @@ const route = useRoute();
 
 interface Module {
   name: string;
+  image?: string;
+  title?: string;
   // add other properties if needed
 }
 
@@ -21,7 +23,11 @@ if (!pageContent.value) {
 <template>
   <main>
     <div v-for="(module, key) in pageContent" :key="key">
-      <ModulesHeroBanner v-if="module.name === 'HeroBanner'" />
+      <ModulesHeroBanner
+        v-if="module.name === 'HeroBanner'"
+        :background-image="module.image ?? ''"
+        :title="module.title ?? ''"
+      />
     </div>
   </main>
 </template>
