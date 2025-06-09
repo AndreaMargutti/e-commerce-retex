@@ -16,13 +16,9 @@ const labelsStyle = computed(() => {
 </script>
 
 <template>
-  <!--TODO: rimanere solo con il figure-->
   <figure class="relative">
     <AtomsBackgroundImage :src="backgroundImage" />
-    <!-- Gradient overlay with Tailwind, fixed to cover image at all breakpoints -->
-    <div
-      class="absolute left-0 top-0 w-full h-full pointer-events-none bg-gradient-to-b from-[rgba(255,255,255,0.1)] from-10% to-[rgba(0,0,0,0.9)] to-90% md:bg-gradient-to-b md:from-transparent md:to-black md:from-0% md:to-100%"
-    ></div>
+    <AtomsGradient />
     <section
       class="absolute bottom-21 md:bottom-8 lg:bottom-15 xl:bottom-30 px-4 lg:ps-28"
     >
