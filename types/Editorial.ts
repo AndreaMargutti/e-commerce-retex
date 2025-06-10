@@ -1,15 +1,32 @@
-export type Editorial = {
+export type Editorial = (HeroBanner | TextBlock)[];
+
+export type HeroBanner = {
   name: string;
   variant: "links" | "buttons";
-  image?: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
   title?: string;
   appendix?: string;
   subtitle?: string;
-  labels?: string[];
-  fontStyle?: "capitalized" | "uppercase";
-  btnLabel?: string;
-  btnLink?: string;
-  btnType?: "primary" | "secondary" | "tertiary";
+  links?: [
+    {
+      label: string;
+      href: string;
+      fontSize?: "small" | "medium" | "large";
+    },
+  ];
+  buttons?: [
+    {
+      btnLabel?: string;
+      btnLink?: string;
+      btnType?: "primary" | "secondary" | "tertiary";
+    },
+  ];
+};
 
-  // TODO: add other properties if needed
+export type TextBlock = {
+  name: "TextBlock";
+  text: string;
 };
