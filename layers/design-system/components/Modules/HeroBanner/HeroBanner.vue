@@ -36,7 +36,7 @@ const positioning = computed(() => {
 const labelsStyle = computed(() => {
   let labelClass = "";
 
-  if (props.labels && props.labels.length > 3) {
+  if (props.links && props.links.length > 3) {
     labelClass = "min-w-40 flex-wrap *:flex-1/3";
   } else {
     labelClass = "flex-nowrap";
@@ -61,16 +61,16 @@ const labelsStyle = computed(() => {
         :class="labelsStyle"
       >
         <AtomsLink
-          v-for="(label, idx) in labels"
+          v-for="(link, idx) in links"
           :key="idx"
-          :name="label"
-          :href="'#'"
+          :name="link.label"
+          :href="link.href"
           :is-uppercase="true"
           icon="navigation-right"
           direction="row-reverse"
           class="justify-end w-fit"
         >
-          {{ label }}
+          {{ link.label }}
         </AtomsLink>
       </div>
       <div
@@ -78,10 +78,12 @@ const labelsStyle = computed(() => {
         class="flex justify-center whitespace-nowrap"
       >
         <AtomsButton
-          :label="btnLabel ?? ''"
-          :type="btnType ?? 'primary'"
+          v-for="button in buttons"
+          :key="button.btnLabel"
+          :label="button.btnLabel ?? ''"
+          :type="button.btnType ?? 'primary'"
           text-size="medium"
-          :href="btnLink"
+          :href="button.btnLink"
           :is-uppercase="true"
           :on-background="true"
           class="max-w-[60%] justify-center"

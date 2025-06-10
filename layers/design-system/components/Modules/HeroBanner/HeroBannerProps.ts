@@ -5,10 +5,15 @@ export type HeroBannerProps = {
   title?: string;
   fontStyle?: "capitalized" | "uppercase";
   subtitle?: string;
-  labels?: string[];
+  links?: Array<{
+    label: string;
+    href: string;
+  }>;
   positionX: "left" | "center" | "right";
   positionY: "top" | "middle" | "bottom";
-  btnLabel?: string;
-  btnLink?: string;
-  btnType?: "primary" | "secondary" | "tertiary";
+  buttons?: Array<{
+    btnLabel: string;
+    btnLink: string;
+    btnType: "primary" | "secondary" | "tertiary";
+  }>;
 };

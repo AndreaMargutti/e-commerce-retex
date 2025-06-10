@@ -2,7 +2,7 @@
 import type { Editorial } from "~/types/Editorial";
 const route = useRoute();
 
-const { data: pageContent } = await useFetch<Editorial[]>(
+const { data: pageContent } = await useFetch<Editorial>(
   `/api/page${route.path}`,
 );
 
@@ -19,15 +19,13 @@ if (!pageContent.value) {
     <div v-for="(module, key) in pageContent" :key="key">
       <ModulesHeroBanner
         v-if="module.name === 'HeroBanner'"
-        :variant="module.variant"
+        :variant="module.variant ?? 'links'"
         position-x="center"
         position-y="middle"
-        :background-image="module.image ?? ''"
+        :background-image="module.image?.src ?? ''"
         :title="module.title ?? ''"
-        :font-style="module.fontStyle ?? undefined"
-        :btn-label="module.btnLabel ?? ''"
-        :btn-link="module.btnLink ?? ''"
-        :btn-type="module.btnType ?? 'primary'"
+        :font-style="module.fontStyle"
+        :buttons="module.buttons ?? []"
       />
     </div>
   </main>

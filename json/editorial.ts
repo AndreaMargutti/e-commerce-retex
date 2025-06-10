@@ -3,13 +3,11 @@ const editorial: Record<string, unknown> = {
     {
       name: "HeroBanner",
       variant: "links",
-      image:
-        "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-      imageAlt: "Diversity and Inclusion",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Diversity and Inclusion",
+      },
       title: "Diversity and Inclusion",
-      subtitle: "Subtitle",
-      appendix: "Appendix",
-      labels: ["Label 1", "Label 2", "Label 3", "Label 4"],
     },
     // {
     //   name: "TextBlock",
@@ -17,9 +15,10 @@ const editorial: Record<string, unknown> = {
     // },
     {
       name: "HeroBanner",
-      image:
-        "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/70a6027d-9c78-4465-9303-cad0f087f13e/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-      imageAlt: "Emphaty will always remain the strongest fiber",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/70a6027d-9c78-4465-9303-cad0f087f13e/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Emphaty will always remain the strongest fiber",
+      },
       title: "Emphaty will always remain the strongest fiber",
       fontStyle: "uppercase",
     },
@@ -113,12 +112,17 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       variant: "buttons",
       title: "Brand Mission and Values",
-      image:
-        "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-      imageAlt: "Immagine di esempio",
-      btnLabel: "Discover More",
-      btnLink: "/it/stories",
-      btnType: "primary",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Immagine di esempio",
+      },
+      buttons: [
+        {
+          btnLabel: "Discover More",
+          btnLink: "/en/stories",
+          btnType: "primary",
+        },
+      ],
     },
   ],
 };
