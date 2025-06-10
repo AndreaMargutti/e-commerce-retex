@@ -73,7 +73,10 @@ const labelsStyle = computed(() => {
           {{ label }}
         </AtomsLink>
       </div>
-      <div v-else-if="variant === 'buttons'">
+      <div
+        v-else-if="variant === 'buttons'"
+        class="flex justify-center whitespace-nowrap"
+      >
         <AtomsButton
           :label="btnLabel ?? ''"
           :type="btnType ?? 'primary'"
@@ -81,6 +84,7 @@ const labelsStyle = computed(() => {
           :href="btnLink"
           :is-uppercase="true"
           :on-background="true"
+          class="max-w-[60%] justify-center"
         />
       </div>
     </section>
