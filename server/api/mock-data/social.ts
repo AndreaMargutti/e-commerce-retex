@@ -1,4 +1,6 @@
-export default defineEventHandler((event): FooterIcons => {
+import type { FooterIcons } from "~/types/FooterIcons";
+
+export default defineEventHandler((): FooterIcons => {
   return {
     icons: [
       {
