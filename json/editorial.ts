@@ -108,15 +108,16 @@ const editorial: Record<string, unknown> = {
     //     },
     //   ],
     // },
-    // {
-    //   name: "ListingPage",
-    //   title: "Bran Mission and Values",
-    //   image:
-    //     "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-    //   imageAlt: "Immagine di esempio",
-    //   btnLabel: "Discover More",
-    //   btnLink: "/it/stories",
-    // },
+    {
+      name: "HeroBanner",
+      title: "Bran Mission and Values",
+      image:
+        "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+      imageAlt: "Immagine di esempio",
+      btnLabel: "Discover More",
+      btnLink: "/it/stories",
+      btnType: "primary",
+    },
   ],
 };
 
