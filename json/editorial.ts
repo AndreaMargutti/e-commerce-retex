@@ -8,16 +8,8 @@ const editorial: Record<string, unknown> = {
         alt: "Diversity and Inclusion",
       },
       title: "Diversity and Inclusion",
-      appendix: "Woolrich is committed to diversity and inclusion",
-      subtitle: "Woolrich is committed to diversity and inclusion",
-      positioningY: "bottom",
-      positioningX: "left",
-      links: [
-        { label: "Our Mission", href: "/en/mission" },
-        { label: "Our Values", href: "/en/values" },
-        { label: "Our Stories", href: "/en/stories" },
-        { label: "Our People", href: "/en/people" },
-      ],
+      positioningY: "middle",
+      positioningX: "center",
     },
     // {
     //   name: "TextBlock",
