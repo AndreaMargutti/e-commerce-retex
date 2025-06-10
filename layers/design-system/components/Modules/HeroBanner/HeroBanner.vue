@@ -6,9 +6,9 @@ const props = defineProps<HeroBannerProps>();
 const positioningX = computed(() => {
   switch (props.positionX) {
     case "left":
-      return "left-0 lg:ps-20";
+      return "left-0 ps-4 lg:ps-20";
     case "center":
-      return "left-1/2 -translate-x-1/2";
+      return "left-1/2 -translate-x-1/2 text-center";
     case "right":
       return "right-0 lg:pe-20";
     default:
@@ -23,7 +23,7 @@ const positioningY = computed(() => {
     case "middle":
       return "top-1/2 -translate-y-1/2";
     case "bottom":
-      return "bottom-21 md:bottom-8 lg:bottom-15 xl:bottom-30";
+      return "bottom-20 lg:bottom-30";
     default:
       return "bottom-21 md:bottom-8 lg:bottom-15 xl:bottom-30"; // Default to bottom if no valid position is provided
   }
@@ -36,8 +36,11 @@ const positioning = computed(() => {
 const labelsStyle = computed(() => {
   let labelClass = "";
 
-  if (props.links && props.links.length > 3) {
-    labelClass = "min-w-40 flex-wrap *:flex-1/3";
+  if (props.links && props.links.length > 3 && props.positionX === "center") {
+    labelClass =
+      "min-w-40 flex-wrap *:flex-1/4 left-1/3 -translate-x-1/3 text-center";
+  } else if (props.links && props.links.length > 3) {
+    labelClass = "min-w-40 flex-wrap *:flex-1/4";
   } else {
     labelClass = "flex-nowrap";
   }
@@ -57,12 +60,12 @@ const labelsStyle = computed(() => {
       </div>
       <div
         v-if="variant === 'links'"
-        class="pt-8 flex gap-6 text-white"
-        :class="labelsStyle"
+        class="lg:pt-8 flex gap-6 text-white absolute"
+        :class="[labelsStyle]"
       >
         <AtomsLink
-          v-for="(link, idx) in links"
-          :key="idx"
+          v-for="link in links"
+          :key="link.label"
           :name="link.label"
           :href="link.href"
           :is-uppercase="true"

@@ -6,7 +6,7 @@ const props = withDefaults(defineProps<AtomsLinkProps>(), {
 
 const direction = computed(() => {
   if (props.direction === "row-reverse") {
-    return "flex-row-reverse";
+    return "flex-row-reverse w-full justify-end";
   } else {
     return "";
   }

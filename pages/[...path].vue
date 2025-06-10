@@ -24,8 +24,11 @@ if (!pageContent.value) {
         :position-y="module.positioningY ?? 'middle'"
         :background-image="module.image?.src ?? ''"
         :title="module.title ?? ''"
+        :appendix="module.appendix ?? ''"
+        :subtitle="module.subtitle ?? ''"
         :font-style="module.fontStyle"
         :buttons="module.buttons ?? []"
+        :links="module.links ?? []"
       />
     </div>
   </main>

@@ -6,7 +6,7 @@ withDefaults(defineProps<AtomsTitleProps>(), {
 </script>
 
 <template>
-  <h2 class="text-white py-4 text-center">
+  <h2 class="text-white py-4">
     {{
       fontStyle === "capitalized"
         ? capitalize(title ?? "")
