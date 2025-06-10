@@ -68,11 +68,20 @@ const labelsStyle = computed(() => {
           :is-uppercase="true"
           icon="navigation-right"
           direction="row-reverse"
-          +
           class="justify-end w-fit"
         >
           {{ label }}
         </AtomsLink>
+      </div>
+      <div v-else-if="variant === 'buttons'">
+        <AtomsButton
+          :label="btnLabel ?? ''"
+          :type="btnType ?? 'primary'"
+          text-size="medium"
+          :href="btnLink"
+          :is-uppercase="true"
+          :on-background="true"
+        />
       </div>
     </section>
   </figure>

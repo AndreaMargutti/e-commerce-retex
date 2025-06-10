@@ -36,6 +36,8 @@ const onBackground = computed(() => {
     switch (props.type) {
       case "tertiary":
         return "py-4 text-white text-shadow-btn";
+      case "primary":
+        return "py-4 text-white bg-transparent border-1 border-white";
       default:
         return "";
     }

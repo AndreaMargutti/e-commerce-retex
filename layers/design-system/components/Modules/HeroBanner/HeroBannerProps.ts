@@ -8,4 +8,7 @@ export type HeroBannerProps = {
   labels?: string[];
   positionX: "left" | "center" | "right";
   positionY: "top" | "middle" | "bottom";
+  btnLabel?: string;
+  btnLink?: string;
+  btnType?: "primary" | "secondary" | "tertiary";
 };

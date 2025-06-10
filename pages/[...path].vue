@@ -25,6 +25,9 @@ if (!pageContent.value) {
         :background-image="module.image ?? ''"
         :title="module.title ?? ''"
         :font-style="module.fontStyle ?? undefined"
+        :btn-label="module.btnLabel ?? ''"
+        :btn-link="module.btnLink ?? ''"
+        :btn-type="module.btnType ?? 'primary'"
       />
     </div>
   </main>
