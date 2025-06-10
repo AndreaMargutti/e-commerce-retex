@@ -28,28 +28,16 @@ const editorial: Record<string, unknown> = {
     //   name: "TextBlock",
     //   text: "Woolrich stands in solidarity with all those who reject racism, injustice, and inequality. We support our communities and our customers regardless of their background, ethnicity, or identity. The campaigns featured across all our channles exemplify our efforts to represent the diversity within our customer and employee base with respect and compassion.",
     // },
-    // {
-    //   name: "FourImage",
-    //   images: [
-    //     {
-    //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ec7bc695-e1d8-48e1-8e16-867e12c98e79/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-    //       alt: "Immagine 1",
-    //     },
-    //     {
-    //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/d09239b9-4d94-4010-aa76-f44ea1ea5d2f/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-    //       alt: "Immagine 2",
-    //     },
-    //     {
-    //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/bebea67e-de59-4ed8-94ea-6c2f3da45aa4/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-    //       alt: "Immagine 3",
-    //     },
-    //     {
-    //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f9e77df3-306c-4b4b-9d4d-d0ada3b8815c/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-    //       alt: "Immagine 4",
-    //     },
-    //   ],
-    //   title: "Woolrich embraces and empowers all communities",
-    // },
+    {
+      name: "HeroBanner",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e945bda4-2f5c-4897-9018-ad8dd3105cb8/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Woolrich embraces and empowers all communities",
+      },
+      title: "Woolrich embraces and empowers all communities",
+      fontStyle: "capitalized",
+      positioningY: "bottom",
+    },
     // {
     //   name: "CardGallery",
     //   title: "Inclusive and purposeful stories",
