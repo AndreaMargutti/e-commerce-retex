@@ -55,7 +55,11 @@ const labelsStyle = computed(() => {
         <AtomsTitle :title="title ?? ''" :font-style="fontStyle" />
         <AtomsSubtitle :subtitle="subtitle ?? ''" />
       </div>
-      <div class="pt-8 flex gap-6 text-white" :class="labelsStyle">
+      <div
+        v-if="variant === 'links'"
+        class="pt-8 flex gap-6 text-white"
+        :class="labelsStyle"
+      >
         <AtomsLink
           v-for="(label, idx) in labels"
           :key="idx"

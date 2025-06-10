@@ -1,4 +1,5 @@
 export type HeroBannerProps = {
+  variant: "links" | "buttons";
   backgroundImage: string;
   appendix?: string;
   title?: string;
