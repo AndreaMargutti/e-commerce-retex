@@ -20,8 +20,8 @@ if (!pageContent.value) {
       <ModulesHeroBanner
         v-if="module.name === 'HeroBanner'"
         :variant="module.variant ?? 'links'"
-        position-x="center"
-        position-y="middle"
+        :position-x="module.positioningX ?? 'center'"
+        :position-y="module.positioningY ?? 'middle'"
         :background-image="module.image?.src ?? ''"
         :title="module.title ?? ''"
         :font-style="module.fontStyle"

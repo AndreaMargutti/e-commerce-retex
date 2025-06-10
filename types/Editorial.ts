@@ -25,6 +25,8 @@ export type HeroBanner = {
       btnType: "primary" | "secondary" | "tertiary";
     },
   ];
+  positioningY?: "top" | "middle" | "bottom";
+  positioningX?: "left" | "center" | "right";
 };
 
 export type TextBlock = {

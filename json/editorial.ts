@@ -8,6 +8,7 @@ const editorial: Record<string, unknown> = {
         alt: "Diversity and Inclusion",
       },
       title: "Diversity and Inclusion",
+      positioningY: "middle",
     },
     // {
     //   name: "TextBlock",
@@ -21,6 +22,7 @@ const editorial: Record<string, unknown> = {
       },
       title: "Emphaty will always remain the strongest fiber",
       fontStyle: "uppercase",
+      positioningY: "middle",
     },
     // {
     //   name: "TextBlock",
@@ -123,6 +125,7 @@ const editorial: Record<string, unknown> = {
           btnType: "primary",
         },
       ],
+      positioningY: "bottom",
     },
   ],
 };
