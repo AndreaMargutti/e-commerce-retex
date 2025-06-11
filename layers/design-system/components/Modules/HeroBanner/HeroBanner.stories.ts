@@ -91,12 +91,71 @@ export const WithButton: Story = {
   },
 };
 
+export const WithThreeButton: Story = {
+  args: {
+    variant: "buttons",
+    backgroundImage:
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+    title: "Scopri la nuova collezione",
+    fontStyle: "capitalized",
+    positionX: "center",
+    positionY: "middle",
+    buttons: [
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+    ],
+  },
+  render: (args) => ({
+    components: { HeroBanner },
+    setup: () => ({ args }),
+    template: `<HeroBanner v-bind="args" />`,
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: "HeroBanner con una call to action a bottone.",
+      },
+    },
+  },
+};
+
+export const WithFourButton: Story = {
+  args: {
+    variant: "buttons",
+    backgroundImage:
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+    title: "Scopri la nuova collezione",
+    fontStyle: "capitalized",
+    positionX: "center",
+    positionY: "middle",
+    buttons: [
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+      { btnLabel: "Acquista ora", btnLink: "#", btnType: "primary" },
+    ],
+  },
+  render: (args) => ({
+    components: { HeroBanner },
+    setup: () => ({ args }),
+    template: `<HeroBanner v-bind="args" />`,
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: "HeroBanner con una call to action a bottone.",
+      },
+    },
+  },
+};
+
 // Variante con 4 labels
 export const WithFourLabels: Story = {
   args: {
     variant: "links",
     backgroundImage:
-      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/70a6027d-9c78-4465-9303-cad0f087f13e/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
     appendix: "Nuovi Arrivi",
     title: "Primavera 2024",
     fontStyle: "uppercase",
@@ -109,6 +168,37 @@ export const WithFourLabels: Story = {
     ],
     positionX: "left",
     positionY: "bottom",
+  },
+  render: (args) => ({
+    components: { HeroBanner },
+    setup: () => ({ args }),
+    template: `<HeroBanner v-bind="args" />`,
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: "HeroBanner con quattro link label come call to action.",
+      },
+    },
+  },
+};
+
+export const WithThreeLabels: Story = {
+  args: {
+    variant: "links",
+    backgroundImage:
+      "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+    appendix: "Nuovi Arrivi",
+    title: "Primavera 2024",
+    fontStyle: "uppercase",
+    subtitle: "Scopri tutte le novità della stagione.",
+    links: [
+      { label: "Uomo", href: "#" },
+      { label: "Donna", href: "#" },
+      { label: "Bambini", href: "#" },
+    ],
+    positionX: "center",
+    positionY: "middle",
   },
   render: (args) => ({
     components: { HeroBanner },
