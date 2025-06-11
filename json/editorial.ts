@@ -10,20 +10,6 @@ const editorial: Record<string, unknown> = {
       title: "Diversity and Inclusion",
       positioningY: "middle",
       positioningX: "center",
-      links: [
-        {
-          label: "Discover More",
-          link: "/en/diversity-and-inclusion",
-        },
-        {
-          label: "Read the Story",
-          link: "/en/stories/diversity-and-inclusion",
-        },
-        {
-          label: "Shop the Collection",
-          link: "/en/collections/diversity-and-inclusion",
-        },
-      ],
     },
     // {
     //   name: "TextBlock",
@@ -52,24 +38,6 @@ const editorial: Record<string, unknown> = {
       title: "Woolrich embraces and empowers all communities",
       fontStyle: "capitalized",
       positioningY: "bottom",
-      links: [
-        {
-          label: "Discover More",
-          link: "/en/diversity-and-inclusion",
-        },
-        {
-          label: "Read the Story",
-          link: "/en/stories/diversity-and-inclusion",
-        },
-        {
-          label: "Shop the Collection",
-          link: "/en/collections/diversity-and-inclusion",
-        },
-        {
-          label: "Watch the Video",
-          link: "https://www.youtube.com/watch?v=example", // Replace with actual video link
-        },
-      ],
     },
     // {
     //   name: "CardGallery",

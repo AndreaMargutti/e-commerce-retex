@@ -35,12 +35,11 @@ const positioning = computed(() => {
 
 const labelsStyle = computed(() => {
   let labelClass = "";
-  if (props.links) {
-    if (props.links.length > 3) {
-      labelClass = "grid grid-cols-2";
-    } else {
-      labelClass = "flex justify-center";
-    }
+
+  if ((props.links?.length ?? 0) > 3 || (props.buttons?.length ?? 0) > 3) {
+    labelClass = "grid grid-cols-2";
+  } else {
+    labelClass = "flex justify-center";
   }
 
   return labelClass;
@@ -81,7 +80,8 @@ const labelsStyle = computed(() => {
       </div>
       <div
         v-else-if="variant === 'buttons'"
-        class="flex justify-center whitespace-nowrap"
+        class="whitespace-nowrap mx-auto gap-4 md:gap-8 justify-items-center lg:justify-items-normal lg:max-w-2/3"
+        :class="labelsStyle"
       >
         <AtomsButton
           v-for="button in buttons"
