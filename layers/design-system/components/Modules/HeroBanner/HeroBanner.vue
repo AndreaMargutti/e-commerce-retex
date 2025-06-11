@@ -23,9 +23,9 @@ const positioningY = computed(() => {
     case "middle":
       return "top-1/2 -translate-y-1/2";
     case "bottom":
-      return "bottom-20 lg:bottom-30";
+      return "bottom-23 md:bottom-10 lg:bottom-30";
     default:
-      return "bottom-21 md:bottom-8 lg:bottom-15 xl:bottom-30"; // Default to bottom if no valid position is provided
+      return "bottom-21 md:bottom-8 lg:bottom-10 xl:bottom-30"; // Default to bottom if no valid position is provided
   }
 });
 
@@ -35,15 +35,14 @@ const positioning = computed(() => {
 
 const labelsStyle = computed(() => {
   let labelClass = "";
-
-  if (props.links && props.links.length > 3 && props.positionX === "center") {
-    labelClass =
-      "min-w-40 flex-wrap *:flex-1/4 left-1/3 -translate-x-1/3 text-center";
-  } else if (props.links && props.links.length > 3) {
-    labelClass = "min-w-40 flex-wrap *:flex-1/4";
-  } else {
-    labelClass = "flex-nowrap";
+  if (props.links) {
+    if (props.links.length > 3) {
+      labelClass = "grid grid-cols-2";
+    } else {
+      labelClass = "flex justify-center";
+    }
   }
+
   return labelClass;
 });
 </script>
@@ -52,16 +51,20 @@ const labelsStyle = computed(() => {
   <figure class="relative">
     <AtomsBackgroundImage :src="backgroundImage" />
     <AtomsGradient />
-    <section :class="positioning" class="absolute">
+    <section :class="positioning" class="absolute pb-4 max-w-1/2">
       <div>
         <AtomsAppendix :appendix="appendix ?? ''" />
-        <AtomsTitle :title="title ?? ''" :font-style="fontStyle" />
+        <AtomsTitle
+          :title="title ?? ''"
+          :font-style="fontStyle"
+          class="lg:text-center"
+        />
         <AtomsSubtitle :subtitle="subtitle ?? ''" />
       </div>
       <div
         v-if="variant === 'links'"
-        class="lg:pt-8 flex gap-6 text-white absolute"
-        :class="[labelsStyle]"
+        class="lg:pt-8 text-white max-w-2/3 mx-auto gap-[1.5rem]"
+        :class="labelsStyle"
       >
         <AtomsLink
           v-for="link in links"
@@ -71,7 +74,7 @@ const labelsStyle = computed(() => {
           :is-uppercase="true"
           icon="navigation-right"
           direction="row-reverse"
-          class="justify-end w-fit"
+          class="justify-between"
         >
           {{ link.label }}
         </AtomsLink>

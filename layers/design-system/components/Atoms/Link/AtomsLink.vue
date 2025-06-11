@@ -6,7 +6,7 @@ const props = withDefaults(defineProps<AtomsLinkProps>(), {
 
 const direction = computed(() => {
   if (props.direction === "row-reverse") {
-    return "flex-row-reverse w-full justify-end";
+    return "flex-row-reverse";
   } else {
     return "";
   }
@@ -21,7 +21,7 @@ const propsStyle = computed(() => {
   <NuxtLink
     :to="href"
     :class="propsStyle"
-    class="flex items-center gap-2 hover:cursor-pointer hover:underline underline-offset-5"
+    class="flex items-center gap-3 hover:cursor-pointer hover:underline underline-offset-5"
   >
     <AtomsIcon v-if="icon" :name="icon" size="20px" />
     {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
