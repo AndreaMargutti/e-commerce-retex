@@ -9,7 +9,24 @@ const editorial: Record<string, unknown> = {
       },
       title: "Diversity and Inclusion",
       positioningY: "middle",
-      positioningX: "center",
+      links: [
+        {
+          link: "/en/diversity-and-inclusion",
+          label: "Discover More",
+        },
+        {
+          link: "/en/stories",
+          label: "See All Stories",
+        },
+        {
+          link: "/en/brand-mission-and-values",
+          label: "Brand Mission and Values",
+        },
+        {
+          link: "/en/brand-mission-and-values",
+          label: "Brand Mission and Values",
+        },
+      ],
     },
     // {
     //   name: "TextBlock",

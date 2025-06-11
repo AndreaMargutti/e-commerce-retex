@@ -23,7 +23,7 @@ const propsStyle = computed(() => {
     :class="propsStyle"
     class="flex items-center gap-3 hover:cursor-pointer hover:underline underline-offset-5"
   >
-    <AtomsIcon v-if="icon" :name="icon" size="20px" />
+    <AtomsIcon v-if="icon" :name="icon" size="20px" class="flex-shrink-0" />
     {{ isUppercase ? name.toLocaleUpperCase() : capitalize(name) }}
   </NuxtLink>
 </template>

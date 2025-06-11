@@ -44,6 +44,20 @@ const labelsStyle = computed(() => {
 
   return labelClass;
 });
+
+const labelPosition = computed(() => {
+  let labelClass = "";
+
+  if (props.positionX === "left" && (props.links?.length ?? 0) > 3) {
+    labelClass = "gap-6 ";
+  } else if (props.positionX === "center" && (props.links?.length ?? 0) > 3) {
+    labelClass = "max-w-2/3 mx-auto gap-[1.5rem]";
+  } else if (props.positionX === "right" && (props.links?.length ?? 0) > 3) {
+    labelClass = "gap-6 pe-4 lg:pe-20";
+  }
+
+  return labelClass;
+});
 </script>
 
 <template>
@@ -53,17 +67,13 @@ const labelsStyle = computed(() => {
     <section :class="positioning" class="absolute pb-4 max-w-1/2">
       <div>
         <AtomsAppendix :appendix="appendix ?? ''" />
-        <AtomsTitle
-          :title="title ?? ''"
-          :font-style="fontStyle"
-          class="lg:text-center"
-        />
+        <AtomsTitle :title="title ?? ''" :font-style="fontStyle" />
         <AtomsSubtitle :subtitle="subtitle ?? ''" />
       </div>
       <div
         v-if="variant === 'links'"
-        class="lg:pt-8 text-white max-w-2/3 mx-auto gap-[1.5rem]"
-        :class="labelsStyle"
+        class="lg:pt-8 text-white gap-[1.5rem]"
+        :class="[labelsStyle, labelPosition]"
       >
         <AtomsLink
           v-for="link in links"
