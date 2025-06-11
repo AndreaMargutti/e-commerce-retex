@@ -8,7 +8,7 @@ const editorial: Record<string, unknown> = {
         alt: "Diversity and Inclusion",
       },
       title: "Diversity and Inclusion",
-      positioningY: "middle",
+      positioningY: "bottom",
       links: [
         {
           link: "/en/diversity-and-inclusion",

@@ -19,13 +19,13 @@ const positioningX = computed(() => {
 const positioningY = computed(() => {
   switch (props.positionY) {
     case "top":
-      return "top-16";
+      return "top-1/6 md:top-1/4";
     case "middle":
       return "top-1/2 -translate-y-1/2";
     case "bottom":
-      return "bottom-23 md:bottom-10 lg:bottom-30";
+      return "bottom-1/6 md:bottom-1/8";
     default:
-      return "bottom-21 md:bottom-8 lg:bottom-10 xl:bottom-30"; // Default to bottom if no valid position is provided
+      return "top-1/2 -translate-y-1/2"; // Default to bottom if no valid position is provided
   }
 });
 
