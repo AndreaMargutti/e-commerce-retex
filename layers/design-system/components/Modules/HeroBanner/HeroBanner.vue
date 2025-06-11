@@ -6,11 +6,11 @@ const props = defineProps<HeroBannerProps>();
 const positioningX = computed(() => {
   switch (props.positionX) {
     case "left":
-      return "left-0 ps-4 lg:ps-20";
+      return "left-0";
     case "center":
       return "left-1/2 -translate-x-1/2 text-center";
     case "right":
-      return "right-0 lg:pe-20";
+      return "right-0";
     default:
       return "left-0"; // Default to left if no valid position is provided
   }
@@ -19,11 +19,11 @@ const positioningX = computed(() => {
 const positioningY = computed(() => {
   switch (props.positionY) {
     case "top":
-      return "top-1/6 md:top-1/4";
+      return "top-[20%] -translate-y-[20%] md:top-1/4";
     case "middle":
-      return "top-1/2 -translate-y-1/2";
+      return "top-[50%] -translate-y-1/2";
     case "bottom":
-      return "bottom-1/6 md:bottom-1/8";
+      return "bottom-[20%] translate-y-[20%] md:bottom-1/8";
     default:
       return "top-1/2 -translate-y-1/2"; // Default to bottom if no valid position is provided
   }
@@ -64,7 +64,7 @@ const labelPosition = computed(() => {
   <figure class="relative">
     <AtomsBackgroundImage :src="backgroundImage" />
     <AtomsGradient />
-    <section :class="positioning" class="absolute pb-4 max-w-1/2">
+    <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
         <AtomsAppendix :appendix="appendix ?? ''" />
         <AtomsTitle :title="title ?? ''" :font-style="fontStyle" />
