@@ -30,6 +30,10 @@ if (!pageContent.value) {
         :buttons="module.buttons ?? []"
         :links="module.links ?? []"
       />
+      <ModulesTextBlock
+        v-if="module.name === 'TextBlock'"
+        :text="(module as any).text ?? ''"
+      />
     </div>
   </main>
 </template>

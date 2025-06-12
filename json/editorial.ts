@@ -8,20 +8,6 @@ const editorial: Record<string, unknown> = {
         alt: "Diversity and Inclusion",
       },
       title: "Diversity and Inclusion",
-      links: [
-        {
-          label: "Learn More",
-          href: "/en/diversity-and-inclusion",
-        },
-        {
-          label: "Read the Story",
-          href: "/en/stories/diversity-and-inclusion",
-        },
-        {
-          label: "Shop the Collection",
-          href: "/en/collections/diversity-and-inclusion",
-        },
-      ],
     },
     {
       name: "TextBlock",
@@ -37,10 +23,10 @@ const editorial: Record<string, unknown> = {
       fontStyle: "uppercase",
       positioningY: "middle",
     },
-    // {
-    //   name: "TextBlock",
-    //   text: "Woolrich stands in solidarity with all those who reject racism, injustice, and inequality. We support our communities and our customers regardless of their background, ethnicity, or identity. The campaigns featured across all our channles exemplify our efforts to represent the diversity within our customer and employee base with respect and compassion.",
-    // },
+    {
+      name: "TextBlock",
+      text: "Woolrich stands in solidarity with all those who reject racism, injustice, and inequality. We support our communities and our customers regardless of their background, ethnicity, or identity. The campaigns featured across all our channles exemplify our efforts to represent the diversity within our customer and employee base with respect and compassion.",
+    },
     {
       name: "HeroBanner",
       image: {
