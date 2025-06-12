@@ -4,7 +4,6 @@ import AtomsTitle from "./AtomsTitle.vue";
 const meta: Meta<typeof AtomsTitle> = {
   component: AtomsTitle,
   title: "Design System / Atoms / AtomsTitle",
-  tags: ["autodocs"],
   argTypes: {
     title: {
       control: {

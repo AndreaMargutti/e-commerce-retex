@@ -4,7 +4,6 @@ import AtomsBackgroundImage from "./AtomsBackgroundImage.vue";
 const meta: Meta<typeof AtomsBackgroundImage> = {
   component: AtomsBackgroundImage,
   title: "Design System / Atoms / AtomsBackgroundImage",
-  tags: ["autodocs"],
   argTypes: {
     src: {
       control: {

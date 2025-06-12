@@ -4,7 +4,6 @@ import HeroBanner from "./HeroBanner.vue";
 const meta: Meta<typeof HeroBanner> = {
   component: HeroBanner,
   title: "Design System / Modules / HeroBanner",
-  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {

@@ -4,7 +4,6 @@ import AtomsSubtitle from "./AtomsSubtitle.vue";
 const meta: Meta<typeof AtomsSubtitle> = {
   component: AtomsSubtitle,
   title: "Design System / Atoms / AtomsSubtitle",
-  tags: ["autodocs"],
   argTypes: {
     subtitle: {
       control: {

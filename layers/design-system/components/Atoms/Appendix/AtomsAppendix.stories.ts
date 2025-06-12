@@ -5,7 +5,6 @@ const meta: Meta<typeof AtomsAppendix> = {
   component: AtomsAppendix,
   title: "Design System / Atoms / AtomsAppendix",
   // Removed unsupported 'documentation' property.
-  tags: ["autodocs"],
   argTypes: {
     appendix: {
       control: {

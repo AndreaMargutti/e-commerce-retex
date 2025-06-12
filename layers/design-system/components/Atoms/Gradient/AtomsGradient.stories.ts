@@ -4,7 +4,6 @@ import AtomsGradient from "./AtomsGradient.vue";
 const meta: Meta<typeof AtomsGradient> = {
   component: AtomsGradient,
   title: "Design System / Atoms / AtomsGradient",
-  tags: ["autodocs"],
 };
 
 export default meta;
