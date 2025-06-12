@@ -8,10 +8,6 @@ const editorial: Record<string, unknown> = {
         alt: "Diversity and Inclusion",
       },
       title: "Diversity and Inclusion",
-      subtitle: "Subtitle",
-      appendix: "APPENDIX",
-      positioningY: "middle",
-      positioningX: "left",
       links: [
         {
           label: "Learn More",
