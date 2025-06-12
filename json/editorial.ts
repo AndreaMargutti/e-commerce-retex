@@ -23,10 +23,10 @@ const editorial: Record<string, unknown> = {
         },
       ],
     },
-    // {
-    //   name: "TextBlock",
-    //   text: "Woolrich is committed to diversity at all levels of our organization and fosters a supportive and inclusive enviroment for our employees. We've long equipped those with a passion for the outdoors while protecting them from the elements. By breaking down barries in evniroments that test and inspire, and by fueling our innate desire for leisure, we are learning about the vorld around us and of course, about ourselves.",
-    // },
+    {
+      name: "TextBlock",
+      text: "Woolrich is committed to diversity at all levels of our organization and fosters a supportive and inclusive enviroment for our employees. We've long equipped those with a passion for the outdoors while protecting them from the elements. By breaking down barries in evniroments that test and inspire, and by fueling our innate desire for leisure, we are learning about the vorld around us and of course, about ourselves.",
+    },
     {
       name: "HeroBanner",
       image: {
