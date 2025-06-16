@@ -47,8 +47,12 @@ const editorial: Record<string, unknown> = {
           image:
             "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ec4c47d3-3ce6-40c5-aa23-d9e1c9b43a64/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
           imageAlt: "Immagine di esempio",
-          label: "Discover Now",
-          link: "/it/being-a-woman-today",
+          labels: [
+            {
+              label: "Discover Now",
+              link: "/it/being-a-woman-today",
+            },
+          ],
         },
         {
           title: "Family ties",
@@ -56,8 +60,12 @@ const editorial: Record<string, unknown> = {
           image:
             "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/51b4a9b0-43d6-4896-ad39-8b8fa30d8c30/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
           imageAlt: "Immagine di esempio",
-          label: "Discover Now",
-          link: "/it/family-ties",
+          labels: [
+            {
+              label: "Discover Now",
+              link: "/it/family-ties",
+            },
+          ],
         },
         {
           title: "An Enchanted Archive Tale",
@@ -65,8 +73,12 @@ const editorial: Record<string, unknown> = {
           image:
             "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/4d6b7428-f59e-461e-806a-d182a30aad8c/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
           imageAlt: "Immagine di esempio",
-          label: "Discover Now",
-          link: "/it/an-enchanted-archive-tale",
+          labels: [
+            {
+              label: "Discover Now",
+              link: "/it/an-enchanted-archive-tale",
+            },
+          ],
         },
         {
           title: "Without Barriers",
@@ -74,8 +86,12 @@ const editorial: Record<string, unknown> = {
           image:
             "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e9bb922c-0741-47be-856f-6b5844e8ea97/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
           imageAlt: "Immagine di esempio",
-          label: "Discover Now",
-          link: "/it/without-barriers",
+          labels: [
+            {
+              label: "Discover Now",
+              link: "/it/without-barriers",
+            },
+          ],
         },
         {
           title: "Growing Up in Italy",
@@ -83,8 +99,12 @@ const editorial: Record<string, unknown> = {
           image:
             "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/45a51318-a02c-4091-abfe-6e8bbd67aef8/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
           imageAlt: "Immagine di esempio",
-          label: "Discover Now",
-          link: "/it/growing-up-in-italy",
+          labels: [
+            {
+              label: "Discover Now",
+              link: "/it/growing-up-in-italy",
+            },
+          ],
         },
         {
           title: "Woolrich Keeps New York Warm",
@@ -92,11 +112,16 @@ const editorial: Record<string, unknown> = {
           image:
             "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/31b7bc53-8002-4137-bc5e-6e5fc4140d61/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
           imageAlt: "Immagine di esempio",
-          label: "Discover Now",
-          link: "/it/woolrich-keeps-new-york-warm",
+          labels: [
+            {
+              label: "Discover Now",
+              link: "/it/woolrich-keeps-new-york-warm",
+            },
+          ],
         },
       ],
     },
+
     {
       name: "HeroBanner",
       variant: "buttons",
