@@ -67,8 +67,13 @@ const labelPosition = computed(() => {
     <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
         <AtomsAppendix :appendix="appendix ?? ''" />
-        <AtomsTitle :title="title ?? ''" :font-style="fontStyle" />
-        <AtomsSubtitle :subtitle="subtitle ?? ''" />
+        <AtomsTitle
+          :title="title ?? ''"
+          :font-style="fontStyle"
+          color="white"
+          class="py-4"
+        />
+        <AtomsSubtitle :subtitle="subtitle ?? ''" color="white" class="pb-4" />
       </div>
       <div
         v-if="variant === 'links'"
