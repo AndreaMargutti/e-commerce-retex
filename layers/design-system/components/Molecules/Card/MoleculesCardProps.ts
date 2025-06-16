@@ -5,8 +5,10 @@ export type MoleculesCardProps = {
     src: string;
     alt: string;
   };
-  links?: {
-    label: string;
-    link: string;
-  };
+  links?: [
+    {
+      label: string;
+      href: string;
+    },
+  ];
 };

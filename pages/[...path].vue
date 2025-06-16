@@ -34,7 +34,6 @@ if (!pageContent.value) {
         v-if="module.name === 'TextBlock'"
         :text="(module as any).text ?? ''"
       />
-      <MoleculesCard v-if="module.name === 'CardGallery'" />
     </div>
   </main>
 </template>
