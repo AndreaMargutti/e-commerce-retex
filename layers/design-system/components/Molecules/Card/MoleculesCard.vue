@@ -6,14 +6,14 @@ defineProps<MoleculesCardProps>();
 <template>
   <section>
     <figure class="pb-[1.4rem]">
-      <img :src="image.src" :alt="image.alt" class="aspect-square" />
+      <img :src="image.src" :alt="image.alt" class="aspect-square w-full" />
       <div class="px-6 pt-6 pb-5">
         <AtomsTitle :title="title" color="black" class="pb-2" />
         <AtomsSubtitle :subtitle="subtitle ?? ''" color="black" class="pb-0" />
       </div>
       <div class="flex gap-8 px-6 *:p-0">
         <AtomsLink
-          v-for="link in links ?? []"
+          v-for="link in labels ?? []"
           :key="link.label"
           :name="link.label"
           :href="link.href"

@@ -34,6 +34,11 @@ if (!pageContent.value) {
         v-if="module.name === 'TextBlock'"
         :text="(module as any).text ?? ''"
       />
+      <ModulesCardGallery
+        v-if="module.name === 'CardGallery'"
+        :title="module.title"
+        :cards="(module as any).cards ?? []"
+      />
     </div>
   </main>
 </template>

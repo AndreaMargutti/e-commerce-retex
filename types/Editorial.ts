@@ -1,4 +1,4 @@
-export type Editorial = (HeroBanner | TextBlock)[];
+export type Editorial = (HeroBanner | TextBlock | CardGallery)[];
 
 export type HeroBanner = {
   name: string;
@@ -32,4 +32,19 @@ export type HeroBanner = {
 export type TextBlock = {
   name: "TextBlock";
   text: string;
+};
+
+export type CardGallery = {
+  name: "CardGallery";
+  title?: string;
+  cards: Array<{
+    title: string;
+    text: string;
+    image: string;
+    imageAlt: string;
+    labels: Array<{
+      label: string;
+      link: string;
+    }>;
+  }>;
 };
