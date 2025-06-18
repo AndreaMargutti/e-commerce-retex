@@ -31,6 +31,7 @@ export type HeroBanner = {
 
 export type TextBlock = {
   name: "TextBlock";
+  title?: string;
   text: string;
 };
 

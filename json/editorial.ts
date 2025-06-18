@@ -150,6 +150,11 @@ const editorial: Record<string, unknown> = {
       title: "Woolrich: who we are",
     },
     {
+      name: "TextBlock",
+      title: "Established in 1830",
+      text: "Born in Pennsylvania in 1830, Woolrich is the oldest continuously operating woolen mill in the United States. Our heritage is rooted in the American outdoors, and our products are designed to withstand the elements while providing comfort and style. We are committed to sustainability, quality craftsmanship, and innovation, ensuring that our products not only meet the needs of our customers but also respect the environment.",
+    },
+    {
       name: "CardGallery",
       title: "Our three core values",
       cards: [

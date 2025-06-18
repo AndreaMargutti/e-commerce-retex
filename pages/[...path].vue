@@ -32,6 +32,7 @@ if (!pageContent.value) {
       />
       <ModulesTextBlock
         v-if="module.name === 'TextBlock'"
+        :title="module.title"
         :text="(module as any).text ?? ''"
       />
       <ModulesCardGallery
