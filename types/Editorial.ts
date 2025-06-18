@@ -1,4 +1,4 @@
-export type Editorial = (HeroBanner | TextBlock | CardGallery)[];
+export type Editorial = (HeroBanner | TextBlock | CardGallery | SplitSection)[];
 
 export type HeroBanner = {
   name: string;
@@ -48,4 +48,15 @@ export type CardGallery = {
       link: string;
     }>;
   }>;
+};
+
+export type SplitSection = {
+  name: "SplitSection";
+  title?: string;
+  text: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  orientation: "left" | "right";
 };

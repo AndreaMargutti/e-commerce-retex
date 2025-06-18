@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-import type { Editorial } from "~/types/Editorial";
+import type {
+  CardGallery,
+  Editorial,
+  SplitSection,
+  TextBlock,
+} from "~/types/Editorial";
 const route = useRoute();
 
 const { data: pageContent } = await useFetch<Editorial>(
@@ -33,12 +38,19 @@ if (!pageContent.value) {
       <ModulesTextBlock
         v-if="module.name === 'TextBlock'"
         :title="module.title"
-        :text="(module as any).text ?? ''"
+        :text="(module as TextBlock).text ?? ''"
       />
       <ModulesCardGallery
         v-if="module.name === 'CardGallery'"
         :title="module.title"
-        :cards="(module as any).cards ?? []"
+        :cards="(module as CardGallery).cards ?? []"
+      />
+      <ModulesSplitSection
+        v-if="module.name === 'SplitSection'"
+        :orientation="(module as SplitSection).orientation"
+        :title="module.title"
+        :text="(module as SplitSection).text"
+        :image="module.image ?? { src: '', alt: '' }"
       />
     </div>
   </main>

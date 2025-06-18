@@ -155,6 +155,16 @@ const editorial: Record<string, unknown> = {
       text: "Born in Pennsylvania in 1830, Woolrich is the oldest continuously operating woolen mill in the United States. Our heritage is rooted in the American outdoors, and our products are designed to withstand the elements while providing comfort and style. We are committed to sustainability, quality craftsmanship, and innovation, ensuring that our products not only meet the needs of our customers but also respect the environment.",
     },
     {
+      name: "SplitSection",
+      title: "Our Legacy",
+      text: "We call ourselves the 'original outdoor clothing company' since we have produced high-quality garments for outdoor enthusiasts for over 190 years. Crafting fine and warm wool is our calling, and our mills have lent a helping hand during major historical moments. Woolrich has made big contributions by supplying socks, blankets and coats to US soldiers providing them warmth and comfort.",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcea614f-f66d-44e9-a7dc-36b743d15327/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+        alt: "Our Legacy",
+      },
+      orientation: "right",
+    },
+    {
       name: "CardGallery",
       title: "Our three core values",
       cards: [
