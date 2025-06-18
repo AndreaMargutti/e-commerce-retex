@@ -50,8 +50,6 @@ if (!pageContent.value) {
         :orientation="(module as SplitSection).orientation"
         :title="module.title"
         :text="(module as SplitSection).text"
-        :text-position="(module as SplitSection).textPosition ?? 'left'"
-        :font-weight="module.fontWeight ?? 'normal'"
         :image="module.image ?? { src: '', alt: '' }"
       />
     </div>
