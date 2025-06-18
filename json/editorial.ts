@@ -150,6 +150,33 @@ const editorial: Record<string, unknown> = {
       title: "Woolrich: who we are",
     },
     {
+      name: "CardGallery",
+      title: "Our three core values",
+      cards: [
+        {
+          title: "Amrerican Heritage",
+          text: "Founded in Pennsylvania in 1830 Woolrich is part of the fabric of the American outdoors. Our original products mirrored the American Dream: wear woolrich to pursue your goals, regardless of the elements.",
+          image:
+            "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          imageAlt: "American Heritage",
+        },
+        {
+          title: "Purposeful Design",
+          text: "Our products design ethos is pure, considered, consistent. Woolrich collections embody a design sensibilty of stylish durability.",
+          image:
+            "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b77dd455-c6e9-4149-af1f-860379bdfdae/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          imageAlt: "Purposeful Design",
+        },
+        {
+          title: "Iconic Brand Elements",
+          text: "As America's oldest continuously operating woolen mill, Woolrich has a rich history of producing iconic products that have become synonymous with the brand. From the classic buffalo check to the signature Woolrich red, these elements are woven into the very fabric of our identity.",
+          image:
+            "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3a75a851-d0e4-4097-965b-9f762254bcbd/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          imageAlt: "Iconic Brand Elements",
+        },
+      ],
+    },
+    {
       name: "HeroBanner",
       image: {
         src: "https://www.pambianconews.com/wp-content/uploads/2024/12/IMG_7707-e1733936428749.jpeg",
