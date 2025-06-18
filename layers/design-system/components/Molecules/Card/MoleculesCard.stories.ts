@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-// If the file is named 'MoleculesCard.vue'
 import MoleculesCard from "./MoleculesCard.vue";
 
 const meta: Meta<typeof MoleculesCard> = {
