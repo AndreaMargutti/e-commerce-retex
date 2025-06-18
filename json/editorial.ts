@@ -152,13 +152,6 @@ const editorial: Record<string, unknown> = {
     {
       name: "HeroBanner",
       image: {
-        src: "https://static.wixstatic.com/media/a9dbf0_8d49e54cc6f54da4808ad3445799a91f~mv2.png/v1/fill/w_980,h_405,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9dbf0_8d49e54cc6f54da4808ad3445799a91f~mv2.png",
-        alt: "Woolrich. We keep america warm",
-      },
-    },
-    {
-      name: "HeroBanner",
-      image: {
         src: "https://www.pambianconews.com/wp-content/uploads/2024/12/IMG_7707-e1733936428749.jpeg",
         alt: "We empower life in the elements",
       },
@@ -180,6 +173,36 @@ const editorial: Record<string, unknown> = {
         },
       ],
       positioningY: "bottom",
+    },
+  ],
+  "en/outdoor-foundation": [
+    {
+      name: "HeroBanner",
+      title: "Woolrich Outdoor Foundation",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/21dd07c8-1de8-40ef-beca-de1928edb605/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Woolrich Outdoor Foundation",
+      },
+    },
+  ],
+  "en/our-mission": [
+    {
+      name: "HeroBanner",
+      title: "Brand Mission and Values",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Woolrich Brand Mission and Values",
+      },
+    },
+  ],
+  "en/shopping-guide": [
+    {
+      name: "HeroBanner",
+      title: "Shopping Guide",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dba7589c-2ceb-4a18-9484-2b4b152c044c/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Shopping Guide",
+      },
     },
   ],
 };
