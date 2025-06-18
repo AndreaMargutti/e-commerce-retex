@@ -121,7 +121,49 @@ const editorial: Record<string, unknown> = {
         },
       ],
     },
-
+    {
+      name: "HeroBanner",
+      variant: "buttons",
+      title: "Brand Mission and Values",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Immagine di esempio",
+      },
+      buttons: [
+        {
+          btnLabel: "Discover More",
+          btnLink: "/en/stories",
+          btnType: "primary",
+        },
+      ],
+      positioningY: "bottom",
+    },
+  ],
+  "en/about": [
+    {
+      name: "HeroBanner",
+      variant: "links",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        alt: "Woolrich: who we are",
+      },
+      title: "Woolrich: who we are",
+    },
+    {
+      name: "HeroBanner",
+      image: {
+        src: "https://static.wixstatic.com/media/a9dbf0_8d49e54cc6f54da4808ad3445799a91f~mv2.png/v1/fill/w_980,h_405,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9dbf0_8d49e54cc6f54da4808ad3445799a91f~mv2.png",
+        alt: "Woolrich. We keep america warm",
+      },
+    },
+    {
+      name: "HeroBanner",
+      image: {
+        src: "https://www.pambianconews.com/wp-content/uploads/2024/12/IMG_7707-e1733936428749.jpeg",
+        alt: "We empower life in the elements",
+      },
+      title: "We empower life in the elements",
+    },
     {
       name: "HeroBanner",
       variant: "buttons",
