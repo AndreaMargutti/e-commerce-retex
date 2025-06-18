@@ -165,6 +165,22 @@ const editorial: Record<string, unknown> = {
       orientation: "right",
     },
     {
+      name: "TextBlock",
+      title: "Woolrich Timeline",
+    },
+    {
+      name: "SplitSection",
+      title: "1901",
+      text: "Fire strikes the Woolrich mill.",
+      textPosition: "center",
+      fontWeight: "bold",
+      image: {
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcea614f-f66d-44e9-a7dc-36b743d15327/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+        alt: "Our Legacy",
+      },
+      orientation: "left",
+    },
+    {
       name: "CardGallery",
       title: "Our three core values",
       cards: [
