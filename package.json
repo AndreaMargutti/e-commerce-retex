@@ -16,6 +16,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@kgierke/nuxt-basic-auth": "1.7.0",
     "@nuxt/eslint": "1.4.0",
     "@nuxt/fonts": "^0.11.1",
     "@nuxt/icon": "^1.11.0",

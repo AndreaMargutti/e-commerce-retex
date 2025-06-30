@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
+  modules: ["@nuxtjs/i18n", "@nuxt/eslint", "@kgierke/nuxt-basic-auth"],
   alias: {
     "@design-system": fileURLToPath(
       new URL("./layers/design-system", import.meta.url),
@@ -19,5 +19,15 @@ export default defineNuxtConfig({
     compilation: {
       strictMessage: false,
     },
+  },
+
+  basicAuth: {
+    enabled: true,
+    users: [
+      {
+        username: "admin",
+        password: "admin",
+      },
+    ],
   },
 });

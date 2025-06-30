@@ -5,6 +5,7 @@ import type {
   SplitSection,
   TextBlock,
 } from "~/types/Editorial";
+
 const route = useRoute();
 
 const { data: pageContent } = await useFetch<Editorial>(
