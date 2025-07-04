@@ -7,7 +7,6 @@ import type {
 } from "~/types/Editorial";
 
 const route = useRoute();
-
 const { data: pageContent } = await useFetch<Editorial>(
   `/api/page${route.path}`,
 );
@@ -22,6 +21,7 @@ if (!pageContent.value) {
 
 <template>
   <main>
+    <div>pos: {{ x }}, {{ y }}</div>
     <div v-for="(module, key) in pageContent" :key="key">
       <ModulesHeroBanner
         v-if="module.name === 'HeroBanner'"
