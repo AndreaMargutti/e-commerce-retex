@@ -25,8 +25,12 @@ export default defineNuxtConfig({
     enabled: true,
     users: [
       {
-        username: "admin",
-        password: "admin",
+        username: "andrea",
+        password: "andrea",
+      },
+      {
+        username: "gabriele",
+        password: "gabriele",
       },
     ],
   },
