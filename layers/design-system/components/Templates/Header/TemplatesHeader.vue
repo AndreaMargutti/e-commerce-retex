@@ -3,7 +3,7 @@ import type { TemplatesHeaderProps } from "./TemplatesHeaderProps.ts";
 
 const props = withDefaults(defineProps<TemplatesHeaderProps>(), {
   size: "normal",
-  isTransparent: false,
+  isTransparent: true,
 });
 
 const isTransparentLocal = ref(props.isTransparent);
