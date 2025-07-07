@@ -5,9 +5,9 @@ defineProps<AtomsBackgroundImageProps>();
 </script>
 
 <template>
-  <img
+  <NuxtImg
     :src="src"
-    alt="Hero Banner Background"
+    :alt="alt"
     class="object-cover object-[25%] aspect-[3/4] md:object-center md:aspect-[12/5] w-full"
   />
 </template>

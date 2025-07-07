@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@kgierke/nuxt-basic-auth",
     "@vueuse/nuxt",
+    "@nuxt/image",
   ],
   alias: {
     "@design-system": fileURLToPath(

@@ -1,6 +1,7 @@
 export type HeroBannerProps = {
   variant: "links" | "buttons";
   backgroundImage: string;
+  backgroundImageAlt: string;
   appendix?: string;
   title?: string;
   fontStyle?: "capitalized" | "uppercase";

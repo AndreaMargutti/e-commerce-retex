@@ -28,6 +28,7 @@ if (!pageContent.value) {
         :position-x="module.positioningX ?? 'center'"
         :position-y="module.positioningY ?? 'middle'"
         :background-image="module.image?.src ?? ''"
+        :background-image-alt="module.image?.alt ?? ''"
         :title="module.title ?? ''"
         :appendix="module.appendix ?? ''"
         :subtitle="module.subtitle ?? ''"
