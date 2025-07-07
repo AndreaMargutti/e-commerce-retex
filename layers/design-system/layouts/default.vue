@@ -12,7 +12,7 @@ const { y } = useWindowScroll();
     <TemplatesHeader
       size="normal"
       :links="menuItems"
-      :is-transparent="y < 50"
+      :is-transparent="y < 100"
     />
     <div>
       <slot />
