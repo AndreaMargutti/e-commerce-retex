@@ -4,7 +4,7 @@ defineProps<MoleculesCardProps>();
 </script>
 
 <template>
-  <section>
+  <div>
     <figure class="pb-[1.4rem]">
       <img :src="image.src" :alt="image.alt" class="aspect-square w-full" />
       <div class="px-6 pt-6 pb-5">
@@ -28,5 +28,5 @@ defineProps<MoleculesCardProps>();
         />
       </div>
     </figure>
-  </section>
+  </div>
 </template>
