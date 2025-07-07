@@ -87,7 +87,7 @@ const labelPosition = computed(() => {
           :href="link.href"
           :is-uppercase="true"
           icon="navigation-right"
-          direction="row-reverse"
+          icon-position="right"
           class="justify-between"
         >
           {{ link.label }}

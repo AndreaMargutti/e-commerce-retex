@@ -13,7 +13,7 @@ defineProps<MoleculesDesktopMenuProps>();
           :name="item.label.toLocaleUpperCase()"
           :href="item.to"
           :is-uppercase="true"
-          direction="row"
+          icon-position="left"
         />
       </MoleculesDesktopMenuLink>
       <MoleculesList :items="item.category || []" :is-uppercase="false" />

@@ -4,8 +4,8 @@ const props = withDefaults(defineProps<AtomsLinkProps>(), {
   textSize: "text-xs xl:text-sm",
 });
 
-const direction = computed(() => {
-  if (props.direction === "row-reverse") {
+const iconPosition = computed(() => {
+  if (props.iconPosition === "right") {
     return "flex-row-reverse";
   } else {
     return "";
@@ -13,7 +13,7 @@ const direction = computed(() => {
 });
 
 const propsStyle = computed(() => {
-  return [direction.value, props.textSize];
+  return [iconPosition.value, props.textSize];
 });
 </script>
 

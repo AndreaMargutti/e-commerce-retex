@@ -23,7 +23,7 @@ defineProps<MoleculesCardProps>();
           :href="link.href"
           icon="navigation-right"
           :is-uppercase="true"
-          direction="row-reverse"
+          icon-position="right"
           class="justify-end px-6"
         />
       </div>

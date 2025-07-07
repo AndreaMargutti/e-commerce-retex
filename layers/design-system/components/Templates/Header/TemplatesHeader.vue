@@ -111,7 +111,7 @@ watch(
           :name="link.label"
           :href="link.to"
           :is-uppercase="true"
-          direction="row"
+          icon-position="left"
         />
         <MoleculesDesktopMenu
           :items="link.category"
