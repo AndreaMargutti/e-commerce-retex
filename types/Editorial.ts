@@ -1,7 +1,7 @@
 export type Editorial = (HeroBanner | TextBlock | CardGallery | SplitSection)[];
 
 export type HeroBanner = {
-  name: string;
+  name: "HeroBanner";
   variant?: "links" | "buttons";
   image?: {
     src: string;

@@ -4,7 +4,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       variant: "links",
       image: {
-        src: "/https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+        src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
         alt: "Diversity and Inclusion",
       },
       title: "Diversity and Inclusion",
