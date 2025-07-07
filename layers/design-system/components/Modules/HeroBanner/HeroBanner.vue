@@ -5,8 +5,6 @@ const props = defineProps<HeroBannerProps>();
 
 const positioningX = computed(() => {
   switch (props.positionX) {
-    case "left":
-      return "left-0";
     case "center":
       return "left-1/2 -translate-x-1/2 text-center";
     case "right":
