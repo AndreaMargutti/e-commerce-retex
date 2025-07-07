@@ -9,11 +9,9 @@ defineProps<MoleculesCardProps>();
       <img :src="image.src" :alt="image.alt" class="aspect-square w-full" />
       <div class="px-6 pt-6 pb-5">
         <AtomsTitle :title="title" color="black" class="pb-2 text-xl" />
-        <AtomsSubtitle
-          :subtitle="subtitle ?? ''"
-          color="black"
-          class="pb-0 text-sm"
-        />
+        <h3 class="text-black pb-0 text-sm">
+          {{ capitalize(subtitle ?? "") }}
+        </h3>
       </div>
       <div class="flex gap-8 px-6 *:p-0">
         <AtomsLink

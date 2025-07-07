@@ -71,7 +71,7 @@ const labelPosition = computed(() => {
           color="white"
           class="py-4"
         />
-        <AtomsSubtitle :subtitle="subtitle ?? ''" color="white" class="pb-4" />
+        <h3 class="text-white">{{ capitalize(subtitle ?? "") }}</h3>
       </div>
       <div
         v-if="variant === 'links'"
