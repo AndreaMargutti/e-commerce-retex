@@ -1,4 +1,4 @@
-import type { HeaderLink } from "~/types/headerLinks";
+import type { HeaderLink } from "~/types/MenuItem";
 
 export type TemplatesHeaderProps = {
   size?: "small" | "normal";
