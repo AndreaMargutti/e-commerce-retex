@@ -224,26 +224,6 @@ export default defineEventHandler((): Menu => {
           },
         ],
       },
-      {
-        id: 3,
-        label: "Outdoor Foundation",
-        to: "/outdoor-foundation",
-      },
-      {
-        id: 4,
-        label: "Our Mission",
-        to: "/our-mission",
-      },
-      {
-        id: 5,
-        label: "About Us",
-        to: "/about",
-      },
-      {
-        id: 6,
-        label: "Shopping Guide",
-        to: "/shopping-guide",
-      },
     ],
   };
 });
