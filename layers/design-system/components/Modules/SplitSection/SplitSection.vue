@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { NuxtImg } from "#components";
 import type { SplitSectionProps } from "./SplitSectionProps";
 
 const props = defineProps<SplitSectionProps>();
@@ -11,7 +12,7 @@ const flexDirection = computed(() => {
 <template>
   <section>
     <figure :class="flexDirection" class="flex flex-col *:md:basis-1/2">
-      <img
+      <NuxtImg
         :src="image.src"
         :alt="image.alt"
         class="mb-6 md:pb-0 aspect-3/2 md:aspect-4/3 md:max-w-1/2"
