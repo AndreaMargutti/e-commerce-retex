@@ -5,7 +5,7 @@ export type MoleculesCardProps = {
     src: string;
     alt: string;
   };
-  labels?: Array<{
+  links?: Array<{
     label: string;
     href: string;
   }>;

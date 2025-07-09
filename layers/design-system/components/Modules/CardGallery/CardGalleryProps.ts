@@ -5,7 +5,7 @@ export type CardGalleryProps = {
     text: string;
     image: string;
     imageAlt: string;
-    labels: [
+    links: [
       {
         label: string;
         link: string;

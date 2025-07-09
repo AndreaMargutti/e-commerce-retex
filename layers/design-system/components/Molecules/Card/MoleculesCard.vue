@@ -17,7 +17,7 @@ defineProps<MoleculesCardProps>();
       </div>
       <div class="flex gap-8 px-6 *:p-0">
         <AtomsLink
-          v-for="link in labels ?? []"
+          v-for="link in links ?? []"
           :key="link.label"
           :name="link.label"
           :href="link.href"

@@ -15,7 +15,7 @@ defineProps<CardGalleryProps>();
       :title="card.title"
       :subtitle="card.text"
       :image="{ src: card.image, alt: card.title }"
-      :labels="card.labels?.map((l) => ({ label: l.label, href: l.link }))"
+      :links="card.links?.map((l) => ({ label: l.label, href: l.link }))"
     />
   </div>
 </template>
