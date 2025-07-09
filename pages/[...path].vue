@@ -59,44 +59,6 @@ const normalizeSplitSection = (module: SplitSection): SplitSectionProps => {
     image: module.data.image ?? { src: "", alt: "" },
   };
 };
-
-// const normalizeData = (
-//   module: HeroBanner | TextBlock,
-// ): NormalizedHero | NormalizedTextBlock => {
-//   switch (module.name) {
-//     case "HeroBanner":
-//       return {
-//         name: module.name,
-//         variant: module.data.variant ?? "links",
-//         backgroundImage: module.data.image?.src ?? "",
-//         backgroundImageAlt: module.data.image?.alt ?? "",
-//         positionX: module.data.positionX ?? "center",
-//         positionY: module.data.positionY ?? "middle",
-//         appendix: module.data.appendix ?? "",
-//         title: module.data.title ?? "",
-//         subtitle: module.data.subtitle ?? "",
-//         buttons: module.data.buttons ?? [],
-//       } as NormalizedHero;
-//     default:
-//       return {
-//         name: module.name,
-//         title: module.data.title ?? "",
-//         text: module.data.text ?? "Default text",
-//       } as NormalizedTextBlock;
-//     case "CardGallery":
-//       return {
-//         title: module.data.title ?? "",
-//         cards: module.data.cards ?? [],
-//       };
-//     case "SplitSection":
-//       return {
-//         orientation: module.data.orientation ?? "left",
-//         title: module.data.title ?? "",
-//         text: module.data.text ?? "",
-//         image: module.data.image ?? { src: "", alt: "" },
-//       };
-//   }
-// };
 </script>
 
 <template>
@@ -114,7 +76,6 @@ const normalizeSplitSection = (module: SplitSection): SplitSectionProps => {
         v-else-if="module.name === 'CardGallery'"
         v-bind="normalizeCardGallery(module)"
       />
-
       <ModulesSplitSection
         v-else-if="module.name === 'SplitSection'"
         v-bind="normalizeSplitSection(module)"

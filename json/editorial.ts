@@ -153,118 +153,138 @@ const editorial: Record<string, unknown> = {
       },
     },
   ],
-  // "en/about": [
-  //   {
-  //     name: "HeroBanner",
-  //     variant: "links",
-  //     image: {
-  //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //       alt: "Woolrich: who we are",
-  //     },
-  //     title: "Woolrich: who we are",
-  //   },
-  //   {
-  //     name: "TextBlock",
-  //     title: "Established in 1830",
-  //     text: "Born in Pennsylvania in 1830, Woolrich is the oldest continuously operating woolen mill in the United States. Our heritage is rooted in the American outdoors, and our products are designed to withstand the elements while providing comfort and style. We are committed to sustainability, quality craftsmanship, and innovation, ensuring that our products not only meet the needs of our customers but also respect the environment.",
-  //   },
-  //   {
-  //     name: "SplitSection",
-  //     title: "Our Legacy",
-  //     text: "We call ourselves the 'original outdoor clothing company' since we have produced high-quality garments for outdoor enthusiasts for over 190 years. Crafting fine and warm wool is our calling, and our mills have lent a helping hand during major historical moments. Woolrich has made big contributions by supplying socks, blankets and coats to US soldiers providing them warmth and comfort.",
-  //     image: {
-  //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcea614f-f66d-44e9-a7dc-36b743d15327/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
-  //       alt: "Our Legacy",
-  //     },
-  //     orientation: "right",
-  //   },
-  //   {
-  //     name: "TextBlock",
-  //     title: "Woolrich Timeline",
-  //   },
-  //   {
-  //     name: "CardGallery",
-  //     title: "Our three core values",
-  //     cards: [
-  //       {
-  //         title: "Amrerican Heritage",
-  //         text: "Founded in Pennsylvania in 1830 Woolrich is part of the fabric of the American outdoors. Our original products mirrored the American Dream: wear woolrich to pursue your goals, regardless of the elements.",
-  //         image:
-  //           "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
-  //         imageAlt: "American Heritage",
-  //       },
-  //       {
-  //         title: "Purposeful Design",
-  //         text: "Our products design ethos is pure, considered, consistent. Woolrich collections embody a design sensibilty of stylish durability.",
-  //         image:
-  //           "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b77dd455-c6e9-4149-af1f-860379bdfdae/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //         imageAlt: "Purposeful Design",
-  //       },
-  //       {
-  //         title: "Iconic Brand Elements",
-  //         text: "As America's oldest continuously operating woolen mill, Woolrich has a rich history of producing iconic products that have become synonymous with the brand. From the classic buffalo check to the signature Woolrich red, these elements are woven into the very fabric of our identity.",
-  //         image:
-  //           "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3a75a851-d0e4-4097-965b-9f762254bcbd/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //         imageAlt: "Iconic Brand Elements",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: "HeroBanner",
-  //     image: {
-  //       src: "https://www.pambianconews.com/wp-content/uploads/2024/12/IMG_7707-e1733936428749.jpeg",
-  //       alt: "We empower life in the elements",
-  //     },
-  //     title: "We empower life in the elements",
-  //   },
-  //   {
-  //     name: "HeroBanner",
-  //     variant: "buttons",
-  //     title: "Brand Mission and Values",
-  //     image: {
-  //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //       alt: "Immagine di esempio",
-  //     },
-  //     buttons: [
-  //       {
-  //         btnLabel: "Discover More",
-  //         btnLink: "/en/stories",
-  //         btnType: "primary",
-  //       },
-  //     ],
-  //     positioningY: "bottom",
-  //   },
-  // ],
-  // "en/outdoor-foundation": [
-  //   {
-  //     name: "HeroBanner",
-  //     title: "Woolrich Outdoor Foundation",
-  //     image: {
-  //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/21dd07c8-1de8-40ef-beca-de1928edb605/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //       alt: "Woolrich Outdoor Foundation",
-  //     },
-  //   },
-  // ],
-  // "en/our-mission": [
-  //   {
-  //     name: "HeroBanner",
-  //     title: "Brand Mission and Values",
-  //     image: {
-  //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //       alt: "Woolrich Brand Mission and Values",
-  //     },
-  //   },
-  // ],
-  // "en/shopping-guide": [
-  //   {
-  //     name: "HeroBanner",
-  //     title: "Shopping Guide",
-  //     image: {
-  //       src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dba7589c-2ceb-4a18-9484-2b4b152c044c/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
-  //       alt: "Shopping Guide",
-  //     },
-  //   },
-  // ],
+  "en/about": [
+    {
+      name: "HeroBanner",
+      data: {
+        variant: "links",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Woolrich: who we are",
+        },
+        title: "Woolrich: who we are",
+      },
+    },
+    {
+      name: "TextBlock",
+      data: {
+        title: "Established in 1830",
+        text: "Born in Pennsylvania in 1830, Woolrich is the oldest continuously operating woolen mill in the United States. Our heritage is rooted in the American outdoors, and our products are designed to withstand the elements while providing comfort and style. We are committed to sustainability, quality craftsmanship, and innovation, ensuring that our products not only meet the needs of our customers but also respect the environment.",
+      },
+    },
+    {
+      name: "SplitSection",
+      data: {
+        title: "Our Legacy",
+        text: "We call ourselves the 'original outdoor clothing company' since we have produced high-quality garments for outdoor enthusiasts for over 190 years. Crafting fine and warm wool is our calling, and our mills have lent a helping hand during major historical moments. Woolrich has made big contributions by supplying socks, blankets and coats to US soldiers providing them warmth and comfort.",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcea614f-f66d-44e9-a7dc-36b743d15327/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          alt: "Our Legacy",
+        },
+        orientation: "right",
+      },
+    },
+    {
+      name: "TextBlock",
+      data: {
+        title: "Woolrich Timeline",
+      },
+    },
+    {
+      name: "CardGallery",
+      data: {
+        title: "Our three core values",
+        cards: [
+          {
+            title: "Amrerican Heritage",
+            text: "Founded in Pennsylvania in 1830 Woolrich is part of the fabric of the American outdoors. Our original products mirrored the American Dream: wear woolrich to pursue your goals, regardless of the elements.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            imageAlt: "American Heritage",
+          },
+          {
+            title: "Purposeful Design",
+            text: "Our products design ethos is pure, considered, consistent. Woolrich collections embody a design sensibilty of stylish durability.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b77dd455-c6e9-4149-af1f-860379bdfdae/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Purposeful Design",
+          },
+          {
+            title: "Iconic Brand Elements",
+            text: "As America's oldest continuously operating woolen mill, Woolrich has a rich history of producing iconic products that have become synonymous with the brand. From the classic buffalo check to the signature Woolrich red, these elements are woven into the very fabric of our identity.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3a75a851-d0e4-4097-965b-9f762254bcbd/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Iconic Brand Elements",
+          },
+        ],
+      },
+    },
+    {
+      name: "HeroBanner",
+      data: {
+        image: {
+          src: "https://www.pambianconews.com/wp-content/uploads/2024/12/IMG_7707-e1733936428749.jpeg",
+          alt: "We empower life in the elements",
+        },
+        title: "We empower life in the elements",
+      },
+    },
+    {
+      name: "HeroBanner",
+      data: {
+        variant: "buttons",
+        title: "Brand Mission and Values",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Immagine di esempio",
+        },
+        buttons: [
+          {
+            btnLabel: "Discover More",
+            btnLink: "/en/stories",
+            btnType: "primary",
+          },
+        ],
+        positioningY: "bottom",
+      },
+    },
+  ],
+  "en/outdoor-foundation": [
+    {
+      name: "HeroBanner",
+      data: {
+        title: "Woolrich Outdoor Foundation",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/21dd07c8-1de8-40ef-beca-de1928edb605/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Woolrich Outdoor Foundation",
+        },
+      },
+    },
+  ],
+  "en/our-mission": [
+    {
+      name: "HeroBanner",
+      data: {
+        title: "Brand Mission and Values",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Woolrich Brand Mission and Values",
+        },
+      },
+    },
+  ],
+  "en/shopping-guide": [
+    {
+      name: "HeroBanner",
+      data: {
+        title: "Shopping Guide",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dba7589c-2ceb-4a18-9484-2b4b152c044c/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Shopping Guide",
+        },
+      },
+    },
+  ],
 };
 
 export default editorial;
