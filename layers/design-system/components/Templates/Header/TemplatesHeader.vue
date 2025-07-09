@@ -114,6 +114,7 @@ watch(
           icon-position="left"
         />
         <MoleculesDesktopMenu
+          v-if="link.category"
           :items="link.category"
           class="hidden group-hover:flex"
         />
