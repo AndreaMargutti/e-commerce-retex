@@ -8,7 +8,9 @@ defineProps<MoleculesCardProps>();
     <figure class="pb-[1.4rem]">
       <img :src="image.src" :alt="image.alt" class="aspect-square w-full" />
       <div class="px-6 pt-6 pb-5">
-        <AtomsTitle :title="title" color="black" class="pb-2 text-xl" />
+        <h2 class="text-black pb-3 text-xl">
+          {{ title }}
+        </h2>
         <h3 class="text-black pb-0 text-sm">
           {{ capitalize(subtitle ?? "") }}
         </h3>

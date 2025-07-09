@@ -5,11 +5,9 @@ defineProps<CardGalleryProps>();
 </script>
 
 <template>
-  <AtomsTitle
-    :title="title ?? ''"
-    color="black"
-    class="text-center pt-11 pb-7"
-  />
+  <h2 class="black text-center pt-11 pb-7 uppercase">
+    {{ title }}
+  </h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
     <MoleculesCard
       v-for="card in cards"

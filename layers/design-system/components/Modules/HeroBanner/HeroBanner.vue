@@ -65,12 +65,9 @@ const labelPosition = computed(() => {
     <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
         <AtomsAppendix :appendix="appendix ?? ''" />
-        <AtomsTitle
-          :title="title ?? ''"
-          :font-style="fontStyle"
-          color="white"
-          class="py-4"
-        />
+        <h2 class="text-white py-4">
+          {{ title }}
+        </h2>
         <h3 class="text-white">{{ capitalize(subtitle ?? "") }}</h3>
       </div>
       <div
