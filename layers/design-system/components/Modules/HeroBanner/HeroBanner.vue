@@ -65,7 +65,10 @@ const labelPosition = computed(() => {
       :alt="backgroundImageAlt"
       class="object-cover object-[25%] aspect-[3/4] md:object-center md:aspect-[12/5] w-full"
     />
-    <AtomsGradient />
+    <!-- image gradient -->
+    <div
+      class="absolute left-0 top-0 w-full h-full pointer-events-none bg-gradient-to-b from-[rgba(255,255,255,0.1)] from-10% to-[rgba(0,0,0,0.9)] to-90%"
+    ></div>
     <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
         <h6 class="text-white">{{ appendix?.toLocaleUpperCase() }}</h6>
