@@ -60,7 +60,11 @@ const labelPosition = computed(() => {
 
 <template>
   <figure class="relative">
-    <AtomsBackgroundImage :src="backgroundImage" :alt="backgroundImageAlt" />
+    <NuxtImg
+      :src="backgroundImage"
+      :alt="backgroundImageAlt"
+      class="object-cover object-[25%] aspect-[3/4] md:object-center md:aspect-[12/5] w-full"
+    />
     <AtomsGradient />
     <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
