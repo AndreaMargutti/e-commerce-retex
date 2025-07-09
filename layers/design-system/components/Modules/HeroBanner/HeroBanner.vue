@@ -68,7 +68,7 @@ const labelPosition = computed(() => {
     <AtomsGradient />
     <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
-        <AtomsAppendix :appendix="appendix ?? ''" />
+        <h6 class="text-white">{{ appendix?.toLocaleUpperCase() }}</h6>
         <h2 class="text-white py-4">
           {{ title }}
         </h2>
