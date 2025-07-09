@@ -8,15 +8,13 @@ const { y } = useWindowScroll();
 </script>
 
 <template>
-  <div ref="page">
+  <div>
     <TemplatesHeader
       size="normal"
       :links="menuItems"
       :is-transparent="y < 100"
     />
-    <div>
-      <slot />
-      <TemplatesFooter />
-    </div>
+    <slot />
+    <TemplatesFooter />
   </div>
 </template>

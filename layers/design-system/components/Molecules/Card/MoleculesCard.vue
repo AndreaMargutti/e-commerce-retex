@@ -5,7 +5,7 @@ defineProps<MoleculesCardProps>();
 
 <template>
   <div>
-    <figure class="pb-[1.4rem]">
+    <div class="pb-[1.4rem]">
       <img :src="image.src" :alt="image.alt" class="aspect-square w-full" />
       <div class="px-6 pt-6 pb-5">
         <h2 class="text-black pb-3 text-xl">
@@ -15,7 +15,7 @@ defineProps<MoleculesCardProps>();
           {{ capitalize(subtitle ?? "") }}
         </h3>
       </div>
-      <div class="flex gap-8 px-6 *:p-0">
+      <div class="flex gap-8">
         <AtomsLink
           v-for="link in links ?? []"
           :key="link.label"
@@ -27,6 +27,6 @@ defineProps<MoleculesCardProps>();
           class="justify-end px-6"
         />
       </div>
-    </figure>
+    </div>
   </div>
 </template>

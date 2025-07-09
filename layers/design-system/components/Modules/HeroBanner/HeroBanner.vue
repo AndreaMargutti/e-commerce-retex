@@ -59,7 +59,7 @@ const labelPosition = computed(() => {
 </script>
 
 <template>
-  <figure class="relative">
+  <div class="relative">
     <NuxtImg
       :src="backgroundImage"
       :alt="backgroundImageAlt"
@@ -113,5 +113,5 @@ const labelPosition = computed(() => {
         />
       </div>
     </section>
-  </figure>
+  </div>
 </template>
