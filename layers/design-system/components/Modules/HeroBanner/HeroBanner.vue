@@ -3,8 +3,12 @@ import type { HeroBannerProps } from "./HeroBannerProps";
 defineProps<HeroBannerProps>();
 </script>
 
+<!--TODO: make section flex as computed; fix labels placement; check padding-->
+
 <template>
-  <section class="relative size-full overflow-hidden min-h-130 flex">
+  <section
+    class="relative size-full overflow-hidden min-h-130 flex justify-center items-end"
+  >
     <div class="text-white px-4">
       <h6 class="pb-4">{{ appendix?.toLocaleUpperCase() }}</h6>
       <h2 class="pb-4">{{ title }}</h2>
