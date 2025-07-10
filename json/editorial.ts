@@ -220,6 +220,27 @@ const editorial: Record<string, unknown> = {
       },
     },
     {
+      name: "TextBlock",
+      data: {
+        title: "Our Mission",
+      },
+    },
+    {
+      name: "HeroBanner",
+      data: {
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3fab2cbb-5c68-4091-83e7-b90d6a87e4b8/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Our Mission",
+        },
+      },
+    },
+    {
+      name: "TextBlock",
+      data: {
+        text: "At its core, Woolrich is a celebration of spirit and capability in all pursuits; of an empowerment against elements real and imagined; of a bold, tactile and elevated stylishness that stands the test of time and conditions. We are here to inspire our customers to see the world on their terms through a brand and product that matches their ambitions.",
+      },
+    },
+    {
       name: "HeroBanner",
       data: {
         image: {
@@ -227,6 +248,56 @@ const editorial: Record<string, unknown> = {
           alt: "We empower life in the elements",
         },
         title: "We empower life in the elements",
+      },
+    },
+    {
+      name: "TextBlock",
+      data: {
+        text: "Woolrich stays true to its core values: progression, travels, communities and a positive approach to a world in wich adversity is tackled head-on and transformed into opportunity.",
+      },
+    },
+    {
+      name: "CardGallery",
+      data: {
+        title: "Our Heritage",
+        cards: [
+          {
+            title: "Woolrich Vintage Shopping Guide",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            imageAlt: "Woolrich Vintage Shopping Guide",
+            links: [
+              {
+                label: "Discover Now",
+                link: "/en/vintage-shopping-guide",
+              },
+            ],
+          },
+          {
+            title: "The Birth of an Icon",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            imageAlt: "The Birth of an Icon",
+            links: [
+              {
+                label: "Discover Now",
+                link: "/it/the-birth-of-an-icon",
+              },
+            ],
+          },
+          {
+            title: "Uncover the Archive",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            imageAlt: "Uncover the Archive",
+            links: [
+              {
+                label: "Discover Now",
+                link: "/it/uncover-the-archive",
+              },
+            ],
+          },
+        ],
       },
     },
     {

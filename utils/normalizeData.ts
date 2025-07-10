@@ -26,7 +26,7 @@ export const normalizeHeroBanner = (module: HeroBanner): HeroBannerProps => {
 export const normalizeTextBlock = (module: TextBlock): TextBlockProps => {
   return {
     title: module.data.title ?? "",
-    text: module.data.text ?? "Default text",
+    text: module.data.text ?? "",
   };
 };
 
