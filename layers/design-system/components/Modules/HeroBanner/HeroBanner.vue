@@ -72,7 +72,7 @@ const labelPosition = computed(() => {
     <section :class="positioning" class="absolute py-15 px-8 max-w-1/2">
       <div>
         <h6 class="text-white">{{ appendix?.toLocaleUpperCase() }}</h6>
-        <h2 class="text-white py-4">
+        <h2 class="text-white py-4 text-2-5xl leading-[37px]">
           {{ title }}
         </h2>
         <h3 class="text-white">{{ capitalize(subtitle ?? "") }}</h3>
