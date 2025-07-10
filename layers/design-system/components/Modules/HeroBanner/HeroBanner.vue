@@ -4,24 +4,26 @@ defineProps<HeroBannerProps>();
 </script>
 
 <template>
-  <section class="relative size-full overflow-hidden">
-    <div class="text-white pt-71 px-4 relative">
+  <section class="relative size-full overflow-hidden min-h-130 flex">
+    <div class="text-white px-4">
       <h6 class="pb-4">{{ appendix?.toLocaleUpperCase() }}</h6>
       <h2 class="pb-4">{{ title }}</h2>
       <h3 class="pb-4">{{ capitalize(subtitle ?? "") }}</h3>
-      <div v-if="variant === 'links'" class="flex pb-21">
-        <AtomsLink
-          v-for="link in links"
-          :key="link.label"
-          :name="link.label"
-          :href="link.href"
-          icon="navigation-right"
-          :is-uppercase="true"
-          text-size="text-sm"
-          icon-position="right"
-          class="pe-6"
-        />
-      </div>
+      <section class="mb-21">
+        <div v-if="variant === 'links'" class="flex">
+          <AtomsLink
+            v-for="link in links"
+            :key="link.label"
+            :name="link.label"
+            :href="link.href"
+            icon="navigation-right"
+            :is-uppercase="true"
+            text-size="text-sm"
+            icon-position="right"
+            class="pe-6"
+          />
+        </div>
+      </section>
     </div>
     <div>
       <NuxtImg
