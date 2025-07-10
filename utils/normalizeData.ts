@@ -16,10 +16,23 @@ export const normalizeHeroBanner = (module: HeroBanner): HeroBannerProps => {
     backgroundImageAlt: module.data.image?.alt ?? "",
     positionX: module.data.positionX ?? "center",
     positionY: module.data.positionY ?? "middle",
-    appendix: module.data.appendix ?? "",
+    appendix: module.data.appendix ?? "appendix",
     title: module.data.title ?? "",
-    subtitle: module.data.subtitle ?? "",
-    buttons: module.data.buttons ?? [],
+    subtitle: module.data.subtitle ?? "subtitle",
+    links: module.data.links ?? [
+      {
+        label: "Button",
+        href: "/",
+      },
+      {
+        label: "Button",
+        href: "/",
+      },
+      {
+        label: "Button",
+        href: "/",
+      },
+    ],
   };
 };
 
