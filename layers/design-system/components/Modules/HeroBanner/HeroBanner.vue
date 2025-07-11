@@ -29,7 +29,7 @@ const position = computed(() => {
 <template>
   <section
     :class="position"
-    class="relative size-full overflow-hidden min-h-130 flex justify-center items-end"
+    class="relative size-full overflow-hidden min-h-150 flex"
   >
     <div class="text-white px-4">
       <h6 class="pb-4">{{ appendix?.toLocaleUpperCase() }}</h6>
