@@ -1,12 +1,34 @@
 <script lang="ts" setup>
 import type { HeroBannerProps } from "./HeroBannerProps";
-defineProps<HeroBannerProps>();
-</script>
+const props = defineProps<HeroBannerProps>();
 
-<!--TODO: make section flex as computed; fix labels placement; check padding-->
+const position = computed(() => {
+  switch (props.position) {
+    case "top-left":
+      return "justify-start items-start";
+    case "top-center":
+      return "justify-center items-start";
+    case "top-right":
+      return "justify-end items-start";
+    case "middle-left":
+      return "justify-start items-center";
+    case "middle-right":
+      return "justify-end items-center";
+    case "bottom-left":
+      return "justify-start items-end";
+    case "bottom-center":
+      return "justify-center items-end";
+    case "bottom-right":
+      return "justify-end items-end";
+    default:
+      return "justify-center items-center";
+  }
+});
+</script>
 
 <template>
   <section
+    :class="position"
     class="relative size-full overflow-hidden min-h-130 flex justify-center items-end"
   >
     <div class="text-white px-4">

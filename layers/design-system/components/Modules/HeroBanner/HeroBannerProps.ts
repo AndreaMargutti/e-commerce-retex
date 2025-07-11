@@ -10,8 +10,16 @@ export type HeroBannerProps = {
     label: string;
     href: string;
   }>;
-  positionX: "left" | "center" | "right";
-  positionY: "top" | "middle" | "bottom";
+  position?:
+    | "top-left"
+    | "top-right"
+    | "top-center"
+    | "middle-left"
+    | "middle-right"
+    | "middle-center"
+    | "bottom-left"
+    | "bottom-right"
+    | "bottom-center";
   buttons?: Array<{
     btnLabel: string;
     btnLink: string;
