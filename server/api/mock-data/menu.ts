@@ -5,31 +5,36 @@ export default defineEventHandler((): Menu => {
   return {
     items: [
       {
-        id: 1,
-        label: "New Arrivals",
-        to: "/new-arrivals",
+        id: 0,
+        label: "Editorials",
+        to: "/en",
+        category: [
+          {
+            id: 1,
+            label: "about",
+            to: "/about",
+          },
+          {
+            id: 10,
+            label: "outdoor foundation",
+            to: "/outdoor-foundation",
+          },
+          {
+            id: 11,
+            label: "our mission",
+            to: "/our-mission",
+          },
+          {
+            id: 12,
+            label: "shooping guide",
+            to: "/shopping-guide",
+          },
+        ],
       },
       {
         id: 2,
         label: "Men",
         to: "/men",
-        category: [
-          {
-            id: 20,
-            label: "See all men",
-            to: "/men",
-          },
-          {
-            id: 21,
-            label: "Outerwear",
-            to: "/men/outerwear",
-          },
-          {
-            id: 22,
-            label: "Clothing",
-            to: "/men/clothing",
-          },
-        ],
       },
       {
         id: 3,
