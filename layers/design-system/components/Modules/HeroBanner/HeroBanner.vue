@@ -31,7 +31,7 @@ const position = computed(() => {
     :class="position"
     class="relative size-full overflow-hidden min-h-150 flex"
   >
-    <div class="text-white px-4">
+    <div class="text-white px-4 text-center">
       <h6 class="pb-4">{{ appendix?.toLocaleUpperCase() }}</h6>
       <h2 class="pb-4">{{ title }}</h2>
       <h3 class="pb-4">{{ capitalize(subtitle ?? "") }}</h3>
@@ -50,6 +50,28 @@ const position = computed(() => {
             :is-uppercase="true"
             text-size="text-sm"
             icon-position="right"
+          >
+            {{ link.label }}
+          </AtomsLink>
+        </div>
+        <div
+          v-else
+          :class="
+            buttons && buttons.length > 3
+              ? 'flex-wrap *:basis-1/3 justify-center'
+              : ''
+          "
+          class="flex gap-6"
+        >
+          <AtomsButton
+            v-for="button in buttons"
+            :key="button.btnLabel"
+            :label="button.btnLabel ?? ''"
+            :type="button.btnType ?? 'primary'"
+            text-size="medium"
+            :href="button.btnLink"
+            :is-uppercase="true"
+            :on-background="true"
           />
         </div>
       </section>

@@ -19,6 +19,7 @@ export const normalizeHeroBanner = (module: HeroBanner): HeroBannerProps => {
     title: module.data.title ?? "",
     subtitle: module.data.subtitle ?? "",
     links: module.data.links ?? [],
+    buttons: module.data.buttons ?? [],
   };
 };
 
