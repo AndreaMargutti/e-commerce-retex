@@ -26,8 +26,16 @@ export type HeroBanner = {
         btnType: "primary" | "secondary" | "tertiary";
       },
     ];
-    positionY?: "top" | "middle" | "bottom";
-    positionX?: "left" | "center" | "right";
+    position?:
+      | "top-left"
+      | "top-right"
+      | "top-center"
+      | "middle-left"
+      | "middle-right"
+      | "middle-center"
+      | "bottom-left"
+      | "bottom-right"
+      | "bottom-center";
   };
 };
 

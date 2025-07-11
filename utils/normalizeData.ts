@@ -14,24 +14,11 @@ export const normalizeHeroBanner = (module: HeroBanner): HeroBannerProps => {
     variant: module.data.variant ?? "links",
     backgroundImage: module.data.image?.src ?? "",
     backgroundImageAlt: module.data.image?.alt ?? "",
-    position: module.data.position ?? "",
-    appendix: module.data.appendix ?? "appendix",
+    position: module.data.position ?? undefined,
+    appendix: module.data.appendix ?? "",
     title: module.data.title ?? "",
-    subtitle: module.data.subtitle ?? "subtitle",
-    links: module.data.links ?? [
-      {
-        label: "Button",
-        href: "/",
-      },
-      {
-        label: "Button",
-        href: "/",
-      },
-      {
-        label: "Button",
-        href: "/",
-      },
-    ],
+    subtitle: module.data.subtitle ?? "",
+    links: module.data.links ?? [],
   };
 };
 

@@ -36,7 +36,11 @@ const position = computed(() => {
       <h2 class="pb-4">{{ title }}</h2>
       <h3 class="pb-4">{{ capitalize(subtitle ?? "") }}</h3>
       <section class="mb-21">
-        <div v-if="variant === 'links'" class="flex">
+        <div
+          v-if="variant === 'links'"
+          :class="links && links.length > 3 ? 'flex-wrap' : ''"
+          class="flex gap-6 max-w-50"
+        >
           <AtomsLink
             v-for="link in links"
             :key="link.label"
@@ -46,7 +50,6 @@ const position = computed(() => {
             :is-uppercase="true"
             text-size="text-sm"
             icon-position="right"
-            class="pe-6"
           />
         </div>
       </section>
