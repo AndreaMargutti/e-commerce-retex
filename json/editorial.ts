@@ -198,6 +198,101 @@ const editorial: Record<string, unknown> = {
             url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/5ce127d0-8e80-491b-8f11-0bc4bd3c3f60/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
             alt: "Woolrich Timeline 1830",
           },
+          {
+            id: "slide-2",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-3",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/071372a6-9cf2-49a4-96fb-78619c0d4e48/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1861-65",
+          },
+          {
+            id: "slide-4",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/0095fbd7-2904-4695-90d4-f973201b8aa4/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1880-85",
+          },
+          {
+            id: "slide-5",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2e29c35d-b2fd-42e8-af10-236d68f8f631/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1890",
+          },
+          {
+            id: "slide-6",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/76ac07a2-2194-4a37-a7d6-bf9d9726d86e/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1901",
+          },
+          {
+            id: "slide-7",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-8",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-9",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9fd444af-d533-4a2d-8cfb-25a0336efca9/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1917-18",
+          },
+          {
+            id: "slide-10",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-11",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-12",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-13",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-14",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-15",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-16",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-17",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-18",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-19",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
+          {
+            id: "slide-20",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a962f477-edf4-4fba-8ef8-31e0fd9778fc/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1850",
+          },
         ],
       },
     },
