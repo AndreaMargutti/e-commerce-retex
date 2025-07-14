@@ -1,6 +1,6 @@
 export type CarouselProps = {
   slides: Array<{
-    id: string;
+    id: number;
     url: string;
     alt: string;
   }>;

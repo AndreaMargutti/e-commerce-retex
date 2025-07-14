@@ -88,7 +88,7 @@ export type Carousel = {
   name: "Carousel";
   data: {
     slides: Array<{
-      id: string;
+      id: number;
       url: string;
       alt: string;
     }>;

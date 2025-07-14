@@ -8,7 +8,17 @@ const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true }, [Autoplay()]);
 function scrollTo(index: number) {
   emblaApi.value?.scrollTo(index);
 }
+
 defineProps<CarouselProps>();
+
+const slideIndex = ref(0);
+const atSlideChange = () => {
+  slideIndex.value = emblaApi.value?.selectedScrollSnap() ?? 0;
+};
+
+onMounted(() => {
+  if (emblaApi.value) emblaApi.value.on("select", atSlideChange);
+});
 </script>
 
 <template>
@@ -24,9 +34,10 @@ defineProps<CarouselProps>();
       <button
         v-for="(slide, id) in slides"
         :key="slide.id"
-        class="embla__to border-2 border-gray-state min-w-10"
+        :class="id === slideIndex ? 'loader' : ''"
+        class="embla__to min-w-10 min-h-1 bg-gray-75"
         @click="scrollTo(id)"
-      />
+      ></button>
     </div>
   </div>
 </template>
@@ -41,7 +52,18 @@ defineProps<CarouselProps>();
 }
 
 .embla__slide {
-  flex: 0 0 100%; /* Slide covers 80% of the viewport */
+  flex: 0 0 100%;
   min-width: 0;
+}
+
+.loader {
+  background: linear-gradient(#ddd) 0/0% no-repeat #bdbdbd;
+  animation: l1 4.5s infinite linear;
+}
+
+@keyframes l1 {
+  100% {
+    background-size: 100%;
+  }
 }
 </style>
