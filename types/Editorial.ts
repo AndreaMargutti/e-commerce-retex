@@ -1,4 +1,10 @@
-export type Editorial = (HeroBanner | TextBlock | CardGallery | SplitSection)[];
+export type Editorial = (
+  | HeroBanner
+  | TextBlock
+  | CardGallery
+  | SplitSection
+  | Carousel
+)[];
 
 export type HeroBanner = {
   name: "HeroBanner";
@@ -75,5 +81,16 @@ export type SplitSection = {
       alt: string;
     };
     orientation: "left" | "right";
+  };
+};
+
+export type Carousel = {
+  name: "Carousel";
+  data: {
+    slides: Array<{
+      id: string;
+      url: string;
+      alt: string;
+    }>;
   };
 };

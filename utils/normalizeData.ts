@@ -2,8 +2,10 @@ import type { CardGalleryProps } from "~/layers/design-system/components/Modules
 import type { HeroBannerProps } from "~/layers/design-system/components/Modules/HeroBanner/HeroBannerProps";
 import type { SplitSectionProps } from "~/layers/design-system/components/Modules/SplitSection/SplitSectionProps";
 import type { TextBlockProps } from "~/layers/design-system/components/Modules/TextBlock/TextBlockProps";
+import type { CarouselProps } from "~/layers/design-system/components/Modules/Carousel/CarouselProps";
 import type {
   CardGallery,
+  Carousel,
   HeroBanner,
   SplitSection,
   TextBlock,
@@ -46,5 +48,11 @@ export const normalizeSplitSection = (
     title: module.data.title ?? "",
     text: module.data.text ?? "",
     image: module.data.image ?? { src: "", alt: "" },
+  };
+};
+
+export const normalizeCarousel = (module: Carousel): CarouselProps => {
+  return {
+    slides: module.data.slides ?? [],
   };
 };

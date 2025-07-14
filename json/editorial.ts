@@ -190,6 +190,18 @@ const editorial: Record<string, unknown> = {
       },
     },
     {
+      name: "Carousel",
+      data: {
+        slides: [
+          {
+            id: "slide-1",
+            url: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/5ce127d0-8e80-491b-8f11-0bc4bd3c3f60/fdynkn/std/1440x720/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            alt: "Woolrich Timeline 1830",
+          },
+        ],
+      },
+    },
+    {
       name: "CardGallery",
       data: {
         title: "Our three core values",

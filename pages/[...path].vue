@@ -34,6 +34,10 @@ if (!pageContent.value) {
         v-else-if="module.name === 'SplitSection'"
         v-bind="normalizeSplitSection(module)"
       />
+      <ModulesCarousel
+        v-if="module.name === 'Carousel'"
+        v-bind="normalizeCarousel(module)"
+      />
     </div>
   </main>
 </template>
