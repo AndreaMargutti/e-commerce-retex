@@ -7,6 +7,7 @@ const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true }, [Autoplay()]);
 
 function scrollTo(index: number) {
   emblaApi.value?.scrollTo(index);
+  emblaApi.value?.plugins().autoplay.reset();
 }
 
 defineProps<CarouselProps>();
