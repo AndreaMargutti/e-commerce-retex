@@ -35,7 +35,7 @@ onMounted(() => {
         v-for="(slide, id) in slides"
         :key="slide.id"
         :class="id === slideIndex ? 'loader' : ''"
-        class="embla__to min-w-10 min-h-1 bg-gray-75"
+        class="embla__to min-w-10 min-h-1 bg-gray-base shadow-sm hover:cursor-pointer"
         @click="scrollTo(id)"
       ></button>
     </div>
@@ -57,7 +57,7 @@ onMounted(() => {
 }
 
 .loader {
-  background: linear-gradient(#ddd) 0/0% no-repeat #bdbdbd;
+  background: linear-gradient(#fff) 0/0% no-repeat #bdbdbd;
   animation: l1 4.5s infinite linear;
 }
 
