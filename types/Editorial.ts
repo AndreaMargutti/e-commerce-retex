@@ -51,6 +51,7 @@ export type CardGallery = {
   name: "CardGallery";
   data: {
     title?: string;
+    numberOfCols?: number;
     cards: Array<{
       title: string;
       text: string;

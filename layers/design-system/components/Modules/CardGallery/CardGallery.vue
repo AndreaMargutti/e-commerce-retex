@@ -8,7 +8,10 @@ defineProps<CardGalleryProps>();
   <h2 class="black text-center pt-11 pb-7 uppercase text-2-5xl leading-[37px]">
     {{ title }}
   </h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+  <div
+    :class="`lg:grid-cols-${numberOfCols}`"
+    class="grid md:grid-cols-2 gap-2"
+  >
     <MoleculesCard
       v-for="card in cards"
       :key="card.title"

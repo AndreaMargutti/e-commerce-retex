@@ -33,6 +33,7 @@ export const normalizeTextBlock = (module: TextBlock): TextBlockProps => {
 export const normalizeCardGallery = (module: CardGallery): CardGalleryProps => {
   return {
     title: module.data.title ?? "",
+    numberOfCols: module.data.numberOfCols ?? 3,
     cards: module.data.cards ?? [],
   };
 };
