@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 import type { CarouselProps } from "./CarouselProps";
 import emblaCarouselVue from "embla-carousel-vue";
+import Autoplay from "embla-carousel-autoplay";
 
-const [emblaRef, emblaApi] = emblaCarouselVue();
+const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true }, [Autoplay()]);
+
 function scrollNext() {
   emblaApi.value?.scrollNext();
 }
@@ -13,9 +15,9 @@ defineProps<CarouselProps>();
 </script>
 
 <template>
-  <div class="embla">
+  <div class="embla overflow-hidden">
     <div ref="emblaRef" class="embla__viewport">
-      <div class="embla__container">
+      <div class="embla__container flex">
         <div v-for="slide in slides" :key="slide.id" class="embla__slide">
           <NuxtImg :src="slide.url" :alt="slide.alt" class="w-full" />
         </div>
