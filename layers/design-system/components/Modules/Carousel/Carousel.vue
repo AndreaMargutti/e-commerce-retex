@@ -5,11 +5,8 @@ import Autoplay from "embla-carousel-autoplay";
 
 const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true }, [Autoplay()]);
 
-function scrollNext() {
-  emblaApi.value?.scrollNext();
-}
-function scrollPrev() {
-  emblaApi.value?.scrollPrev();
+function scrollTo(index: number) {
+  emblaApi.value?.scrollTo(index);
 }
 defineProps<CarouselProps>();
 </script>
@@ -23,8 +20,14 @@ defineProps<CarouselProps>();
         </div>
       </div>
     </div>
-    <button class="embla__prev" @click="scrollPrev">Prev</button>
-    <button class="embla__next" @click="scrollNext">Next</button>
+    <div class="flex gap-2 justify-center relative bottom-5">
+      <button
+        v-for="(slide, id) in slides"
+        :key="slide.id"
+        class="embla__to border-2 border-gray-state min-w-10"
+        @click="scrollTo(id)"
+      />
+    </div>
   </div>
 </template>
 
