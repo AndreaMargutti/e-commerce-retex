@@ -6,4 +6,5 @@ export type SplitSectionProps = {
     alt: string;
   };
   orientation: "left" | "right";
+  isFullWidth?: boolean;
 };

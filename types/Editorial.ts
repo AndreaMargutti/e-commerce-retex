@@ -81,6 +81,7 @@ export type SplitSection = {
       alt: string;
     };
     orientation: "left" | "right";
+    isFullWidth?: boolean;
   };
 };
 

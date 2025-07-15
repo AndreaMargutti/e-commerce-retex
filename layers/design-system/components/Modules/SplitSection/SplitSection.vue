@@ -2,7 +2,10 @@
 import { NuxtImg } from "#components";
 import type { SplitSectionProps } from "./SplitSectionProps";
 
-const props = defineProps<SplitSectionProps>();
+const props = withDefaults(defineProps<SplitSectionProps>(), {
+  orientation: "left",
+  isFullWidth: true,
+});
 
 const flexDirection = computed(() => {
   return props.orientation === "right" ? "md:flex-row" : "md:flex-row-reverse";
@@ -10,7 +13,7 @@ const flexDirection = computed(() => {
 </script>
 
 <template>
-  <section>
+  <section :class="isFullWidth ? '' : 'px-13'">
     <figure :class="flexDirection" class="flex flex-col *:md:basis-1/2">
       <NuxtImg
         :src="image.src"

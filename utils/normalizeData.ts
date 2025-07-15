@@ -48,6 +48,7 @@ export const normalizeSplitSection = (
     title: module.data.title ?? "",
     text: module.data.text ?? "",
     image: module.data.image ?? { src: "", alt: "" },
+    isFullWidth: module.data.isFullWidth ?? true,
   };
 };
 
