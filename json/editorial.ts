@@ -763,6 +763,13 @@ const editorial: Record<string, unknown> = {
         },
       },
     },
+    {
+      name: "TextBlock",
+      data: {
+        title: "Woolrich Vintage Shopping Guide",
+        text: "Buying clothes that have already lived, in some other place, some other time, can add up a touch to your style while helping lower the environmental impact of the fashion. That's why we craft high-quality, well-designed and timeless garments that will be the new vintage of the future.",
+      },
+    },
   ],
 };
 
