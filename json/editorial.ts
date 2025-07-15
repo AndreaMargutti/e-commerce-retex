@@ -650,6 +650,12 @@ const editorial: Record<string, unknown> = {
         },
       },
     },
+    {
+      name: "TextBlock",
+      data: {
+        text: "Woolrich is committed to putting social responsability at the forefront of everything we do. We are committed to making a positive impact on the world around us, including by taking a respectful apporoach to our stakeholder relationships, ecnouraging environmetal awareness and promoting ethical practices.",
+      },
+    },
   ],
   "en/shopping-guide": [
     {
