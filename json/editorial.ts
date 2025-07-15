@@ -656,6 +656,101 @@ const editorial: Record<string, unknown> = {
         text: "Woolrich is committed to putting social responsability at the forefront of everything we do. We are committed to making a positive impact on the world around us, including by taking a respectful apporoach to our stakeholder relationships, ecnouraging environmetal awareness and promoting ethical practices.",
       },
     },
+    {
+      name: "DeepLinks",
+      data: {
+        cards: [
+          {
+            title: "Woolrich History",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7ec42981-a6b2-45bd-b4b8-2588d9654875/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich History",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/history",
+            },
+          },
+          {
+            title: "Suistainability",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f3ed6995-28df-412a-b93b-9960846845cd/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Sustainability",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/sustainability",
+            },
+          },
+          {
+            title: "Diversity and Inclusion",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/d00613ff-5aa7-45b8-b431-400268d57809/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Diversity and Inclusion",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/diversity-and-inclusion",
+            },
+          },
+          {
+            title: "Charities",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ef8f06a9-fdca-4b17-a585-2d6f82334863/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Charities",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/charities",
+            },
+          },
+          {
+            title: "Employees and Recruitment",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a9a55f95-df0e-49f1-9461-78e6b0825777/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Employees and Recruitment",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/employees-and-recruitment",
+            },
+          },
+          {
+            title: "Responsible Sourcing",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/95813f7a-f8a6-4786-ba46-287520350d14/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Responsible Sourcing",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/responsible-sourcing",
+            },
+          },
+          {
+            title: "Woolrich Outdoor Foundation",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcd9b0a6-1296-43eb-83fd-1da5874a1a61/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Outdoor Foundation",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/woolrich-outdoor-foundation",
+            },
+          },
+          {
+            title: "Code of Ethics",
+            image: {
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e95e5e75-f89d-4b79-8d50-3414e1bbd4c6/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              alt: "Woolrich Code of Ethics",
+            },
+            link: {
+              label: "Discover More",
+              href: "/en/code-of-ethics",
+            },
+          },
+        ],
+      },
+    },
   ],
   "en/shopping-guide": [
     {

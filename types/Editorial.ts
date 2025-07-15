@@ -4,6 +4,7 @@ export type Editorial = (
   | CardGallery
   | SplitSection
   | Carousel
+  | DeepLinks
 )[];
 
 export type HeroBanner = {
@@ -92,6 +93,23 @@ export type Carousel = {
       id: number;
       url: string;
       alt: string;
+    }>;
+  };
+};
+
+export type DeepLinks = {
+  name: "DeepLinks";
+  data: {
+    cards: Array<{
+      title: string;
+      image: {
+        src: string;
+        alt: string;
+      };
+      link: {
+        label: string;
+        href: string;
+      };
     }>;
   };
 };

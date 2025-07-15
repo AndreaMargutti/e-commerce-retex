@@ -3,12 +3,14 @@ import type { HeroBannerProps } from "~/layers/design-system/components/Modules/
 import type { SplitSectionProps } from "~/layers/design-system/components/Modules/SplitSection/SplitSectionProps";
 import type { TextBlockProps } from "~/layers/design-system/components/Modules/TextBlock/TextBlockProps";
 import type { CarouselProps } from "~/layers/design-system/components/Modules/Carousel/CarouselProps";
+import type { DeepLinksProps } from "~/layers/design-system/components/Modules/DeepLinks/DeepLinksProps";
 import type {
   CardGallery,
   Carousel,
   HeroBanner,
   SplitSection,
   TextBlock,
+  DeepLinks,
 } from "~/types/Editorial";
 
 export const normalizeHeroBanner = (module: HeroBanner): HeroBannerProps => {
@@ -55,5 +57,11 @@ export const normalizeSplitSection = (
 export const normalizeCarousel = (module: Carousel): CarouselProps => {
   return {
     slides: module.data.slides ?? [],
+  };
+};
+
+export const normalizeDeepLinks = (module: DeepLinks): DeepLinksProps => {
+  return {
+    cards: module.data.cards ?? [],
   };
 };
