@@ -770,6 +770,12 @@ const editorial: Record<string, unknown> = {
         text: "Buying clothes that have already lived, in some other place, some other time, can add up a touch to your style while helping lower the environmental impact of the fashion. That's why we craft high-quality, well-designed and timeless garments that will be the new vintage of the future.",
       },
     },
+    {
+      name: "TextBlock",
+      data: {
+        text: "we have a very strong connection to our legacy: the spirit of true Americana. We embarked on a journey around the world in search of our own vintage pieces that are a testament to that heritage, and we found some true gems in each city. With our partners at Highsnobiety and local vintage hunters we looked for the best vintage stores: in there we found pieces that passed the test of time.",
+      },
+    },
   ],
 };
 
