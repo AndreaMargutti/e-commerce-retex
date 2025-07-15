@@ -437,6 +437,207 @@ const editorial: Record<string, unknown> = {
         },
       },
     },
+    {
+      name: "TextBlock",
+      data: {
+        title: "Our commitment for a brighter future",
+        text: "Nature has been our source of inspiration for nearly 200 years. Now we want to take steps to protect the planet so that the next 200 years ca be paved in a sustainable manner. This new chapter represents our ongoing commitment to the environment, and we are please to announce the establishemnt of The Woolrich Outdoor Foundation. We also invite you to join us in creating a better future.",
+      },
+    },
+    {
+      name: "HeroBanner",
+      data: {
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9ac88b30-369a-41c3-a01d-c099babdf5ce/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Woolrich Outdoor Foundation",
+        },
+      },
+    },
+    {
+      name: "TextBlock",
+      data: {
+        text: "The Woolrich Outdoor Foundation is dedicated to preserving and protecting outdoor spaces for communities all over the world. The WOF collaborators with orgnizations that share its values to support urban regeneration projects, green space restoration, and environmental and forest protection initiatives.",
+      },
+    },
+    {
+      name: "SplitSection",
+      data: {
+        title: "1% FOR THE PLANET",
+        text: "Through our strategic partnership with 1% for the Planet and in collaboration with other global non-profit organizations, we will allocate funds and resources for our three core pillars - protecting our forests, maintaing our coastslines, and urban renewal projects wich are rooted in facilitating impactful environmentals changes.",
+        image: {
+          src: "https://data2.nssmag.com/images/galleries/27295/cover%2812%29.jpg",
+          alt: "1% for the Planet",
+        },
+        orientation: "left",
+      },
+    },
+    {
+      name: "CardGallery",
+      data: {
+        title: "The Pillars",
+        cards: [
+          {
+            title: "Protecting the forests",
+            text: "The Woolrich Outdoor Foundation devotes funds and resources to conserving forests globally to combat global warming.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/979bdc89-7203-44fa-86c5-d279b8ea616e/fdynkn/std/1268x1024/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Protecting the forests",
+          },
+          {
+            title: "Urban regeneration",
+            text: "The Woolrich Outdoor Foundation supports community-based and educational urban initiatives.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/708924b8-55d2-489f-a323-ad61b1e16090/fdynkn/std/1268x1024/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Urban regeneration",
+          },
+          {
+            title: "Coastal Maintenance",
+            text: "The Woolrich Outdoor Foundation collaborates with organizations that work to protect environments, communities, and economies.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/41f410f1-d697-4bc2-bb4f-e5711ca10f2f/fdynkn/std/1268x1024/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Maintaining our coastlines",
+          },
+        ],
+      },
+    },
+    {
+      name: "CardGallery",
+      data: {
+        title: "Our Partnerships",
+        numberOfCols: 4,
+        cards: [
+          {
+            title: "Arteparco",
+            text: "We support Arteparco as an Ethical Partner, with the goal of preserving natural and cultural heritage.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7592a997-103d-4e44-ba28-501a4529b12b/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Arteparco",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://arteparco.com/",
+              },
+            ],
+          },
+          {
+            title: "Planted",
+            text: "The Woolrich Outdoor Foundation and Planted collaborate in an effort to seek to preserve forests and offset CO2 emissions.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9f21a608-443e-4675-9163-c226f5ae7829/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Planted",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://www.planted.com/",
+              },
+            ],
+          },
+          {
+            title: "Worldrise and Fatastudio",
+            text: "We worked with Wolrdrise and Fantastudio to create CURA, a social project to protect the environment and the seas in Milan's neighborhood 'Stadera.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/002874e6-39b6-43cb-90d2-8811d26cafa4/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Worldrise and Fantastudio",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://worldrise.org/",
+              },
+            ],
+          },
+          {
+            title: "A Billion Oyster",
+            text: "Woolrich Outdoor Foundation and Billion Oyster Project will collaborate on restoring oysters and their reef habitat in the New York Harbor in order to reactivate the natural-self-maintenance mechanism of the local marine ecosystem.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f4672157-9c1e-483e-878c-81483e2d3e79/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "A Billion Oyster",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://billionoysterproject.org/",
+              },
+            ],
+          },
+          {
+            title: "Istituto Oikos",
+            text: "Woolrich work to protect and enhance biodiversity, engage the community and raise awareness by organizing special events and activities.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7548510a-507d-40c0-9345-967f7aa1d925/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Istituto Oikos",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://www.istituto-oikos.org/en/",
+              },
+            ],
+          },
+          {
+            title: "Humana People to People Italia",
+            text: "Woolrich Outdoor Foundation and Humana both share the same commitment to creating a world where the community is able to build a future in balance with nature",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/75c54571-6d4e-4711-9899-fd0c426ba0fd/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Humana People to People Italia",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://www.humana-people2people.it/",
+              },
+            ],
+          },
+          {
+            title: "Selva Urbana",
+            text: "The Woolrich Outdoor Foundation supports Selva Urbana in the implementation of green space restoration projects to meet the environmetal and socio-cultural needs of local communities.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ce1e5ef8-92c4-4b35-9511-31747642774e/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Selva Urbana",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://www.selvurbana.org/",
+              },
+            ],
+          },
+          {
+            title: "Plastic Free Odv Onlus",
+            text: "Woolrich Outdoor Foundation and Plastic Free work together to restore urban areas by cleaning up green spaces.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/c5fc268b-a3ca-41ac-8482-859b82b514d9/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Plastic Free Odv Onlus",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://plasticfreeonlus.it/",
+              },
+            ],
+          },
+          {
+            title: "Parks & Trails NYC",
+            text: "Woolrich Outdoor Foundation and Parks & Trails New York cooperate to improve public green spaces in the city.",
+            image:
+              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3aaad65e-f959-4168-ad13-29cca628d6f2/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            imageAlt: "Parks & Trails NYC",
+            links: [
+              {
+                label: "Discover More",
+                link: "https://www.ptny.org/",
+              },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      name: "SplitSection",
+      data: {
+        title: "From our CEO, Stefano Saccone",
+        text: `"Giving back to the people and planet that inspired and helped build our brand is important to us and that's why we are contributing 1% of our Direct-to-Consumer sales to fund impactful environmetal projects through a partnership with 1% for the Planet. Working togheter we can donate, volunteer, and actively provide service to protect and shape a brighter and more sustainable future."`,
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f43710c0-f76c-44f1-8e01-0ada5866b4c7/fdynkn/std/464x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          alt: "Stefano Saccone, CEO of Woolrich",
+        },
+        orientation: "left",
+      },
+    },
   ],
   "en/our-mission": [
     {
