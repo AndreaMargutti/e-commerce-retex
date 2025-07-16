@@ -778,7 +778,7 @@ const editorial: Record<string, unknown> = {
             title: "Tokyo",
             appendix: "First Stop",
             image: {
-              src: "",
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/82c84320-4b33-4d74-952f-eac0f85e026d/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
               alt: "Tokyo Stop",
             },
             link: {
@@ -790,7 +790,7 @@ const editorial: Record<string, unknown> = {
             title: "London",
             appendix: "Second Stop",
             image: {
-              src: "",
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/64660373-cbc5-455e-b5c3-08a26110ada5/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
               alt: "London Stop",
             },
             link: {
@@ -802,7 +802,7 @@ const editorial: Record<string, unknown> = {
             title: "Berlin",
             appendix: "Third Stop",
             image: {
-              src: "",
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/75fafc8a-45be-4a83-ade0-9f8b813880bd/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
               alt: "Berlin Stop",
             },
             link: {
@@ -814,7 +814,7 @@ const editorial: Record<string, unknown> = {
             title: "New York",
             appendix: "Fourth Stop",
             image: {
-              src: "",
+              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/41f0286a-593d-4a51-aec1-7f568fd05c69/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
               alt: "New York Stop",
             },
             link: {
