@@ -1,4 +1,4 @@
-export type DeepLinksProps = {
+export type ImageCardProps = {
   cards: [
     {
       title: string;

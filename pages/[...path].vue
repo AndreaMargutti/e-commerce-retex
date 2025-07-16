@@ -38,7 +38,7 @@ if (!pageContent.value) {
         v-if="module.name === 'Carousel'"
         v-bind="normalizeCarousel(module)"
       />
-      <ModulesDeepLinks
+      <ModulesImageCard
         v-if="module.name === 'DeepLinks'"
         v-bind="normalizeDeepLinks(module)"
       />

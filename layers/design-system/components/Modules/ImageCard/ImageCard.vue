@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { DeepLinksProps } from "./DeepLinksProps";
+import type { ImageCardProps } from "./ImageCardProps";
 
-defineProps<DeepLinksProps>();
+defineProps<ImageCardProps>();
 </script>
 
 <template>
