@@ -4,6 +4,7 @@ import type { SplitSectionProps } from "~/layers/design-system/components/Module
 import type { TextBlockProps } from "~/layers/design-system/components/Modules/TextBlock/TextBlockProps";
 import type { CarouselProps } from "~/layers/design-system/components/Modules/Carousel/CarouselProps";
 import type { ImageCardProps } from "~/layers/design-system/components/Modules/ImageCard/ImageCardProps";
+import type { CenterCardProps } from "~/layers/design-system/components/Modules/CenterCard/CenterCardProps";
 import type {
   CardGallery,
   Carousel,
@@ -11,6 +12,7 @@ import type {
   SplitSection,
   TextBlock,
   DeepLinks,
+  CenterCard,
 } from "~/types/Editorial";
 
 export const normalizeHeroBanner = (module: HeroBanner): HeroBannerProps => {
@@ -61,6 +63,12 @@ export const normalizeCarousel = (module: Carousel): CarouselProps => {
 };
 
 export const normalizeDeepLinks = (module: DeepLinks): ImageCardProps => {
+  return {
+    cards: module.data.cards ?? [],
+  };
+};
+
+export const normalizeCenterCard = (module: CenterCard): CenterCardProps => {
   return {
     cards: module.data.cards ?? [],
   };

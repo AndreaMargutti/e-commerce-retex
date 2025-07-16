@@ -42,6 +42,10 @@ if (!pageContent.value) {
         v-if="module.name === 'DeepLinks'"
         v-bind="normalizeDeepLinks(module)"
       />
+      <ModulesCenterCard
+        v-if="module.name === 'CenterCard'"
+        v-bind="normalizeCenterCard(module)"
+      />
     </div>
   </main>
 </template>

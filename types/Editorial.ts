@@ -5,6 +5,7 @@ export type Editorial = (
   | SplitSection
   | Carousel
   | DeepLinks
+  | CenterCard
 )[];
 
 export type HeroBanner = {
@@ -102,6 +103,24 @@ export type DeepLinks = {
   data: {
     cards: Array<{
       title: string;
+      image: {
+        src: string;
+        alt: string;
+      };
+      link: {
+        label: string;
+        href: string;
+      };
+    }>;
+  };
+};
+
+export type CenterCard = {
+  name: "CenterCard";
+  data: {
+    cards: Array<{
+      title: string;
+      appendix?: string;
       image: {
         src: string;
         alt: string;
