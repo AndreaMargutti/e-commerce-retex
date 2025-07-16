@@ -831,6 +831,46 @@ const editorial: Record<string, unknown> = {
         text: "we have a very strong connection to our legacy: the spirit of true Americana. We embarked on a journey around the world in search of our own vintage pieces that are a testament to that heritage, and we found some true gems in each city. With our partners at Highsnobiety and local vintage hunters we looked for the best vintage stores: in there we found pieces that passed the test of time.",
       },
     },
+    {
+      name: "HeroBanner",
+      data: {
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b635e6f5-70fd-4132-abc6-3167c911753b/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          alt: "Woolrich Vintage Shopping Guide",
+        },
+      },
+    },
+    {
+      name: "TextBlock",
+      data: {
+        title: "Something about us",
+      },
+    },
+    {
+      name: "SplitSection",
+      data: {
+        title: "Uncover the Archive",
+        text: "We dug deep into our heritage with Daiki Suzuki and Kara Jubin to retrace our path through american history.",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/6dc80448-b2ff-4a30-b956-01de59b20621/fdynkn/std/464x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          alt: "Uncover the Archive",
+        },
+        orientation: "right",
+        isFullWidth: false,
+      },
+    },
+    {
+      name: "SplitSection",
+      data: {
+        title: "Woolrich History",
+        text: "We are the Original Outdoor Clothing Company and our long history of producing fine, warm wool garments is proof of that.",
+        image: {
+          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/6e2623fc-1978-41ea-bc4c-33df3646a8e3/fdynkn/std/464x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          alt: "Uncover the Archive",
+        },
+        isFullWidth: false,
+      },
+    },
   ],
 };
 
