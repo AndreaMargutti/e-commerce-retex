@@ -771,6 +771,61 @@ const editorial: Record<string, unknown> = {
       },
     },
     {
+      name: "CenterCard",
+      data: {
+        cards: [
+          {
+            title: "Tokyo",
+            appendix: "First Stop",
+            image: {
+              src: "",
+              alt: "Tokyo Stop",
+            },
+            link: {
+              label: "Browse Now",
+              href: "/#",
+            },
+          },
+          {
+            title: "London",
+            appendix: "Second Stop",
+            image: {
+              src: "",
+              alt: "London Stop",
+            },
+            link: {
+              label: "Browse Now",
+              href: "/#",
+            },
+          },
+          {
+            title: "Berlin",
+            appendix: "Third Stop",
+            image: {
+              src: "",
+              alt: "Berlin Stop",
+            },
+            link: {
+              label: "Browse Now",
+              href: "/#",
+            },
+          },
+          {
+            title: "New York",
+            appendix: "Fourth Stop",
+            image: {
+              src: "",
+              alt: "New York Stop",
+            },
+            link: {
+              label: "Browse Now",
+              href: "/#",
+            },
+          },
+        ],
+      },
+    },
+    {
       name: "TextBlock",
       data: {
         text: "we have a very strong connection to our legacy: the spirit of true Americana. We embarked on a journey around the world in search of our own vintage pieces that are a testament to that heritage, and we found some true gems in each city. With our partners at Highsnobiety and local vintage hunters we looked for the best vintage stores: in there we found pieces that passed the test of time.",
