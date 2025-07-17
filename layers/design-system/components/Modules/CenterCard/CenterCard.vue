@@ -12,8 +12,8 @@ defineProps<CenterCardProps>();
         <h4 v-if="card.appendix" class="pt-6 uppercase text-sm leading-[17px]">
           {{ card.appendix }}
         </h4>
-        <h2 class="py-6 text-2-5xl leading-[34px]">
-          {{ capitalize(card.title) }}
+        <h2 class="py-6 text-2-5xl leading-[34px] uppercase">
+          {{ card.title }}
         </h2>
         <div class="flex pb-6">
           <AtomsLink

@@ -20,7 +20,7 @@ const flexDirection = computed(() => {
         :alt="image.alt"
         class="mb-6 md:mb-0 md:pb-0 aspect-3/2 md:aspect-4/3 md:max-w-1/2"
       />
-      <div class="px-4 md:self-center">
+      <div class="px-4 pb-10 md:self-center">
         <h3 class="pb-4">{{ title }}</h3>
         <p class="text-sm leading-[17px] lg:text-base">{{ text }}</p>
       </div>
