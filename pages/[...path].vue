@@ -29,6 +29,7 @@ if (!pageContent.value) {
         v-else-if="module.name === 'CardGallery'"
         v-bind="normalizeCardGallery(module)"
       /> -->
+
       <ModulesGallery v-else-if="module.name === 'CardGallery'">
         <MoleculesCard
           v-for="card in normalizeCardGallery(module).cards"
@@ -41,6 +42,7 @@ if (!pageContent.value) {
           "
         />
       </ModulesGallery>
+
       <ModulesSplitSection
         v-else-if="module.name === 'SplitSection'"
         v-bind="normalizeSplitSection(module)"
