@@ -30,7 +30,10 @@ if (!pageContent.value) {
         v-bind="normalizeCardGallery(module)"
       /> -->
 
-      <ModulesGallery v-else-if="module.name === 'CardGallery'">
+      <ModulesGallery
+        v-else-if="module.name === 'CardGallery'"
+        :title="module.data.title"
+      >
         <MoleculesCard
           v-for="card in normalizeCardGallery(module).cards"
           :key="card.title"
