@@ -29,7 +29,6 @@ if (!pageContent.value) {
         v-else-if="module.name === 'CardGallery'"
         v-bind="normalizeCardGallery(module)"
       /> -->
-
       <ModulesGallery
         v-else-if="module.name === 'CardGallery'"
         :title="module.data.title"
