@@ -1,25 +1,14 @@
 <script lang="ts" setup>
 import type { CardGalleryProps } from "./CardGalleryProps";
 
-const props = withDefaults(defineProps<CardGalleryProps>(), {
-  numberOfCols: 3,
-});
-
-const getColsLayout = computed(() => {
-  switch (props.numberOfCols) {
-    case 4:
-      return "lg:grid-cols-4";
-    default:
-      return "lg:grid-cols-3";
-  }
-});
+defineProps<CardGalleryProps>();
 </script>
 
 <template>
   <h2 class="black text-center pt-11 pb-7 uppercase text-2-5xl leading-[37px]">
     {{ title }}
   </h2>
-  <div :class="getColsLayout" class="grid md:grid-cols-2 gap-2">
+  <AtomsGallery :num-of-cols="numberOfCols">
     <MoleculesCard
       v-for="card in cards"
       :key="card.title"
@@ -28,5 +17,5 @@ const getColsLayout = computed(() => {
       :image="{ src: card.image, alt: card.title }"
       :links="card.links?.map((l) => ({ label: l.label, href: l.link }))"
     />
-  </div>
+  </AtomsGallery>
 </template>

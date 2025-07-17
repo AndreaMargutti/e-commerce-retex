@@ -1,6 +1,6 @@
 export type CardGalleryProps = {
   title?: string;
-  numberOfCols?: number;
+  numberOfCols?: 3 | 4;
   cards: Array<{
     title: string;
     text: string;

@@ -5,7 +5,7 @@ defineProps<ImageCardProps>();
 </script>
 
 <template>
-  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+  <AtomsGallery :num-of-cols="4">
     <figure v-for="card in cards" :key="card.title" class="relative">
       <NuxtImg :src="card.image.src" :alt="card.image.alt" class="w-full" />
       <div class="absolute bottom-0 text-white ps-8 pb-8">
@@ -24,5 +24,5 @@ defineProps<ImageCardProps>();
         </div>
       </div>
     </figure>
-  </div>
+  </AtomsGallery>
 </template>

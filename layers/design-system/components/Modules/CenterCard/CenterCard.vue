@@ -5,7 +5,7 @@ defineProps<CenterCardProps>();
 </script>
 
 <template>
-  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+  <AtomsGallery :num-of-cols="4">
     <div v-for="card in cards" :key="card.title" class="center-card">
       <NuxtImg :src="card.image.src" :alt="card.image.alt" class="w-full" />
       <div class="flex flex-col items-center">
@@ -26,5 +26,5 @@ defineProps<CenterCardProps>();
         </div>
       </div>
     </div>
-  </div>
+  </AtomsGallery>
 </template>
