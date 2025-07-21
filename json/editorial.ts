@@ -734,7 +734,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Shopping Guide",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dba7589c-2ceb-4a18-9484-2b4b152c044c/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-11.webp",
           alt: "Shopping Guide",
         },
       },
@@ -754,7 +754,7 @@ const editorial: Record<string, unknown> = {
             title: "Tokyo",
             appendix: "First Stop",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/82c84320-4b33-4d74-952f-eac0f85e026d/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/centerCard-1.webp",
               alt: "Tokyo Stop",
             },
             link: {
@@ -766,7 +766,7 @@ const editorial: Record<string, unknown> = {
             title: "London",
             appendix: "Second Stop",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/64660373-cbc5-455e-b5c3-08a26110ada5/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/centerCard-2.webp",
               alt: "London Stop",
             },
             link: {
@@ -778,7 +778,7 @@ const editorial: Record<string, unknown> = {
             title: "Berlin",
             appendix: "Third Stop",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/75fafc8a-45be-4a83-ade0-9f8b813880bd/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/centerCard-3.webp",
               alt: "Berlin Stop",
             },
             link: {
@@ -790,7 +790,7 @@ const editorial: Record<string, unknown> = {
             title: "New York",
             appendix: "Fourth Stop",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/41f0286a-593d-4a51-aec1-7f568fd05c69/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/centerCard-4.webp",
               alt: "New York Stop",
             },
             link: {
@@ -811,7 +811,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b635e6f5-70fd-4132-abc6-3167c911753b/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-12.webp",
           alt: "Woolrich Vintage Shopping Guide",
         },
       },
@@ -828,7 +828,7 @@ const editorial: Record<string, unknown> = {
         title: "Uncover the Archive",
         text: "We dug deep into our heritage with Daiki Suzuki and Kara Jubin to retrace our path through american history.",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/6dc80448-b2ff-4a30-b956-01de59b20621/fdynkn/std/464x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          src: "../public/images/mediatext-4.webp",
           alt: "Uncover the Archive",
         },
         orientation: "right",
@@ -841,7 +841,7 @@ const editorial: Record<string, unknown> = {
         title: "Woolrich History",
         text: "We are the Original Outdoor Clothing Company and our long history of producing fine, warm wool garments is proof of that.",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/6e2623fc-1978-41ea-bc4c-33df3646a8e3/fdynkn/std/464x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          src: "../public/images/mediatext-5.webp",
           alt: "Uncover the Archive",
         },
         isFullWidth: false,
