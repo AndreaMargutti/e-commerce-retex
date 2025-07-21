@@ -5,7 +5,7 @@ const editorial: Record<string, unknown> = {
       data: {
         variant: "links",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9e066b5b-a554-4e04-af93-68c4f68aa1f7/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-1.png",
           alt: "Diversity and Inclusion",
         },
         title: "Diversity and Inclusion",
@@ -21,7 +21,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/70a6027d-9c78-4465-9303-cad0f087f13e/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-2.webp",
           alt: "Emphaty will always remain the strongest fiber",
         },
         title: "Emphaty will always remain the strongest fiber",
@@ -38,7 +38,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e945bda4-2f5c-4897-9018-ad8dd3105cb8/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-3.webp",
           alt: "Woolrich embraces and empowers all communities",
         },
         title: "Woolrich embraces and empowers all communities",
@@ -54,8 +54,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Being a woman today",
             text: "For this international Women's Day, we recognize five women who are making strides in their own right. Carolina Amoretti, Luzai, Sara Ricciardi, Aya Mohamed, and Bianca Hirata let us into their private spaces and discuss various aspects of womanhood that inspire them",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ec4c47d3-3ce6-40c5-aa23-d9e1c9b43a64/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-1.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -67,8 +66,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Family ties",
             text: "For Travis and Cynhyia, respect for nature begins with family and a desire to instill in their son Tenoch a deep understanding of the resposibility that all generations share in caring for the naturl world.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/51b4a9b0-43d6-4896-ad39-8b8fa30d8c30/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-2.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -80,8 +78,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "An Enchanted Archive Tale",
             text: "At Woolrich, we believe in spreading love, embracing diversity, and standing togheter. In celebration of Pride Month, we have collaborated with the talented Jerome Lamaar to add a touch of enchantment to our iconic archive pieces.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/4d6b7428-f59e-461e-806a-d182a30aad8c/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-3.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -93,8 +90,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Without Barriers",
             text: "Stories studded with positivity where overcoming personal and social obstacles reflects the truest spirit of human perseverance. This is Without Barriers.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e9bb922c-0741-47be-856f-6b5844e8ea97/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-4.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -106,8 +102,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Growing Up in Italy",
             text: "A project conceived in collaboration with NSS magazine and The Good Neighborhood Collective to showcase positive stories of integration and success of second-generation italians.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/45a51318-a02c-4091-abfe-6e8bbd67aef8/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-5.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -119,8 +114,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Woolrich Keeps New York Warm",
             text: "Small businesses have faced challenges during the pandemic: starting out in New York Citu, Woolrich empowers the people and places that are the backbone of the city by shining a light on six small businesses.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/31b7bc53-8002-4137-bc5e-6e5fc4140d61/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-6.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -138,7 +132,7 @@ const editorial: Record<string, unknown> = {
         variant: "buttons",
         title: "Brand Mission and Values",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-4.webp",
           alt: "Immagine di esempio",
         },
         buttons: [
@@ -158,7 +152,7 @@ const editorial: Record<string, unknown> = {
       data: {
         variant: "links",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-5.webp",
           alt: "Woolrich: who we are",
         },
         title: "Woolrich: who we are",
@@ -177,7 +171,7 @@ const editorial: Record<string, unknown> = {
         title: "Our Legacy",
         text: "We call ourselves the 'original outdoor clothing company' since we have produced high-quality garments for outdoor enthusiasts for over 190 years. Crafting fine and warm wool is our calling, and our mills have lent a helping hand during major historical moments. Woolrich has made big contributions by supplying socks, blankets and coats to US soldiers providing them warmth and comfort.",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcea614f-f66d-44e9-a7dc-36b743d15327/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          src: "../public/images/mediatext-1.webp",
           alt: "Our Legacy",
         },
         orientation: "right",
@@ -304,22 +298,19 @@ const editorial: Record<string, unknown> = {
           {
             title: "Amrerican Heritage",
             text: "Founded in Pennsylvania in 1830 Woolrich is part of the fabric of the American outdoors. Our original products mirrored the American Dream: wear woolrich to pursue your goals, regardless of the elements.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            image: "../public/images/card-7.webp",
             imageAlt: "American Heritage",
           },
           {
             title: "Purposeful Design",
             text: "Our products design ethos is pure, considered, consistent. Woolrich collections embody a design sensibilty of stylish durability.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/b77dd455-c6e9-4149-af1f-860379bdfdae/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-8.webp",
             imageAlt: "Purposeful Design",
           },
           {
             title: "Iconic Brand Elements",
             text: "As America's oldest continuously operating woolen mill, Woolrich has a rich history of producing iconic products that have become synonymous with the brand. From the classic buffalo check to the signature Woolrich red, these elements are woven into the very fabric of our identity.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3a75a851-d0e4-4097-965b-9f762254bcbd/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-9.webp",
             imageAlt: "Iconic Brand Elements",
           },
         ],
@@ -335,7 +326,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3fab2cbb-5c68-4091-83e7-b90d6a87e4b8/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-6.webp",
           alt: "Our Mission",
         },
       },
@@ -350,7 +341,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "https://www.pambianconews.com/wp-content/uploads/2024/12/IMG_7707-e1733936428749.jpeg",
+          src: "../public/images/herobanner-7.jpeg",
           alt: "We empower life in the elements",
         },
         title: "We empower life in the elements",
@@ -369,8 +360,7 @@ const editorial: Record<string, unknown> = {
         cards: [
           {
             title: "Woolrich Vintage Shopping Guide",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            image: "../public/images/card-10.webp",
             imageAlt: "Woolrich Vintage Shopping Guide",
             links: [
               {
@@ -381,8 +371,7 @@ const editorial: Record<string, unknown> = {
           },
           {
             title: "The Birth of an Icon",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            image: "../public/images/card-11.webp",
             imageAlt: "The Birth of an Icon",
             links: [
               {
@@ -393,8 +382,7 @@ const editorial: Record<string, unknown> = {
           },
           {
             title: "Uncover the Archive",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/83c3b993-ca3a-4392-8d22-6f02e59d2cb0/fdynkn/std/928x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+            image: "../public/images/card-12.webp",
             imageAlt: "Uncover the Archive",
             links: [
               {
@@ -412,7 +400,7 @@ const editorial: Record<string, unknown> = {
         variant: "buttons",
         title: "Brand Mission and Values",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/2c40e3e6-9421-4ee1-bad2-a26df967b4d6/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-4.webp",
           alt: "Immagine di esempio",
         },
         buttons: [

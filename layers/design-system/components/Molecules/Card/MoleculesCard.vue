@@ -5,7 +5,7 @@ defineProps<MoleculesCardProps>();
 
 <template>
   <div class="pb-[1.4rem] flex flex-col">
-    <img :src="image.src" :alt="image.alt" class="aspect-square w-full" />
+    <NuxtImg :src="image.src" :alt="image.alt" class="aspect-square w-full" />
 
     <div class="px-6 pt-6 pb-5">
       <h2 class="text-black pb-3 text-xl">
