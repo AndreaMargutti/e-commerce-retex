@@ -28,6 +28,10 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    provider: "netlify",
+  },
+
   basicAuth: {
     enabled: true,
     users: [
