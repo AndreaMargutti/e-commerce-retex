@@ -420,7 +420,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Woolrich Outdoor Foundation",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/21dd07c8-1de8-40ef-beca-de1928edb605/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-8.webp",
           alt: "Woolrich Outdoor Foundation",
         },
       },
@@ -436,7 +436,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9ac88b30-369a-41c3-a01d-c099babdf5ce/fdynkn/std/1024x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-9.webp",
           alt: "Woolrich Outdoor Foundation",
         },
       },
@@ -453,7 +453,7 @@ const editorial: Record<string, unknown> = {
         title: "1% FOR THE PLANET",
         text: "Through our strategic partnership with 1% for the Planet and in collaboration with other global non-profit organizations, we will allocate funds and resources for our three core pillars - protecting our forests, maintaing our coastslines, and urban renewal projects wich are rooted in facilitating impactful environmentals changes.",
         image: {
-          src: "https://data2.nssmag.com/images/galleries/27295/cover%2812%29.jpg",
+          src: "../public/images/mediatext-2.jpg",
           alt: "1% for the Planet",
         },
         orientation: "left",
@@ -467,22 +467,19 @@ const editorial: Record<string, unknown> = {
           {
             title: "Protecting the forests",
             text: "The Woolrich Outdoor Foundation devotes funds and resources to conserving forests globally to combat global warming.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/979bdc89-7203-44fa-86c5-d279b8ea616e/fdynkn/std/1268x1024/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-13.webp",
             imageAlt: "Protecting the forests",
           },
           {
             title: "Urban regeneration",
             text: "The Woolrich Outdoor Foundation supports community-based and educational urban initiatives.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/708924b8-55d2-489f-a323-ad61b1e16090/fdynkn/std/1268x1024/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-14.webp",
             imageAlt: "Urban regeneration",
           },
           {
             title: "Coastal Maintenance",
             text: "The Woolrich Outdoor Foundation collaborates with organizations that work to protect environments, communities, and economies.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/41f410f1-d697-4bc2-bb4f-e5711ca10f2f/fdynkn/std/1268x1024/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/card-15.webp",
             imageAlt: "Maintaining our coastlines",
           },
         ],
@@ -497,8 +494,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Arteparco",
             text: "We support Arteparco as an Ethical Partner, with the goal of preserving natural and cultural heritage.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7592a997-103d-4e44-ba28-501a4529b12b/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-1.webp",
             imageAlt: "Arteparco",
             links: [
               {
@@ -510,8 +506,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Planted",
             text: "The Woolrich Outdoor Foundation and Planted collaborate in an effort to seek to preserve forests and offset CO2 emissions.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/9f21a608-443e-4675-9163-c226f5ae7829/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-2.webp",
             imageAlt: "Planted",
             links: [
               {
@@ -523,8 +518,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Worldrise and Fatastudio",
             text: "We worked with Wolrdrise and Fantastudio to create CURA, a social project to protect the environment and the seas in Milan's neighborhood 'Stadera.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/002874e6-39b6-43cb-90d2-8811d26cafa4/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-3.webp",
             imageAlt: "Worldrise and Fantastudio",
             links: [
               {
@@ -536,8 +530,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "A Billion Oyster",
             text: "Woolrich Outdoor Foundation and Billion Oyster Project will collaborate on restoring oysters and their reef habitat in the New York Harbor in order to reactivate the natural-self-maintenance mechanism of the local marine ecosystem.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f4672157-9c1e-483e-878c-81483e2d3e79/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-4.webp",
             imageAlt: "A Billion Oyster",
             links: [
               {
@@ -549,8 +542,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Istituto Oikos",
             text: "Woolrich work to protect and enhance biodiversity, engage the community and raise awareness by organizing special events and activities.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7548510a-507d-40c0-9345-967f7aa1d925/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-5.webp",
             imageAlt: "Istituto Oikos",
             links: [
               {
@@ -562,8 +554,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Humana People to People Italia",
             text: "Woolrich Outdoor Foundation and Humana both share the same commitment to creating a world where the community is able to build a future in balance with nature",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/75c54571-6d4e-4711-9899-fd0c426ba0fd/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-6.webp",
             imageAlt: "Humana People to People Italia",
             links: [
               {
@@ -575,8 +566,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Selva Urbana",
             text: "The Woolrich Outdoor Foundation supports Selva Urbana in the implementation of green space restoration projects to meet the environmetal and socio-cultural needs of local communities.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ce1e5ef8-92c4-4b35-9511-31747642774e/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-7.webp",
             imageAlt: "Selva Urbana",
             links: [
               {
@@ -588,8 +578,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Plastic Free Odv Onlus",
             text: "Woolrich Outdoor Foundation and Plastic Free work together to restore urban areas by cleaning up green spaces.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/c5fc268b-a3ca-41ac-8482-859b82b514d9/fdynkn/std/762x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-8.webp",
             imageAlt: "Plastic Free Odv Onlus",
             links: [
               {
@@ -601,8 +590,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Parks & Trails NYC",
             text: "Woolrich Outdoor Foundation and Parks & Trails New York cooperate to improve public green spaces in the city.",
-            image:
-              "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/3aaad65e-f959-4168-ad13-29cca628d6f2/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+            image: "../public/images/partnerCard-9.webp",
             imageAlt: "Parks & Trails NYC",
             links: [
               {
@@ -620,7 +608,7 @@ const editorial: Record<string, unknown> = {
         title: "From our CEO, Stefano Saccone",
         text: `"Giving back to the people and planet that inspired and helped build our brand is important to us and that's why we are contributing 1% of our Direct-to-Consumer sales to fund impactful environmetal projects through a partnership with 1% for the Planet. Working togheter we can donate, volunteer, and actively provide service to protect and shape a brighter and more sustainable future."`,
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f43710c0-f76c-44f1-8e01-0ada5866b4c7/fdynkn/std/464x960/editorialimage?format=auto&scalemode=none&quality=100&dpr=120",
+          src: "../public/images/mediatext-3.webp",
           alt: "Stefano Saccone, CEO of Woolrich",
         },
         orientation: "left",
@@ -633,7 +621,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Brand Mission and Values",
         image: {
-          src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e8055d92-f93b-4d9b-8a8b-27a149e00c51/fdynkn/std/2048x960/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+          src: "../public/images/herobanner-10.webp",
           alt: "Woolrich Brand Mission and Values",
         },
       },
@@ -651,7 +639,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Woolrich History",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/7ec42981-a6b2-45bd-b4b8-2588d9654875/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-1.webp",
               alt: "Woolrich History",
             },
             link: {
@@ -662,7 +650,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Suistainability",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/f3ed6995-28df-412a-b93b-9960846845cd/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-2.webp",
               alt: "Woolrich Sustainability",
             },
             link: {
@@ -673,7 +661,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Diversity and Inclusion",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/d00613ff-5aa7-45b8-b431-400268d57809/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-3.webp",
               alt: "Woolrich Diversity and Inclusion",
             },
             link: {
@@ -684,7 +672,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Charities",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/ef8f06a9-fdca-4b17-a585-2d6f82334863/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-4.webp",
               alt: "Woolrich Charities",
             },
             link: {
@@ -695,7 +683,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Employees and Recruitment",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/a9a55f95-df0e-49f1-9461-78e6b0825777/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-5.webp",
               alt: "Woolrich Employees and Recruitment",
             },
             link: {
@@ -706,7 +694,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Responsible Sourcing",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/95813f7a-f8a6-4786-ba46-287520350d14/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-6.webp",
               alt: "Woolrich Responsible Sourcing",
             },
             link: {
@@ -717,7 +705,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Woolrich Outdoor Foundation",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/dcd9b0a6-1296-43eb-83fd-1da5874a1a61/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-7.webp",
               alt: "Woolrich Outdoor Foundation",
             },
             link: {
@@ -728,7 +716,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Code of Ethics",
             image: {
-              src: "https://woolrich-cdn.thron.com/delivery/public/image/woolrich/e95e5e75-f89d-4b79-8d50-3414e1bbd4c6/fdynkn/std/381x1280/editorialimage?format=auto&scalemode=none&quality=80&dpr=120",
+              src: "../public/images/deepCard-8.webp",
               alt: "Woolrich Code of Ethics",
             },
             link: {
