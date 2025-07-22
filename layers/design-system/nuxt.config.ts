@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  image: {
+    provider: "netlify",
+  },
   icon: {
     provider: "server",
     customCollections: [
