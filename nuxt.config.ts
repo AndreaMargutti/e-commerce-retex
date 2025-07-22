@@ -15,9 +15,9 @@ export default defineNuxtConfig({
       new URL("./layers/design-system", import.meta.url),
     ),
   },
-  image: {
-    provider: "netlify",
-  },
+  // image: {
+  //   provider: "netlify",
+  // },
   i18n: {
     strategy: "prefix",
     defaultLocale: "en",
