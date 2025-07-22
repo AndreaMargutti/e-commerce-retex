@@ -21,7 +21,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "../public/herobanner-2.webp",
+          src: "/herobanner-2.webp",
           alt: "Emphaty will always remain the strongest fiber",
         },
         title: "Emphaty will always remain the strongest fiber",
@@ -38,7 +38,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "../public/herobanner-3.webp",
+          src: "/herobanner-3.webp",
           alt: "Woolrich embraces and empowers all communities",
         },
         title: "Woolrich embraces and empowers all communities",
@@ -54,7 +54,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Being a woman today",
             text: "For this international Women's Day, we recognize five women who are making strides in their own right. Carolina Amoretti, Luzai, Sara Ricciardi, Aya Mohamed, and Bianca Hirata let us into their private spaces and discuss various aspects of womanhood that inspire them",
-            image: "../public/card-1.webp",
+            image: "/card-1.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -66,7 +66,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Family ties",
             text: "For Travis and Cynhyia, respect for nature begins with family and a desire to instill in their son Tenoch a deep understanding of the resposibility that all generations share in caring for the naturl world.",
-            image: "../public/card-2.webp",
+            image: "/card-2.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -78,7 +78,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "An Enchanted Archive Tale",
             text: "At Woolrich, we believe in spreading love, embracing diversity, and standing togheter. In celebration of Pride Month, we have collaborated with the talented Jerome Lamaar to add a touch of enchantment to our iconic archive pieces.",
-            image: "../public/card-3.webp",
+            image: "/card-3.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -90,7 +90,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Without Barriers",
             text: "Stories studded with positivity where overcoming personal and social obstacles reflects the truest spirit of human perseverance. This is Without Barriers.",
-            image: "../public/card-4.webp",
+            image: "/card-4.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -102,7 +102,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Growing Up in Italy",
             text: "A project conceived in collaboration with NSS magazine and The Good Neighborhood Collective to showcase positive stories of integration and success of second-generation italians.",
-            image: "../public/card-5.webp",
+            image: "/card-5.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -114,7 +114,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Woolrich Keeps New York Warm",
             text: "Small businesses have faced challenges during the pandemic: starting out in New York Citu, Woolrich empowers the people and places that are the backbone of the city by shining a light on six small businesses.",
-            image: "../public/card-6.webp",
+            image: "/card-6.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -132,7 +132,7 @@ const editorial: Record<string, unknown> = {
         variant: "buttons",
         title: "Brand Mission and Values",
         image: {
-          src: "../public/herobanner-4.webp",
+          src: "/herobanner-4.webp",
           alt: "Immagine di esempio",
         },
         buttons: [
@@ -152,7 +152,7 @@ const editorial: Record<string, unknown> = {
       data: {
         variant: "links",
         image: {
-          src: "../public/herobanner-5.webp",
+          src: "/herobanner-5.webp",
           alt: "Woolrich: who we are",
         },
         title: "Woolrich: who we are",
@@ -171,7 +171,7 @@ const editorial: Record<string, unknown> = {
         title: "Our Legacy",
         text: "We call ourselves the 'original outdoor clothing company' since we have produced high-quality garments for outdoor enthusiasts for over 190 years. Crafting fine and warm wool is our calling, and our mills have lent a helping hand during major historical moments. Woolrich has made big contributions by supplying socks, blankets and coats to US soldiers providing them warmth and comfort.",
         image: {
-          src: "../public/mediatext-1.webp",
+          src: "/mediatext-1.webp",
           alt: "Our Legacy",
         },
         orientation: "right",
@@ -298,19 +298,19 @@ const editorial: Record<string, unknown> = {
           {
             title: "Amrerican Heritage",
             text: "Founded in Pennsylvania in 1830 Woolrich is part of the fabric of the American outdoors. Our original products mirrored the American Dream: wear woolrich to pursue your goals, regardless of the elements.",
-            image: "../public/card-7.webp",
+            image: "/card-7.webp",
             imageAlt: "American Heritage",
           },
           {
             title: "Purposeful Design",
             text: "Our products design ethos is pure, considered, consistent. Woolrich collections embody a design sensibilty of stylish durability.",
-            image: "../public/card-8.webp",
+            image: "/card-8.webp",
             imageAlt: "Purposeful Design",
           },
           {
             title: "Iconic Brand Elements",
             text: "As America's oldest continuously operating woolen mill, Woolrich has a rich history of producing iconic products that have become synonymous with the brand. From the classic buffalo check to the signature Woolrich red, these elements are woven into the very fabric of our identity.",
-            image: "../public/card-9.webp",
+            image: "/card-9.webp",
             imageAlt: "Iconic Brand Elements",
           },
         ],
@@ -326,7 +326,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "../public/herobanner-6.webp",
+          src: "/herobanner-6.webp",
           alt: "Our Mission",
         },
       },
@@ -341,7 +341,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "../public/herobanner-7.jpeg",
+          src: "/herobanner-7.jpeg",
           alt: "We empower life in the elements",
         },
         title: "We empower life in the elements",
@@ -360,7 +360,7 @@ const editorial: Record<string, unknown> = {
         cards: [
           {
             title: "Woolrich Vintage Shopping Guide",
-            image: "../public/card-10.webp",
+            image: "/card-10.webp",
             imageAlt: "Woolrich Vintage Shopping Guide",
             links: [
               {
@@ -371,7 +371,7 @@ const editorial: Record<string, unknown> = {
           },
           {
             title: "The Birth of an Icon",
-            image: "../public/card-11.webp",
+            image: "/card-11.webp",
             imageAlt: "The Birth of an Icon",
             links: [
               {
@@ -382,7 +382,7 @@ const editorial: Record<string, unknown> = {
           },
           {
             title: "Uncover the Archive",
-            image: "../public/card-12.webp",
+            image: "/card-12.webp",
             imageAlt: "Uncover the Archive",
             links: [
               {
@@ -400,7 +400,7 @@ const editorial: Record<string, unknown> = {
         variant: "buttons",
         title: "Brand Mission and Values",
         image: {
-          src: "../public/herobanner-4.webp",
+          src: "/herobanner-4.webp",
           alt: "Immagine di esempio",
         },
         buttons: [
@@ -420,7 +420,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Woolrich Outdoor Foundation",
         image: {
-          src: "../public/herobanner-8.webp",
+          src: "/herobanner-8.webp",
           alt: "Woolrich Outdoor Foundation",
         },
       },
@@ -436,7 +436,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "../public/herobanner-9.webp",
+          src: "/herobanner-9.webp",
           alt: "Woolrich Outdoor Foundation",
         },
       },
@@ -453,7 +453,7 @@ const editorial: Record<string, unknown> = {
         title: "1% FOR THE PLANET",
         text: "Through our strategic partnership with 1% for the Planet and in collaboration with other global non-profit organizations, we will allocate funds and resources for our three core pillars - protecting our forests, maintaing our coastslines, and urban renewal projects wich are rooted in facilitating impactful environmentals changes.",
         image: {
-          src: "../public/mediatext-2.jpg",
+          src: "/mediatext-2.jpg",
           alt: "1% for the Planet",
         },
         orientation: "left",
@@ -467,19 +467,19 @@ const editorial: Record<string, unknown> = {
           {
             title: "Protecting the forests",
             text: "The Woolrich Outdoor Foundation devotes funds and resources to conserving forests globally to combat global warming.",
-            image: "../public/card-13.webp",
+            image: "/card-13.webp",
             imageAlt: "Protecting the forests",
           },
           {
             title: "Urban regeneration",
             text: "The Woolrich Outdoor Foundation supports community-based and educational urban initiatives.",
-            image: "../public/card-14.webp",
+            image: "/card-14.webp",
             imageAlt: "Urban regeneration",
           },
           {
             title: "Coastal Maintenance",
             text: "The Woolrich Outdoor Foundation collaborates with organizations that work to protect environments, communities, and economies.",
-            image: "../public/card-15.webp",
+            image: "/card-15.webp",
             imageAlt: "Maintaining our coastlines",
           },
         ],
@@ -494,7 +494,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Arteparco",
             text: "We support Arteparco as an Ethical Partner, with the goal of preserving natural and cultural heritage.",
-            image: "../public/partnerCard-1.webp",
+            image: "/partnerCard-1.webp",
             imageAlt: "Arteparco",
             links: [
               {
@@ -506,7 +506,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Planted",
             text: "The Woolrich Outdoor Foundation and Planted collaborate in an effort to seek to preserve forests and offset CO2 emissions.",
-            image: "../public/partnerCard-2.webp",
+            image: "/partnerCard-2.webp",
             imageAlt: "Planted",
             links: [
               {
@@ -518,7 +518,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Worldrise and Fatastudio",
             text: "We worked with Wolrdrise and Fantastudio to create CURA, a social project to protect the environment and the seas in Milan's neighborhood 'Stadera.",
-            image: "../public/partnerCard-3.webp",
+            image: "/partnerCard-3.webp",
             imageAlt: "Worldrise and Fantastudio",
             links: [
               {
@@ -530,7 +530,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "A Billion Oyster",
             text: "Woolrich Outdoor Foundation and Billion Oyster Project will collaborate on restoring oysters and their reef habitat in the New York Harbor in order to reactivate the natural-self-maintenance mechanism of the local marine ecosystem.",
-            image: "../public/partnerCard-4.webp",
+            image: "/partnerCard-4.webp",
             imageAlt: "A Billion Oyster",
             links: [
               {
@@ -542,7 +542,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Istituto Oikos",
             text: "Woolrich work to protect and enhance biodiversity, engage the community and raise awareness by organizing special events and activities.",
-            image: "../public/partnerCard-5.webp",
+            image: "/partnerCard-5.webp",
             imageAlt: "Istituto Oikos",
             links: [
               {
@@ -554,7 +554,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Humana People to People Italia",
             text: "Woolrich Outdoor Foundation and Humana both share the same commitment to creating a world where the community is able to build a future in balance with nature",
-            image: "../public/partnerCard-6.webp",
+            image: "/partnerCard-6.webp",
             imageAlt: "Humana People to People Italia",
             links: [
               {
@@ -566,7 +566,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Selva Urbana",
             text: "The Woolrich Outdoor Foundation supports Selva Urbana in the implementation of green space restoration projects to meet the environmetal and socio-cultural needs of local communities.",
-            image: "../public/partnerCard-7.webp",
+            image: "/partnerCard-7.webp",
             imageAlt: "Selva Urbana",
             links: [
               {
@@ -578,7 +578,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Plastic Free Odv Onlus",
             text: "Woolrich Outdoor Foundation and Plastic Free work together to restore urban areas by cleaning up green spaces.",
-            image: "../public/partnerCard-8.webp",
+            image: "/partnerCard-8.webp",
             imageAlt: "Plastic Free Odv Onlus",
             links: [
               {
@@ -590,7 +590,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Parks & Trails NYC",
             text: "Woolrich Outdoor Foundation and Parks & Trails New York cooperate to improve public green spaces in the city.",
-            image: "../public/partnerCard-9.webp",
+            image: "/partnerCard-9.webp",
             imageAlt: "Parks & Trails NYC",
             links: [
               {
@@ -608,7 +608,7 @@ const editorial: Record<string, unknown> = {
         title: "From our CEO, Stefano Saccone",
         text: `"Giving back to the people and planet that inspired and helped build our brand is important to us and that's why we are contributing 1% of our Direct-to-Consumer sales to fund impactful environmetal projects through a partnership with 1% for the Planet. Working togheter we can donate, volunteer, and actively provide service to protect and shape a brighter and more sustainable future."`,
         image: {
-          src: "../public/mediatext-3.webp",
+          src: "/mediatext-3.webp",
           alt: "Stefano Saccone, CEO of Woolrich",
         },
         orientation: "left",
@@ -621,7 +621,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Brand Mission and Values",
         image: {
-          src: "../public/herobanner-10.webp",
+          src: "/herobanner-10.webp",
           alt: "Woolrich Brand Mission and Values",
         },
       },
@@ -639,7 +639,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Woolrich History",
             image: {
-              src: "../public/deepCard-1.webp",
+              src: "/deepCard-1.webp",
               alt: "Woolrich History",
             },
             link: {
@@ -650,7 +650,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Suistainability",
             image: {
-              src: "../public/deepCard-2.webp",
+              src: "/deepCard-2.webp",
               alt: "Woolrich Sustainability",
             },
             link: {
@@ -661,7 +661,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Diversity and Inclusion",
             image: {
-              src: "../public/deepCard-3.webp",
+              src: "/deepCard-3.webp",
               alt: "Woolrich Diversity and Inclusion",
             },
             link: {
@@ -672,7 +672,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Charities",
             image: {
-              src: "../public/deepCard-4.webp",
+              src: "/deepCard-4.webp",
               alt: "Woolrich Charities",
             },
             link: {
@@ -683,7 +683,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Employees and Recruitment",
             image: {
-              src: "../public/deepCard-5.webp",
+              src: "/deepCard-5.webp",
               alt: "Woolrich Employees and Recruitment",
             },
             link: {
@@ -694,7 +694,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Responsible Sourcing",
             image: {
-              src: "../public/deepCard-6.webp",
+              src: "/deepCard-6.webp",
               alt: "Woolrich Responsible Sourcing",
             },
             link: {
@@ -705,7 +705,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Woolrich Outdoor Foundation",
             image: {
-              src: "../public/deepCard-7.webp",
+              src: "/deepCard-7.webp",
               alt: "Woolrich Outdoor Foundation",
             },
             link: {
@@ -716,7 +716,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Code of Ethics",
             image: {
-              src: "../public/deepCard-8.webp",
+              src: "/deepCard-8.webp",
               alt: "Woolrich Code of Ethics",
             },
             link: {
@@ -734,7 +734,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Shopping Guide",
         image: {
-          src: "../public/herobanner-11.webp",
+          src: "/herobanner-11.webp",
           alt: "Shopping Guide",
         },
       },
@@ -754,7 +754,7 @@ const editorial: Record<string, unknown> = {
             title: "Tokyo",
             appendix: "First Stop",
             image: {
-              src: "../public/centerCard-1.webp",
+              src: "/centerCard-1.webp",
               alt: "Tokyo Stop",
             },
             link: {
@@ -766,7 +766,7 @@ const editorial: Record<string, unknown> = {
             title: "London",
             appendix: "Second Stop",
             image: {
-              src: "../public/centerCard-2.webp",
+              src: "/centerCard-2.webp",
               alt: "London Stop",
             },
             link: {
@@ -778,7 +778,7 @@ const editorial: Record<string, unknown> = {
             title: "Berlin",
             appendix: "Third Stop",
             image: {
-              src: "../public/centerCard-3.webp",
+              src: "/centerCard-3.webp",
               alt: "Berlin Stop",
             },
             link: {
@@ -790,7 +790,7 @@ const editorial: Record<string, unknown> = {
             title: "New York",
             appendix: "Fourth Stop",
             image: {
-              src: "../public/centerCard-4.webp",
+              src: "/centerCard-4.webp",
               alt: "New York Stop",
             },
             link: {
@@ -811,7 +811,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "../public/herobanner-12.webp",
+          src: "/herobanner-12.webp",
           alt: "Woolrich Vintage Shopping Guide",
         },
       },
@@ -828,7 +828,7 @@ const editorial: Record<string, unknown> = {
         title: "Uncover the Archive",
         text: "We dug deep into our heritage with Daiki Suzuki and Kara Jubin to retrace our path through american history.",
         image: {
-          src: "../public/mediatext-4.webp",
+          src: "/mediatext-4.webp",
           alt: "Uncover the Archive",
         },
         orientation: "right",
@@ -841,7 +841,7 @@ const editorial: Record<string, unknown> = {
         title: "Woolrich History",
         text: "We are the Original Outdoor Clothing Company and our long history of producing fine, warm wool garments is proof of that.",
         image: {
-          src: "../public/mediatext-5.webp",
+          src: "/mediatext-5.webp",
           alt: "Uncover the Archive",
         },
         isFullWidth: false,
