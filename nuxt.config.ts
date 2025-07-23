@@ -9,7 +9,17 @@ export default defineNuxtConfig({
     "@kgierke/nuxt-basic-auth",
     "@vueuse/nuxt",
     "@nuxt/image",
+    [
+      "@storyblok/nuxt",
+      {
+        accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,
+        apiOptions: {
+          region: "eu",
+        },
+      },
+    ],
   ],
+
   alias: {
     "@design-system": fileURLToPath(
       new URL("./layers/design-system", import.meta.url),
