@@ -420,7 +420,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Worealis Outdoor Foundation",
         image: {
-          src: "/herobanner-8.webp",
+          src: "placeholders/herobanner-8.jpg",
           alt: "Worealis Outdoor Foundation",
         },
       },
@@ -436,7 +436,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "/herobanner-9.webp",
+          src: "placeholders/herobanner-9.jpg",
           alt: "Worealis Outdoor Foundation",
         },
       },
@@ -734,7 +734,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Shopping Guide",
         image: {
-          src: "/herobanner-11.webp",
+          src: "placeholders/herobanner-11.webp",
           alt: "Shopping Guide",
         },
       },
@@ -811,7 +811,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "/herobanner-12.webp",
+          src: "placeholders/herobanner-12.jpeg",
           alt: "Worealis Vintage Shopping Guide",
         },
       },
