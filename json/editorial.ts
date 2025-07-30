@@ -21,7 +21,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "/herobanner-2.webp",
+          src: "placeholders/herobanner-2.jpg",
           alt: "Emphaty will always remain the strongest fiber",
         },
         title: "Emphaty will always remain the strongest fiber",
