@@ -152,7 +152,7 @@ const editorial: Record<string, unknown> = {
       data: {
         variant: "links",
         image: {
-          src: "/herobanner-5.webp",
+          src: "placeholders/herobanner-5.jpeg",
           alt: "Worealis: who we are",
         },
         title: "Worealis: who we are",
@@ -326,7 +326,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "/herobanner-6.webp",
+          src: "placeholders/herobanner-6.jpeg",
           alt: "Our Mission",
         },
       },
@@ -341,7 +341,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "/herobanner-7.jpeg",
+          src: "placeholders/herobanner-7.jpg",
           alt: "We empower life in the elements",
         },
         title: "We empower life in the elements",
