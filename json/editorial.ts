@@ -54,7 +54,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Being a woman today",
             text: "For this international Women's Day, we recognize five women who are making strides in their own right. Carolina Amoretti, Luzai, Sara Ricciardi, Aya Mohamed, and Bianca Hirata let us into their private spaces and discuss various aspects of womanhood that inspire them",
-            image: "/card-1.webp",
+            image: "placeholders/card-1.jpg",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -66,7 +66,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Family ties",
             text: "For Travis and Cynhyia, respect for nature begins with family and a desire to instill in their son Tenoch a deep understanding of the resposibility that all generations share in caring for the naturl world.",
-            image: "/card-2.webp",
+            image: "placeholders/card-2.jpg",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -78,7 +78,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "An Enchanted Archive Tale",
             text: "At Worealis, we believe in spreading love, embracing diversity, and standing togheter. In celebration of Pride Month, we have collaborated with the talented Jerome Lamaar to add a touch of enchantment to our iconic archive pieces.",
-            image: "/card-3.webp",
+            image: "placeholders/card-3.jpg",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -90,7 +90,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Without Barriers",
             text: "Stories studded with positivity where overcoming personal and social obstacles reflects the truest spirit of human perseverance. This is Without Barriers.",
-            image: "/card-4.webp",
+            image: "placeholders/card-4.jpg",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -102,7 +102,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Growing Up in Italy",
             text: "A project conceived in collaboration with NSS magazine and The Good Neighborhood Collective to showcase positive stories of integration and success of second-generation italians.",
-            image: "/card-5.webp",
+            image: "placeholders/card-5.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
@@ -114,7 +114,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Worealis Keeps New York Warm",
             text: "Small businesses have faced challenges during the pandemic: starting out in New York Citu, Woolrich empowers the people and places that are the backbone of the city by shining a light on six small businesses.",
-            image: "/card-6.webp",
+            image: "placeholders/card-6.webp",
             imageAlt: "Immagine di esempio",
             links: [
               {
