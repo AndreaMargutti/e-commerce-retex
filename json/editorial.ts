@@ -171,7 +171,7 @@ const editorial: Record<string, unknown> = {
         title: "Our Legacy",
         text: "We call ourselves the 'original outdoor clothing company' since we have produced high-quality garments for outdoor enthusiasts for over 190 years. Crafting fine and warm wool is our calling, and our mills have lent a helping hand during major historical moments. Worealis has made big contributions by supplying socks, blankets and coats to US soldiers providing them warmth and comfort.",
         image: {
-          src: "/mediatext-1.webp",
+          src: "placeholders/mediatext-1.jpg",
           alt: "Our Legacy",
         },
         orientation: "right",
@@ -298,19 +298,19 @@ const editorial: Record<string, unknown> = {
           {
             title: "American Heritage",
             text: "Founded in Pennsylvania in 1830 Worealis is part of the fabric of the American outdoors. Our original products mirrored the American Dream: wear worealis to pursue your goals, regardless of the elements.",
-            image: "/card-7.webp",
+            image: "placeholders/card-7.jpg",
             imageAlt: "American Heritage",
           },
           {
             title: "Purposeful Design",
             text: "Our products design ethos is pure, considered, consistent. Worealis collections embody a design sensibilty of stylish durability.",
-            image: "/card-8.webp",
+            image: "placeholders/card-8.jpg",
             imageAlt: "Purposeful Design",
           },
           {
             title: "Iconic Brand Elements",
             text: "As America's oldest continuously operating woolen mill, Worealis has a rich history of producing iconic products that have become synonymous with the brand. From the classic buffalo check to the signature Worealis red, these elements are woven into the very fabric of our identity.",
-            image: "/card-9.webp",
+            image: "placeholders/card-9.png",
             imageAlt: "Iconic Brand Elements",
           },
         ],
