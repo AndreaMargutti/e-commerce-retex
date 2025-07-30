@@ -467,7 +467,7 @@ const editorial: Record<string, unknown> = {
           {
             title: "Protecting the forests",
             text: "The Worealis Outdoor Foundation devotes funds and resources to conserving forests globally to combat global warming.",
-            image: "placeholders/card-13.webp",
+            image: "placeholders/card-13.jpg",
             imageAlt: "Protecting the forests",
           },
           {
@@ -608,7 +608,7 @@ const editorial: Record<string, unknown> = {
         title: "From our CEO, Andrea Bellinzoni",
         text: `"Giving back to the people and planet that inspired and helped build our brand is important to us and that's why we are contributing 1% of our Direct-to-Consumer sales to fund impactful environmetal projects through a partnership with 1% for the Planet. Working togheter we can donate, volunteer, and actively provide service to protect and shape a brighter and more sustainable future."`,
         image: {
-          src: "placeholders/mediatext-3.avif",
+          src: "placeholders/mediatext-3.webp",
           alt: "Andrea Bellinzoni, CEO of Worealis",
         },
         orientation: "left",
