@@ -360,7 +360,7 @@ const editorial: Record<string, unknown> = {
         cards: [
           {
             title: "Worealis Vintage Shopping Guide",
-            image: "/card-10.webp",
+            image: "placeholders/card-10.jpg",
             imageAlt: "Worealis Vintage Shopping Guide",
             links: [
               {
@@ -371,7 +371,7 @@ const editorial: Record<string, unknown> = {
           },
           {
             title: "The Birth of an Icon",
-            image: "/card-11.webp",
+            image: "placeholders/card-11.jpg",
             imageAlt: "The Birth of an Icon",
             links: [
               {
@@ -382,7 +382,7 @@ const editorial: Record<string, unknown> = {
           },
           {
             title: "Uncover the Archive",
-            image: "/card-12.webp",
+            image: "placeholders/card-12.avif",
             imageAlt: "Uncover the Archive",
             links: [
               {
@@ -453,7 +453,7 @@ const editorial: Record<string, unknown> = {
         title: "1% FOR THE PLANET",
         text: "Through our strategic partnership with 1% for the Planet and in collaboration with other global non-profit organizations, we will allocate funds and resources for our three core pillars - protecting our forests, maintaing our coastslines, and urban renewal projects wich are rooted in facilitating impactful environmentals changes.",
         image: {
-          src: "/mediatext-2.jpg",
+          src: "placeholders/mediatext-2.webp",
           alt: "1% for the Planet",
         },
         orientation: "left",
