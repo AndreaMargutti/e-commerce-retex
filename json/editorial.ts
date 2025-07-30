@@ -621,7 +621,7 @@ const editorial: Record<string, unknown> = {
       data: {
         title: "Brand Mission and Values",
         image: {
-          src: "/herobanner-10.webp",
+          src: "placeholders/herobanner-10.avif",
           alt: "Worealis Brand Mission and Values",
         },
       },
