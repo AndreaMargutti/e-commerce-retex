@@ -5,7 +5,7 @@ const editorial: Record<string, unknown> = {
       data: {
         variant: "links",
         image: {
-          src: "/herobanner-1.png",
+          src: "/placeholders/herobanner-1.jpg",
           alt: "Diversity and Inclusion",
         },
         title: "Diversity and Inclusion",
