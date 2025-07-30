@@ -38,7 +38,7 @@ const editorial: Record<string, unknown> = {
       name: "HeroBanner",
       data: {
         image: {
-          src: "/herobanner-3.webp",
+          src: "placeholders/herobanner-3.jpg",
           alt: "Worealis embraces and empowers all communities",
         },
         title: "Woolrich embraces and empowers all communities",
