@@ -132,7 +132,7 @@ const editorial: Record<string, unknown> = {
         variant: "buttons",
         title: "Brand Mission and Values",
         image: {
-          src: "/herobanner-4.webp",
+          src: "placeholders/herobanner-4.jpg",
           alt: "Immagine di esempio",
         },
         buttons: [
@@ -400,7 +400,7 @@ const editorial: Record<string, unknown> = {
         variant: "buttons",
         title: "Brand Mission and Values",
         image: {
-          src: "/herobanner-4.webp",
+          src: "placeholders/herobanner-4.jpg",
           alt: "Immagine di esempio",
         },
         buttons: [
