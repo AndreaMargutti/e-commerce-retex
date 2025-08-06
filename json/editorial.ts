@@ -828,7 +828,7 @@ const editorial: Record<string, unknown> = {
         title: "Uncover the Archive",
         text: "We dug deep into our heritage with Daiki Suzuki and Kara Jubin to retrace our path through american history.",
         image: {
-          src: "/mediatext-4.webp",
+          src: "placeholders/mediatext-4.webp",
           alt: "Uncover the Archive",
         },
         orientation: "right",
@@ -841,7 +841,7 @@ const editorial: Record<string, unknown> = {
         title: "Worealis History",
         text: "We are the Original Outdoor Clothing Company and our long history of producing fine, warm wool garments is proof of that.",
         image: {
-          src: "/mediatext-5.webp",
+          src: "placeholders/mediatext-5.webp",
           alt: "Worealis History",
         },
         isFullWidth: false,
