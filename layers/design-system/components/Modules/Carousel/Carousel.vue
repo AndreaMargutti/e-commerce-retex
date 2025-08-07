@@ -50,6 +50,7 @@ onMounted(() => {
 
 .embla__container {
   display: flex;
+  max-height: 700px;
 }
 
 .embla__slide {
